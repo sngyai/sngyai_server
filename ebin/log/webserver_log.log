@@ -1,0 +1,146 @@
+ 22-3-2013 15:42:35.616000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 22-3-2013 15:42:49.360000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 22-3-2013 15:43:0.638000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 22-3-2013 15:44:56.79000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 22-3-2013 15:45:25.142000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 22-3-2013 15:46:29.477000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:27:39.917470 [mod_webserver:499] mod_webserver deal_request type error Msg:1025, QS:[{"msg",
+                                                                         "1025"},
+                                                                        {"player_id",
+                                                                         "10010200000139"},
+                                                                        {"rs",
+                                                                         "1"}]
+
+ 25-3-2013 13:27:40.276470 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:28:7.342470 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:28:40.9470 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:29:0.398470 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:29:41.38870 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:29:52.114870 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:30:13.361870 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 13:30:16.590870 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 14:48:6.668180 [mod_webserver:499] mod_webserver deal_request type error Msg:1025, QS:[{"msg",
+                                                                         "1025"},
+                                                                        {"player_id",
+                                                                         "10010200000139"}]
+
+ 25-3-2013 14:48:6.762180 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 18:33:36.46760 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 18:33:50.946360 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 25-3-2013 18:33:59.981100 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:27:10.384000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:27:25.750000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:32:16.161000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:32:36.176000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:34:59.635000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:35:24.720000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:39:54.570000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 26-3-2013 14:40:8.17000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 9:59:22.388032 [mod_webserver:254] mod_webserver handle_request type:["sys"] Reason :{badmatch,
+                                                                       {update,
+                                                                        0}}
+
+ 27-3-2013 9:59:23.808030 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 9:59:27.114882 [mod_webserver:254] mod_webserver handle_request type:["sys"] Reason :{badmatch,
+                                                                       {update,
+                                                                        0}}
+
+ 27-3-2013 9:59:27.192880 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 9:59:31.14882 [mod_webserver:254] mod_webserver handle_request type:["sys"] Reason :{badmatch,
+                                                                       {update,
+                                                                        0}}
+
+ 27-3-2013 9:59:31.76880 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:30:34.801000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:30:38.451000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:30:41.150000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:30:44.441000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:41:20.660000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:41:28.804000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:41:33.733000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:41:44.778000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:41:57.898000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:43:44.680000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:43:47.114000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:43:51.45000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 10:43:53.354000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:23:47.548000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:23:52.72000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:23:54.147000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:28.124000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:30.745000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:32.601000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:35.815000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:38.358000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:24:40.89000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:26:51.707000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:26:53.860000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:26:56.185000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:26:59.975000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:27:2.113000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:27:7.869000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:27:10.303000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 27-3-2013 11:27:13.657000 [mod_webserver:293] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+ 17-4-2013 16:54:41.803001 [mod_webserver:294] mod_webserver deal_request type error type:["flash_ppskernel_crossdomin.xml"], QS:[]
+
+ 17-4-2013 16:54:41.928001 [mod_webserver:294] mod_webserver deal_request type error type:["flash_ppskernel_crossdomin.xml"], QS:[]
+
