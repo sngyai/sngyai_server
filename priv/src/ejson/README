@@ -1,0 +1,16 @@
+EJSON
+
+ Simple JSON library for Erlang.
+ 
+ Adapted here as an http://erlang-plugin.sourceforge.net/ Maven Erlang Plug-In
+ built erlang-otp dependency.
+ 
+ To use, simply get the source code and do:
+ 
+ $> mvn install
+ 
+ The artifact will be compiled, packaged and installed as an erlang-otp
+ dependency in your local m2 repository.
+
+
+olle-ejson-1091186
