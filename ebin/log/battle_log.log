@@ -1,6 +1,0 @@
-29-3-2013 17:34:27.525882 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_21.btl"   Reason : enoent 
-29-3-2013 17:34:42.48885 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_22.btl"   Reason : enoent 
-29-3-2013 17:34:55.386885 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_23.btl"   Reason : enoent 
-29-3-2013 17:36:29.815002 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_24.btl"   Reason : enoent 
-29-3-2013 17:36:41.16005 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_25.btl"   Reason : enoent 
-29-3-2013 17:41:13.393002 [lib_battle_file:78] write_battle_file  BattleFile : "../battle_result/10010700000309_103_26.btl"   Reason : enoent 
