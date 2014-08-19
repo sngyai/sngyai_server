@@ -7,7 +7,7 @@
 -ifndef(record_info_hrl).
 -define(record_info_hrl, 1).
 
--compile([{parse_transform, record_info}]).
+%% -compile([{parse_transform, record_info}]).
 
 -endif.
 % ----------------------------------------------------------------------------

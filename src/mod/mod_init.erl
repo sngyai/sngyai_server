@@ -207,8 +207,6 @@ init_ets() ->
 %% 返回值:ok
 init_data() ->
   ok = lib_system_config:init(),
-  ok = lib_system_config:memory_config_init(),
-  ok = lib_rank:init_rank(),
   ok.
 
 

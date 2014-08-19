@@ -43,7 +43,7 @@
 -define(MYSQL_DB_POOL_GAME, mysql_conn_pool_game).
 
 %% 数据库调用模块
--define(DB_GAME, (db_mysql:new(?MYSQL_DB_POOL_GAME))).
+-define(DB_GAME, db_mysql).
 
 %%Mysql语句执行超时时间,单位毫秒
 -define(DB_EXECUTE_TIMEOUT, 20000).

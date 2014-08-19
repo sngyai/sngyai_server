@@ -57,76 +57,10 @@ stop_sup() ->
 %% 返回：不是返回值
 %%------------------------------------------------------------------------------
 start_mod_workers() ->
-  %帮会
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_guild,
-      {mod_increase_guild, start_link, []},
-      permanent, 10000, worker, [mod_increase_guild]}),
-  %帮会萌宠
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_guild_pet,
-      {mod_increase_guild_pet, start_link, []},
-      permanent, 10000, worker, [mod_increase_guild_pet]}),
-  %物品
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_item,
-      {mod_increase_item, start_link, []},
-      permanent, 10000, worker, [mod_increase_item]}),
-  %零时背包
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_temp_bag,
-      {mod_increase_temp_bag, start_link, []},
-      permanent, 10000, worker, [mod_increase_temp_bag]}),
-  %采集背包
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_collection_bag,
-      {mod_increase_collection_bag, start_link, []},
-      permanent, 10000, worker, [mod_increase_collection_bag]}),
-  %元神
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_spirit,
-      {mod_increase_spirit, start_link, []},
-      permanent, 10000, worker, [mod_increase_spirit]}),
-  %地图
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_map,
-      {mod_increase_map, start_link, []},
-      permanent, 10000, worker, [mod_increase_map]}),
-  %怪物
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_monster,
-      {mod_increase_monster, start_link, []},
-      permanent, 10000, worker, [mod_increase_monster]}),
-  %宠物
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_pet,
-      {mod_increase_pet, start_link, []},
-      permanent, 10000, worker, [mod_increase_pet]}),
   %玩家
   {ok, _} = supervisor:start_child(
     ?MODULE,
     {mod_increase_player,
       {mod_increase_player, start_link, []},
       permanent, 10000, worker, [mod_increase_player]}),
-  %竞技场
-  %    {ok, _} = supervisor:start_child(
-  %        ?MODULE,
-  %        {mod_increase_athletics,
-  %         {mod_increase_athletics, start_link, []},
-  %         permanent, 10000, worker, [mod_increase_athletics]}),
-  %副本
-  {ok, _} = supervisor:start_child(
-    ?MODULE,
-    {mod_increase_duplicate,
-      {mod_increase_duplicate, start_link, []},
-      permanent, 10000, worker, [mod_increase_duplicate]}),
   ok.
