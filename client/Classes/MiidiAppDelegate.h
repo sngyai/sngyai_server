@@ -13,5 +13,6 @@
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) UITabBarController *tabBarController;
+@property (retain, nonatomic) NSNumber* score;
 
 @end

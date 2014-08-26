@@ -42,8 +42,12 @@
 	guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     //设置代理
     guomobwall_vc.delegate=self;
+    
+    //设置果盟定时查询是否获得积分
     guomobwall_vc.updatetime=30;
     
+    //设置有米获取积分监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 
     //设置标题和返回
 	self.navigationItem.title = @"利赚-手机赚钱";
@@ -174,6 +178,128 @@
     [super dealloc];
 }
 
+- (void)didReceiveAwardPoints:(NSInteger)totalPoints{
+	NSLog(@"didReceiveAwardPoints success! totalPoints=%d",totalPoints);
+	
+	[self alertMessage:[NSString stringWithFormat:@"卧槽得分啦,用户总积分 %d !",totalPoints]];
+	
+}
+
+- (void)didFailReceiveAwardPoints:(NSError *)error{
+	NSLog(@"didFailReceiveAwardPoints failed!");
+	
+	[self alertMessage:@"卧槽得分失败啦~~~~~~~~~~~~~~~~~~~~~"];
+	
+}
+
+- (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
+	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
+	
+	[self alertMessage:[NSString stringWithFormat:@"卧槽看到总分了（米迪）, 总积分 %d !",totalPoints]];
+    UILocalNotification *localnotification=[[UILocalNotification alloc] init];
+    if (localnotification!=nil) {
+        
+        NSDate *now=[NSDate new];
+        localnotification.fireDate=now;
+        localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
+        
+        localnotification.timeZone=[NSTimeZone defaultTimeZone];
+        localnotification.soundName = UILocalNotificationDefaultSoundName;
+        localnotification.alertBody=[NSString stringWithFormat:@"米迪的%@积分，总积分%d", pointName, totalPoints];
+        
+        localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+        
+        //下面设置本地通知发送的消息，这个消息可以接受
+        NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+        localnotification.userInfo = infoDic;
+        //发送通知
+        [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+    }
+}
+
+- (void)didFailReceiveGetPoints:(NSError *)error{
+	NSLog(@"didFailReceiveGetPoints failed!");
+	
+	[self alertMessage:@"卧槽没获取到总分（米迪）~~~~~~~~~~~~~~~~~~~~~~~~~~~"];
+}
+
+// 有米
+- (void)pointsGotted:(NSNotification *)notification {
+    NSDictionary *dict = [notification userInfo];
+    NSNumber *freshPoints = [dict objectForKey:kYouMiPointsManagerFreshPointsKey];
+    NSLog(@"积分信息：%@", dict);
+    if([freshPoints intValue] > 0){
+        int *points = [YouMiPointsManager pointsRemained];
+        UILocalNotification *localnotification=[[UILocalNotification alloc] init];
+        if (localnotification!=nil) {
+        
+            NSDate *now=[NSDate new];
+            localnotification.fireDate=now;
+            localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
+        
+            localnotification.timeZone=[NSTimeZone defaultTimeZone];
+            localnotification.soundName = UILocalNotificationDefaultSoundName;
+            localnotification.alertBody=[NSString stringWithFormat:@"有米获得%@积分，有米总积分%d", freshPoints, *points];
+        
+            localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+        
+            //下面设置本地通知发送的消息，这个消息可以接受
+            NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+            localnotification.userInfo = infoDic;
+            //发送通知
+            [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+        }
+    }
+//    // 手动积分管理可以通过下面这种方法获得每份积分的信息。
+//    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
+//    for (NSDictionary *aPointInfo in pointInfos) {
+//        // aPointInfo 是每份积分的信息，包括积分数，userID，下载的APP的名字
+//        NSLog(@"积分数：%@", aPointInfo[kYouMiPointsManagerPointAmountKey]);
+//        NSLog(@"userID：%@", aPointInfo[kYouMiPointsManagerPointUserIDKey]);
+//        NSLog(@"产品名字：%@", aPointInfo[kYouMiPointsManagerPointProductNameKey]);
+//        
+//        // TODO 按需要处理
+//    }
+}
+
+//果盟
+- (void)checkPoint:(NSString *)appname point:(int)point
+{
+    if (point > 0) {
+        UILocalNotification *localnotification=[[UILocalNotification alloc] init];
+        NSLog(@"入口：%@", localnotification);
+        if (localnotification!=nil) {
+            NSLog(@"内部：%@", localnotification);
+            NSDate *now=[NSDate new];
+            localnotification.fireDate=now;
+            
+            localnotification.timeZone=[NSTimeZone defaultTimeZone];
+            localnotification.soundName = UILocalNotificationDefaultSoundName;
+            localnotification.alertBody= [NSString stringWithFormat:@"果盟通过%@获得%d积分",appname,point];
+            
+            localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+            
+            //下面设置本地通知发送的消息，这个消息可以接受
+            NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+            localnotification.userInfo = infoDic;
+            //发送通知
+            [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+        }
+        NSLog(@"出口：%@", localnotification);
+    }
+}
+
+-(void) alertMessage:(NSString*)msg{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning"
+														message:msg
+													   delegate:nil
+											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
 
 @end
+
+
 

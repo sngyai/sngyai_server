@@ -10,6 +10,7 @@
 #import "MiidiAppDelegate.h"
 #import "MiidiManager.h"
 #import "YouMiConfig.h"
+#import "YouMiPointsManager.h"
 
 
 int main(int argc, char *argv[]) {
@@ -19,6 +20,7 @@ int main(int argc, char *argv[]) {
     [MiidiManager setAppPublisher:@"19071"  withAppSecret:(NSString*)@"5sb72gp3iyj8znow" ];
     [YouMiConfig launchWithAppID:@"18e9f2d24d78bb26" appSecret:@"9c3909b6e5f685cb"];
     [YouMiConfig setIsTesting:NO];
+    [YouMiPointsManager enable];
     
 	int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MiidiAppDelegate class]));
 	

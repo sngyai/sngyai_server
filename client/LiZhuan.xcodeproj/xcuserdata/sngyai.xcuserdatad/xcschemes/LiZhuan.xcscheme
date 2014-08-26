@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "MiidiSdkSample.app"
-               BlueprintName = "MiidiSdkSample"
-               ReferencedContainer = "container:MiidiSdkSample.xcodeproj">
+               BuildableName = "LiZhuan.app"
+               BlueprintName = "LiZhuan"
+               ReferencedContainer = "container:LiZhuan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MiidiSdkSample.app"
-            BlueprintName = "MiidiSdkSample"
-            ReferencedContainer = "container:MiidiSdkSample.xcodeproj">
+            BuildableName = "LiZhuan.app"
+            BlueprintName = "LiZhuan"
+            ReferencedContainer = "container:LiZhuan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MiidiSdkSample.app"
-            BlueprintName = "MiidiSdkSample"
-            ReferencedContainer = "container:MiidiSdkSample.xcodeproj">
+            BuildableName = "LiZhuan.app"
+            BlueprintName = "LiZhuan"
+            ReferencedContainer = "container:LiZhuan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MiidiSdkSample.app"
-            BlueprintName = "MiidiSdkSample"
-            ReferencedContainer = "container:MiidiSdkSample.xcodeproj">
+            BuildableName = "LiZhuan.app"
+            BlueprintName = "LiZhuan"
+            ReferencedContainer = "container:LiZhuan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -81,6 +81,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "&#x5229;&#x8d5a;"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

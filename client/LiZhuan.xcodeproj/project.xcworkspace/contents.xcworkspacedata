@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MiidiSdkSample.xcodeproj">
+      location = "self:LiZhuan.xcodeproj">
    </FileRef>
 </Workspace>
