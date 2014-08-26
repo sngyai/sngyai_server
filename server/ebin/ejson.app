@@ -1,0 +1,11 @@
+{application, ejson,
+  [{description, "Json for Erlang."},
+    {vsn, "olle-ejson-1091186"},
+    {modules, {ejson, ejson_decode, ejson_encode, mochijson2, rfc4627}},
+    {maxT, infinity},
+    {registered, [ejson_app]},
+    {included_applications, []},
+    {applications, []},
+    {env, []},
+    {mod, ejson},
+    {start_phases, []}]}.

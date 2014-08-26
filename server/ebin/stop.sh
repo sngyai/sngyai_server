@@ -1,0 +1,1 @@
+/usr/local/erlang/erl_interface-3.7.6/bin/erl_call -s -a "init stop []" -name angel_web4399_s1@127.0.0.1 -c angel_cookie_web4399_s1
