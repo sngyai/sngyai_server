@@ -218,8 +218,8 @@ get_value_convert_default(Key, Keyvalpairs) ->
 %% 返回值:record列名列表
 get_record_filed_list(Record_Name) ->
   case Record_Name of
-    player_status ->
-      record_info(fields, player_status);
+    user ->
+      record_info(fields, user);
     Other_Record ->
       ?T("get_record_filed_list record no define in lib_util_type.erl do it record_name is:~p", [Other_Record]),
       ?Error(default_logger, "no record ~p", [Other_Record]),

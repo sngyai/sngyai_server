@@ -4,7 +4,6 @@
 -module(test).
 -export([main/0]).
 -export([test/0]).
--include("record_info.hrl").
 -include("test.hrl").
 -include("record_info.hrl").
 -import(record_info, [record_to_proplist/2]).

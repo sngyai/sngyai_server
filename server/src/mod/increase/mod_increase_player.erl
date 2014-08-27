@@ -78,7 +78,9 @@ init([]) ->
   put(tag, ?MODULE),
   process_flag(trap_exit, true),
   % 初始化ID
-  {ok, Id_Index, Id_Max} = init_id(),
+  Result = init_id(),
+  ?T("*****Error mod_increase_player init error: ~p ~n", [Result]),
+  {ok, Id_Index, Id_Max} = Result,
   % 服务启动的时候保证还有五千万的空间,否则不让启动
   if Id_Max - Id_Index < 50000000 -> throw("item key overflow warning!"); true -> skip end,
   State = #state{
@@ -203,7 +205,7 @@ do_info(Info, State) ->
 init_id() ->
   Min = lib_config:get_subsection_min(),
   Max = lib_config:get_subsection_max(),
-  Table_Name = player,
+  Table_Name = db_user,
   case ?DB_GAME:select_one(Table_Name, "Max(id)", [{id, ">=", Min}, {id, "<", Max}]) of
     {scalar, undefined} ->%没有找到，初始化 ID起始值
       FirstID = Min,

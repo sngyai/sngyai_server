@@ -139,7 +139,7 @@ handle_info(Info, State) ->
 %% 通配进程销毁处理
 %% State:当前进程状态
 %% 返回值:ok
-terminate(PlayerState) ->
+terminate(_PlayerState) ->
   %体力timer
   case erlang:get(?key_mod_player_settle_strength_timer) of
     undefined ->
