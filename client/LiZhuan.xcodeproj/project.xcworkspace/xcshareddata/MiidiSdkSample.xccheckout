@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>49859CBF-9A7A-40A1-A5F8-EB1FA5B87A8E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MiidiSdkSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2054C3F5-BB8A-4C91-B138-01BF3694BF95</key>
+		<string>https://github.com/sngyai/sngyai_server</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>client/MiidiSdkSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2054C3F5-BB8A-4C91-B138-01BF3694BF95</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sngyai/sngyai_server</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2054C3F5-BB8A-4C91-B138-01BF3694BF95</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2054C3F5-BB8A-4C91-B138-01BF3694BF95</string>
+			<key>IDESourceControlWCCName</key>
+			<string>project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
