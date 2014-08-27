@@ -259,6 +259,20 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -689,12 +703,12 @@
       <workItem from="1408439447261" duration="222000" />
       <workItem from="1408439755403" duration="2617000" />
       <workItem from="1409123366389" duration="5000" />
-      <workItem from="1409123407556" duration="238000" />
+      <workItem from="1409123407556" duration="370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3082000" />
+    <option name="totallyTimeSpent" value="3214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1926" height="1052" extended-state="6" />
