@@ -2,28 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cd084b7-6627-4772-8012-5aef09e98ec4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_athletics.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_collection_bag.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_duplicate.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_guild.erl" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_guild_pet.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_item.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_map.erl" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_monster.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_duplicate.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_temp_bag.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_collection_bag.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_item.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_athletics.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_guild.erl" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_pet.erl" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_spirit.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_temp_bag.erl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/common.hrl" afterPath="$PROJECT_DIR$/include/common.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/debug.sh" afterPath="$PROJECT_DIR$/ebin/debug.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/erl_crash.dump" afterPath="$PROJECT_DIR$/ebin/erl_crash.dump" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" afterPath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_init.erl" afterPath="$PROJECT_DIR$/src/mod/mod_init.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run.sh" afterPath="$PROJECT_DIR$/ebin/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run_robot.sh" afterPath="$PROJECT_DIR$/ebin/run_robot.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/stop.sh" afterPath="$PROJECT_DIR$/ebin/stop.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_map.erl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/erl_crash.dump" afterPath="$PROJECT_DIR$/ebin/erl_crash.dump" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run.sh" afterPath="$PROJECT_DIR$/ebin/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/stop.sh" afterPath="$PROJECT_DIR$/ebin/stop.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" afterPath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/debug.sh" afterPath="$PROJECT_DIR$/ebin/debug.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/common.hrl" afterPath="$PROJECT_DIR$/include/common.hrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run_robot.sh" afterPath="$PROJECT_DIR$/ebin/run_robot.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_init.erl" afterPath="$PROJECT_DIR$/src/mod/mod_init.erl" />
     </list>
     <ignored path="sngyai_server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +77,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -109,7 +109,7 @@
       <file leaf-file-name="increase_sup.erl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mod/increase/increase_sup.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64455783" vertical-offset="780" max-vertical-offset="1368">
+            <state vertical-scroll-proportion="0.8046875" vertical-offset="438" max-vertical-offset="1368">
               <caret line="61" column="45" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
               <folding />
             </state>
@@ -119,7 +119,7 @@
       <file leaf-file-name="lib_system_config.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/config/lib_system_config.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3477">
+            <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="3477">
               <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
@@ -129,7 +129,7 @@
       <file leaf-file-name="db_agent_system_config.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="843" max-vertical-offset="1444">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1444">
               <caret line="57" column="10" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="10" />
               <folding />
             </state>
@@ -139,7 +139,7 @@
       <file leaf-file-name="common.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/common.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="659" max-vertical-offset="4541">
+            <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="4541">
               <caret line="45" column="25" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="25" />
               <folding />
             </state>
@@ -149,7 +149,7 @@
       <file leaf-file-name="db_mysql.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.9259257" vertical-offset="5190" max-vertical-offset="7771">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5377" max-vertical-offset="7771">
               <caret line="283" column="18" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="18" />
               <folding />
             </state>
@@ -159,7 +159,7 @@
       <file leaf-file-name="record_info.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1900">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1900">
               <caret line="15" column="35" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding />
             </state>
@@ -169,7 +169,7 @@
       <file leaf-file-name="record_info.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
+            <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="418">
               <caret line="13" column="74" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
               <folding />
             </state>
@@ -179,7 +179,7 @@
       <file leaf-file-name="test.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/test.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2204">
+            <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2204">
               <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
@@ -245,63 +245,17 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sngyai_server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priv" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,22 +688,23 @@
       <updated>1408439446845</updated>
       <workItem from="1408439447261" duration="222000" />
       <workItem from="1408439755403" duration="2617000" />
+      <workItem from="1409123366389" duration="5000" />
+      <workItem from="1409123407556" duration="238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2839000" />
+    <option name="totallyTimeSpent" value="3082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1926" height="1052" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -763,13 +718,14 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67146015" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1826411" sideWeight="0.6280353" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1826411" sideWeight="0.6280353" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -792,6 +748,166 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1957">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/mod_init.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3233" max-vertical-offset="4142">
+          <caret line="208" column="32" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/increase/increase_sup.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="1368">
+          <caret line="61" column="45" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/config/lib_system_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="3477">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1444">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/common.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="4541">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5377" max-vertical-offset="7771">
+          <caret line="283" column="18" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1900">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="418">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/test.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2204">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1957">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/mod_init.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3233" max-vertical-offset="4142">
+          <caret line="208" column="32" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/increase/increase_sup.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1368">
+          <caret line="61" column="45" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/config/lib_system_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="3477">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="843" max-vertical-offset="1444">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/common.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="659" max-vertical-offset="4541">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5377" max-vertical-offset="7771">
+          <caret line="283" column="18" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1900">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="418">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/test.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2204">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1957">
@@ -820,19 +936,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="909">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Emakefile">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.0" vertical-offset="0" max-vertical-offset="1064">
           <caret line="26" column="61" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.erl">
@@ -869,7 +983,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9259257" vertical-offset="5190" max-vertical-offset="7771">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5377" max-vertical-offset="7771">
           <caret line="283" column="18" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="18" />
           <folding />
         </state>
@@ -909,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mod/increase/increase_sup.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64455783" vertical-offset="780" max-vertical-offset="1368">
+        <state vertical-scroll-proportion="0.8046875" vertical-offset="438" max-vertical-offset="1368">
           <caret line="61" column="45" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
           <folding />
         </state>
