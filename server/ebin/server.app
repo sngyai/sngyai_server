@@ -13,7 +13,7 @@
         {host, "127.0.0.1"},
         {password, "zhuanqian123"},
         {user, "developer"},
-        {port, 3332},
+        {port, 3306},
         {database, "zhuanqian"},
         {pool_size, 12}
       ]},
