@@ -13,11 +13,10 @@
 #import "MiidiAdSpot.h"
 #import "MiidiWallViewController.h"
 #import "MiidiAdWall.h"
-#import "AdSourceViewController.h"
 #import "YouMiWall.h"
+#import "PBOfferWall.h"
 
-
-@interface RootViewController ()
+@interface RootViewController () <PBOfferWallDelegate>
 
 @end
 
@@ -69,7 +68,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -101,27 +100,46 @@
 	else if (indexPath.row == 2) {
         cell.textLabel.text = @"果盟积分墙";
     }
-	
-	   
+    else if (indexPath.row == 3) {
+        cell.textLabel.text = @"触控积分墙";
+    }
     return cell;
-	
 }
 
+- (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
+          withError:(NSError *)error
+{
+    NSLog(@"----------%s", __PRETTY_FUNCTION__);
+    NSLog(@"用户已经完成的任务：%@", taskCoins);
+    
+    NSMutableString *mstr = [NSMutableString string];
+    if (taskCoins) {
+        if (taskCoins.count > 0) {
+            for (NSDictionary *dic in taskCoins) {
+                [mstr appendFormat:@"%@:%@;", [dic objectForKey:@"taskContent"], [dic objectForKey:@"coins"]];
+            }
+        }
+        else {
+            [mstr appendString:@"无积分"];
+        }
+    }
+    else {
+        [mstr appendString:error.localizedDescription];
+    }
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"返回的金币数"
+                                                        message:mstr
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"确定", nil];
+    [alertView show];
+    [alertView release];
+}
 
 #pragma mark -
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
-	
-		
+ 		
 	switch (indexPath.row) {
 		case 0: //米迪积分墙[下应用奖励积分]
             [MiidiAdWall showAppOffers:self withDelegate:self];
@@ -135,6 +153,9 @@
             break;
         case 2:
             [guomobwall_vc pushGuoMobWall:YES Hscreen:NO];
+            break;
+        case 3:
+            [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
             break;
 		default:
 			break;
@@ -228,7 +249,7 @@
     NSDictionary *dict = [notification userInfo];
     NSNumber *freshPoints = [dict objectForKey:kYouMiPointsManagerFreshPointsKey];
     NSLog(@"积分信息：%@", dict);
-    if([freshPoints intValue] > 0){
+//    if([freshPoints intValue] > 0){
         int *points = [YouMiPointsManager pointsRemained];
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
         if (localnotification!=nil) {
@@ -240,7 +261,7 @@
             localnotification.timeZone=[NSTimeZone defaultTimeZone];
             localnotification.soundName = UILocalNotificationDefaultSoundName;
             localnotification.alertBody=[NSString stringWithFormat:@"有米获得%@积分，有米总积分%d", freshPoints, *points];
-        
+            localnotification.soundName = UILocalNotificationDefaultSoundName;
             localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
         
             //下面设置本地通知发送的消息，这个消息可以接受
@@ -249,7 +270,7 @@
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
         }
-    }
+//    }
 //    // 手动积分管理可以通过下面这种方法获得每份积分的信息。
 //    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
 //    for (NSDictionary *aPointInfo in pointInfos) {
@@ -265,14 +286,14 @@
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-    if (point > 0) {
+//    if (point > 0) {
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
-        NSLog(@"入口：%@", localnotification);
+//        NSLog(@"入口：%@", localnotification);
         if (localnotification!=nil) {
-            NSLog(@"内部：%@", localnotification);
+//            NSLog(@"内部：%@", localnotification);
             NSDate *now=[NSDate new];
             localnotification.fireDate=now;
-            
+            localnotification.soundName = UILocalNotificationDefaultSoundName;
             localnotification.timeZone=[NSTimeZone defaultTimeZone];
             localnotification.soundName = UILocalNotificationDefaultSoundName;
             localnotification.alertBody= [NSString stringWithFormat:@"果盟通过%@获得%d积分",appname,point];
@@ -285,8 +306,8 @@
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
         }
-        NSLog(@"出口：%@", localnotification);
-    }
+//        NSLog(@"出口：%@", localnotification);
+//    }
 }
 
 -(void) alertMessage:(NSString*)msg{

@@ -8,14 +8,13 @@
 
 #import "MiidiWallViewController.h"
 #import "MiidiAdWall.h"
-#import "AdSourceViewController.h"
+
 
 @interface MiidiWallViewController ()
-@property (retain,nonatomic) AdSourceViewController *tableviewController;
+
 @end
 
 @implementation MiidiWallViewController
-@synthesize tableviewController = _tableviewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,7 +36,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.tableviewController = [[AdSourceViewController alloc]initWithNibName:@"AdSourceViewController" bundle:nil];
     
     //
 	
@@ -50,7 +48,6 @@
 }
 
 -(void) dealloc{
-    self.tableviewController = nil;
     [super dealloc];
 }
 
@@ -158,19 +155,6 @@
         case 5: // 积分墙开关
             [MiidiAdWall requestToggleOfAdWall:self];
 			break;
-            
-        case 6: // 广告数据源
-        {
-            [MiidiAdWall requestAdSourcesWithBlock:^(NSArray * adDescArray, NSError * error) {
-                if(adDescArray != nil && [adDescArray count] > 0){
-                    
-                    _tableviewController.adDescArray = adDescArray;
-                    [self.navigationController pushViewController:_tableviewController animated:YES];
-                    
-                }
-            }];
-        }
-            break;
 		default:
 			break;
 	}

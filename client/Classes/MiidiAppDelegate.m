@@ -9,7 +9,7 @@
 #import "MiidiAppDelegate.h"
 #import "RootViewController.h"
 #import "MiidiWallViewController.h"
-
+#import "PunchBoxAd.h"
 
 @implementation MiidiAppDelegate
 @synthesize window = _window;
@@ -26,8 +26,6 @@
     // Override point for customization after application launch.
     
     self.tabBarController = [[UITabBarController alloc] init];
-    
-    
 	
     RootViewController *viewController = [[[RootViewController alloc] init] autorelease];
     MiidiWallViewController *miidiWallViewController = [[[MiidiWallViewController alloc] init] autorelease];
@@ -36,15 +34,6 @@
                                              arrayWithObjects:viewController, miidiWallViewController, nil];
     self.window.rootViewController = self.tabBarController;
     
-    //    UINavigationController *navController = nil;
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//        navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
-//    } else {
-//        navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
-//    }
-//    self.window.rootViewController = navController;
-//    
-//    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

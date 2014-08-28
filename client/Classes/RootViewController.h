@@ -13,13 +13,14 @@
 #import "MiidiAdWallGetPointsDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "GuoMobWallViewController.h"
-
+#import "PBOfferWall.h"
 
 @interface RootViewController : UITableViewController <MiidiAdWallShowAppOffersDelegate
 , MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
+, PBOfferWallDelegate
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController *guomobwall_vc;
