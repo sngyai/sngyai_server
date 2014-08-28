@@ -22,6 +22,8 @@
 		B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBC19AA484500D7965A /* CFNetwork.framework */; };
 		B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBE19AA485D00D7965A /* libsqlite3.dylib */; };
 		B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CC019AA486C00D7965A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239519AEF15000C54B62 /* AppDelegate.m */; };
+		B7AE239919AEF25900C54B62 /* TaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239819AEF25900C54B62 /* TaskTableViewController.m */; };
 		B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF00519AE42140009C0C6 /* libz.dylib */; };
 		B7AFF07919AE64A30009C0C6 /* libPunchBoxAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF06F19AE64A30009C0C6 /* libPunchBoxAd.a */; };
 		B7AFF07A19AE64A30009C0C6 /* PunchBoxAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7AFF07819AE64A30009C0C6 /* PunchBoxAdRes.bundle */; };
@@ -29,14 +31,11 @@
 		BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE882ED11568C15900D0EDC9 /* QuartzCore.framework */; };
 		BE882ED41568C16800D0EDC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE882ED31568C16800D0EDC9 /* MessageUI.framework */; };
 		BE882EE61568C34600D0EDC9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE882EE51568C34600D0EDC9 /* RootViewController.m */; };
-		BE882F7F1568CB6A00D0EDC9 /* MiidiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE882F7E1568CB6A00D0EDC9 /* MiidiAppDelegate.m */; };
 		F14551C5171E43950087DDB5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14551C4171E43950087DDB5 /* Default-568h@2x.png */; };
 		F19AA98018A9BFAF0001C8FD /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19AA97418A9BFAF0001C8FD /* MiidiAdLib.a */; };
 		F19AAA8518A9C7590001C8FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19AAA8418A9C7590001C8FD /* ImageIO.framework */; };
 		F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19AAA8618A9C7770001C8FD /* MapKit.framework */; };
 		F1A0C83617E07C7B00474C9A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A0C83517E07C7B00474C9A /* AdSupport.framework */; };
-		F1FBB35918BF3D080061F8B6 /* MiidiWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FBB35818BF3D080061F8B6 /* MiidiWallViewController.m */; };
-		F1FBB35E18BF431D0061F8B6 /* CodeAdViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FBB35D18BF431D0061F8B6 /* CodeAdViewController_iPhone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +66,10 @@
 		B7867CBC19AA484500D7965A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B7867CBE19AA485D00D7965A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B7867CC019AA486C00D7965A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B7AE239419AEF15000C54B62 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7AE239519AEF15000C54B62 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7AE239719AEF25900C54B62 /* TaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewController.h; sourceTree = "<group>"; };
+		B7AE239819AEF25900C54B62 /* TaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewController.m; sourceTree = "<group>"; };
 		B7AFF00519AE42140009C0C6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B7AFF06F19AE64A30009C0C6 /* libPunchBoxAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPunchBoxAd.a; sourceTree = "<group>"; };
 		B7AFF07019AE64A30009C0C6 /* PBADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBADRequest.h; sourceTree = "<group>"; };
@@ -83,8 +86,6 @@
 		BE882ED31568C16800D0EDC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BE882EE41568C34600D0EDC9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		BE882EE51568C34600D0EDC9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		BE882F7D1568CB6A00D0EDC9 /* MiidiAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAppDelegate.h; sourceTree = "<group>"; };
-		BE882F7E1568CB6A00D0EDC9 /* MiidiAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiidiAppDelegate.m; sourceTree = "<group>"; };
 		F14551C4171E43950087DDB5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F19AA97218A9BFAF0001C8FD /* MiidiAdDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdDesc.h; path = Lib/MiidiAdDesc.h; sourceTree = "<group>"; };
 		F19AA97418A9BFAF0001C8FD /* MiidiAdLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MiidiAdLib.a; path = Lib/MiidiAdLib.a; sourceTree = "<group>"; };
@@ -101,10 +102,6 @@
 		F1FBB35018BF3B930061F8B6 /* MiidiAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdSpot.h; path = Lib/MiidiAdSpot.h; sourceTree = "<group>"; };
 		F1FBB35118BF3B930061F8B6 /* MiidiAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdView.h; path = Lib/MiidiAdView.h; sourceTree = "<group>"; };
 		F1FBB35218BF3B930061F8B6 /* MiidiAdViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdViewDelegate.h; path = Lib/MiidiAdViewDelegate.h; sourceTree = "<group>"; };
-		F1FBB35718BF3D080061F8B6 /* MiidiWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiWallViewController.h; sourceTree = "<group>"; };
-		F1FBB35818BF3D080061F8B6 /* MiidiWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiidiWallViewController.m; sourceTree = "<group>"; };
-		F1FBB35C18BF431D0061F8B6 /* CodeAdViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeAdViewController_iPhone.h; sourceTree = "<group>"; };
-		F1FBB35D18BF431D0061F8B6 /* CodeAdViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeAdViewController_iPhone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,14 +137,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BE882F7D1568CB6A00D0EDC9 /* MiidiAppDelegate.h */,
-				BE882F7E1568CB6A00D0EDC9 /* MiidiAppDelegate.m */,
+				B7AE239419AEF15000C54B62 /* AppDelegate.h */,
+				B7AE239519AEF15000C54B62 /* AppDelegate.m */,
 				BE882EE41568C34600D0EDC9 /* RootViewController.h */,
 				BE882EE51568C34600D0EDC9 /* RootViewController.m */,
-				F1FBB35718BF3D080061F8B6 /* MiidiWallViewController.h */,
-				F1FBB35818BF3D080061F8B6 /* MiidiWallViewController.m */,
-				F1FBB35C18BF431D0061F8B6 /* CodeAdViewController_iPhone.h */,
-				F1FBB35D18BF431D0061F8B6 /* CodeAdViewController_iPhone.m */,
+				B7AE239719AEF25900C54B62 /* TaskTableViewController.h */,
+				B7AE239819AEF25900C54B62 /* TaskTableViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -367,11 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1FBB35E18BF431D0061F8B6 /* CodeAdViewController_iPhone.m in Sources */,
+				B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				B7AE239919AEF25900C54B62 /* TaskTableViewController.m in Sources */,
 				BE882EE61568C34600D0EDC9 /* RootViewController.m in Sources */,
-				BE882F7F1568CB6A00D0EDC9 /* MiidiAppDelegate.m in Sources */,
-				F1FBB35918BF3D080061F8B6 /* MiidiWallViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = NO;
@@ -404,11 +399,12 @@
 					"$(PROJECT_DIR)/Lib/libPunchBoxAd",
 					/Users/sngyai/Downloads/Cocounion_AD_SDK_iOS_v5.0.1/PunchBoxSDK_Demo/libPunchBoxAd,
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = LiZhuan;
 				PROVISIONING_PROFILE = "c4ed2400-d64d-42d9-a17b-d9437b7cab66";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4ed2400-d64d-42d9-a17b-d9437b7cab66";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
 			};
@@ -418,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = YES;
@@ -443,6 +440,7 @@
 				PRODUCT_NAME = LiZhuan;
 				PROVISIONING_PROFILE = "c4ed2400-d64d-42d9-a17b-d9437b7cab66";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4ed2400-d64d-42d9-a17b-d9437b7cab66";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7s armv7";

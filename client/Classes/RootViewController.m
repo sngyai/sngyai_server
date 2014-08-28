@@ -7,14 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import "MiidiManager.h"
-#import "MiidiWallViewController.h"
-#import "CodeAdViewController_iPhone.h"
-#import "MiidiAdSpot.h"
-#import "MiidiWallViewController.h"
-#import "MiidiAdWall.h"
-#import "YouMiWall.h"
-#import "PBOfferWall.h"
 
 @interface RootViewController () <PBOfferWallDelegate>
 
@@ -38,73 +30,20 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
         //
-	guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
+	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     //设置代理
-    guomobwall_vc.delegate=self;
+    _guomobwall_vc.delegate=self;
     
     //设置果盟定时查询是否获得积分
-    guomobwall_vc.updatetime=30;
+    _guomobwall_vc.updatetime=30;
     
     //设置有米获取积分监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
-
-    //设置标题和返回
-	self.navigationItem.title = @"利赚-手机赚钱";
-	UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] init];
-	backButtonItem.title = @"返回";
-	self.navigationItem.backBarButtonItem = backButtonItem; 
-	[backButtonItem release];
 }
 
 #pragma mark -
 #pragma mark Table view data source
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 4;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 60.0;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Miidi Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-	// Configure the cell...
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"米迪积分墙";
-    } 
-	
-	else if (indexPath.row == 1) {
-        cell.textLabel.text = @"有米积分墙";
-    }
-	
-	else if (indexPath.row == 2) {
-        cell.textLabel.text = @"果盟积分墙";
-    }
-    else if (indexPath.row == 3) {
-        cell.textLabel.text = @"触控积分墙";
-    }
-    return cell;
-}
 
 - (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
           withError:(NSError *)error
@@ -135,50 +74,6 @@
     [alertView release];
 }
 
-#pragma mark -
-#pragma mark Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- 		
-	switch (indexPath.row) {
-		case 0: //米迪积分墙[下应用奖励积分]
-            [MiidiAdWall showAppOffers:self withDelegate:self];
-			break;
-        case 1:
-            [YouMiWall showOffers:YES didShowBlock:^{
-                NSLog(@"有米积分墙已显示");
-            } didDismissBlock:^{
-                NSLog(@"有米积分墙已退出");
-            }];
-            break;
-        case 2:
-            [guomobwall_vc pushGuoMobWall:YES Hscreen:NO];
-            break;
-        case 3:
-            [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
-            break;
-		default:
-			break;
-	}
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    if ([super initWithStyle:style] != nil)
-    {
-        UITabBarItem * item = [[UITabBarItem alloc]
-                               initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
-        item.badgeValue = @"新";
-        self.tabBarItem = item;
-    }
-    return self;
-}
-
-
-
-
-#pragma mark -
-#pragma mark Memory management
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -194,7 +89,7 @@
 
 
 - (void)dealloc {
-	[versionTipView_ release];
+	[_versionTipView_ release];
 	//
     [super dealloc];
 }
@@ -248,8 +143,8 @@
 - (void)pointsGotted:(NSNotification *)notification {
     NSDictionary *dict = [notification userInfo];
     NSNumber *freshPoints = [dict objectForKey:kYouMiPointsManagerFreshPointsKey];
-    NSLog(@"积分信息：%@", dict);
-//    if([freshPoints intValue] > 0){
+    if([freshPoints intValue] > 0){
+        NSLog(@"积分信息：%@", dict);
         int *points = [YouMiPointsManager pointsRemained];
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
         if (localnotification!=nil) {
@@ -270,7 +165,7 @@
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
         }
-//    }
+    }
 //    // 手动积分管理可以通过下面这种方法获得每份积分的信息。
 //    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
 //    for (NSDictionary *aPointInfo in pointInfos) {

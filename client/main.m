@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MiidiAppDelegate.h"
+#import "AppDelegate.h"
 #import "MiidiManager.h"
 #import "YouMiConfig.h"
 #import "YouMiPointsManager.h"
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     [YouMiPointsManager enable];
 
 	
-    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MiidiAppDelegate class]));
+    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 	
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     [pool release];

@@ -1,18 +1,17 @@
 //
-//  MiidiAppDelegate.m
-//  MiidiSdkSample_Banner
+//  AppDelegate.m
+//  LiZhuan
 //
-//  Created by adpooh miidi on 12-5-20.
-//  Copyright 2012 miidi. All rights reserved.
+//  Created by sngyai on 14-8-27.
+//
 //
 
-#import "MiidiAppDelegate.h"
+#import "AppDelegate.h"
+#import "TaskTableViewController.h"
 #import "RootViewController.h"
-#import "MiidiWallViewController.h"
 #import "PunchBoxAd.h"
 
-@implementation MiidiAppDelegate
-@synthesize window = _window;
+@implementation AppDelegate
 
 - (void)dealloc
 {
@@ -25,14 +24,13 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     
-    self.tabBarController = [[UITabBarController alloc] init];
-	
-    RootViewController *viewController = [[[RootViewController alloc] init] autorelease];
-    MiidiWallViewController *miidiWallViewController = [[[MiidiWallViewController alloc] init] autorelease];
+    tabBar = [[RootViewController alloc] init];
     
-    self.tabBarController.viewControllers = [NSArray
-                                             arrayWithObjects:viewController, miidiWallViewController, nil];
-    self.window.rootViewController = self.tabBarController;
+	
+    TaskTableViewController *viewController = [[[TaskTableViewController alloc] init] autorelease];
+ 
+    tabBar.viewControllers = [NSArray arrayWithObjects:viewController, nil];
+    self.window.rootViewController = tabBar;
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -41,8 +39,9 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    NSLog(@"HELLO, WORLD applicationDidEnterBackground");
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
@@ -88,10 +87,9 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    
+    NSLog(@"HELLO, WORLD applicationWillResignActive");
     // 图标上的数字减1
     application.applicationIconBadgeNumber -= 1;
 }
-
 
 @end
