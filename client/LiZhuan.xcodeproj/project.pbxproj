@@ -24,6 +24,8 @@
 		B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CC019AA486C00D7965A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239519AEF15000C54B62 /* AppDelegate.m */; };
 		B7AE239919AEF25900C54B62 /* TaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239819AEF25900C54B62 /* TaskTableViewController.m */; };
+		B7AE23A019B1DBF500C54B62 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239E19B1DBF500C54B62 /* InfoTableViewController.m */; };
+		B7AE23A119B1DBF500C54B62 /* InfoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AE239F19B1DBF500C54B62 /* InfoTableViewController.xib */; };
 		B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF00519AE42140009C0C6 /* libz.dylib */; };
 		B7AFF07919AE64A30009C0C6 /* libPunchBoxAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF06F19AE64A30009C0C6 /* libPunchBoxAd.a */; };
 		B7AFF07A19AE64A30009C0C6 /* PunchBoxAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7AFF07819AE64A30009C0C6 /* PunchBoxAdRes.bundle */; };
@@ -70,6 +72,9 @@
 		B7AE239519AEF15000C54B62 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B7AE239719AEF25900C54B62 /* TaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewController.h; sourceTree = "<group>"; };
 		B7AE239819AEF25900C54B62 /* TaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewController.m; sourceTree = "<group>"; };
+		B7AE239D19B1DBF500C54B62 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		B7AE239E19B1DBF500C54B62 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
+		B7AE239F19B1DBF500C54B62 /* InfoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewController.xib; sourceTree = "<group>"; };
 		B7AFF00519AE42140009C0C6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B7AFF06F19AE64A30009C0C6 /* libPunchBoxAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPunchBoxAd.a; sourceTree = "<group>"; };
 		B7AFF07019AE64A30009C0C6 /* PBADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBADRequest.h; sourceTree = "<group>"; };
@@ -143,6 +148,9 @@
 				BE882EE51568C34600D0EDC9 /* RootViewController.m */,
 				B7AE239719AEF25900C54B62 /* TaskTableViewController.h */,
 				B7AE239819AEF25900C54B62 /* TaskTableViewController.m */,
+				B7AE239D19B1DBF500C54B62 /* InfoTableViewController.h */,
+				B7AE239E19B1DBF500C54B62 /* InfoTableViewController.m */,
+				B7AE239F19B1DBF500C54B62 /* InfoTableViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 			files = (
 				B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */,
 				B71C689E19ACC4ED0054EAF4 /* Icon.png in Resources */,
+				B7AE23A119B1DBF500C54B62 /* InfoTableViewController.xib in Resources */,
 				F14551C5171E43950087DDB5 /* Default-568h@2x.png in Resources */,
 				B71C689D19ACC4ED0054EAF4 /* Icon-72.png in Resources */,
 				B7AFF07A19AE64A30009C0C6 /* PunchBoxAdRes.bundle in Resources */,
@@ -362,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7AE23A019B1DBF500C54B62 /* InfoTableViewController.m in Sources */,
 				B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				B7AE239919AEF25900C54B62 /* TaskTableViewController.m in Sources */,

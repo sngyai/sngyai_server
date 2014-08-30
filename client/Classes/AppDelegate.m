@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TaskTableViewController.h"
-#import "RootViewController.h"
-#import "PunchBoxAd.h"
+
 
 @implementation AppDelegate
 
@@ -24,14 +22,24 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     
-    tabBar = [[RootViewController alloc] init];
     
 	
-    TaskTableViewController *viewController = [[[TaskTableViewController alloc] init] autorelease];
- 
-    tabBar.viewControllers = [NSArray arrayWithObjects:viewController, nil];
-    self.window.rootViewController = tabBar;
+    TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
+    UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
+    InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
+    UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
     
+    
+    tabBar = [[RootViewController alloc] init];
+    tabBar.delegate = self;
+    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
+    tabBar.viewControllers = controllerArray;
+    
+    [[tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
+    [(UITabBarItem *)[tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
+    
+    self.window.rootViewController = tabBar;
+//    [self.window addSubview:tabBar.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -43,55 +51,30 @@
     __block UIBackgroundTaskIdentifier background_task;
     //Create a task object
     background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
-        while (TRUE) {
-            [NSThread sleepForTimeInterval:1];
-            NSLog(@"HELLO, WORLD running ~~~~~~~~~~~~~~~");
-            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
-        }
+        [self hold];
         NSLog(@"exit~~~~~~~~~~~~~~~~~~ back ground !!!");
         [application endBackgroundTask: background_task];
         background_task = UIBackgroundTaskInvalid;
     }];
-    
+}
 
-//    __block UIBackgroundTaskIdentifier background_task;
-//    background_task = [application beginBackgroundTaskWithExpirationHandler:^ {
-//        
-//        //Clean up code. Tell the system that we are done.
-//        [application endBackgroundTask: background_task];
-//        NSLog(@"Running out the background\n");
-//        background_task = UIBackgroundTaskInvalid;
-//    }];
-//    
-//    //To make the code block asynchronous
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        
-//        //### background task starts
-//        NSLog(@"Running in the background\n");
-//        while(TRUE)
-//        {
-//            NSLog(@"Background time Remaining: %f",[[UIApplication sharedApplication] backgroundTimeRemaining]);
-//            [NSThread sleepForTimeInterval:1]; //wait for 1 sec
-//        }
-//        //#### background task ends
-//        
-//        //Clean up code. Tell the system that we are done.
-//        NSLog(@"Running out the background   0\n");
-//        [application endBackgroundTask: background_task];
-//        NSLog(@"Running out the background   1\n");
-//        background_task = UIBackgroundTaskInvalid;
-//    });
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+- (void)hold
+{
+    NSLog(@"hold enter");
+    _isBackGround = YES;
+    NSLog(@"hold inner");
+    while (_isBackGround) {
+        NSLog(@"back !!!");
+        [NSThread sleepForTimeInterval:1];
+        /** clean the runloop for other source */
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
+    }
+    NSLog(@"hold exit");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
+    _isBackGround = NO;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

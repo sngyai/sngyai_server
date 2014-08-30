@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
+#import "TaskTableViewController.h"
+#import "RootViewController.h"
+#import "PunchBoxAd.h"
+#import "InfoTableViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder
+<
+    UIApplicationDelegate,
+    UITabBarControllerDelegate
+>
 {
     RootViewController *tabBar;
-    UIBackgroundTaskIdentifier myTask	;
+    BOOL _isBackGround;
 }
 
 @property (retain, nonatomic) UIWindow *window;
-//@property (nonatomic, unsafe_unretained)
-@property (nonatomic, strong) NSTimer *myTimer;
+
 @end

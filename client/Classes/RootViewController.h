@@ -33,8 +33,6 @@
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController * _guomobwall_vc;
-    
-	UILabel			* _versionTipView_;
 }
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
 

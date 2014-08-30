@@ -30,6 +30,7 @@
     PBOfferWallDelegate,
     GuoMobWallDelegate>
 {
+    UILabel *versionTipView_;
 }
 
 @end

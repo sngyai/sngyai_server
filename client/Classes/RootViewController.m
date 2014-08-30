@@ -89,7 +89,6 @@
 
 
 - (void)dealloc {
-	[_versionTipView_ release];
 	//
     [super dealloc];
 }
@@ -181,7 +180,7 @@
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-    //if (point > 0) {
+//    if (point > 0) {
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
 //        NSLog(@"入口：%@", localnotification);
         if (localnotification!=nil) {
@@ -200,9 +199,9 @@
             localnotification.userInfo = infoDic;
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
-      //  }
+        }
 //        NSLog(@"出口：%@", localnotification);
-    }
+//    }
 }
 
 -(void) alertMessage:(NSString*)msg{
