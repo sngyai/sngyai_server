@@ -40,6 +40,47 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     NSLog(@"HELLO, WORLD applicationDidEnterBackground");
+    __block UIBackgroundTaskIdentifier background_task;
+    //Create a task object
+    background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
+        while (TRUE) {
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"HELLO, WORLD running ~~~~~~~~~~~~~~~");
+            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
+        }
+        NSLog(@"exit~~~~~~~~~~~~~~~~~~ back ground !!!");
+        [application endBackgroundTask: background_task];
+        background_task = UIBackgroundTaskInvalid;
+    }];
+    
+
+//    __block UIBackgroundTaskIdentifier background_task;
+//    background_task = [application beginBackgroundTaskWithExpirationHandler:^ {
+//        
+//        //Clean up code. Tell the system that we are done.
+//        [application endBackgroundTask: background_task];
+//        NSLog(@"Running out the background\n");
+//        background_task = UIBackgroundTaskInvalid;
+//    }];
+//    
+//    //To make the code block asynchronous
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        
+//        //### background task starts
+//        NSLog(@"Running in the background\n");
+//        while(TRUE)
+//        {
+//            NSLog(@"Background time Remaining: %f",[[UIApplication sharedApplication] backgroundTimeRemaining]);
+//            [NSThread sleepForTimeInterval:1]; //wait for 1 sec
+//        }
+//        //#### background task ends
+//        
+//        //Clean up code. Tell the system that we are done.
+//        NSLog(@"Running out the background   0\n");
+//        [application endBackgroundTask: background_task];
+//        NSLog(@"Running out the background   1\n");
+//        background_task = UIBackgroundTaskInvalid;
+//    });
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

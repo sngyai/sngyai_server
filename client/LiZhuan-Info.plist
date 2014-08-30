@@ -30,11 +30,7 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-
-    <key>UIBackgroundModes</key>
-	<string>audio</string>
-	
-    <key>LSRequiresIPhoneOS</key>
+	<key>LSRequiresIPhoneOS</key>
 	<true/>
 </dict>
 </plist>

@@ -12,8 +12,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     RootViewController *tabBar;
+    UIBackgroundTaskIdentifier myTask	;
 }
 
 @property (retain, nonatomic) UIWindow *window;
-
+//@property (nonatomic, unsafe_unretained)
+@property (nonatomic, strong) NSTimer *myTimer;
 @end

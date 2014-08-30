@@ -142,46 +142,46 @@
 // 有米
 - (void)pointsGotted:(NSNotification *)notification {
     NSDictionary *dict = [notification userInfo];
-    NSNumber *freshPoints = [dict objectForKey:kYouMiPointsManagerFreshPointsKey];
-    if([freshPoints intValue] > 0){
-        NSLog(@"积分信息：%@", dict);
-        int *points = [YouMiPointsManager pointsRemained];
-        UILocalNotification *localnotification=[[UILocalNotification alloc] init];
-        if (localnotification!=nil) {
+    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
+    for (NSDictionary *aPointInfo in pointInfos) {
+        // aPointInfo 是每份积分的信息，包括积分数，userID，下载的APP的名字
         
-            NSDate *now=[NSDate new];
-            localnotification.fireDate=now;
-            localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
+        NSLog(@"积分数：%@", aPointInfo[kYouMiPointsManagerPointAmountKey]);
+        NSLog(@"userID：%@", aPointInfo[kYouMiPointsManagerPointUserIDKey]);
+        NSLog(@"产品名字：%@", aPointInfo[kYouMiPointsManagerPointProductNameKey]);
         
-            localnotification.timeZone=[NSTimeZone defaultTimeZone];
-            localnotification.soundName = UILocalNotificationDefaultSoundName;
-            localnotification.alertBody=[NSString stringWithFormat:@"有米获得%@积分，有米总积分%d", freshPoints, *points];
-            localnotification.soundName = UILocalNotificationDefaultSoundName;
-            localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
-        
-            //下面设置本地通知发送的消息，这个消息可以接受
-            NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
-            localnotification.userInfo = infoDic;
-            //发送通知
-            [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+        if([aPointInfo[kYouMiPointsManagerPointAmountKey] intValue] > 0){
+            NSLog(@"积分信息：%@", dict);
+            UILocalNotification *localnotification=[[UILocalNotification alloc] init];
+            if (localnotification!=nil) {
+                
+                NSDate *now=[NSDate new];
+                localnotification.fireDate=now;
+                localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
+                
+                localnotification.timeZone=[NSTimeZone defaultTimeZone];
+                localnotification.soundName = UILocalNotificationDefaultSoundName;
+                localnotification.alertBody=[NSString stringWithFormat:@"用户%@通过有米在应用%@获得%@积分",
+                                             aPointInfo[kYouMiPointsManagerPointUserIDKey],
+                                             aPointInfo[kYouMiPointsManagerPointProductNameKey],
+                                             aPointInfo[kYouMiPointsManagerPointAmountKey] ];
+                localnotification.soundName = UILocalNotificationDefaultSoundName;
+                localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+                
+                //下面设置本地通知发送的消息，这个消息可以接受
+                NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+                localnotification.userInfo = infoDic;
+                //发送通知
+                [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+            }
         }
     }
-//    // 手动积分管理可以通过下面这种方法获得每份积分的信息。
-//    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
-//    for (NSDictionary *aPointInfo in pointInfos) {
-//        // aPointInfo 是每份积分的信息，包括积分数，userID，下载的APP的名字
-//        NSLog(@"积分数：%@", aPointInfo[kYouMiPointsManagerPointAmountKey]);
-//        NSLog(@"userID：%@", aPointInfo[kYouMiPointsManagerPointUserIDKey]);
-//        NSLog(@"产品名字：%@", aPointInfo[kYouMiPointsManagerPointProductNameKey]);
-//        
-//        // TODO 按需要处理
-//    }
 }
 
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-//    if (point > 0) {
+    //if (point > 0) {
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
 //        NSLog(@"入口：%@", localnotification);
         if (localnotification!=nil) {
@@ -200,9 +200,9 @@
             localnotification.userInfo = infoDic;
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
-        }
+      //  }
 //        NSLog(@"出口：%@", localnotification);
-//    }
+    }
 }
 
 -(void) alertMessage:(NSString*)msg{
