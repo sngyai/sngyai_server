@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootViewController.h"
 
 @interface InfoTableViewController : UITableViewController
 

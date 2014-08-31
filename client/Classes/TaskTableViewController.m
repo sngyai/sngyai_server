@@ -20,7 +20,6 @@
     {
         UITabBarItem * item = [[UITabBarItem alloc]
                                initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
-        item.title = @"利赚";
         item.badgeValue = @"新";
         self.tabBarItem = item;
     }
@@ -59,7 +58,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Miidi Cell";
+    static NSString *CellIdentifier = @"Task Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {

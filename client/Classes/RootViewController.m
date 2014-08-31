@@ -37,6 +37,10 @@
     //设置果盟定时查询是否获得积分
     _guomobwall_vc.updatetime=30;
     
+    //初始化积分
+    
+    _score = [[[NSNumber alloc] initWithInt:0] autorelease];
+    
     //设置有米获取积分监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
@@ -151,6 +155,12 @@
         
         if([aPointInfo[kYouMiPointsManagerPointAmountKey] intValue] > 0){
             NSLog(@"积分信息：%@", dict);
+            
+            //更新总积分
+            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue] +
+                                   [aPointInfo[kYouMiPointsManagerPointAmountKey] intValue]] autorelease];
+            self.score = newScore;
+            
             UILocalNotification *localnotification=[[UILocalNotification alloc] init];
             if (localnotification!=nil) {
                 
@@ -180,7 +190,12 @@
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-//    if (point > 0) {
+    if (point > 0) {
+        
+        NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+point] autorelease];
+        
+        self.score = newScore;
+        NSLog(@"hello, world ****************** add_score%d, total_score:%@", point, self.score);
         UILocalNotification *localnotification=[[UILocalNotification alloc] init];
 //        NSLog(@"入口：%@", localnotification);
         if (localnotification!=nil) {
@@ -201,7 +216,7 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
         }
 //        NSLog(@"出口：%@", localnotification);
-//    }
+    }
 }
 
 -(void) alertMessage:(NSString*)msg{

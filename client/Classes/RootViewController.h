@@ -33,7 +33,9 @@
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController * _guomobwall_vc;
+    NSNumber *_score;
 }
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
+@property(nonatomic,copy)NSNumber *score;
 
 @end
