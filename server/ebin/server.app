@@ -10,7 +10,7 @@
     {start_phases, []},
     {env, [
       {mysql_config, [
-        {host, "127.0.0.1"},
+        {host, "123.57.9.112"},
         {password, "MoonLight"},
         {user, "root"},
         {port, 3306},

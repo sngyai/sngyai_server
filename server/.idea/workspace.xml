@@ -2,97 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="6c710d36-de48-4af6-9089-c7d8193ec96e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.ssh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.ssh.pub" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/log/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server.app.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erl_crash.dump" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rebar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sngyai_server.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/lib_language.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/lib_manage.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/lib_read_only_asyn_data.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/mod_delay_plug.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/mod_node_manager.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/mod_server_state.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mod/mod_storage_file.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/start-dev.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Emakefile" afterPath="$PROJECT_DIR$/Emakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/chat.hrl" afterPath="$PROJECT_DIR$/include/chat.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/common.hrl" afterPath="$PROJECT_DIR$/include/common.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/core/db_agent.erl" afterPath="$PROJECT_DIR$/src/db/core/db_agent.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_player.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_player.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_server_state.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_server_state.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_system_config.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_system_config.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/core/db_cache.erl" afterPath="$PROJECT_DIR$/src/db/core/db_cache.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/core/db_mysql.erl" afterPath="$PROJECT_DIR$/src/db/core/db_mysql.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/e_test.cmd" afterPath="$PROJECT_DIR$/ebin/e_test.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/erl_crash.dump" afterPath="$PROJECT_DIR$/ebin/erl_crash.dump" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/gen_player/gen_player.erl" afterPath="$PROJECT_DIR$/src/mod/gen_player/gen_player.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/global_msg.hrl" afterPath="$PROJECT_DIR$/include/global_msg.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" afterPath="$PROJECT_DIR$/src/mod/increase/increase_sup.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/config/lib_config.erl" afterPath="$PROJECT_DIR$/src/lib/config/lib_config.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_monitor_system.erl" afterPath="$PROJECT_DIR$/src/lib/lib_monitor_system.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_server_log.erl" afterPath="$PROJECT_DIR$/src/lib/lib_server_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/server_state/lib_server_state.erl" afterPath="$PROJECT_DIR$/src/lib/server_state/lib_server_state.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl" afterPath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" afterPath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/config/lib_system_config.erl" afterPath="$PROJECT_DIR$/src/lib/config/lib_system_config.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_algo.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_algo.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_math.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_math.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_proc.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_proc.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_random.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_random.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_string.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_string.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_time.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_time.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/utils/lib_util_type.erl" afterPath="$PROJECT_DIR$/src/lib/utils/lib_util_type.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl.conf" afterPath="$PROJECT_DIR$/ebin/log4erl.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/log4erl.hrl" afterPath="$PROJECT_DIR$/include/log4erl.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.erl" afterPath="$PROJECT_DIR$/src/main.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_chat.erl" afterPath="$PROJECT_DIR$/src/mod/mod_chat.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_chat_system.erl" afterPath="$PROJECT_DIR$/src/mod/mod_chat_system.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/dynamic_compile/mod_code.erl" afterPath="$PROJECT_DIR$/priv/src/dynamic_compile/mod_code.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_crone.erl" afterPath="$PROJECT_DIR$/src/mod/mod_crone.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/increase/mod_increase_player.erl" afterPath="$PROJECT_DIR$/src/mod/increase/mod_increase_player.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_init.erl" afterPath="$PROJECT_DIR$/src/mod/mod_init.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/gen_player/mod_player.erl" afterPath="$PROJECT_DIR$/src/mod/gen_player/mod_player.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_random.erl" afterPath="$PROJECT_DIR$/src/mod/mod_random.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_reloader.erl" afterPath="$PROJECT_DIR$/src/mod/mod_reloader.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_server_log.erl" afterPath="$PROJECT_DIR$/src/mod/mod_server_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_webserver.erl" afterPath="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/os_mon.app" afterPath="$PROJECT_DIR$/ebin/os_mon.app" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/player_server.erl" afterPath="$PROJECT_DIR$/src/mod/player_server.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/protocol.hrl" afterPath="$PROJECT_DIR$/include/protocol.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/rank.hrl" afterPath="$PROJECT_DIR$/include/rank.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/record.hrl" afterPath="$PROJECT_DIR$/include/record.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_compiler_supplement.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info_compiler_supplement.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_internal.hrl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info_internal.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_transform.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/record_info_transform.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/robot.app" afterPath="$PROJECT_DIR$/ebin/robot.app" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/robot.cmd" afterPath="$PROJECT_DIR$/ebin/robot.cmd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run.sh" afterPath="$PROJECT_DIR$/ebin/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sasl.config" afterPath="$PROJECT_DIR$/ebin/sasl.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server.app" afterPath="$PROJECT_DIR$/ebin/server.app" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server.cmd" afterPath="$PROJECT_DIR$/ebin/server.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server_app.erl" afterPath="$PROJECT_DIR$/src/server_app.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server_sup.erl" afterPath="$PROJECT_DIR$/src/server_sup.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server_sup_sys.erl" afterPath="$PROJECT_DIR$/src/server_sup_sys.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/sys_alarm_monitor_sup.erl" afterPath="$PROJECT_DIR$/priv/src/sys_monitor/sys_alarm_monitor_sup.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/networking/tcp_request_broker.erl" afterPath="$PROJECT_DIR$/src/networking/tcp_request_broker.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.hrl" afterPath="$PROJECT_DIR$/priv/src/record_proplist/test.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.iml" afterPath="$PROJECT_DIR$/server.iml" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,21 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="db_agent_system_config.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1444">
-              <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_agent_user.erl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="db_agent_user.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/db_agent_user.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50584304" vertical-offset="305" max-vertical-offset="1235">
-              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="1235">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,18 +91,18 @@
       <file leaf-file-name="common.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/common.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4313" max-vertical-offset="4541">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3972" max-vertical-offset="4541">
               <caret line="227" column="46" selection-start-line="163" selection-start-column="0" selection-end-line="227" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record.hrl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="record.hrl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/record.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="893">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7598315" vertical-offset="181" max-vertical-offset="893">
+              <caret line="38" column="9" selection-start-line="37" selection-start-column="2" selection-end-line="38" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -208,8 +111,18 @@
       <file leaf-file-name="mod_webserver.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5966" max-vertical-offset="6859">
-              <caret line="314" column="59" selection-start-line="314" selection-start-column="42" selection-end-line="314" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5572" max-vertical-offset="6859">
+              <caret line="316" column="23" selection-start-line="316" selection-start-column="23" selection-end-line="316" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="erlang.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/local/erlang/lib/erlang/lib/erts-6.0/src/erlang.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="20863" max-vertical-offset="70699">
+              <caret line="1111" column="0" selection-start-line="1111" selection-start-column="0" selection-end-line="1111" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -248,8 +161,8 @@
       <file leaf-file-name="lib_user.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1862">
-              <caret line="74" column="15" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="15" />
+            <state vertical-scroll-proportion="-9.481482" vertical-offset="960" max-vertical-offset="1862">
+              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -283,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/mod/mod_crone.erl" />
         <option value="$PROJECT_DIR$/src/server_sup_sys.erl" />
         <option value="$PROJECT_DIR$/include/common.hrl" />
-        <option value="$PROJECT_DIR$/include/record.hrl" />
         <option value="$PROJECT_DIR$/src/mod/gen_player/mod_player.erl" />
         <option value="$PROJECT_DIR$/src/lib/utils/lib_util_type.erl" />
         <option value="$PROJECT_DIR$/src/db/db_agent_player.erl" />
@@ -297,6 +209,7 @@
         <option value="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
         <option value="$PROJECT_DIR$/src/lib/lib_user.erl" />
         <option value="$PROJECT_DIR$/src/db/db_agent_user.erl" />
+        <option value="$PROJECT_DIR$/include/record.hrl" />
       </list>
     </option>
   </component>
@@ -382,6 +295,24 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mod" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -404,6 +335,20 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -416,7 +361,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/knight/server/erlang" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -849,19 +794,19 @@
       <workItem from="1408376692296" duration="5023000" />
       <workItem from="1408452822792" duration="12599000" />
       <workItem from="1408465484175" duration="12000" />
-      <workItem from="1409555870739" duration="292000" />
+      <workItem from="1409555870739" duration="3641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17926000" />
+    <option name="totallyTimeSpent" value="21275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1926" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17987151" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -878,7 +823,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12353568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -908,14 +853,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_type.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3438" max-vertical-offset="5082">
-          <caret line="174" column="113" selection-start-line="174" selection-start-column="99" selection-end-line="174" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/common.hrl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2943" max-vertical-offset="5019">
@@ -1232,34 +1169,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/common.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2943" max-vertical-offset="5019">
-          <caret line="227" column="46" selection-start-line="163" selection-start-column="0" selection-end-line="227" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/record.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="987">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5137" max-vertical-offset="8589">
           <caret line="250" column="15" selection-start-line="250" selection-start-column="9" selection-end-line="250" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6586" max-vertical-offset="7581">
-          <caret line="314" column="59" selection-start-line="314" selection-start-column="42" selection-end-line="314" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -1272,18 +1185,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
+    <entry file="file://$PROJECT_DIR$/include/common.hrl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1862">
-          <caret line="74" column="15" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2943" max-vertical-offset="5019">
+          <caret line="227" column="46" selection-start-line="163" selection-start-column="0" selection-end-line="227" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/erlang/lib/erlang/lib/erts-6.0/src/erlang.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20863" max-vertical-offset="70699">
+          <caret line="1111" column="0" selection-start-line="1111" selection-start-column="0" selection-end-line="1111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5572" max-vertical-offset="6859">
+          <caret line="316" column="23" selection-start-line="316" selection-start-column="23" selection-end-line="316" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/db_agent_user.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50584304" vertical-offset="305" max-vertical-offset="1235">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="1235">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.481482" vertical-offset="960" max-vertical-offset="1862">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/record.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7598315" vertical-offset="181" max-vertical-offset="893">
+          <caret line="38" column="9" selection-start-line="37" selection-start-column="2" selection-end-line="38" selection-end-column="8" />
           <folding />
         </state>
       </provider>
