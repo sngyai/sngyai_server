@@ -49,7 +49,6 @@ server_stop() ->
 %% Node 节点名
 rpc_server_stop([Node]) ->
   io:format("   rpc:call game server stopping ... ~p ~n", [Node]),
-  rpc:call(Node, lib_manage, kick_all_player, []),% 踢掉在线玩家
   rpc:call(Node, main, server_stop, []),% 停止服务
   io:format("   server_stoped finish ...~n"),
   erlang:halt(),

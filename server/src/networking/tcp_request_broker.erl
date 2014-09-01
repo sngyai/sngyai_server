@@ -298,10 +298,6 @@ login_lost(Socket, _Client, Reason) ->
 .
 %% 关闭socekt操作,一段时间之后没有返回,就强行杀死
 fixed_close(Socket) ->
-  %    Pid = spawn_link(fun() ->
-  %        gen_tcp:close(Socket)
-  %        %catch erlang:port_close((Status_After_Set_Logout_Time#player_status.other_data)#player_other.socket),
-  %    end),
   catch erlang:port_close(Socket),
   receive
     {'EXIT', Socket, _} ->

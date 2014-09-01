@@ -18,7 +18,7 @@
 
 -endif. % RECORD
 %% 请将新增加的record记录名称 追加至里面
--define(EXPORT_RECORD_INFO, [server_node, player_status]).
+-define(EXPORT_RECORD_INFO, [server_node, user]).
 %% 服务器节点
 -record(server_node, {
   id = "",                                % server编号
@@ -30,12 +30,12 @@
 
 %% 玩家状态信息记录
 %% player ==> player_status
--record(player_status, {
+-record(user, {
   id,                                     %% 玩家ID
-  player_account = "",                    %% 玩家平台账号
-  nick_name = "",                         %% 玩家昵称
+  account = "",                    %% 玩家平台账号
   score = 0,
   money = 0,
-  restrict_state = 0
+  restrict_state = 0,
+  passwd
 }).
 

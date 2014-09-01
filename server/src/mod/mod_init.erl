@@ -199,7 +199,14 @@ do_terminate(Reason, State) ->
 %% 初始ETS表
 %% 返回值:ok
 init_ets() ->
-  ets:new(?ETS_ONLINE, [{keypos, #player_status.id}, named_table, public, set]),      %%在线玩家列表
+  ets:new(?ETS_ONLINE, [{keypos, #user.id}, named_table, public, set]),      %%在线玩家列表
+  AllUsers = db_agent_user:get_all_users(),
+  ?T("all users 1: ~p~n", [AllUsers]),
+  lists:foreach(
+    fun(#user{} = User_E) ->
+      ets:insert(?ETS_ONLINE, User_E)
+    end, AllUsers),
+  ?T("all users 2: ~p~n", [ets:tab2list(?ETS_ONLINE)]),
   ets:new(?Ets_Services_Time, [{keypos, 1}, named_table, public, set]),
   ok.
 

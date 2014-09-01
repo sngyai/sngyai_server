@@ -36,10 +36,10 @@ select() ->
 %% Player_Status:#player_status
 %% Ver:当前版本号
 %% 返回值:不使用
-insert(Player_Status) ->
+insert(UserInfo) ->
   Ver = lib_storage_file:get_ver(),
   %?T("insert1 ver:~p", [Ver]),
-  dets:insert(?dets_key_storage_player, #storage_file_player_status{id = Player_Status#player_status.id, ver = Ver, time = lib_util_time:get_timestamp(), value = Player_Status}),
+  dets:insert(?dets_key_storage_player, #storage_file_player_status{id = UserInfo#user.id, ver = Ver, time = lib_util_time:get_timestamp(), value = UserInfo}),
   dets:sync(?dets_key_storage_player).
 
 

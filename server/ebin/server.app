@@ -11,8 +11,8 @@
     {env, [
       {mysql_config, [
         {host, "127.0.0.1"},
-        {password, "zhuanqian123"},
-        {user, "developer"},
+        {password, "MoonLight"},
+        {user, "root"},
         {port, 3306},
         {database, "zhuanqian"},
         {pool_size, 12}

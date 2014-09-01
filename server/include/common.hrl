@@ -43,14 +43,14 @@
 -define(MYSQL_DB_POOL_GAME, mysql_conn_pool_game).
 
 %% 数据库调用模块
+%% -define(DB_GAME, (db_mysql:new(?MYSQL_DB_POOL_GAME))).
 -define(DB_GAME, db_mysql).
 
 %%Mysql语句执行超时时间,单位毫秒
 -define(DB_EXECUTE_TIMEOUT, 20000).
 
 
-%%%_------------------------ETS表相关--------------------------------------------------------------------------------------------
--define(ETS_SERVER_NODE, ets_server_node).
+%%%_------------------------ETS表相关-------------------------------------------------------------------
 -define(ETS_STAT_DB, ets_stat_db).  %% 数据库访问统计(表名，操作，次数)
 -define(ETS_ONLINE, ets_online).    %% 玩家在线ETS
 -define(ETS_MAP_WALKABLE, ets_map_walkable).    %% 可行走坐标
