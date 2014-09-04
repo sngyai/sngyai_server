@@ -7,23 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MiidiAppDelegate.h"
+#import "AppDelegate.h"
 #import "MiidiManager.h"
 #import "YouMiConfig.h"
 #import "YouMiPointsManager.h"
-
+#import "PunchBoxAd.h"
 
 int main(int argc, char *argv[]) {
-   
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
+    [PunchBoxAd startSession:@"889879453-E23F9F-E650-079D-6B1EF8ECC"];
+    
     [MiidiManager setAppPublisher:@"19071"  withAppSecret:(NSString*)@"5sb72gp3iyj8znow" ];
     [YouMiConfig launchWithAppID:@"18e9f2d24d78bb26" appSecret:@"9c3909b6e5f685cb"];
     [YouMiConfig setIsTesting:NO];
     [YouMiPointsManager enable];
-    
-	int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MiidiAppDelegate class]));
+
 	
+    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+	
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     [pool release];
     return retVal;
 }

@@ -7,24 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MiidiAdWallShowAppOffersDelegate.h"
+
+#import "YouMiWall.h"
+#import "MiidiAdSpot.h"
+#import "MiidiAdWall.h"
+#import "PBOfferWall.h"
+#import "MiidiManager.h"
+#import "GuoMobWallViewController.h"
+#import "MiidiAdWallGetPointsDelegate.h"
 #import "MiidiAdWallAwardPointsDelegate.h"
 #import "MiidiAdWallSpendPointsDelegate.h"
-#import "MiidiAdWallGetPointsDelegate.h"
+#import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
-#import "GuoMobWallViewController.h"
 
 
-@interface RootViewController : UITableViewController <MiidiAdWallShowAppOffersDelegate
+
+
+
+@interface RootViewController : UITabBarController <MiidiAdWallShowAppOffersDelegate
 , MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
+, PBOfferWallDelegate
 , GuoMobWallDelegate>
 {
-    GuoMobWallViewController *guomobwall_vc;
-    
-	UILabel			*versionTipView_;
+    GuoMobWallViewController * _guomobwall_vc;
+    NSNumber *_score;
 }
+@property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
+@property(nonatomic,copy)NSNumber *score;
 
 @end
