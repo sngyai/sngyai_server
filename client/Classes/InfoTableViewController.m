@@ -30,14 +30,6 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"个人中心";
-    
-//    self.refreshControl = [[UIRefreshControl alloc] init];
-//    self.refreshControl.tintColor = [UIColor grayColor];
-//    
-//    self.refreshControl.attributedTitle = [[NSAttributedString alloc]
-//                                           initWithString:@"下拉刷新"];
-//    [self.refreshControl addTarget:self action:@selector(refreshScore)
-//                               forControlEvents:UIControlEventValueChanged];
     [self setupRefresh];
 }
 
@@ -66,11 +58,6 @@
 #pragma mark 开始进入刷新状态
 - (void)headerRereshing
 {
-    //RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
-    //NSNumber* newScore = [[[NSNumber alloc] initWithInt:[tabBarController.score intValue]+1] autorelease];
-    
-    //tabBarController.score = newScore;
-    
     // 2.2秒后刷新表格UI
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 刷新表格
@@ -113,26 +100,6 @@
     
     return cell;
 }
-
-//- (void) refreshScore
-//{
-//    [self performSelector:@selector(handleScore) withObject:nil afterDelay:0.5];
-//}
-//
-//- (void) handleScore
-//{
-//    RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
-//    NSNumber* newScore = [[[NSNumber alloc] initWithInt:[tabBarController.score intValue]+1] autorelease];
-//    
-//    tabBarController.score = newScore;
-//    
-//    self.refreshControl.attributedTitle = [[NSAttributedString alloc]
-//                                           initWithString:@"正在刷新..."];
-//    [self.refreshControl endRefreshing];
-//    
-//    [self.tableView reloadData];
-//}
-
 
 /*
 // Override to support conditional editing of the table view.

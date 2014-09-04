@@ -133,7 +133,9 @@
              }
             break;
         case 3:
-            [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+            {
+                [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+            }
             break;
 		default:
 			break;

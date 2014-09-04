@@ -41,6 +41,10 @@
     
     _score = [[[NSNumber alloc] initWithInt:0] autorelease];
     
+    [PBOfferWall sharedOfferWall].delegate = self;
+    
+    [NSThread detachNewThreadSelector:@selector(threadMethod) toTarget:self withObject:nil];
+
     //设置有米获取积分监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
@@ -113,26 +117,26 @@
 
 - (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
 	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
-	
-	[self alertMessage:[NSString stringWithFormat:@"卧槽看到总分了（米迪）, 总积分 %d !",totalPoints]];
-    UILocalNotification *localnotification=[[UILocalNotification alloc] init];
-    if (localnotification!=nil) {
+	if (totalPoints > 0) {
+        UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
+        if (localnotification!=nil) {
         
-        NSDate *now=[NSDate new];
-        localnotification.fireDate=now;
-        localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
+            NSDate *now=[NSDate new];
+            localnotification.fireDate=now;
+            localnotification.repeatInterval=0; //循环次数，kCFCalendarUnitWeekday一周一次
         
-        localnotification.timeZone=[NSTimeZone defaultTimeZone];
-        localnotification.soundName = UILocalNotificationDefaultSoundName;
-        localnotification.alertBody=[NSString stringWithFormat:@"米迪的%@积分，总积分%d", pointName, totalPoints];
+            localnotification.timeZone=[NSTimeZone defaultTimeZone];
+            localnotification.soundName = UILocalNotificationDefaultSoundName;
+            localnotification.alertBody=[NSString stringWithFormat:@"米迪的%@积分，总积分%d", pointName, totalPoints];
         
-        localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+            localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
         
-        //下面设置本地通知发送的消息，这个消息可以接受
-        NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
-        localnotification.userInfo = infoDic;
-        //发送通知
-        [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+            //下面设置本地通知发送的消息，这个消息可以接受
+            NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+            localnotification.userInfo = infoDic;
+            //发送通知
+            [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+        }
     }
 }
 
@@ -161,7 +165,7 @@
                                    [aPointInfo[kYouMiPointsManagerPointAmountKey] intValue]] autorelease];
             self.score = newScore;
             
-            UILocalNotification *localnotification=[[UILocalNotification alloc] init];
+            UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             if (localnotification!=nil) {
                 
                 NSDate *now=[NSDate new];
@@ -196,10 +200,9 @@
         
         self.score = newScore;
         NSLog(@"hello, world ****************** add_score%d, total_score:%@", point, self.score);
-        UILocalNotification *localnotification=[[UILocalNotification alloc] init];
-//        NSLog(@"入口：%@", localnotification);
+        UILocalNotification *localnotification=[[[UILocalNotification alloc] init] autorelease];
+
         if (localnotification!=nil) {
-//            NSLog(@"内部：%@", localnotification);
             NSDate *now=[NSDate new];
             localnotification.fireDate=now;
             localnotification.soundName = UILocalNotificationDefaultSoundName;
@@ -215,8 +218,53 @@
             //发送通知
             [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
         }
-//        NSLog(@"出口：%@", localnotification);
     }
+}
+
+-(void)threadMethod
+
+{
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
+    
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
+    [[NSRunLoop currentRunLoop] run];
+}
+
+-(void)timerDone
+{
+    [[PBOfferWall sharedOfferWall] queryRewardCoin:^(NSArray *taskCoins, PBRequestError *error) {
+        [MiidiAdWall requestGetPoints:self];
+        if (taskCoins.count > 0) {
+            
+            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+taskCoins.count] autorelease];
+            
+            self.score = newScore;
+            NSLog(@"hello, world ****************** add_score%d, total_score:%@ taskCoins:%@", taskCoins.count, self.score, taskCoins);
+            UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
+            
+            if (localnotification!=nil) {
+                NSDate *now=[NSDate new];
+                localnotification.fireDate=now;
+                localnotification.soundName = UILocalNotificationDefaultSoundName;
+                localnotification.timeZone=[NSTimeZone defaultTimeZone];
+                localnotification.soundName = UILocalNotificationDefaultSoundName;
+                NSMutableString *alertStr = [NSMutableString string];
+                for (NSDictionary *dic in taskCoins) {
+                    [alertStr appendFormat:@"%@:%@;", [dic objectForKey:@"taskContent"], [dic objectForKey:@"coins"]];
+                }
+                localnotification.alertBody = alertStr;
+                
+                localnotification.hasAction = YES; //是否显示额外的按钮，为no时alertAction消失
+                
+                //下面设置本地通知发送的消息，这个消息可以接受
+                NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"value" forKey:@"key"];
+                localnotification.userInfo = infoDic;
+                //发送通知
+                [[UIApplication sharedApplication] scheduleLocalNotification:localnotification];
+            }
+        }
+    }];
 }
 
 -(void) alertMessage:(NSString*)msg{

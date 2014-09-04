@@ -21,16 +21,14 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    
-    
-	
+
     TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
     UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
     InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
     UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
     
     
-    tabBar = [[RootViewController alloc] init];
+    tabBar = [[[RootViewController alloc] init]autorelease];
     tabBar.delegate = self;
     NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
     tabBar.viewControllers = controllerArray;
@@ -52,7 +50,6 @@
     //Create a task object
     background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
         [self hold];
-        NSLog(@"exit~~~~~~~~~~~~~~~~~~ back ground !!!");
         [application endBackgroundTask: background_task];
         background_task = UIBackgroundTaskInvalid;
     }];
@@ -64,7 +61,7 @@
     _isBackGround = YES;
     NSLog(@"hold inner");
     while (_isBackGround) {
-        NSLog(@"back !!!");
+        NSLog(@"running ~~~~~~~~~~~~~~");
         [NSThread sleepForTimeInterval:1];
         /** clean the runloop for other source */
         CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
@@ -74,6 +71,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    NSLog(@"enter foreground");
     _isBackGround = NO;
 }
 
@@ -98,7 +96,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LocalNotification" message:notification.alertBody delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alert show];
     
-    NSDictionary* dic = [[NSDictionary alloc]init];
+    NSDictionary* dic = [[[NSDictionary alloc]init]autorelease];
     //这里可以接受到本地通知中心发送的消息
     dic = notification.userInfo;
     NSLog(@"user info = %@",[dic objectForKey:@"key"]);
