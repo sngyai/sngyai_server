@@ -19,23 +19,28 @@
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
+#import "DMOfferWallManager.h"
 
 
 
 
 
-@interface RootViewController : UITabBarController <MiidiAdWallShowAppOffersDelegate
+@interface RootViewController : UITabBarController
+<MiidiAdWallShowAppOffersDelegate
 , MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
 , PBOfferWallDelegate
+, DMOfferWallManagerDelegate
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController * _guomobwall_vc;
+    DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
 }
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
+@property(nonatomic,copy)DMOfferWallManager *offerWallManager;
 @property(nonatomic,copy)NSNumber *score;
 
 @end

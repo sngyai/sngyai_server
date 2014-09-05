@@ -20,6 +20,7 @@
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
+#import "DMOfferWallManager.h"
 
 @interface TaskTableViewController : UITableViewController
     <MiidiAdWallShowAppOffersDelegate,

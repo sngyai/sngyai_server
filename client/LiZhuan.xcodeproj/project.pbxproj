@@ -29,6 +29,11 @@
 		B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF00519AE42140009C0C6 /* libz.dylib */; };
 		B7AFF07919AE64A30009C0C6 /* libPunchBoxAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AFF06F19AE64A30009C0C6 /* libPunchBoxAd.a */; };
 		B7AFF07A19AE64A30009C0C6 /* PunchBoxAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7AFF07819AE64A30009C0C6 /* PunchBoxAdRes.bundle */; };
+		B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */; };
+		B7F1E24619B9F3FF0095D451 /* libDMOfferWallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */; };
+		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
+		B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24919B9F4D40095D451 /* AVFoundation.framework */; };
+		B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24B19B9F5240095D451 /* CoreLocation.framework */; };
 		B7FDDB4619B3824B00278867 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7FDDB3619B3824B00278867 /* MJRefresh.bundle */; };
 		B7FDDB4719B3824B00278867 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDDB3919B3824B00278867 /* MJRefreshBaseView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B7FDDB4819B3824B00278867 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDDB3B19B3824B00278867 /* MJRefreshConst.m */; };
@@ -94,6 +99,12 @@
 		B7AFF07619AE64A30009C0C6 /* PBRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestError.h; sourceTree = "<group>"; };
 		B7AFF07719AE64A30009C0C6 /* PunchBoxAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchBoxAd.h; sourceTree = "<group>"; };
 		B7AFF07819AE64A30009C0C6 /* PunchBoxAdRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PunchBoxAdRes.bundle; sourceTree = "<group>"; };
+		B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
+		B7F1E24319B9F3FF0095D451 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOfferWallManager.h; sourceTree = "<group>"; };
+		B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDMOfferWallSDK.a; sourceTree = "<group>"; };
+		B7F1E24719B9F4C70095D451 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B7F1E24919B9F4D40095D451 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B7F1E24B19B9F5240095D451 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B7FDDB3619B3824B00278867 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		B7FDDB3719B3824B00278867 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		B7FDDB3819B3824B00278867 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -138,20 +149,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */,
 				F1A0C83617E07C7B00474C9A /* AdSupport.framework in Frameworks */,
+				B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */,
+				B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */,
+				B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */,
+				B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */,
+				B7F1E24619B9F3FF0095D451 /* libDMOfferWallSDK.a in Frameworks */,
 				B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */,
 				BE882ED01568C15000D0EDC9 /* SystemConfiguration.framework in Frameworks */,
 				B7867CBB19AA481700D7965A /* Security.framework in Frameworks */,
 				B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */,
 				F19AAA8518A9C7590001C8FD /* ImageIO.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				B71C68AA19ACC5370054EAF4 /* libYouMi.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				B7AFF07919AE64A30009C0C6 /* libPunchBoxAd.a in Frameworks */,
 				B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */,
 				BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */,
 				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
 				F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */,
@@ -224,6 +239,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7F1E24B19B9F5240095D451 /* CoreLocation.framework */,
+				B7F1E24919B9F4D40095D451 /* AVFoundation.framework */,
+				B7F1E24719B9F4C70095D451 /* CoreMedia.framework */,
 				B7AFF00519AE42140009C0C6 /* libz.dylib */,
 				B745A5F519AA5DBE00491373 /* CoreTelephony.framework */,
 				B7867CC019AA486C00D7965A /* StoreKit.framework */,
@@ -277,6 +295,25 @@
 			path = ../../Downloads/Cocounion_AD_SDK_iOS_v5.0.1/PunchBoxSDK_Demo/libPunchBoxAd;
 			sourceTree = "<group>";
 		};
+		B7F1E24019B9F3FF0095D451 /* DMOfferWallSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */,
+				B7F1E24219B9F3FF0095D451 /* Header */,
+				B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */,
+			);
+			name = DMOfferWallSDK;
+			path = Lib/DMOfferWallSDK;
+			sourceTree = "<group>";
+		};
+		B7F1E24219B9F3FF0095D451 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B7F1E24319B9F3FF0095D451 /* DMOfferWallManager.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		B7FDDB3519B3824B00278867 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +341,7 @@
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B7F1E24019B9F3FF0095D451 /* DMOfferWallSDK */,
 				B7FDDB3519B3824B00278867 /* MJRefresh */,
 				B7AFF06E19AE64A30009C0C6 /* libPunchBoxAd */,
 				B71C68AB19ACC56F0054EAF4 /* GuomobWallBundle.bundle */,
@@ -403,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */,
 				B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */,
 				B71C689E19ACC4ED0054EAF4 /* Icon.png in Resources */,
 				B7AE23A119B1DBF500C54B62 /* InfoTableViewController.xib in Resources */,
@@ -461,6 +500,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib/**",
+					"$(PROJECT_DIR)/Lib/DMOfferWallSDK",
+					"$(PROJECT_DIR)/Lib",
+					"$(PROJECT_DIR)/Lib/libPunchBoxAd",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
@@ -493,6 +535,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib/**",
+					"$(PROJECT_DIR)/Lib/DMOfferWallSDK",
+					"$(PROJECT_DIR)/Lib",
+					"$(PROJECT_DIR)/Lib/libPunchBoxAd",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
@@ -518,6 +563,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
@@ -539,6 +585,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;

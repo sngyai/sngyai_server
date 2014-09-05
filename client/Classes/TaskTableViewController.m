@@ -46,14 +46,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 60.0;
 }
-
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,36 +80,10 @@
     else if (indexPath.row == 3) {
         cell.textLabel.text = @"触控积分墙";
     }
+    else if (indexPath.row == 4) {
+        cell.textLabel.text = @"多盟积分墙";
+    }
     return cell;
-}
-
-- (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
-          withError:(NSError *)error
-{
-    NSLog(@"----------%s", __PRETTY_FUNCTION__);
-    NSLog(@"用户已经完成的任务：%@", taskCoins);
-    
-    NSMutableString *mstr = [NSMutableString string];
-    if (taskCoins) {
-        if (taskCoins.count > 0) {
-            for (NSDictionary *dic in taskCoins) {
-                [mstr appendFormat:@"%@:%@;", [dic objectForKey:@"taskContent"], [dic objectForKey:@"coins"]];
-            }
-        }
-        else {
-            [mstr appendString:@"无积分"];
-        }
-    }
-    else {
-        [mstr appendString:error.localizedDescription];
-    }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"返回的金币数"
-                                                        message:mstr
-                                                       delegate:nil
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"确定", nil];
-    [alertView show];
-    [alertView release];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,6 +108,12 @@
         case 3:
             {
                 [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+            }
+            break;
+        case 4:
+            {
+                RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+                [tabBarController.offerWallManager presentOfferWallWithViewController:self type:eDMOfferWallTypeList];
             }
             break;
 		default:

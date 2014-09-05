@@ -24,6 +24,13 @@
 #pragma mark View lifecycle
 
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]; if (self) {
+        // 创建积分墙管理器,这⾥里使⽤用的是测试 ID,请按照 User Guide ⽂文档中获取新的 PublisherID。
+        _offerWallManager = [[DMOfferWallManager alloc] initWithPublisherID:@"96ZJ1IZAzeB0nwTBAd"];
+    }
+    return self; }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -33,6 +40,7 @@
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     //设置代理
     _guomobwall_vc.delegate=self;
+    _offerWallManager.delegate = self;
     
     //设置果盟定时查询是否获得积分
     _guomobwall_vc.updatetime=30;
@@ -97,7 +105,11 @@
 
 
 - (void)dealloc {
-	//
+    //多盟
+	_offerWallManager.delegate = nil;
+    [_offerWallManager release];
+    _offerWallManager = nil;
+    
     [super dealloc];
 }
 
@@ -115,6 +127,7 @@
 	
 }
 
+//miidi
 - (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
 	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
 	if (totalPoints > 0) {
