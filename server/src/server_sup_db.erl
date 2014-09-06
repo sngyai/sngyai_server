@@ -37,7 +37,7 @@ start_db_conn() ->
       ok;
     {error, _Reason} ->
       ?Error(db_logger, "连接数据库失败:~p!", [_Reason]),
-      ?T("连接数据库失败:~p!", [_Reason]),
+      ?T("DB_CON FAILED:~p!", [_Reason]),
       {error, _Reason};
     {ok, _} ->
       ?T("与中心数据库连接成功"),

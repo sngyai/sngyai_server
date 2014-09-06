@@ -52,8 +52,7 @@ data2record(Key, Value) ->
 
 record2data(User) ->
   tuple_to_list(User#user{
-    account = lib_util_type:term_to_string(User#user.account),
-    passwd = lib_util_type:term_to_string(User#user.passwd)
+    account = lib_util_type:term_to_string(User#user.account)
   }
 ).
 

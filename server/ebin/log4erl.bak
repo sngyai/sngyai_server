@@ -1,0 +1,712 @@
+
+%%default
+logger default_logger{
+	file_appender default_app{
+		dir = "./log",
+		level = debug,
+		file = default_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%debug_logger
+logger debug_logger{
+	file_appender debug_app{
+		dir = "./log",
+		level = error,
+		file = debug_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%player_logger
+logger player_logger{
+	file_appender player_app{
+		dir = "./log",
+		level = debug,
+		file = player_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%chat_logger
+logger chat_logger{
+	file_appender chat_app{
+		dir = "./log",
+		level = debug,
+		file = chat_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%task_logger
+logger task_logger{
+	file_appender task_app{
+		dir = "./log",
+		level = debug,
+		file = task_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%battle_logger
+logger battle_logger{
+	file_appender battle_app{
+		dir = "./log",
+		level = debug,
+		file = battle_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%athletics_logger
+logger athletics_logger{
+	file_appender athletics_app{
+		dir = "./log",
+		level = debug,
+		file = athletics_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%crone log
+logger crone_logger{
+	file_appender crone_app{
+		dir = "./log",
+		level = debug,
+		file = crone_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%webserver log
+logger webserver_logger{
+	file_appender webserver_app{
+		dir = "./log",
+		level = debug,
+		file = webserver_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%language log
+logger language_logger{
+	file_appender language_app{
+		dir = "./log",
+		level = debug,
+		file = language_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%db log
+logger db_logger{
+	file_appender db_app{
+		dir = "./log",
+		level = debug,
+		file = db_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%mod_monster_invasion log
+logger mod_monster_invasion_logger{
+	file_appender mod_monster_invasion_app{
+		dir = "./log",
+		level = debug,
+		file = mod_monster_invasion_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%mod_guild_battle log
+logger mod_guild_battle_logger{
+	file_appender mod_guild_battle_app{
+		dir = "./log",
+		level = debug,
+		file = mod_guild_battle_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%dungeon log
+logger dungeon_logger{
+	file_appender dungeon_app{
+		dir = "./log",
+		level = debug,
+		file = dungeon_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%map log
+logger map_logger{
+	file_appender map_app{
+		dir = "./log",
+		level = debug,
+		file = map_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%monster log
+logger monster_logger{
+	file_appender monster_app{
+		dir = "./log",
+		level = debug,
+		file = monster_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%talisman log
+logger talisman_logger{
+	file_appender talisman_app{
+		dir = "./log",
+		level = debug,
+		file = talisman_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%socket log
+logger socket_logger{
+	file_appender socket_app{
+		dir = "./log",
+		level = debug,
+		file = socket_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%increase log
+logger increase_logger{
+	file_appender increase_app{
+		dir = "./log",
+		level = debug,
+		file = increase_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%chat_system log
+logger chat_system_logger{
+	file_appender chat_system_app{
+		dir = "./log",
+		level = debug,
+		file = chat_system_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%guild log
+logger guild_logger{
+	file_appender guild_app{
+		dir = "./log",
+		level = debug,
+		file = guild_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%init log
+logger init_logger{
+	file_appender init_app{
+		dir = "./log",
+		level = debug,
+		file = init_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%node_manager log
+logger node_manager_logger{
+	file_appender node_manager_app{
+		dir = "./log",
+		level = debug,
+		file = node_manager_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+
+%%random log
+logger random_logger{
+	file_appender random_app{
+		dir = "./log",
+		level = debug,
+		file = random_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%relation log
+logger relation_logger{
+	file_appender relation_app{
+		dir = "./log",
+		level = debug,
+		file = relation_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%server_log_logger log
+logger server_log_logger{
+	file_appender server_log_app{
+		dir = "./log",
+		level = debug,
+		file = server_log_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%broker_logger log
+logger broker_logger{
+	file_appender broker_app{
+		dir = "./log",
+		level = debug,
+		file = broker_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%activity_logger log
+logger activity_logger{
+	file_appender activity_app{
+		dir = "./log",
+		level = debug,
+		file = activity_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%pet log
+logger pet_logger{
+	file_appender pet_app{
+		dir = "./log",
+		level = debug,
+		file = pet_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%feature log
+logger feature_logger{
+	file_appender feature_app{
+		dir = "./log",
+		level = debug,
+		file = feature_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+
+%%spirit log
+logger spirit_logger{
+	file_appender spirit_app{
+		dir = "./log",
+		level = debug,
+		file = spirit_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%mod_turntable log
+logger mod_turntable_logger{
+	file_appender mod_turntable_app{
+		dir = "./log",
+		level = debug,
+		file = mod_turntable_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%liveness log
+logger liveness_logger{
+	file_appender liveness_app{
+		dir = "./log",
+		level = debug,
+		file = liveness_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%duplicate log
+logger duplicate_logger{
+	file_appender duplicate_app{
+		dir = "./log",
+		level = debug,
+		file = duplicate_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%delay_plug log
+logger delay_plug_logger{
+	file_appender delay_plug_app{
+		dir = "./log",
+		level = debug,
+		file = delay_plug_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%multi_dungeon log
+logger multi_dungeon_logger{
+	file_appender multi_dungeon_app{
+		dir = "./log",
+		level = debug,
+		file = multi_dungeon_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%server_state log
+logger server_state_logger{
+	file_appender server_state_app{
+		dir = "./log",
+		level = debug,
+		file = server_state_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%storage_file log
+logger storage_file_logger{
+	file_appender storage_file_app{
+		dir = "./log",
+		level = debug,
+		file = storage_file_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%peon log
+logger peon_logger{
+	file_appender peon_app{
+		dir = "./log",
+		level = debug,
+		file = peon_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%rank log
+logger rank_logger{
+	file_appender rank_app{
+		dir = "./log",
+		level = debug,
+		file = rank_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%angel_overlord log
+logger angel_overlord_logger{
+	file_appender angel_overlord_app{
+		dir = "./log",
+		level = debug,
+		file = angel_overlord_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%sys_monitor log
+logger sys_monitor_logger{
+	file_appender sys_monitor_app{
+		dir = "./log",
+		level = debug,
+		file = sys_monitor_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%server_log log
+logger server_log_logger{
+	file_appender server_log_app{
+		dir = "./log",
+		level = debug,
+		file = server_log_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%peon_rank log
+logger peon_rank_logger{
+	file_appender peon_rank_app{
+		dir = "./log",
+		level = debug,
+		file = peon_rank_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%peon log
+logger peon_logger{
+	file_appender peon_app{
+		dir = "./log",
+		level = debug,
+		file = peon_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%http log
+logger http_logger{
+	file_appender http_app{
+		dir = "./log",
+		level = debug,
+		file = http_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%tencent_api log
+logger tencent_api_logger{
+	file_appender tencent_api_app{
+		dir = "./log",
+		level = debug,
+		file = tencent_api_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%mod_fairy_war log
+logger mod_fairy_war_logger{
+	file_appender mod_fairy_war_app{
+		dir = "./log",
+		level = debug,
+		file = mod_fairy_war_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%exam log
+logger exam_logger{
+	file_appender exam_app{
+		dir = "./log",
+		level = debug,
+		file = exam_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%holiday_activity_logger log
+logger holiday_activity_logger{
+	file_appender holiday_activity_app{
+		dir = "./log",
+		level = debug,
+		file = holiday_activity_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = ' %d %h:%m:%s.%i %l%n'
+	}
+}
+

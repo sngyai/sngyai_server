@@ -125,12 +125,12 @@
 
 
 -define(T(Des), begin
-                  io:format("~n===============~n~p,module:~p,line:~p~n~p ~n==================~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, Des]),
-                  ?Debug(debug_logger, "~p", [Des])
+                  io:format("~n===============~n~p,module:~p,line:~p~n~p ~n==================~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, Des])
+%%                   ?Debug(debug_logger, "~p", [Des])
                 end).
 -define(T(Des, Values), begin
-                          io:format("~n===============~n~p,module:~p,line:~p~n~s ~n===============~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, lists:flatten(io_lib:format(Des, Values))]),
-                          ?Debug(debug_logger, "~s", [lists:flatten(io_lib:format(Des, Values))])
+                          io:format("~n===============~n~p,module:~p,line:~p~n~s ~n===============~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, lists:flatten(io_lib:format(Des, Values))])
+%%                           ?Debug(debug_logger, "~s", [lists:flatten(io_lib:format(Des, Values))])
                         end).
 -endif.
 

@@ -1,0 +1,30 @@
+
+%%default
+logger default_logger{
+	file_appender default_app{
+		dir = "./log",
+		level = debug,
+		file = default_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%debug_logger
+logger debug_logger{
+	file_appender debug_app{
+		dir = "./log",
+		level = error,
+		file = debug_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+
