@@ -131,6 +131,10 @@
 - (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
 	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
 	if (totalPoints > 0) {
+        NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+totalPoints] autorelease];
+        self.score = newScore;
+        [MiidiAdWall requestSpendPoints:totalPoints withDelegate:self];
+        
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
         if (localnotification!=nil) {
         
