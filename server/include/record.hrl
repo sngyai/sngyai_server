@@ -32,10 +32,8 @@
 %% player ==> player_status
 -record(user, {
   id,                                     %% 玩家ID
-  account = "",                    %% 玩家平台账号
-  score = 0,
-  money = 0,
-  restrict_state = 0,
-  passwd
+  score_current,
+  score_total,
+  account
 }).
 

@@ -18,8 +18,8 @@ start(normal, []) ->
   %% 启动游戏服务的根监控进程
   {ok, SupPid} = server_sup:start_link(),
 
-%%   %% log4erl配置
-%%   log4erl:conf("log4erl.conf"),
+  %% log4erl配置
+  log4erl:conf(log4erl),
 
   %初始化配置文件
   ok = lib_config:init_ensure_config(),

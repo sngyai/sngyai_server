@@ -241,6 +241,7 @@ handle_request(Req) ->
   %?T("handle_request path: ~p, method:~p",[Req:get(path), Req:get(method)]),
   QS = case Req:get(method) of 'GET' -> Req:parse_qs(); 'POST' -> Req:parse_post() end,
   ?T("handle_request req:~p, QS:~p", [Req, QS]),
+  ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
   try deal_request(Type, QS) of
     {finish, Result} ->
@@ -287,6 +288,18 @@ deal_request(["sys"], QS) ->
   Result = do_request(Msg, QS),
   {finish, Result};
 
+
+%%**********************************积分墙回调 start *********************************
+%% miidi回调,调用方法:http://127.0.0.1:8088/miidi/
+deal_request(["miidi"], QS) ->
+  Result = do_miidi(QS),
+  {finish, Result};
+
+
+%%**********************************积分墙回调 end *********************************
+
+
+
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
 %% 返回值:{finish, Result:string()}
@@ -303,20 +316,23 @@ deal_request(Type, QS) ->
   ?T("mod_webserver deal_request type error type:~p, QS:~p~n", [Type, QS]),
   {finish, "type_error"}.
 
+%%用户相关
+%% http://127.0.0.1:8088/user/?msg=1000
 %%创建账号
-do_user(1000, QS) ->
-  UserName = lib_util_type:string_to_term(resolve_parameter("user_name", QS)),
-  PassWd = lib_util_type:string_to_term(resolve_parameter("passwd", QS)),
-  Result = lib_user:create_role(UserName, PassWd),
+do_user(1000, _QS) ->
+  Result = lib_user:create_role(),
   {finish, Result};
 
 %%登录
 do_user(1001, QS) ->
-  UserName = lib_util_type:string_to_term(resolve_parameter("user_name", QS)),
-  PassWd = lib_util_type:string_to_term(resolve_parameter("passwd", QS)),
-  Result = lib_user:login(UserName, PassWd),
+  UserId = lib_util_type:string_to_term(resolve_parameter("user_id", QS)),
+  Result = lib_user:login(UserId),
   {finish, Result}.
 
+%% 调用方法:http://127.0.0.1:8088/callback/?msg=100
+%%服务器回调相关
+do_miidi(_QS) ->
+  200.
 
 
 
