@@ -37,3 +37,12 @@
   account
 }).
 
+-record(task_log,
+{
+  user_id,
+  time,
+  channel,
+  app_name,
+  score
+}).
+
