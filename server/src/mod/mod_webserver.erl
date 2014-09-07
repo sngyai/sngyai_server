@@ -320,7 +320,7 @@ deal_request(Type, QS) ->
 %% http://127.0.0.1:8088/user/?msg=1001
 %%登录
 do_user(1001, QS) ->
-  UserId = lib_util_type:string_to_term(resolve_parameter("user_id", QS)),
+  UserId = resolve_parameter("user_id", QS),
   Result = lib_user:login(UserId),
   {finish, Result}.
 

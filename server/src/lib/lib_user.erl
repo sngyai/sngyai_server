@@ -17,7 +17,8 @@
 -export([
   create_role/1,
   login/1,
-  add_score/2
+  add_score/2,
+  t/0
 ]).
 
 %%创建用户
@@ -63,7 +64,8 @@ add_score(UserId, Score) ->
   end.
 
 
-
+t() ->
+  create_role("1A2C").
 
 
 
