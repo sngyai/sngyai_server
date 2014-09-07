@@ -281,8 +281,6 @@
     
     NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
-//    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
-    NSLog(@"HELLO, WORLD ********** HOST:%@, STR_USER:%@", StrUrl, StrUser);
     
     NSURL *url = [NSURL URLWithString:StrUrl];
     
