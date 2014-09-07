@@ -321,8 +321,11 @@ deal_request(Type, QS) ->
 %%登录
 do_user(1001, QS) ->
   UserId = resolve_parameter("user_id", QS),
-  Result = lib_user:login(UserId),
-  {finish, Result}.
+  lib_user:login(UserId).
+
+
+%% do_user(1002, _QS) ->
+%%   lib_util_string:key_value_to_json([{"error", "\"Invalid Parameter player_id\""}]).
 
 %% 调用方法:http://127.0.0.1:8088/callback/?msg=100
 %%服务器回调相关

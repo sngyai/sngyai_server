@@ -36,13 +36,21 @@ create_role(Idfa) ->
 
 %%登录
 login(UserId) ->
-  case ets:lookup(?ETS_ONLINE, UserId) of
+  ?T("user_id:~p, tab2list:~p", [UserId, ets:tab2list(?ETS_ONLINE)]),
+  {ScoreCurrent, ScoreTotal} =
+    case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST}|_] ->
       {SC, ST};
     _Other -> %用户不存在，创建一个
       create_role(UserId),
       {0, 0}
-  end.
+  end,
+  Result =
+    [
+      {"score_current", lib_util_type:term_to_string(ScoreCurrent)},
+      {"score_total", lib_util_type:term_to_string(ScoreTotal)}
+    ],
+  lib_util_string:key_value_to_json(Result).
 
 %%完成任务，更新积分
 %%UserId用户唯一标识
