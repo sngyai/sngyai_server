@@ -122,7 +122,6 @@
     
     _tabBar = [[[RootViewController alloc] init]autorelease];
     _tabBar.delegate = self;
-//    NSString* StrUrl = [NSString stringWithFormat:@"http://123.57.9.112:8088/user/?msg=1001&user_id=%@", adId];
     
     NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
     _tabBar.viewControllers = controllerArray;
