@@ -2,11 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="6c710d36-de48-4af6-9089-c7d8193ec96e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/common.hrl" afterPath="$PROJECT_DIR$/include/common.hrl" />
+      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\doc\利赚.xls" afterPath="" />
+      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\ebin\lib_monitor_system.beam" afterPath="" />
+      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\src\lib\lib_monitor_system.erl" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/crone.beam" afterPath="$PROJECT_DIR$/ebin/crone.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent.beam" afterPath="$PROJECT_DIR$/ebin/db_agent.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_player.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_server_state.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_server_state.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_system_config.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_system_config.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_user.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_user.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_cache.beam" afterPath="$PROJECT_DIR$/ebin/db_cache.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_mysql.beam" afterPath="$PROJECT_DIR$/ebin/db_mysql.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_mysqlutil.beam" afterPath="$PROJECT_DIR$/ebin/db_mysqlutil.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/gen_player.beam" afterPath="$PROJECT_DIR$/ebin/gen_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_server_log.beam" afterPath="$PROJECT_DIR$/ebin/lib_server_log.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_server_state.beam" afterPath="$PROJECT_DIR$/ebin/lib_server_state.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_storage_file.beam" afterPath="$PROJECT_DIR$/ebin/lib_storage_file.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_storage_file_player.beam" afterPath="$PROJECT_DIR$/ebin/lib_storage_file_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_system_config.beam" afterPath="$PROJECT_DIR$/ebin/lib_system_config.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_user.beam" afterPath="$PROJECT_DIR$/ebin/lib_user.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util.beam" afterPath="$PROJECT_DIR$/ebin/lib_util.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_algo.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_algo.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_string.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_string.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_type.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_type.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/main.beam" afterPath="$PROJECT_DIR$/ebin/main.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_chat.beam" afterPath="$PROJECT_DIR$/ebin/mod_chat.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_chat_system.beam" afterPath="$PROJECT_DIR$/ebin/mod_chat_system.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_crone.beam" afterPath="$PROJECT_DIR$/ebin/mod_crone.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_increase_player.beam" afterPath="$PROJECT_DIR$/ebin/mod_increase_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_init.beam" afterPath="$PROJECT_DIR$/ebin/mod_init.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_player.beam" afterPath="$PROJECT_DIR$/ebin/mod_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_random.beam" afterPath="$PROJECT_DIR$/ebin/mod_random.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_reloader.beam" afterPath="$PROJECT_DIR$/ebin/mod_reloader.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_server_log.beam" afterPath="$PROJECT_DIR$/ebin/mod_server_log.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_webserver.beam" afterPath="$PROJECT_DIR$/ebin/mod_webserver.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/player_server.beam" afterPath="$PROJECT_DIR$/ebin/player_server.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_app.beam" afterPath="$PROJECT_DIR$/ebin/server_app.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup_db.beam" afterPath="$PROJECT_DIR$/ebin/server_sup_db.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup_player.beam" afterPath="$PROJECT_DIR$/ebin/server_sup_player.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_alarm_handler.beam" afterPath="$PROJECT_DIR$/ebin/sys_alarm_handler.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_alarm_monitor_sup.beam" afterPath="$PROJECT_DIR$/ebin/sys_alarm_monitor_sup.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_background_gc.beam" afterPath="$PROJECT_DIR$/ebin/sys_background_gc.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_listener.beam" afterPath="$PROJECT_DIR$/ebin/tcp_listener.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_request_broker.beam" afterPath="$PROJECT_DIR$/ebin/tcp_request_broker.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/vm_memory_monitor.beam" afterPath="$PROJECT_DIR$/ebin/vm_memory_monitor.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_user.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_user.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log/default_log.log" afterPath="$PROJECT_DIR$/ebin/log/default_log.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_init.erl" afterPath="$PROJECT_DIR$/src/mod/mod_init.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/erl_crash.dump" afterPath="$PROJECT_DIR$/ebin/erl_crash.dump" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl" afterPath="$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_task_log.erl" afterPath="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_user.erl" afterPath="$PROJECT_DIR$/src/lib/lib_user.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl" afterPath="$PROJECT_DIR$/ebin/log4erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_webserver.erl" afterPath="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/player_server.erl" afterPath="$PROJECT_DIR$/src/mod/player_server.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/record.hrl" afterPath="$PROJECT_DIR$/include/record.hrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +82,8 @@
       <file leaf-file-name="mod_webserver.erl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53382355" vertical-offset="7218" max-vertical-offset="8589">
-              <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38997215" vertical-offset="6622" max-vertical-offset="8505">
+              <caret line="322" column="66" selection-start-line="322" selection-start-column="59" selection-end-line="322" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -42,18 +92,8 @@
       <file leaf-file-name="lib_callback_miidi.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_user.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1197">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -62,28 +102,51 @@
       <file leaf-file-name="common.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/common.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="951" max-vertical-offset="4305">
+            <state vertical-scroll-proportion="9.896552" vertical-offset="1421" max-vertical-offset="4305">
               <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mod_init.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mod/mod_init.erl">
+      <file leaf-file-name="player_server.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mod/player_server.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3992" max-vertical-offset="4809">
-              <caret line="209" column="26" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="7140">
+              <caret line="155" column="42" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_agent_task_log.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db/db_agent_task_log.erl">
+      <file leaf-file-name="log4erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ebin/log4erl">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.310345" vertical-offset="420" max-vertical-offset="1281">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="504" max-vertical-offset="1050">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4erl.app" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ebin/log4erl.app">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="819">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib_user.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1617">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -92,8 +155,8 @@
       <file leaf-file-name="db_agent_user.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/db_agent_user.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1344">
-              <caret line="58" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1512">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,8 +165,8 @@
       <file leaf-file-name="lib_task_log.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/lib_task_log.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,18 +175,8 @@
       <file leaf-file-name="record.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/record.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="1134">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channel.hrl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/channel.hrl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="279" max-vertical-offset="1155">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -146,7 +199,6 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/protocol/ph/ph_10_account.erl" />
         <option value="$PROJECT_DIR$/src/protocol/p_10.erl" />
-        <option value="$PROJECT_DIR$/src/mod/player_server.erl" />
         <option value="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl" />
         <option value="$PROJECT_DIR$/src/lib/lib_sender.erl" />
         <option value="$PROJECT_DIR$/src/lib/lib_monitor_system.erl" />
@@ -164,29 +216,31 @@
         <option value="$PROJECT_DIR$/src/lib/lib_manage.erl" />
         <option value="$PROJECT_DIR$/src/main.erl" />
         <option value="$PROJECT_DIR$/src/mod/increase/mod_increase_player.erl" />
-        <option value="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" />
-        <option value="$PROJECT_DIR$/src/db/db_agent_user.erl" />
-        <option value="$PROJECT_DIR$/src/lib/lib_user.erl" />
         <option value="$PROJECT_DIR$/ebin/log4erl.conf" />
         <option value="$PROJECT_DIR$/src/server_sup_db.erl" />
         <option value="$PROJECT_DIR$/src/server_app.erl" />
-        <option value="$PROJECT_DIR$/include/record.hrl" />
         <option value="$PROJECT_DIR$/include/channel.hrl" />
         <option value="$PROJECT_DIR$/src/lib/lib_callback_miidi.erl" />
-        <option value="$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl" />
         <option value="$PROJECT_DIR$/include/common.hrl" />
         <option value="$PROJECT_DIR$/src/mod/mod_init.erl" />
         <option value="$PROJECT_DIR$/src/db/db_agent_task_log.erl" />
+        <option value="$PROJECT_DIR$/include/storage_file.hrl" />
+        <option value="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" />
+        <option value="$PROJECT_DIR$/include/record.hrl" />
         <option value="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
+        <option value="$PROJECT_DIR$/src/db/db_agent_user.erl" />
+        <option value="$PROJECT_DIR$/src/lib/lib_user.erl" />
         <option value="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
+        <option value="$PROJECT_DIR$/src/mod/player_server.erl" />
+        <option value="$PROJECT_DIR$/ebin/log4erl" />
+        <option value="$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="580" />
+    <option name="width" value="1918" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -263,6 +317,24 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mod" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,6 +354,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ebin" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -587,15 +673,16 @@
       <workItem from="1408452822792" duration="12599000" />
       <workItem from="1408465484175" duration="12000" />
       <workItem from="1410020244936" duration="5296000" />
-      <workItem from="1410025566050" duration="5904000" />
+      <workItem from="1410025566050" duration="6462000" />
+      <workItem from="1410065749477" duration="7141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28834000" />
+    <option name="totallyTimeSpent" value="36533000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="580" y="0" width="1918" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -603,7 +690,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2375924" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.53713673" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -617,12 +704,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22029443" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -645,38 +732,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/db/core/db_mysqlutil.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5498" max-vertical-offset="8127">
-          <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/player.hrl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1932">
           <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/player_server.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1508" max-vertical-offset="7140">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="2079">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/lib_monitor_system.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2079">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -764,25 +823,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.448276" vertical-offset="703" max-vertical-offset="1680">
-          <caret line="41" column="156" selection-start-line="41" selection-start-column="156" selection-end-line="41" selection-end-column="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/db_agent_player.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.793103" vertical-offset="0" max-vertical-offset="7959">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54452056" vertical-offset="720" max-vertical-offset="1596">
           <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,30 +857,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="449" max-vertical-offset="6384">
           <caret line="29" column="53" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ebin/log4erl.conf">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7497" max-vertical-offset="15078">
           <caret line="364" column="20" selection-start-line="364" selection-start-column="17" selection-end-line="364" selection-end-column="20" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ebin/log4erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/priv/src/log4erl/src/log4erl.erl">
@@ -848,31 +879,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/priv/src/log4erl/priv/log4erl.conf">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6748466" vertical-offset="819" max-vertical-offset="1449">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Emakefile">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Emakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1176">
           <caret line="27" column="20" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="20" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/priv/src/log4erl/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="189">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3201" max-vertical-offset="8925">
           <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.586206" vertical-offset="0" max-vertical-offset="1428">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1239">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1239">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="6867">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="506" max-vertical-offset="1302">
           <caret line="49" column="13" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1764">
           <caret line="45" column="12" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="90.51724" vertical-offset="3024" max-vertical-offset="8589">
           <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="387" max-vertical-offset="1365">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="2142">
           <caret line="43" column="23" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,22 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/common.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="951" max-vertical-offset="4305">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -996,50 +998,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/db_agent_user.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1344">
-          <caret line="58" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/db_agent_task_log.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.310345" vertical-offset="420" max-vertical-offset="1281">
+        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1281">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/record.hrl">
+    <entry file="file://$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="1134">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1680">
+          <caret line="41" column="159" selection-start-line="41" selection-start-column="159" selection-end-line="41" selection-end-column="159" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
+    <entry file="file://$PROJECT_DIR$/include/storage_file.hrl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1197">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1533">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="2079">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/db_agent_player.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.586206" vertical-offset="4027" max-vertical-offset="7959">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="206" selection-end-column="109" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/lib_task_log.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/record.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="279" max-vertical-offset="1155">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/db_agent_user.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1512">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/lib_user.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1617">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/common.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.896552" vertical-offset="1421" max-vertical-offset="4305">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/player_server.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="7140">
+          <caret line="155" column="42" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebin/log4erl.app">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="819">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebin/log4erl">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="504" max-vertical-offset="1050">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53382355" vertical-offset="7218" max-vertical-offset="8589">
-          <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38997215" vertical-offset="6622" max-vertical-offset="8505">
+          <caret line="322" column="66" selection-start-line="322" selection-start-column="59" selection-end-line="322" selection-end-column="66" />
           <folding />
         </state>
       </provider>

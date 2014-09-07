@@ -42,6 +42,7 @@
   user_id,
   time,
   channel,
+  trand_no,
   app_name,
   score
 }).

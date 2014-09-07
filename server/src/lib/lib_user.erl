@@ -15,15 +15,16 @@
 
 %% API
 -export([
-  create_role/0,
-  login/1
+  create_role/1,
+  login/1,
+  add_score/2
 ]).
 
 %%创建用户
-create_role() ->
+create_role(Idfa) ->
     NewUser =
       #user{
-        id = mod_increase_player:new_id(),
+        id = Idfa,
         score_current = 0,
         score_total = 0,
         account = ""
@@ -34,12 +35,31 @@ create_role() ->
 
 %%登录
 login(UserId) ->
-  case ets:match_object(?ETS_ONLINE, #user{id = UserId, _='_'}) of
+  case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST}|_] ->
       {SC, ST};
+    _Other -> %用户不存在，创建一个
+      create_role(UserId),
+      {0, 0}
+  end.
+
+%%完成任务，更新积分
+%%UserId用户唯一标识
+%%Score获得积分
+add_score(UserId, Score) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
+      ScoreCurrent = SC + Score,
+      ScoreTotal = SC + ST,
+      NewUserInfo =
+        UserInfo#user{
+          score_current = ScoreCurrent,
+          score_total = ScoreTotal
+        },
+      ets:insert(?ETS_ONLINE, NewUserInfo),
+      db_agent_user:update_score(UserId, ScoreCurrent, ScoreTotal);
     _Other ->
-      ?T("check create: ~p~n", [_Other]),
-      "user not exist"
+      skip
   end.
 
 

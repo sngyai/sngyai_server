@@ -17,11 +17,12 @@
   add/5
   ]).
 
-add(Idfa, Time, Channel, AppName, Score) ->
+add(Idfa, Channel, TrandNo, AppName, Score) ->
   TaskLog =
     #task_log{
       user_id = Idfa,
-      time = Time,
+      time = lib_util_time:get_timestamp(),
+      trand_no = TrandNo,
       channel = Channel,
       app_name = AppName,
       score = Score

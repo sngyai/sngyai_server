@@ -232,7 +232,7 @@ loop(Req, Root) ->
 
 % 功能                                                                 Request
 %---------------------------------------------------------------------------------------------------------------------------------
-% 举例                       msg=1000&id=100023
+% 举例                       msg=1001&id=100023
 %---------------------------------------------------------------------------------------------------------------------------------
 %% 处理请求
 %% Req:请求主体
@@ -271,7 +271,7 @@ deal_request(["dev"], QS) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
-%% 调用方法:http://127.0.0.1:8088/user/?msg=1000&id=....
+%% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["user"], QS) ->
@@ -280,7 +280,7 @@ deal_request(["user"], QS) ->
   {finish, Result};
 
 %% 处理请求
-%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1000&id=....
+%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1001
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["sys"], QS) ->
@@ -298,7 +298,8 @@ deal_request(["miidi"], QS) ->
 %%**********************************积分墙回调 end *********************************
 
 
-
+deal_request(["ping"], QS) ->
+  200;
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
 %% 返回值:{finish, Result:string()}
@@ -316,12 +317,7 @@ deal_request(Type, QS) ->
   {finish, "type_error"}.
 
 %%用户相关
-%% http://127.0.0.1:8088/user/?msg=1000
-%%创建账号
-do_user(1000, _QS) ->
-  Result = lib_user:create_role(),
-  {finish, Result};
-
+%% http://127.0.0.1:8088/user/?msg=1001
 %%登录
 do_user(1001, QS) ->
   UserId = lib_util_type:string_to_term(resolve_parameter("user_id", QS)),
@@ -373,7 +369,7 @@ do_miidi(QS) ->
 %% 后面是本次请求参数列表
 %% 返回值 Result:string()
 
-%%  msg=1000
+%%  msg=1001
 do_request(9999, _QS) ->
   %_PlayerID = list_to_integer(resolve_parameter("id", QS)),
   %do_something,
