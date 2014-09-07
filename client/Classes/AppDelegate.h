@@ -26,8 +26,6 @@
     BOOL _isBackGround;
 }
 
-+(void)queryScore;
-
 @property (retain, nonatomic) UIWindow *window;
 @property(nonatomic,copy)RootViewController *tabBar;
 @end
