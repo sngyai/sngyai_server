@@ -12,17 +12,22 @@
 #import "RootViewController.h"
 #import "PunchBoxAd.h"
 #import "InfoTableViewController.h"
+#import "ASIHTTPRequest.h"
+#import "JSONKit.h"
 
 @interface AppDelegate : UIResponder
 <
     UIApplicationDelegate,
-    UITabBarControllerDelegate
+    UITabBarControllerDelegate,
+    ASIHTTPRequestDelegate
 >
 {
-    RootViewController *tabBar;
+    RootViewController *_tabBar;
     BOOL _isBackGround;
 }
 
-@property (retain, nonatomic) UIWindow *window;
++(void)queryScore;
 
+@property (retain, nonatomic) UIWindow *window;
+@property(nonatomic,copy)RootViewController *tabBar;
 @end

@@ -45,10 +45,6 @@
     //设置果盟定时查询是否获得积分
     _guomobwall_vc.updatetime=30;
     
-    //初始化积分
-    
-    _score = [[[NSNumber alloc] initWithInt:0] autorelease];
-    
     [PBOfferWall sharedOfferWall].delegate = self;
     
     [NSThread detachNewThreadSelector:@selector(threadMethod) toTarget:self withObject:nil];
@@ -252,6 +248,7 @@
 {
     [[PBOfferWall sharedOfferWall] queryRewardCoin:^(NSArray *taskCoins, PBRequestError *error) {
         [MiidiAdWall requestGetPoints:self];
+        [self queryScore];
         if (taskCoins.count > 0) {
             
             NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+taskCoins.count] autorelease];
@@ -293,6 +290,32 @@
 	[alertView release];
 }
 
+-(void) queryScore
+{
+    //获取IDFA
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
+    
+    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        
+        NSString *strScroreCur = [object objectForKey:@"score_current"];
+        self.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
+    }
+}
 
 @end
 

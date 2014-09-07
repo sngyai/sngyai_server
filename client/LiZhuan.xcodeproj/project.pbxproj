@@ -57,6 +57,9 @@
 		B7B167F019BC4D5A00449466 /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B167B619BC4D5A00449466 /* ASIS3ServiceRequest.m */; };
 		B7B1680019BC4D5A00449466 /* README-GHUnit in Resources */ = {isa = PBXBuildFile; fileRef = B7B167D719BC4D5A00449466 /* README-GHUnit */; };
 		B7B1680119BC4D5A00449466 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B167DA19BC4D5A00449466 /* Reachability.m */; };
+		B7B1680719BCA38500449466 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = B7B1680319BCA38500449466 /* CHANGELOG.md */; };
+		B7B1680819BCA38500449466 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1680519BCA38500449466 /* JSONKit.m */; };
+		B7B1680919BCA38500449466 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7B1680619BCA38500449466 /* README.md */; };
 		B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */; };
 		B7F1E24619B9F3FF0095D451 /* libDMOfferWallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */; };
 		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
@@ -183,6 +186,10 @@
 		B7B167D719BC4D5A00449466 /* README-GHUnit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-GHUnit"; sourceTree = "<group>"; };
 		B7B167D919BC4D5A00449466 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B7B167DA19BC4D5A00449466 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B7B1680319BCA38500449466 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		B7B1680419BCA38500449466 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		B7B1680519BCA38500449466 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		B7B1680619BCA38500449466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
 		B7F1E24319B9F3FF0095D451 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOfferWallManager.h; sourceTree = "<group>"; };
 		B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDMOfferWallSDK.a; sourceTree = "<group>"; };
@@ -495,6 +502,17 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		B7B1680219BCA38500449466 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				B7B1680319BCA38500449466 /* CHANGELOG.md */,
+				B7B1680419BCA38500449466 /* JSONKit.h */,
+				B7B1680519BCA38500449466 /* JSONKit.m */,
+				B7B1680619BCA38500449466 /* README.md */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 		B7F1E24019B9F3FF0095D451 /* DMOfferWallSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +559,7 @@
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B7B1680219BCA38500449466 /* JSONKit */,
 				B7B1678219BC4D5A00449466 /* ASIHTTPRequest */,
 				B7B167D519BC4D5A00449466 /* External */,
 				B7F1E24019B9F3FF0095D451 /* DMOfferWallSDK */,
@@ -645,9 +664,11 @@
 			files = (
 				B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */,
 				B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */,
+				B7B1680719BCA38500449466 /* CHANGELOG.md in Resources */,
 				B71C689E19ACC4ED0054EAF4 /* Icon.png in Resources */,
 				B7AE23A119B1DBF500C54B62 /* InfoTableViewController.xib in Resources */,
 				F14551C5171E43950087DDB5 /* Default-568h@2x.png in Resources */,
+				B7B1680919BCA38500449466 /* README.md in Resources */,
 				B7B1680019BC4D5A00449466 /* README-GHUnit in Resources */,
 				B71C689D19ACC4ED0054EAF4 /* Icon-72.png in Resources */,
 				B7AFF07A19AE64A30009C0C6 /* PunchBoxAdRes.bundle in Resources */,
@@ -665,6 +686,7 @@
 			files = (
 				B7B167E719BC4D5A00449466 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				B7B167E519BC4D5A00449466 /* ASICloudFilesContainer.m in Sources */,
+				B7B1680819BCA38500449466 /* JSONKit.m in Sources */,
 				B7FDDB4919B3824B00278867 /* MJRefreshFooterView.m in Sources */,
 				B7B1680119BC4D5A00449466 /* Reachability.m in Sources */,
 				B7B167E919BC4D5A00449466 /* ASICloudFilesObjectRequest.m in Sources */,

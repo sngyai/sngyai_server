@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AdSupport/ASIdentifierManager.h>
 #import "YouMiWall.h"
 #import "MiidiAdSpot.h"
 #import "MiidiAdWall.h"
@@ -20,6 +21,8 @@
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
+#import "ASIHTTPRequest.h"
+#import "JSONKit.h"
 
 
 
@@ -39,6 +42,9 @@
     DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
 }
+
+-(void) queryScore;
+
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
 @property(nonatomic,copy)DMOfferWallManager *offerWallManager;
 @property(nonatomic,copy)NSNumber *score;

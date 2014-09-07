@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
 #import "Reachability.h"
-#import "ASIHTTPRequest.h"
+
 
 
 @implementation AppDelegate
@@ -120,34 +120,17 @@
     InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
     UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
     
-    //获取IDFA
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
+    _tabBar = [[[RootViewController alloc] init]autorelease];
+    _tabBar.delegate = self;
+//    NSString* StrUrl = [NSString stringWithFormat:@"http://123.57.9.112:8088/user/?msg=1001&user_id=%@", adId];
     
-    tabBar = [[[RootViewController alloc] init]autorelease];
-    tabBar.delegate = self;
-    tabBar.score = 0;
-    NSURL *url = [NSURL URLWithString:@"http://123.57.9.112:8088/user/?msg=1001"];
-    
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    
-    [request startSynchronous];
-    
-    NSError *error = [request error];
-    
-    if (!error) {
-        NSString *response = [request responseString];
-        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
-        NSData *data = [request responseData];
-        NSLog(@"HELLO, WORLD *********** DATA:%@", data);
-    }
     NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
-    tabBar.viewControllers = controllerArray;
+    _tabBar.viewControllers = controllerArray;
     
-    [[tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
-    [(UITabBarItem *)[tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
+    [[_tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
+    [(UITabBarItem *)[_tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
     
-    self.window.rootViewController = tabBar;
+    self.window.rootViewController = _tabBar;
     
     [self.window makeKeyAndVisible];
 }
