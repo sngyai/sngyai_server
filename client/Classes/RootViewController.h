@@ -26,7 +26,8 @@
 
 
 
-
+//#define HOST (@"http://192.168.1.3:8088/")
+#define HOST (@"http://123.57.9.112:8088/")
 
 @interface RootViewController : UITabBarController
 <MiidiAdWallShowAppOffersDelegate
