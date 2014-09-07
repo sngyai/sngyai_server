@@ -22,8 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    Reachability *r = [Reachability reachabilityWithHostName:@"www.apple.com"];
-    NSLog(@"HELLO, WORLD**********Server State%d", [r currentReachabilityStatus]);
+    NSString *StringUrlPing = [HOST stringByAppendingString:@"ping"];
+    Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
+
+//    Reachability *r = [Reachability reachabilityWithHostName:@"http://127.0.0.1:8088/ping"];
+    NSLog(@"HELLO, WORLD**********URL:%@， Server State%d", StringUrlPing, [r currentReachabilityStatus]);
     switch ([r currentReachabilityStatus]) {
         case NotReachable:
             break;
