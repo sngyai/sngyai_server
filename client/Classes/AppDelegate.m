@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <AdSupport/ASIdentifierManager.h>
+#import "Reachability.h"
+#import "ASIHTTPRequest.h"
 
 
 @implementation AppDelegate
@@ -19,26 +22,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-
-    TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
-    UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
-    InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
-    UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
+    Reachability *r = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    NSLog(@"HELLO, WORLD**********Server State%d", [r currentReachabilityStatus]);
+    switch ([r currentReachabilityStatus]) {
+        case NotReachable:
+            break;
+        case ReachableViaWWAN:
+            [self loadView];
+            break;
+        case ReachableViaWiFi:
+            [self loadView];
+            break;
+    }
     
-    
-    tabBar = [[[RootViewController alloc] init]autorelease];
-    tabBar.delegate = self;
-    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
-    tabBar.viewControllers = controllerArray;
-    
-    [[tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
-    [(UITabBarItem *)[tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
-    
-    self.window.rootViewController = tabBar;
-//    [self.window addSubview:tabBar.view];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -112,6 +108,48 @@
     NSLog(@"HELLO, WORLD applicationWillResignActive");
     // 图标上的数字减1
     application.applicationIconBadgeNumber -= 1;
+}
+
+- (void)loadView
+{
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    
+    TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
+    UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
+    InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
+    UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
+    
+    //获取IDFA
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
+    
+    tabBar = [[[RootViewController alloc] init]autorelease];
+    tabBar.delegate = self;
+    tabBar.score = 0;
+    NSURL *url = [NSURL URLWithString:@"http://123.57.9.112:8088/user/?msg=1001"];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
+        NSData *data = [request responseData];
+        NSLog(@"HELLO, WORLD *********** DATA:%@", data);
+    }
+    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
+    tabBar.viewControllers = controllerArray;
+    
+    [[tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
+    [(UITabBarItem *)[tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
+    
+    self.window.rootViewController = tabBar;
+    
+    [self.window makeKeyAndVisible];
 }
 
 @end
