@@ -351,7 +351,7 @@ do_user(1001, QS) ->
 %%
 %% key: 积分积分墙的回调key，注意：不是应用密钥；
 do_miidi(QS) ->
-  Idfa = lib_util_type:string_to_term(resolve_parameter("imei", QS)),
+  Idfa = string:to_upper(lib_util_type:string_to_term(resolve_parameter("imei", QS))),
   TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
   Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
   AppName = lib_util_type:string_to_term(resolve_parameter("appName", QS)),

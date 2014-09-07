@@ -68,6 +68,7 @@ add_score(UserId, Score) ->
       ets:insert(?ETS_ONLINE, NewUserInfo),
       db_agent_user:update_score(UserId, ScoreCurrent, ScoreTotal);
     _Other ->
+      ?Error(default_logger, "add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       skip
   end.
 
