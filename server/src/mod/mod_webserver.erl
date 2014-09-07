@@ -232,7 +232,7 @@ loop(Req, Root) ->
 
 % 功能                                                                 Request
 %---------------------------------------------------------------------------------------------------------------------------------
-% 举例                       msg=1000&id=100023
+% 举例                       msg=1001&id=100023
 %---------------------------------------------------------------------------------------------------------------------------------
 %% 处理请求
 %% Req:请求主体
@@ -271,7 +271,7 @@ deal_request(["dev"], QS) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
-%% 调用方法:http://127.0.0.1:8088/user/?msg=1000&id=....
+%% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["user"], QS) ->
@@ -280,14 +280,13 @@ deal_request(["user"], QS) ->
   {finish, Result};
 
 %% 处理请求
-%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1000&id=....
+%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1001
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["sys"], QS) ->
   Msg = list_to_integer(resolve_parameter("msg", QS)),
   Result = do_request(Msg, QS),
   {finish, Result};
-
 
 %%**********************************积分墙回调 start *********************************
 %% miidi回调,调用方法:http://127.0.0.1:8088/miidi/
@@ -299,7 +298,8 @@ deal_request(["miidi"], QS) ->
 %%**********************************积分墙回调 end *********************************
 
 
-
+deal_request(["ping"], QS) ->
+  200;
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
 %% 返回值:{finish, Result:string()}
@@ -317,12 +317,7 @@ deal_request(Type, QS) ->
   {finish, "type_error"}.
 
 %%用户相关
-%% http://127.0.0.1:8088/user/?msg=1000
-%%创建账号
-do_user(1000, _QS) ->
-  Result = lib_user:create_role(),
-  {finish, Result};
-
+%% http://127.0.0.1:8088/user/?msg=1001
 %%登录
 do_user(1001, QS) ->
   UserId = lib_util_type:string_to_term(resolve_parameter("user_id", QS)),
@@ -331,9 +326,42 @@ do_user(1001, QS) ->
 
 %% 调用方法:http://127.0.0.1:8088/callback/?msg=100
 %%服务器回调相关
-do_miidi(_QS) ->
+%% id: 赚取积分的广告id；
+%%
+%% trand_no:  交易流水号，唯一id；
+%%
+%% cash:  此次操作赚取的积分数量； cash=广告价格×应用和汇率；
+%%
+%% imei: 安卓平台为手机imei， iOS为手机mac地址, 如果是iOS 7.0以上的系统, 则是个该手机的idfa, 由于手机的idfa在特殊请情况下会发生改名改变,因此建议看开发者使用param0自定义参数来标识内部系统的唯一值；
+%%
+%% bundleId: 赚取积分的广告的唯一标识，例如唯品会为 com.vipshop.ipad ；
+%%
+%% param0: 应用通过SDK上传的参数；
+%%
+%% appName: 安装的应用的名称；
+%%
+%% sign: 签名字符串，签名算法如下：
+%%
+%% StringBuffer sign=  new StringBuffer();
+%%
+%% sign.append(id).append(trand_no).append(cash).append(param0==null?"":param0).append(key);
+%%
+%% key: 积分积分墙的回调key，注意：不是应用密钥；
+do_miidi(QS) ->
+  Idfa = lib_util_type:string_to_term(resolve_parameter("imei", QS)),
+  TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
+  Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
+  AppName = lib_util_type:string_to_term(resolve_parameter("appName", QS)),
+  lib_callback_miidi:deal(Idfa, TrandNo, Cash, AppName),
   200.
 
+%% QS:[{"msg","1000"},{"user_name","\"sngyai\""},{"passwd","\"MoonLight\""}]
+%% QS:[{"id","1960"},{"trand_no","940740"}, {"imei","8377a82f-3482-45e1-b3e2-ef90b3bc2d11"},
+%% {"cash","250"},
+%% {"sign","64e0c8a3fd577129a0d7a815e6343f22"},
+%% {"appName",[230,177,189,232,189,166,228,185,139,229,174,182]},
+%% {"bundleId","com.autohome"},
+%% {"param0",[]}]
 
 
 %% 具体处理消息请求---------------------------------------------------------------------------------------
@@ -341,7 +369,7 @@ do_miidi(_QS) ->
 %% 后面是本次请求参数列表
 %% 返回值 Result:string()
 
-%%  msg=1000
+%%  msg=1001
 do_request(9999, _QS) ->
   %_PlayerID = list_to_integer(resolve_parameter("id", QS)),
   %do_something,
