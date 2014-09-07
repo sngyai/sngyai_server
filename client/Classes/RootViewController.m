@@ -201,7 +201,6 @@
 {
     if (point > 0)
     {
-        NSLog(@"hello, world ****************** add_score%d, total_score:%@", point, self.score);
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init] autorelease];
 
         if (localnotification!=nil) {
@@ -239,7 +238,6 @@
         [MiidiAdWall requestGetPoints:self];
         [self queryScore];
         if (taskCoins.count > 0) {
-            NSLog(@"hello, world ****************** add_score%d, total_score:%@ taskCoins:%@", taskCoins.count, self.score, taskCoins);
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             
             if (localnotification!=nil) {
@@ -281,8 +279,10 @@
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
     
+    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
 //    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
-    NSString* StrUrl = [NSString stringWithFormat:@"http://123.57.9.112:8088/user/?msg=1001&user_id=%@", adId];
+    NSLog(@"HELLO, WORLD ********** HOST:%@, STR_USER:%@", StrUrl, StrUser);
     
     NSURL *url = [NSURL URLWithString:StrUrl];
     
@@ -300,6 +300,8 @@
         
         NSString *strScroreCur = [object objectForKey:@"score_current"];
         self.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
+    }else{
+        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
     }
 }
 

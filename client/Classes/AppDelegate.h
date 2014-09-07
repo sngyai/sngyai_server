@@ -26,8 +26,6 @@
     BOOL _isBackGround;
 }
 
-#define HOST (@"http://127.0.0.1:8088/")
-
 @property (retain, nonatomic) UIWindow *window;
 @property(nonatomic,copy)RootViewController *tabBar;
 @end
