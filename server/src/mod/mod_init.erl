@@ -203,16 +203,24 @@ init_ets() ->
   ets:new(?ETS_TASK_LOG, [{keypos, #user.id}, named_table, public, set]),
   ets:new(?Ets_Services_Time, [{keypos, 1}, named_table, public, set]),
 
-  init_ets_data(),
+  init_data_user(),
+  init_data_task_log(),
   ok.
 
-init_ets_data() ->
+init_data_user() ->
   AllUsers = db_agent_user:get_all_users(),
   ?T("all users 1: ~p~n", [AllUsers]),
   lists:foreach(
     fun(#user{} = User_E) ->
       ets:insert(?ETS_ONLINE, User_E)
     end, AllUsers).
+
+init_data_task_log() ->
+  AllTasks = db_agent_task_log:get_all_tasks(),
+  lists:foreach(
+    fun(#task_log{} = Task_E) ->
+      ets:insert(?ETS_TASK_LOG, Task_E)
+    end, AllTasks).
 
 %% 初始数据
 %% 返回值:ok

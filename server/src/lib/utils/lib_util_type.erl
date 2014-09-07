@@ -220,6 +220,8 @@ get_record_filed_list(Record_Name) ->
   case Record_Name of
     user ->
       record_info(fields, user);
+    task_log ->
+      record_info(fields, task_log);
     Other_Record ->
       ?T("get_record_filed_list record no define in lib_util_type.erl do it record_name is:~p", [Other_Record]),
       ?Error(default_logger, "no record ~p", [Other_Record]),

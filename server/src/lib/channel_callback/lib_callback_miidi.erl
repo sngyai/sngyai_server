@@ -18,7 +18,7 @@
   deal/4
   ]).
 
-deal(Idfa, TrandNo, AppName, Cash) ->
+deal(Idfa, TrandNo, Cash, AppName) ->
   case ets:match_object(?ETS_TASK_LOG, #task_log{channel = ?CHANNEL_MIIDI, trand_no = TrandNo, _='_'}) of
     [] ->
       %%添加任务记录
@@ -26,6 +26,7 @@ deal(Idfa, TrandNo, AppName, Cash) ->
       %%更新用户积分
       lib_user:add_score(Idfa, Cash);
     _Other -> %%重复的交易
-      ?Error(trand_logger, "handle_miidi_callback req:~p~n, ~nQS:~p~n", [Idfa, TrandNo, AppName, Cash])
+      ?T("duplicate miidi trand req:IDFA:~p~n, TrandNo:~p~n:AppName:~p~n Cash:~p~n", [Idfa, TrandNo, AppName, Cash]),
+      ?Error(trand_logger, "duplicate miidi trand req:IDFA:~p~n, TrandNo:~p~n:AppName:~p~n Cash:~p~n", [Idfa, TrandNo, AppName, Cash])
   end.
 
