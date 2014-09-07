@@ -47,12 +47,10 @@ update_score(UserId, ScoreCurrent, ScoreTotal) ->
   {update, _} = ?DB_GAME:update(db_user, [{score_current, ScoreCurrent}, {score_total, ScoreTotal}], [{id, UserId}]).
 
 
-
+data2record(id, Value) ->
+  {id, binary_to_list(Value)};
 data2record(account, Value) ->
   {account, lib_util_type:string_to_term(Value)};
-data2record(passwd, Value) ->
-  PassWd = lib_util_type:string_to_term(Value),
-  {passwd, PassWd};
 data2record(Key, Value) ->
   {Key, Value}.
 
@@ -60,6 +58,7 @@ data2record(Key, Value) ->
 
 record2data(User) ->
   tuple_to_list(User#user{
+%%     id = lib_util_type:term_to_string(User#user.id),
     account = lib_util_type:term_to_string(User#user.account)
   }
 ).
