@@ -271,6 +271,8 @@ deal_request(["dev"], QS) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
+deal_request(["ping"], _QS) ->
+  {finish, 200};
 %% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
@@ -297,9 +299,6 @@ deal_request(["miidi"], QS) ->
 
 %%**********************************积分墙回调 end *********************************
 
-
-deal_request(["ping"], QS) ->
-  200;
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
 %% 返回值:{finish, Result:string()}
@@ -351,10 +350,11 @@ do_user(1001, QS) ->
 %%
 %% key: 积分积分墙的回调key，注意：不是应用密钥；
 do_miidi(QS) ->
-  Idfa = string:to_upper(lib_util_type:string_to_term(resolve_parameter("imei", QS))),
+  Idfa = string:to_upper(resolve_parameter("imei", QS)),
   TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
   Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
-  AppName = lib_util_type:string_to_term(resolve_parameter("appName", QS)),
+  ?T("HELLO, WORLD ****************CASH:~p~n", [Cash]),
+  AppName = resolve_parameter("appName", QS),
   lib_callback_miidi:deal(Idfa, TrandNo, Cash, AppName),
   200.
 

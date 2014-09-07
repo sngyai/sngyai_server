@@ -1,0 +1,40 @@
+8-9-2014 1:55:20.627 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:undefined
+ Cash:150
+
+8-9-2014 1:55:23.908 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:undefined
+ Cash:150
+
+8-9-2014 1:55:25.096 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:undefined
+ Cash:150
+
+8-9-2014 1:55:26.174 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:undefined
+ Cash:150
+
+8-9-2014 1:57:40.932 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+ Cash:150
+
+8-9-2014 2:10:6.996 [lib_callback_miidi:29] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+ Cash:150
+
+8-9-2014 2:11:45.358 [lib_callback_miidi:30] handle_miidi_callback req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+ Cash:150
+
+8-9-2014 2:12:43.202 [lib_callback_miidi:30] duplicate miidi trand req:IDFA:"7D6E1A60-23E9-4AA9-9B9A-5E711321226E"
+, TrandNo:1035111
+:AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+ Cash:150
+

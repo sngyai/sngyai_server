@@ -53,11 +53,12 @@ login(UserId) ->
   lib_util_string:key_value_to_json(Result).
 
 %%完成任务，更新积分
-%%UserId用户唯一标识
+%%UserId用户唯一标识T
 %%Score获得积分
 add_score(UserId, Score) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
+      ?T("HELLO, WORLD ***********SC:~p, ST:~p, SCORE:~p~n",[SC, ST, Score]),
       ScoreCurrent = SC + Score,
       ScoreTotal = SC + ST,
       NewUserInfo =
@@ -68,6 +69,7 @@ add_score(UserId, Score) ->
       ets:insert(?ETS_ONLINE, NewUserInfo),
       db_agent_user:update_score(UserId, ScoreCurrent, ScoreTotal);
     _Other ->
+      ?T("add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       ?Error(default_logger, "add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       skip
   end.
