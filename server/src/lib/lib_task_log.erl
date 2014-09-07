@@ -14,7 +14,8 @@
 
 %% API
 -export([
-  add/5
+  add/5,
+  query/1
   ]).
 
 add(Idfa, Channel, TrandNo, AppName, Score) ->
@@ -29,3 +30,15 @@ add(Idfa, Channel, TrandNo, AppName, Score) ->
     },
   ets:insert(?ETS_TASK_LOG, TaskLog),
   db_agent_task_log:add(TaskLog).
+
+%%查询用户完成任务记录
+query(Idfa) ->
+  List =
+    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa}) of
+      [] ->
+        [];
+      L ->
+        L
+    end,
+  [record_debug:record_to_json(Record)|| Record <- List].
+
