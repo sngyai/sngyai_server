@@ -320,7 +320,13 @@ deal_request(Type, QS) ->
 %%登录
 do_user(1001, QS) ->
   UserId = resolve_parameter("user_id", QS),
-  lib_user:login(UserId).
+  case UserId of
+    undefined ->
+      "error_id";
+    _Other ->
+      lib_user:login(UserId)
+  end.
+
 
 
 %% do_user(1002, _QS) ->
