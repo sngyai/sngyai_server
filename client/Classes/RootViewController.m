@@ -127,8 +127,6 @@
 - (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
 	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
 	if (totalPoints > 0) {
-        NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+totalPoints] autorelease];
-        self.score = newScore;
         [MiidiAdWall requestSpendPoints:totalPoints withDelegate:self];
         
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
@@ -172,12 +170,6 @@
         
         if([aPointInfo[kYouMiPointsManagerPointAmountKey] intValue] > 0){
             NSLog(@"积分信息：%@", dict);
-            
-            //更新总积分
-            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue] +
-                                   [aPointInfo[kYouMiPointsManagerPointAmountKey] intValue]] autorelease];
-            self.score = newScore;
-            
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             if (localnotification!=nil) {
                 
@@ -207,11 +199,8 @@
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-    if (point > 0) {
-        
-        NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+point] autorelease];
-        
-        self.score = newScore;
+    if (point > 0)
+    {
         NSLog(@"hello, world ****************** add_score%d, total_score:%@", point, self.score);
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init] autorelease];
 
@@ -250,10 +239,6 @@
         [MiidiAdWall requestGetPoints:self];
         [self queryScore];
         if (taskCoins.count > 0) {
-            
-            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+taskCoins.count] autorelease];
-            
-            self.score = newScore;
             NSLog(@"hello, world ****************** add_score%d, total_score:%@ taskCoins:%@", taskCoins.count, self.score, taskCoins);
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             
@@ -296,7 +281,8 @@
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
     
-    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
+//    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
+    NSString* StrUrl = [NSString stringWithFormat:@"http://123.57.9.112:8088/user/?msg=1001&user_id=%@", adId];
     
     NSURL *url = [NSURL URLWithString:StrUrl];
     
