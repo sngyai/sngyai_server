@@ -166,6 +166,7 @@
     
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     request.delegate = self;
+    request.defaultResponseEncoding = NSUTF8StringEncoding;
     
     [request startSynchronous];
     
@@ -174,6 +175,7 @@
     if (!error) {
         NSString *response = [request responseString];
         NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
+//        NSDictionary *object = [[NSString alloc] initWithData:[response objectFromJSONString] encoding:NSUTF8StringEncoding];
         NSDictionary *object = [response objectFromJSONString];
         [tasks removeAllObjects];
         for (NSDictionary *dic in object){
