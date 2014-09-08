@@ -22,8 +22,8 @@
 
 %%创建新用户
 add(Task) ->
-  ValueList = lists:nthtail(1, record2data(Task)),
-  FieldList = record_info(fields, task_log),
+  ValueList = lists:nthtail(2, record2data(Task)),
+  [_Id | FieldList] = record_info(fields, task_log),
   {insert, _, _} = ?DB_GAME:insert(db_task_log, FieldList, ValueList),
   ok.
 
@@ -40,7 +40,13 @@ get_all_tasks() ->
   Result.
 
 data2record(app_name, Value) ->
-  {app_name, lib_util_type:string_to_term(Value)};
+  AppName = lib_util_type:string_to_term(Value),
+  ?T("HELLO, WORLD *****************APP_NAME~p~p~n",[Value, AppName]),
+  {app_name, AppName};
+data2record(user_id, Value) ->
+  {user_id, binary_to_list(Value)};
+%% data2record(app_name, Value) ->
+%%   {app_name, binary_to_list(Value)};
 data2record(Key, Value) ->
   {Key, Value}.
 

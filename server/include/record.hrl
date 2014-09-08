@@ -39,6 +39,7 @@
 
 -record(task_log,
 {
+  id,
   user_id,
   time,
   channel,

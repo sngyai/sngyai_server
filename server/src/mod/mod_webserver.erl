@@ -222,10 +222,16 @@ loop(Req, Root) ->
       {Content, Headers} = handle_request(Req),
       Content_Final =
         case is_list(Content) of
-          true -> Content;
-          false -> io_lib:format("~p", [Content])
+          true ->
+            ?T("HELLO, WORLD ***************1"),
+            Content;
+          false ->
+            ?T("HELLO, WORLD ***************2"),
+            io_lib:format("~p", [Content])
         end,
       Response = {Status, Headers, Content_Final},
+      ?T("HELLO, WORLD ************CONTENT:~p~n, HEADERS:~p~n, ContentFinal:~p~nResponse:~p~n", [Content, Headers, Content_Final, Response]),
+
       Req:respond(Response)
   end.
 
@@ -327,13 +333,16 @@ do_user(1001, QS) ->
       lib_user:login(UserId)
   end;
 
+%%查询用户任务记录
 do_user(1002, QS) ->
   UserId = resolve_parameter("user_id", QS),
   case UserId of
     undefined ->
       "error_id";
     _Other ->
-      lib_task_log:query(UserId)
+      Result = lib_task_log:query(UserId),
+      ?T("HELLO, WORLD *********RESULT:~p~n", [Result]),
+      Result
   end.
 
 
@@ -370,7 +379,7 @@ do_miidi(QS) ->
   TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
   Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
   ?T("HELLO, WORLD ****************CASH:~p~n", [Cash]),
-  AppName = resolve_parameter("appName", QS),
+  AppName = unicode:characters_to_list(iolist_to_binary(resolve_parameter("appName", QS))),
   lib_callback_miidi:deal(Idfa, TrandNo, Cash, AppName),
   200.
 
