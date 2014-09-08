@@ -1,0 +1,366 @@
+8-9-2014 16:38:35.303 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:40:45.350 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:42:55.397 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:45:5.444 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:47:15.475 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:49:25.537 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:51:35.584 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:53:45.631 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:55:55.678 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 16:58:5.725 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:0:15.772 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:2:25.803 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:4:35.850 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:6:45.912 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:8:55.944 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:11:5.975 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:13:16.022 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:15:26.069 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:19:55.125 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:22:5.157 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:24:15.189 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:26:25.220 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:28:35.251 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:30:56.281 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:33:6.300 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:35:16.317 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:37:26.348 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:39:36.379 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:41:46.411 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:43:56.442 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:46:6.473 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:48:16.504 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:50:26.536 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:52:36.567 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:54:46.598 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:56:56.629 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 17:59:6.661 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:1:16.692 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:3:26.723 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:5:36.754 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:7:46.786 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:9:56.817 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:12:6.848 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:14:16.879 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:16:26.911 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:18:36.942 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:20:46.973 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:22:57.004 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:25:7.036 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:27:17.067 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:29:27.098 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:31:37.129 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:33:47.161 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:35:57.192 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:38:7.239 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:40:17.270 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:42:27.301 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:44:37.332 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:46:47.364 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:48:57.395 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:51:7.426 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:53:17.457 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:55:27.489 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:57:37.520 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 18:59:47.551 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:1:57.582 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:4:7.614 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:6:17.645 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:8:27.676 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:10:37.707 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:12:47.739 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:14:57.770 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:17:7.801 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:19:17.832 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:21:27.864 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:23:37.895 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:25:47.926 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:27:57.957 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:30:7.989 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:32:18.020 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:34:28.051 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:36:38.082 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:38:48.114 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:40:58.145 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:43:8.176 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:45:18.207 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:47:28.239 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:49:38.270 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:51:48.301 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:53:58.332 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:56:8.364 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 19:58:18.395 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:0:28.426 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:2:38.473 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:4:48.504 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:6:58.536 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:9:8.567 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:11:18.598 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:13:28.629 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:15:38.661 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:17:48.692 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:19:58.723 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:22:8.754 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:24:18.786 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:26:28.817 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:28:38.848 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:30:48.879 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:32:58.911 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:35:8.942 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:37:18.973 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:39:29.004 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:41:39.036 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:43:49.067 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:45:59.098 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:48:9.129 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:50:19.161 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:52:29.192 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:54:39.223 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:56:49.270 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 20:58:59.301 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 21:1:9.332 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}
+8-9-2014 21:7:3.676 [tcp_request_broker:291] login lost Client:{client,undefined,0,0,0,[],0,1,
+                                            undefined,undefined,undefined,2,0}, Reason:{ok,
+                                                                                        error_protocol}

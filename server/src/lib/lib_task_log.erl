@@ -21,6 +21,7 @@
 add(Idfa, Channel, TrandNo, AppName, Score) ->
   TaskLog =
     #task_log{
+      id = {Channel, TrandNo},
       user_id = Idfa,
       time = lib_util_time:get_timestamp(),
       trand_no = TrandNo,
@@ -34,11 +35,40 @@ add(Idfa, Channel, TrandNo, AppName, Score) ->
 %%查询用户完成任务记录
 query(Idfa) ->
   List =
-    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa}) of
+    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa,_='_'}) of
       [] ->
         [];
       L ->
-        L
+        ?T("HELLO, WORLD ****** TASK_LOG:~p~n", [L]),
+        lists:reverse(lists:keysort(#task_log.time, L))
     end,
-  [record_debug:record_to_json(Record)|| Record <- List].
+  lists:concat(["[", concat_result(List, []), "]"]).
+
+concat_result([], Result) ->
+  Result;
+concat_result([TaskLog|T], Result) ->
+  #task_log{
+    user_id = UserId,
+    time = Time,
+    channel = Channel,
+    trand_no = TrandNo,
+    app_name = AppName,
+    score = Score
+  } = TaskLog,
+%%   AppName = binary_to_list(AppNameBin),
+  CurResult = lists:concat(["{\"user_id\":\"", UserId,
+    "\",\"time\":\"", Time,
+    "\",\"channel\":\"", Channel,
+    "\",\"trand_no\":\"", TrandNo,
+    "\",\"app_name\":\"", AppName,
+    "\",\"score\":\"", Score,
+    "\"}"
+  ]),
+  NewResult = case Result of
+                [] ->
+                  CurResult;
+                _Other ->
+                  lists:concat([Result, ",", CurResult])
+              end,
+  concat_result(T, NewResult).
 
