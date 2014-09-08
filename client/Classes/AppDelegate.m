@@ -22,8 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *StringUrlPing = [HOST stringByAppendingString:@"ping"];
+//    NSString *StringUrlPing = [HOST stringByAppendingString:@"ping"];
+    NSString *StringUrlPing = @"www.apple.com";
     Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
+    NSLog(@"HELLO, WORLD ********** URL：%@\nRESULT%d", StringUrlPing, [r currentReachabilityStatus]);
 
     switch ([r currentReachabilityStatus]) {
         case NotReachable:
@@ -35,7 +37,6 @@
             [self loadView];
             break;
     }
-    
     return YES;
 }
 
