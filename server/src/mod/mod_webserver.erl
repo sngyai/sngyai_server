@@ -325,7 +325,17 @@ do_user(1001, QS) ->
       "error_id";
     _Other ->
       lib_user:login(UserId)
+  end;
+
+do_user(1002, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  case UserId of
+    undefined ->
+      "error_id";
+    _Other ->
+      lib_task_log:query(UserId)
   end.
+
 
 
 
