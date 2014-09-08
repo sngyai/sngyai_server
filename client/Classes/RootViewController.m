@@ -225,7 +225,7 @@
 -(void)threadMethod
 
 {
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
     
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
@@ -236,7 +236,6 @@
 {
     [[PBOfferWall sharedOfferWall] queryRewardCoin:^(NSArray *taskCoins, PBRequestError *error) {
         [MiidiAdWall requestGetPoints:self];
-        [self queryScore];
         if (taskCoins.count > 0) {
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             
@@ -281,8 +280,6 @@
     
     NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
-//    NSString* StrUrl = [NSString stringWithFormat:@"http://192.168.1.3:8088/user/?msg=1001&user_id=%@", adId];
-    NSLog(@"HELLO, WORLD ********** HOST:%@, STR_USER:%@", StrUrl, StrUser);
     
     NSURL *url = [NSURL URLWithString:StrUrl];
     
@@ -297,6 +294,7 @@
         NSString *response = [request responseString];
         NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
         NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        NSLog(@"HELLO, WORLD *********** object:%@", object);
         
         NSString *strScroreCur = [object objectForKey:@"score_current"];
         self.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
