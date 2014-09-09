@@ -84,35 +84,6 @@
     return cell;
 }
 
-- (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
-          withError:(NSError *)error
-{
-    NSLog(@"----------%s", __PRETTY_FUNCTION__);
-    NSLog(@"用户已经完成的任务：%@", taskCoins);
-    
-    NSMutableString *mstr = [NSMutableString string];
-    if (taskCoins) {
-        if (taskCoins.count > 0) {
-            for (NSDictionary *dic in taskCoins) {
-                [mstr appendFormat:@"%@:%@;", [dic objectForKey:@"taskContent"], [dic objectForKey:@"coins"]];
-            }
-        }
-        else {
-            [mstr appendString:@"无积分"];
-        }
-    }
-    else {
-        [mstr appendString:error.localizedDescription];
-    }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"返回的金币数"
-                                                        message:mstr
-                                                       delegate:nil
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"确定", nil];
-    [alertView show];
-    [alertView release];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	switch (indexPath.row) {
@@ -134,7 +105,7 @@
             break;
         case 3:
             {
-                [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+                [[CSAppZone sharedAppZone] showAppZoneWithScale:0.9f];
             }
             break;
 		default:

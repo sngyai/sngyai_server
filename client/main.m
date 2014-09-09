@@ -11,11 +11,11 @@
 #import "MiidiManager.h"
 #import "YouMiConfig.h"
 #import "YouMiPointsManager.h"
-#import "PunchBoxAd.h"
+#import "ChanceAd.h"
 
 int main(int argc, char *argv[]) {
 	
-    [PunchBoxAd startSession:@"889879453-E23F9F-E650-079D-6B1EF8ECC"];
+    [ChanceAd startSession:@"889879453-E23F9F-E650-079D-6B1EF8ECC"];
     
     [MiidiManager setAppPublisher:@"19071"  withAppSecret:(NSString*)@"5sb72gp3iyj8znow" ];
     [YouMiConfig launchWithAppID:@"18e9f2d24d78bb26" appSecret:@"9c3909b6e5f685cb"];

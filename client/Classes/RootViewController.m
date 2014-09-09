@@ -8,11 +8,6 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController () <PBOfferWallDelegate>
-
-@end
-
-
 @implementation RootViewController
 
 
@@ -41,47 +36,15 @@
     
     _score = [[[NSNumber alloc] initWithInt:0] autorelease];
     
-    [PBOfferWall sharedOfferWall].delegate = self;
-    
     [NSThread detachNewThreadSelector:@selector(threadMethod) toTarget:self withObject:nil];
-
+    [[CSAppZone sharedAppZone] loadAppZone:[CSADRequest request]];
+    
     //设置有米获取积分监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
 
 #pragma mark -
 #pragma mark Table view data source
-
-
-- (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
-          withError:(NSError *)error
-{
-    NSLog(@"----------%s", __PRETTY_FUNCTION__);
-    NSLog(@"用户已经完成的任务：%@", taskCoins);
-    
-    NSMutableString *mstr = [NSMutableString string];
-    if (taskCoins) {
-        if (taskCoins.count > 0) {
-            for (NSDictionary *dic in taskCoins) {
-                [mstr appendFormat:@"%@:%@;", [dic objectForKey:@"taskContent"], [dic objectForKey:@"coins"]];
-            }
-        }
-        else {
-            [mstr appendString:@"无积分"];
-        }
-    }
-    else {
-        [mstr appendString:error.localizedDescription];
-    }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"返回的金币数"
-                                                        message:mstr
-                                                       delegate:nil
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"确定", nil];
-    [alertView show];
-    [alertView release];
-}
-
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -233,7 +196,7 @@
 
 -(void)timerDone
 {
-    [[PBOfferWall sharedOfferWall] queryRewardCoin:^(NSArray *taskCoins, PBRequestError *error) {
+    [[CSAppZone sharedAppZone] queryRewardCoin:^(NSArray *taskCoins, CSRequestError *error) {
         [MiidiAdWall requestGetPoints:self];
         if (taskCoins.count > 0) {
             
