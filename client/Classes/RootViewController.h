@@ -12,7 +12,7 @@
 #import "YouMiWall.h"
 #import "MiidiAdSpot.h"
 #import "MiidiAdWall.h"
-#import "PBOfferWall.h"
+#import "CSAppZone.h"
 #import "MiidiManager.h"
 #import "GuoMobWallViewController.h"
 #import "MiidiAdWallGetPointsDelegate.h"
@@ -35,7 +35,6 @@
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
-, PBOfferWallDelegate
 , DMOfferWallManagerDelegate
 , GuoMobWallDelegate>
 {

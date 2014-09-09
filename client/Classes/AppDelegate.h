@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 #import "TaskTableViewController.h"
 #import "RootViewController.h"
-#import "PunchBoxAd.h"
+#import "ChanceAd.h"
 #import "InfoTableViewController.h"
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"

@@ -107,7 +107,7 @@
             break;
         case 3:
             {
-                [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+                [[CSAppZone sharedAppZone] showAppZoneWithScale:0.9f];
             }
             break;
         case 4:

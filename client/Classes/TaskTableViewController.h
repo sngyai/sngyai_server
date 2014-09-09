@@ -11,7 +11,7 @@
 #import "YouMiWall.h"
 #import "MiidiAdSpot.h"
 #import "MiidiAdWall.h"
-#import "PBOfferWall.h"
+#import "CSAppZone.h"
 #import "MiidiManager.h"
 #import "RootViewController.h"
 #import "GuoMobWallViewController.h"
@@ -28,7 +28,6 @@
     MiidiAdWallSpendPointsDelegate,
     MiidiAdWallGetPointsDelegate,
     MiidiAdWallRequestToggleDelegate,
-    PBOfferWallDelegate,
     GuoMobWallDelegate>
 {
     UILabel *versionTipView_;
