@@ -32,7 +32,7 @@
                                    {database,"zhuanqian"},
                                    {pool_size,12}]},
                     {tcp_listener,[{ip,"127.0.0.1"},{port,8888}]},
-                    {server_log,[{dir,"./server_log"},
+                    {server_log,[{dir,"./ebin/server_log"},
                                  {file,"server_log_1"},
                                  {suffix,"txt"}]},
                     {acc_id,1},

@@ -21,7 +21,7 @@
                 {port, 8888}
             ]},
             {server_log, [
-                {dir, "./server_log"},
+                {dir, "./ebin/server_log"},
                 {file, "server_log_1"},
                 {suffix, "txt"}
             ]},
