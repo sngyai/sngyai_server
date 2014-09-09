@@ -19,6 +19,13 @@
 #pragma mark View lifecycle
 
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]; if (self) {
+        // 创建积分墙管理器,这⾥里使⽤用的是测试 ID,请按照 User Guide ⽂文档中获取新的 PublisherID。
+        _offerWallManager = [[DMOfferWallManager alloc] initWithPublisherID:@"96ZJ1IZAzeB0nwTBAd"];
+    }
+    return self; }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -28,13 +35,10 @@
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     //设置代理
     _guomobwall_vc.delegate=self;
+    _offerWallManager.delegate = self;
     
     //设置果盟定时查询是否获得积分
     _guomobwall_vc.updatetime=30;
-    
-    //初始化积分
-    
-    _score = [[[NSNumber alloc] initWithInt:0] autorelease];
     
     [NSThread detachNewThreadSelector:@selector(threadMethod) toTarget:self withObject:nil];
     [[CSAppZone sharedAppZone] loadAppZone:[CSADRequest request]];
@@ -60,7 +64,11 @@
 
 
 - (void)dealloc {
-	//
+    //多盟
+	_offerWallManager.delegate = nil;
+    [_offerWallManager release];
+    _offerWallManager = nil;
+    
     [super dealloc];
 }
 
@@ -78,9 +86,12 @@
 	
 }
 
+//miidi
 - (void)didReceiveGetPoints:(NSInteger)totalPoints forPointName:(NSString*)pointName{
 	NSLog(@"didReceiveGetPoints success! totalPoints:%d",totalPoints);
 	if (totalPoints > 0) {
+        [MiidiAdWall requestSpendPoints:totalPoints withDelegate:self];
+        
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
         if (localnotification!=nil) {
         
@@ -122,12 +133,6 @@
         
         if([aPointInfo[kYouMiPointsManagerPointAmountKey] intValue] > 0){
             NSLog(@"积分信息：%@", dict);
-            
-            //更新总积分
-            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue] +
-                                   [aPointInfo[kYouMiPointsManagerPointAmountKey] intValue]] autorelease];
-            self.score = newScore;
-            
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             if (localnotification!=nil) {
                 
@@ -157,12 +162,8 @@
 //果盟
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
-    if (point > 0) {
-        
-        NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+point] autorelease];
-        
-        self.score = newScore;
-        NSLog(@"hello, world ****************** add_score%d, total_score:%@", point, self.score);
+    if (point > 0)
+    {
         UILocalNotification *localnotification=[[[UILocalNotification alloc] init] autorelease];
 
         if (localnotification!=nil) {
@@ -187,7 +188,7 @@
 -(void)threadMethod
 
 {
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
     
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
@@ -199,11 +200,6 @@
     [[CSAppZone sharedAppZone] queryRewardCoin:^(NSArray *taskCoins, CSRequestError *error) {
         [MiidiAdWall requestGetPoints:self];
         if (taskCoins.count > 0) {
-            
-            NSNumber* newScore = [[[NSNumber alloc] initWithInt:[self.score intValue]+taskCoins.count] autorelease];
-            
-            self.score = newScore;
-            NSLog(@"hello, world ****************** add_score%d, total_score:%@ taskCoins:%@", taskCoins.count, self.score, taskCoins);
             UILocalNotification *localnotification=[[[UILocalNotification alloc] init]autorelease];
             
             if (localnotification!=nil) {
@@ -239,6 +235,36 @@
 	[alertView release];
 }
 
+-(void) queryScore
+{
+    //获取IDFA
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
+    
+    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        NSLog(@"HELLO, WORLD *********** object:%@", object);
+        
+        NSString *strScroreCur = [object objectForKey:@"score_current"];
+        self.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
+    }else{
+        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
+    }
+}
 
 @end
 

@@ -200,15 +200,28 @@ do_terminate(Reason, State) ->
 %% 返回值:ok
 init_ets() ->
   ets:new(?ETS_ONLINE, [{keypos, #user.id}, named_table, public, set]),      %%在线玩家列表
+  ets:new(?ETS_TASK_LOG, [{keypos, #task_log.id}, named_table, public, set]),
+  ets:new(?Ets_Services_Time, [{keypos, 1}, named_table, public, set]),
+
+  init_data_user(),
+  init_data_task_log(),
+  ok.
+
+init_data_user() ->
   AllUsers = db_agent_user:get_all_users(),
   ?T("all users 1: ~p~n", [AllUsers]),
   lists:foreach(
     fun(#user{} = User_E) ->
       ets:insert(?ETS_ONLINE, User_E)
-    end, AllUsers),
-  ?T("all users 2: ~p~n", [ets:tab2list(?ETS_ONLINE)]),
-  ets:new(?Ets_Services_Time, [{keypos, 1}, named_table, public, set]),
-  ok.
+    end, AllUsers).
+
+init_data_task_log() ->
+  AllTasks = db_agent_task_log:get_all_tasks(),
+  ?T("all TASKS 1: ~p~n", [AllTasks]),
+  lists:foreach(
+    fun(#task_log{channel = Channel, trand_no = TrandNo} = Task_E) ->
+      ets:insert(?ETS_TASK_LOG, Task_E#task_log{id = {Channel, TrandNo}})
+    end, AllTasks).
 
 %% 初始数据
 %% 返回值:ok

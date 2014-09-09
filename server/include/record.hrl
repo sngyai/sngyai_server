@@ -18,7 +18,7 @@
 
 -endif. % RECORD
 %% 请将新增加的record记录名称 追加至里面
--define(EXPORT_RECORD_INFO, [server_node, user]).
+-define(EXPORT_RECORD_INFO, [server_node, user, task_log]).
 %% 服务器节点
 -record(server_node, {
   id = "",                                % server编号
@@ -32,10 +32,19 @@
 %% player ==> player_status
 -record(user, {
   id,                                     %% 玩家ID
-  account = "",                    %% 玩家平台账号
-  score = 0,
-  money = 0,
-  restrict_state = 0,
-  passwd
+  score_current = 0,
+  score_total = 0,
+  account = ""
+}).
+
+-record(task_log,
+{
+  id,
+  user_id,
+  time,
+  channel,
+  trand_no,
+  app_name,
+  score
 }).
 

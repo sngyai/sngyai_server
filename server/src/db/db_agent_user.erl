@@ -17,7 +17,8 @@
 -export([
   create/1,
   get_user_by_name/1,
-  get_all_users/0
+  get_all_users/0,
+  update_score/3
   ]).
 
 %%创建新用户
@@ -36,15 +37,20 @@ get_user_by_name(User) ->
       Error
   end.
 
+%%读取所有用户
 get_all_users() ->
   {record_list, Result} = ?DB_GAME:select_record_list_with(user, fun data2record/2, db_user, "*", []),
   Result.
 
+%%更新用户积分
+update_score(UserId, ScoreCurrent, ScoreTotal) ->
+  {update, _} = ?DB_GAME:update(db_user, [{score_current, ScoreCurrent}, {score_total, ScoreTotal}], [{id, UserId}]).
+
+
+data2record(id, Value) ->
+  {id, binary_to_list(Value)};
 data2record(account, Value) ->
   {account, lib_util_type:string_to_term(Value)};
-data2record(passwd, Value) ->
-  PassWd = lib_util_type:string_to_term(Value),
-  {passwd, PassWd};
 data2record(Key, Value) ->
   {Key, Value}.
 
@@ -52,8 +58,8 @@ data2record(Key, Value) ->
 
 record2data(User) ->
   tuple_to_list(User#user{
-    account = lib_util_type:term_to_string(User#user.account),
-    passwd = lib_util_type:term_to_string(User#user.passwd)
+%%     id = lib_util_type:term_to_string(User#user.id),
+    account = lib_util_type:term_to_string(User#user.account)
   }
 ).
 

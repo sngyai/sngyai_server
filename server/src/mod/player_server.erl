@@ -79,7 +79,7 @@ init([Player_Id, Socket, ClientPid, Openkey, Pf, Pfkey, Check_login]) ->
   put(tag, ?MODULE),
   %%设置为系统进程
   erlang:process_flag(trap_exit, true),
-  lib_monitor_system:insert_monitor_pid({self(), ?MODULE, {Player_Id}}),
+%%   lib_monitor_system:insert_monitor_pid({self(), ?MODULE, {Player_Id}}),
 
   put(?DICT_PLAYERID, Player_Id),
   {ok, {Socket, ClientPid, Openkey, Pf, Pfkey, Check_login}}.
@@ -147,7 +147,7 @@ handle_info(Info, State) ->
 %% Returns: any (ignored by gen_server)
 %% --------------------------------------------------------------------
 terminate(Reason, State) ->
-  lib_monitor_system:delete_monitor_pid(self()),
+%%   lib_monitor_system:delete_monitor_pid(self()),
   try
     do_terminate(Reason, State)
   catch

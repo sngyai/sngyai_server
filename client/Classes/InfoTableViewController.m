@@ -60,6 +60,8 @@
 {
     // 2.2秒后刷新表格UI
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+        [tabBarController queryScore];
         // 刷新表格
         [self.tableView reloadData];
         
@@ -96,6 +98,9 @@
         
         NSString *totalScore = [NSString stringWithFormat:@"用户总积分:\t %@", tabBarController.score];
         cell.textLabel.text = totalScore;
+    }
+    if (indexPath.row == 1) {
+        cell.textLabel.text = @"任务记录";
     }
     
     return cell;
@@ -139,21 +144,22 @@
 }
 */
 
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+	switch (indexPath.row) {
+        case 1:
+        {
+            UIViewController *controller = [[TaskLogTableTableViewController alloc] init];
+            if (controller) {
+                [self.navigationController pushViewController:controller animated:YES];
+                [controller release];
+            }
+        }
+            break;
+		default:
+			break;
+	}
 }
-*/
+
 
 @end

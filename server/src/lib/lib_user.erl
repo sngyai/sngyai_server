@@ -15,76 +15,68 @@
 
 %% API
 -export([
-  create_role/2,
-  login/2
+  create_role/1,
+  login/1,
+  add_score/2,
+  t/0
 ]).
 
 %%创建用户
-create_role(UserName, PassWd) ->
-  case check_create(UserName) of
-    error ->
-      "user name already exist";
-    ok ->
-      NewUser =
-        #user{
-          id = mod_increase_player:new_id(),
-          account = UserName,
-          score = 0,
-          money = 0,
-          restrict_state = 0,
-          passwd = PassWd
-        },
-      ets:insert(?ETS_ONLINE, NewUser),
-      db_agent_user:create(NewUser),
-      "ok"
-  end.
-
-%%验证用户名是否存在
-check_create(UserName) ->
-  ?T("create role:~p, ~p~n", [UserName, ets:tab2list(?ETS_ONLINE)]),
-  case ets:match_object(?ETS_ONLINE, #user{account = UserName, _='_'}) of
-    [User|_] when is_record(User, user)->
-      error;
-    _Other ->
-      ?T("check create: ~p~n", [_Other]),
-      ok
-  end.
+create_role(Idfa) ->
+    NewUser =
+      #user{
+        id = Idfa,
+        score_current = 0,
+        score_total = 0,
+        account = ""
+      },
+    ets:insert(?ETS_ONLINE, NewUser),
+    db_agent_user:create(NewUser),
+    "ok".
 
 %%登录
-login(UserName, Passwd) ->
-  case check_login(UserName, Passwd) of
-    {error, Error} ->
-      Error;
-    ok ->
-      "ok"
-  end.
+login(UserId) ->
+  ?T("user_id:~p, tab2list:~p", [UserId, ets:tab2list(?ETS_ONLINE)]),
+  {ScoreCurrent, ScoreTotal} =
+    case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{score_current = SC, score_total = ST}|_] ->
+      {SC, ST};
+    _Other -> %用户不存在，创建一个
+      create_role(UserId),
+      {0, 0}
+  end,
+  Result =
+    [
+      {"score_current", lib_util_type:term_to_string(ScoreCurrent)},
+      {"score_total", lib_util_type:term_to_string(ScoreTotal)}
+    ],
+  lib_util_string:key_value_to_json(Result).
 
-%%验证登录是否合法
-check_login(UserName, Passwd) ->
-  case db_agent_user:get_user_by_name(UserName) of
-    {ok, #user{passwd = Passwd}} ->
-      ok;
-    {ok, #user{passwd = Ps} = U} ->
-      ?T("check_login: ~p ~p~n", [U, Ps]),
-      {error, "passwd incorrect"};
+%%完成任务，更新积分
+%%UserId用户唯一标识T
+%%Score获得积分
+add_score(UserId, Score) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
+      ?T("HELLO, WORLD ***********SC:~p, ST:~p, SCORE:~p~n",[SC, ST, Score]),
+      ScoreCurrent = SC + Score,
+      ScoreTotal = SC + ST,
+      NewUserInfo =
+        UserInfo#user{
+          score_current = ScoreCurrent,
+          score_total = ScoreTotal
+        },
+      ets:insert(?ETS_ONLINE, NewUserInfo),
+      db_agent_user:update_score(UserId, ScoreCurrent, ScoreTotal);
     _Other ->
-      ?T("check_login: ~p~n", [_Other]),
-      {error, "user not exist"}
-  end.
-
-check_login_ets(UserName, Passwd) ->
-  case ets:match_object(?ETS_ONLINE, #user{account = UserName, _='_'}) of
-    [#user{passwd = Passwd}|_] ->
-      ok;
-    [#user{}] ->
-      {error, "passwd incorrect"};
-    _Other ->
-      ?T("check create: ~p~n", [_Other]),
-      {error, "user not exist"}
+      ?T("add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
+      ?Error(default_logger, "add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
+      skip
   end.
 
 
-
+t() ->
+  create_role("1A2C").
 
 
 

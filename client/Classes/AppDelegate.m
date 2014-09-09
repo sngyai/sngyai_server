@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <AdSupport/ASIdentifierManager.h>
+#import "Reachability.h"
+
 
 
 @implementation AppDelegate
@@ -19,33 +22,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
+//    NSString *StringUrlPing = [HOST stringByAppendingString:@"ping"];
+    NSString *StringUrlPing = @"www.apple.com";
+    Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
+    NSLog(@"HELLO, WORLD ********** URL：%@\nRESULT%d", StringUrlPing, [r currentReachabilityStatus]);
 
-    TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
-    UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
-    InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
-    UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
-    
-    
-    tabBar = [[[RootViewController alloc] init]autorelease];
-    tabBar.delegate = self;
-    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
-    tabBar.viewControllers = controllerArray;
-    
-    [[tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
-    [(UITabBarItem *)[tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
-    
-    self.window.rootViewController = tabBar;
-//    [self.window addSubview:tabBar.view];
-    [self.window makeKeyAndVisible];
+    switch ([r currentReachabilityStatus]) {
+        case NotReachable:
+            break;
+        case ReachableViaWWAN:
+            [self loadView];
+            break;
+        case ReachableViaWiFi:
+            [self loadView];
+            break;
+    }
     return YES;
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    NSLog(@"HELLO, WORLD applicationDidEnterBackground");
     __block UIBackgroundTaskIdentifier background_task;
     //Create a task object
     background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
@@ -109,9 +106,32 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    NSLog(@"HELLO, WORLD applicationWillResignActive");
     // 图标上的数字减1
     application.applicationIconBadgeNumber -= 1;
+}
+
+- (void)loadView
+{
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    
+    TaskTableViewController *TaskController = [[[TaskTableViewController alloc] init] autorelease];
+    UINavigationController *TaskNav = [[UINavigationController alloc] initWithRootViewController:TaskController];
+    InfoTableViewController *InfoController = [[[InfoTableViewController alloc] init] autorelease];
+    UINavigationController *InfoNav = [[UINavigationController alloc] initWithRootViewController:InfoController];
+    
+    _tabBar = [[[RootViewController alloc] init]autorelease];
+    _tabBar.delegate = self;
+    
+    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
+    _tabBar.viewControllers = controllerArray;
+    
+    [[_tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
+    [(UITabBarItem *)[_tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
+    
+    self.window.rootViewController = _tabBar;
+    
+    [self.window makeKeyAndVisible];
 }
 
 @end

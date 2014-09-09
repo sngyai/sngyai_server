@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AdSupport/ASIdentifierManager.h>
 #import "YouMiWall.h"
 #import "MiidiAdSpot.h"
 #import "MiidiAdWall.h"
@@ -19,22 +20,33 @@
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
+#import "DMOfferWallManager.h"
+#import "ASIHTTPRequest.h"
+#import "JSONKit.h"
 
 
 
+#define HOST (@"http://192.168.1.3:8088/")
+//#define HOST (@"http://123.57.9.112:8088/")
 
-
-@interface RootViewController : UITabBarController <MiidiAdWallShowAppOffersDelegate
+@interface RootViewController : UITabBarController
+<MiidiAdWallShowAppOffersDelegate
 , MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
+, DMOfferWallManagerDelegate
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController * _guomobwall_vc;
+    DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
 }
+
+-(void) queryScore;
+
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
+@property(nonatomic,copy)DMOfferWallManager *offerWallManager;
 @property(nonatomic,copy)NSNumber *score;
 
 @end

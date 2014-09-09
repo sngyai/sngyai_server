@@ -53,41 +53,7 @@
 %%%_------------------------ETS表相关-------------------------------------------------------------------
 -define(ETS_STAT_DB, ets_stat_db).  %% 数据库访问统计(表名，操作，次数)
 -define(ETS_ONLINE, ets_online).    %% 玩家在线ETS
--define(ETS_MAP_WALKABLE, ets_map_walkable).    %% 可行走坐标
--define(ETS_MONITOR_PID, ets_monitor_pid).      %%进程监控
--define(ETS_ATHLETICS_RANK, ets_athletics_rank).      %%竞技场排行榜ETS表
--define(ETS_GUILD, ets_guild).
--define(ETS_GUILD_MEMBER, ets_guild_member).
--define(ETS_GUILD_APPLY, ets_guild_apply).
--define(ETS_GUILD_BATTLE_APPLY, ets_guild_battle_apply).
--define(ETS_PEON, ets_peon).                            %% 苦工表（都是苦工）
--define(ETS_PLAYER_PEON, ets_player_peon).              %% 正在玩“抓苦工”玩家的待抓捕苦工表（都不是苦工）
--define(ETS_PEON_PEON_RANK, ets_peon_peon_rank).        %% 全服苦工排行
--define(ETS_PEON_FOREMAN_RANK, ets_peon_foreman_rank).  %% 全服工头排行
--define(ETS_PEON_GUILD_FOREMAN_RANK, ets_peon_guild_foreman_rank).  %公会工头排行
--define(ETS_GUILD_BATTLE_PLAYER, ets_guild_battle_player). %% 家族战玩家信息
--define(ETS_PEON_GUILD_PEON_RANK, ets_peon_guild_peon_rank).        %公会苦工排行
--define(ETS_PLAYER_BETTING_TIMES, ets_player_batting_times).  %%玩家投注次数
--define(ETS_RANK, ets_rank).  %%排行
--define(ETS_Asyn_Data, ets_read_only_asyn_data).  %%离线缓存
--define(ETS_DAILY_BULLETIN, ets_daily_bulletin).    %日常公告
--define(ETS_FAIRY_WAR_PLAYER, ets_fairy_war_player). %% 仙域之战中玩家信息
--define(ETS_CAMP_SUCCESS_TIMES, ets_camp_war_player). %% 阵营胜利次数
--define(ETS_SYSTEM_DATA, ets_system_data). %% 系统动态数据 {key, Value} %% 比如 当前最高玩家等级{max_lv, 48}
--define(ETS_JIN_GOD_WAR_PLAYER, ets_jin_god_war_player). %% 晋神之战玩家信息表
--define(ETS_JIN_GOD_WAR_TEAM, ets_jin_god_war_team). %% 晋神之战队伍信息表
--define(ETS_MALL_BOUGHT_INFO, ets_mall_bought_info). %% 商城限购信息
--define(ETS_GUILD_SCENE, ets_guild_scene). %% 帮会场景
--define(ETS_GUILD_DEFEND_LAST_WAR_INFO, ets_guild_defend_last_war_info). %% 家园守卫战上次战斗信息
--define(ETS_GUILD_DEFEND_WAR_INFO, ets_guild_defend_war_info). %% 家园守卫战信息
--define(ETS_GUILD_DEFEND_WAR_ENEMY, ets_guild_defend_war_enemy). %% 家园守卫战敌人信息
--define(ETS_GUILD_DEFEND_WAR_DEFENDER, ets_guild_defend_war_defender). %% 家园守卫战防御者信息
--define(ETS_GUILD_PET, ets_guild_pet). %% 萌宠
--define(ETS_GUILD_PET_MARKET, ets_guild_pet_market). %% 萌宠市场
--define(ETS_GUILD_PET_MARKET_EVENT, ets_guild_pet_market_event). %% 萌宠市场事件
--define(ETS_PLAYER_TEMP_INFO, ets_player_temp_info). %% 玩家临时数据,可以保存在dets中的
--define(ETS_UNREAL_HELP_PLAYER, ets_unreal_help_player).  %% 虚冥幻境助战玩家列表
--define(ETS_MULTI_CONQUEST_TEAM, ets_multi_conquest_team).  %%多人征战队伍
+-define(ETS_TASK_LOG, ets_task_log).
 
 
 %%%_------------------------数据缓存标记--------------------------------------------------------------------------------------------
@@ -125,12 +91,12 @@
 
 
 -define(T(Des), begin
-                  io:format("~n===============~n~p,module:~p,line:~p~n~p ~n==================~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, Des]),
-                  ?Debug(debug_logger, "~p", [Des])
+                  io:format("~n===============~n~p,module:~p,line:~p~n~p ~n==================~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, Des])
+%%                   ?Debug(debug_logger, "~p", [Des])
                 end).
 -define(T(Des, Values), begin
-                          io:format("~n===============~n~p,module:~p,line:~p~n~s ~n===============~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, lists:flatten(io_lib:format(Des, Values))]),
-                          ?Debug(debug_logger, "~s", [lists:flatten(io_lib:format(Des, Values))])
+                          io:format("~n===============~n~p,module:~p,line:~p~n~s ~n===============~n~n~n", [calendar:local_time(), ?MODULE, ?LINE, lists:flatten(io_lib:format(Des, Values))])
+%%                           ?Debug(debug_logger, "~s", [lists:flatten(io_lib:format(Des, Values))])
                         end).
 -endif.
 
@@ -152,12 +118,6 @@
 -define(Lang(Lang_Id, Para_List), lib_language:get_real_laguage_string(Lang_Id, Para_List)).
 
 -define(language_chinese, 1). %语言定义 中文,这个数字有特别的意义,不要改变
-
-
-%% json -----------------------------------------------------------------------------------------------------------------
-
-%JSON
--define(ToJson(Term), ejson:encode(Term)).
 
 %% 其他 -----------------------------------------------------------------------------------------------------------------
 

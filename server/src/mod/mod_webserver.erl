@@ -222,17 +222,23 @@ loop(Req, Root) ->
       {Content, Headers} = handle_request(Req),
       Content_Final =
         case is_list(Content) of
-          true -> Content;
-          false -> io_lib:format("~p", [Content])
+          true ->
+            ?T("HELLO, WORLD ***************1"),
+            Content;
+          false ->
+            ?T("HELLO, WORLD ***************2"),
+            io_lib:format("~p", [Content])
         end,
       Response = {Status, Headers, Content_Final},
+      ?T("HELLO, WORLD ************CONTENT:~p~n, HEADERS:~p~n, ContentFinal:~p~nResponse:~p~n", [Content, Headers, Content_Final, Response]),
+
       Req:respond(Response)
   end.
 
 
 % 功能                                                                 Request
 %---------------------------------------------------------------------------------------------------------------------------------
-% 举例                       msg=1000&id=100023
+% 举例                       msg=1001&id=100023
 %---------------------------------------------------------------------------------------------------------------------------------
 %% 处理请求
 %% Req:请求主体
@@ -241,6 +247,7 @@ handle_request(Req) ->
   %?T("handle_request path: ~p, method:~p",[Req:get(path), Req:get(method)]),
   QS = case Req:get(method) of 'GET' -> Req:parse_qs(); 'POST' -> Req:parse_post() end,
   ?T("handle_request req:~p, QS:~p", [Req, QS]),
+  ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
   try deal_request(Type, QS) of
     {finish, Result} ->
@@ -270,7 +277,9 @@ deal_request(["dev"], QS) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
-%% 调用方法:http://127.0.0.1:8088/user/?msg=1000&id=....
+deal_request(["ping"], _QS) ->
+  {finish, 200};
+%% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["user"], QS) ->
@@ -279,13 +288,22 @@ deal_request(["user"], QS) ->
   {finish, Result};
 
 %% 处理请求
-%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1000&id=....
+%% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1001
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
 deal_request(["sys"], QS) ->
   Msg = list_to_integer(resolve_parameter("msg", QS)),
   Result = do_request(Msg, QS),
   {finish, Result};
+
+%%**********************************积分墙回调 start *********************************
+%% miidi回调,调用方法:http://127.0.0.1:8088/miidi/
+deal_request(["miidi"], QS) ->
+  Result = do_miidi(QS),
+  {finish, Result};
+
+
+%%**********************************积分墙回调 end *********************************
 
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
@@ -303,21 +321,75 @@ deal_request(Type, QS) ->
   ?T("mod_webserver deal_request type error type:~p, QS:~p~n", [Type, QS]),
   {finish, "type_error"}.
 
-%%创建账号
-do_user(1000, QS) ->
-  UserName = lib_util_type:string_to_term(resolve_parameter("user_name", QS)),
-  PassWd = lib_util_type:string_to_term(resolve_parameter("passwd", QS)),
-  Result = lib_user:create_role(UserName, PassWd),
-  {finish, Result};
-
+%%用户相关
+%% http://127.0.0.1:8088/user/?msg=1001
 %%登录
 do_user(1001, QS) ->
-  UserName = lib_util_type:string_to_term(resolve_parameter("user_name", QS)),
-  PassWd = lib_util_type:string_to_term(resolve_parameter("passwd", QS)),
-  Result = lib_user:login(UserName, PassWd),
-  {finish, Result}.
+  UserId = resolve_parameter("user_id", QS),
+  case UserId of
+    undefined ->
+      "error_id";
+    _Other ->
+      lib_user:login(UserId)
+  end;
+
+%%查询用户任务记录
+do_user(1002, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  case UserId of
+    undefined ->
+      "error_id";
+    _Other ->
+      Result = lib_task_log:query(UserId),
+      ?T("HELLO, WORLD *********RESULT:~p~n", [Result]),
+      Result
+  end.
 
 
+
+
+%% do_user(1002, _QS) ->
+%%   lib_util_string:key_value_to_json([{"error", "\"Invalid Parameter player_id\""}]).
+
+%% 调用方法:http://127.0.0.1:8088/callback/?msg=100
+%%服务器回调相关
+%% id: 赚取积分的广告id；
+%%
+%% trand_no:  交易流水号，唯一id；
+%%
+%% cash:  此次操作赚取的积分数量； cash=广告价格×应用和汇率；
+%%
+%% imei: 安卓平台为手机imei， iOS为手机mac地址, 如果是iOS 7.0以上的系统, 则是个该手机的idfa, 由于手机的idfa在特殊请情况下会发生改名改变,因此建议看开发者使用param0自定义参数来标识内部系统的唯一值；
+%%
+%% bundleId: 赚取积分的广告的唯一标识，例如唯品会为 com.vipshop.ipad ；
+%%
+%% param0: 应用通过SDK上传的参数；
+%%
+%% appName: 安装的应用的名称；
+%%
+%% sign: 签名字符串，签名算法如下：
+%%
+%% StringBuffer sign=  new StringBuffer();
+%%
+%% sign.append(id).append(trand_no).append(cash).append(param0==null?"":param0).append(key);
+%%
+%% key: 积分积分墙的回调key，注意：不是应用密钥；
+do_miidi(QS) ->
+  Idfa = string:to_upper(resolve_parameter("imei", QS)),
+  TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
+  Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
+  ?T("HELLO, WORLD ****************CASH:~p~n", [Cash]),
+  AppName = unicode:characters_to_list(iolist_to_binary(resolve_parameter("appName", QS))),
+  lib_callback_miidi:deal(Idfa, TrandNo, Cash, AppName),
+  200.
+
+%% QS:[{"msg","1000"},{"user_name","\"sngyai\""},{"passwd","\"MoonLight\""}]
+%% QS:[{"id","1960"},{"trand_no","940740"}, {"imei","8377a82f-3482-45e1-b3e2-ef90b3bc2d11"},
+%% {"cash","250"},
+%% {"sign","64e0c8a3fd577129a0d7a815e6343f22"},
+%% {"appName",[230,177,189,232,189,166,228,185,139,229,174,182]},
+%% {"bundleId","com.autohome"},
+%% {"param0",[]}]
 
 
 %% 具体处理消息请求---------------------------------------------------------------------------------------
@@ -325,7 +397,7 @@ do_user(1001, QS) ->
 %% 后面是本次请求参数列表
 %% 返回值 Result:string()
 
-%%  msg=1000
+%%  msg=1001
 do_request(9999, _QS) ->
   %_PlayerID = list_to_integer(resolve_parameter("id", QS)),
   %do_something,
