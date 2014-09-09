@@ -2,60 +2,198 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="6c710d36-de48-4af6-9089-c7d8193ec96e" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\CHANGES.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\README" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\include\internal.hrl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\rebar" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\rebar.config" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochifmt.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochifmt_records.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochifmt_std.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiglobal.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochihex.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochijson.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochijson2.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochilists.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochilogfile2.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochinum.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochitemp.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiutf8.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb.app.src" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_acceptor.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_base64url.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_charref.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_cookies.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_cover.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_echo.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_headers.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_html.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_http.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_io.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_mime.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_multipart.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_request.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_response.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_session.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_socket.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_socket_server.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_util.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\mochiweb_websocket.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\src\reloader.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_base64url_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_html_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_http_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_request_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_socket_server_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_tests.erl" afterPath="" />
-      <change type="DELETED" beforePath="D:\lizhuan\sngyai_server\server\priv\src\mochiweb\test\mochiweb_websocket_tests.erl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/console_appender.beam" afterPath="$PROJECT_DIR$/ebin/console_appender.beam" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ejson.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ejson_decode.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ejson_encode.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ibrowse_lib_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ibrowse_test.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/ibrowse_test_server.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_base64url_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_html_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_http_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_request_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_socket_server_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mochiweb_websocket_tests.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mysql.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mysql_auth.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mysql_conn.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mysql_recv.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mysql_test.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/rfc4627.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/console_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/dummy_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/dynamic_code.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/dynamic_compile.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/email_msg.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/error_logger_log4erl_h.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/file_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/flash_start.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl_conf.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl_lex.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl_parser.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log4erl_utils.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log_filter.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log_filter_codegen.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log_formatter.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/log_manager.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/logger_guard.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/mochinum.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/mod_code.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/smtp_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/smtp_fsm.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/syslog_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/ebin/xml_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/dynamic_compile/dynamic_code.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/dynamic_compile/dynamic_compile.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/dynamic_compile/mod_code.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/ejson.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/ejson_decode.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/ejson_encode.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/mochijson2.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ejson/rfc4627.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/flash_policy/flash_start.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/BSD_LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/CHANGELOG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/CONTRIBUTORS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/doc/ibrowse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/doc/ibrowse_lib.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/doc/short-desc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/include/ibrowse.hrl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/priv/ibrowse.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/rebar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/rebar.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/Emakefile.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse.app.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse_app.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse_http_client.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse_lb.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse_lib.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/src/ibrowse_sup.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/test/ibrowse_lib_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/test/ibrowse_test.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/ibrowse-master/test/ibrowse_test_server.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/API.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/Appenders_API.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/CHANGELOG.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/CONFIGURATION.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/TODO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/ebin/log4erl.app" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/include/log4erl.hrl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/priv/l4e.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/priv/log4erl.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/rebar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/rebar.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/console_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/dummy_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/email_msg.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/error_logger_log4erl_h.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/file_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl.app.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl_conf.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl_lex.xrl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl_parser.yrl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl_sup.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log4erl_utils.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log_filter.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log_filter_codegen.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log_formatter.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/log_manager.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/logger_guard.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/smtp_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/smtp_fsm.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/syslog_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/log4erl/src/xml_appender.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/include/internal.hrl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/rebar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/rebar.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochifmt.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochifmt_records.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochifmt_std.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiglobal.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochihex.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochijson.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochijson2.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochilists.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochilogfile2.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochinum.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochitemp.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiutf8.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb.app.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_acceptor.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_base64url.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_charref.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_cookies.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_cover.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_echo.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_headers.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_html.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_http.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_io.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_mime.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_multipart.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_request.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_response.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_session.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_socket.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_socket_server.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_util.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_websocket.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/src/reloader.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_base64url_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_html_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_http_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_request_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_socket_server_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mochiweb/test/mochiweb_websocket_tests.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/COPYING.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/SOURCE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/rebar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql.app.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql_auth.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql_conn.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql_recv.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/mysql-driver/test/mysql_test.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/rabbit_disk_monitor.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/sys_alarm_handler.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/sys_alarm_monitor_sup.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/sys_background_gc.erl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priv/src/sys_monitor/vm_memory_monitor.erl" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/crone/crone.erl" afterPath="$PROJECT_DIR$/src/lib/crone/crone.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/crone/polish.erl" afterPath="$PROJECT_DIR$/src/lib/crone/polish.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_debug.erl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/record_debug.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.erl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/record_info.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl" afterPath="$PROJECT_DIR$/include/record_info.hrl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_compiler_supplement.erl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/record_info_compiler_supplement.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_internal.hrl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/record_info_internal.hrl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/record_info_transform.erl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/record_info_transform.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.erl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/test.erl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/priv/src/record_proplist/test.hrl" afterPath="$PROJECT_DIR$/src/lib/record_proplist/test.hrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/crone.beam" afterPath="$PROJECT_DIR$/ebin/crone.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent.beam" afterPath="$PROJECT_DIR$/ebin/db_agent.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_player.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_player.beam" />
@@ -66,26 +204,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_cache.beam" afterPath="$PROJECT_DIR$/ebin/db_cache.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_mysql.beam" afterPath="$PROJECT_DIR$/ebin/db_mysql.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_mysqlutil.beam" afterPath="$PROJECT_DIR$/ebin/db_mysqlutil.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/dummy_appender.beam" afterPath="$PROJECT_DIR$/ebin/dummy_appender.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/dynamic_code.beam" afterPath="$PROJECT_DIR$/ebin/dynamic_code.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/dynamic_compile.beam" afterPath="$PROJECT_DIR$/ebin/dynamic_compile.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ejson.beam" afterPath="$PROJECT_DIR$/ebin/ejson.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ejson_decode.beam" afterPath="$PROJECT_DIR$/ebin/ejson_decode.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ejson_encode.beam" afterPath="$PROJECT_DIR$/ebin/ejson_encode.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/email_msg.beam" afterPath="$PROJECT_DIR$/ebin/email_msg.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/error_logger_log4erl_h.beam" afterPath="$PROJECT_DIR$/ebin/error_logger_log4erl_h.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/file_appender.beam" afterPath="$PROJECT_DIR$/ebin/file_appender.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/flash_start.beam" afterPath="$PROJECT_DIR$/ebin/flash_start.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/gen_player.beam" afterPath="$PROJECT_DIR$/ebin/gen_player.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_app.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_app.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_http_client.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_http_client.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_lb.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_lb.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_lib.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_lib.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_lib_tests.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_lib_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_sup.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_sup.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_test.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_test.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/ibrowse_test_server.beam" afterPath="$PROJECT_DIR$/ebin/ibrowse_test_server.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/increase_sup.beam" afterPath="$PROJECT_DIR$/ebin/increase_sup.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_callback_miidi.beam" afterPath="$PROJECT_DIR$/ebin/lib_callback_miidi.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_config.beam" afterPath="$PROJECT_DIR$/ebin/lib_config.beam" />
@@ -104,15 +229,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_string.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_string.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_time.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_time.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_util_type.beam" afterPath="$PROJECT_DIR$/ebin/lib_util_type.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl.beam" afterPath="$PROJECT_DIR$/ebin/log4erl.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl_conf.beam" afterPath="$PROJECT_DIR$/ebin/log4erl_conf.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl_sup.beam" afterPath="$PROJECT_DIR$/ebin/log4erl_sup.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl_utils.beam" afterPath="$PROJECT_DIR$/ebin/log4erl_utils.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log_filter.beam" afterPath="$PROJECT_DIR$/ebin/log_filter.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log_filter_codegen.beam" afterPath="$PROJECT_DIR$/ebin/log_filter_codegen.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log_formatter.beam" afterPath="$PROJECT_DIR$/ebin/log_formatter.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log_manager.beam" afterPath="$PROJECT_DIR$/ebin/log_manager.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/logger_guard.beam" afterPath="$PROJECT_DIR$/ebin/logger_guard.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/main.beam" afterPath="$PROJECT_DIR$/ebin/main.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochifmt.beam" afterPath="$PROJECT_DIR$/ebin/mochifmt.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochifmt_records.beam" afterPath="$PROJECT_DIR$/ebin/mochifmt_records.beam" />
@@ -123,38 +239,31 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochijson2.beam" afterPath="$PROJECT_DIR$/ebin/mochijson2.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochilists.beam" afterPath="$PROJECT_DIR$/ebin/mochilists.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochilogfile2.beam" afterPath="$PROJECT_DIR$/ebin/mochilogfile2.beam" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochinum.beam" afterPath="$PROJECT_DIR$/ebin/mochinum.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochitemp.beam" afterPath="$PROJECT_DIR$/ebin/mochitemp.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiutf8.beam" afterPath="$PROJECT_DIR$/ebin/mochiutf8.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_acceptor.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_acceptor.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_base64url.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_base64url.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_base64url_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_base64url_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_charref.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_charref.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_cookies.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_cookies.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_cover.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_cover.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_echo.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_echo.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_headers.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_headers.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_html.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_html.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_html_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_html_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_http.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_http.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_http_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_http_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_io.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_io.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_mime.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_mime.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_multipart.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_multipart.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_request.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_request.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_request_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_request_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_response.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_response.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_session.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_session.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_socket.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_socket.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_socket_server.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_socket_server.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_socket_server_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_socket_server_tests.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_util.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_util.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_websocket.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_websocket.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mochiweb_websocket_tests.beam" afterPath="$PROJECT_DIR$/ebin/mochiweb_websocket_tests.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_chat.beam" afterPath="$PROJECT_DIR$/ebin/mod_chat.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_chat_system.beam" afterPath="$PROJECT_DIR$/ebin/mod_chat_system.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_code.beam" afterPath="$PROJECT_DIR$/ebin/mod_code.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_crone.beam" afterPath="$PROJECT_DIR$/ebin/mod_crone.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_increase_player.beam" afterPath="$PROJECT_DIR$/ebin/mod_increase_player.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_init.beam" afterPath="$PROJECT_DIR$/ebin/mod_init.beam" />
@@ -163,11 +272,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_reloader.beam" afterPath="$PROJECT_DIR$/ebin/mod_reloader.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_server_log.beam" afterPath="$PROJECT_DIR$/ebin/mod_server_log.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_webserver.beam" afterPath="$PROJECT_DIR$/ebin/mod_webserver.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mysql.beam" afterPath="$PROJECT_DIR$/ebin/mysql.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mysql_auth.beam" afterPath="$PROJECT_DIR$/ebin/mysql_auth.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mysql_conn.beam" afterPath="$PROJECT_DIR$/ebin/mysql_conn.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mysql_recv.beam" afterPath="$PROJECT_DIR$/ebin/mysql_recv.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mysql_test.beam" afterPath="$PROJECT_DIR$/ebin/mysql_test.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/player_server.beam" afterPath="$PROJECT_DIR$/ebin/player_server.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/polish.beam" afterPath="$PROJECT_DIR$/ebin/polish.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/rabbit_disk_monitor.beam" afterPath="$PROJECT_DIR$/ebin/rabbit_disk_monitor.beam" />
@@ -176,18 +280,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/record_info_compiler_supplement.beam" afterPath="$PROJECT_DIR$/ebin/record_info_compiler_supplement.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/record_info_transform.beam" afterPath="$PROJECT_DIR$/ebin/record_info_transform.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/reloader.beam" afterPath="$PROJECT_DIR$/ebin/reloader.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/rfc4627.beam" afterPath="$PROJECT_DIR$/ebin/rfc4627.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_app.beam" afterPath="$PROJECT_DIR$/ebin/server_app.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup.beam" afterPath="$PROJECT_DIR$/ebin/server_sup.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup_db.beam" afterPath="$PROJECT_DIR$/ebin/server_sup_db.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup_player.beam" afterPath="$PROJECT_DIR$/ebin/server_sup_player.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_sup_sys.beam" afterPath="$PROJECT_DIR$/ebin/server_sup_sys.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/smtp_appender.beam" afterPath="$PROJECT_DIR$/ebin/smtp_appender.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/smtp_fsm.beam" afterPath="$PROJECT_DIR$/ebin/smtp_fsm.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_alarm_handler.beam" afterPath="$PROJECT_DIR$/ebin/sys_alarm_handler.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_alarm_monitor_sup.beam" afterPath="$PROJECT_DIR$/ebin/sys_alarm_monitor_sup.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/sys_background_gc.beam" afterPath="$PROJECT_DIR$/ebin/sys_background_gc.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/syslog_appender.beam" afterPath="$PROJECT_DIR$/ebin/syslog_appender.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_acceptor.beam" afterPath="$PROJECT_DIR$/ebin/tcp_acceptor.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_acceptor_sup.beam" afterPath="$PROJECT_DIR$/ebin/tcp_acceptor_sup.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_client_sup.beam" afterPath="$PROJECT_DIR$/ebin/tcp_client_sup.beam" />
@@ -196,16 +296,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/tcp_request_broker.beam" afterPath="$PROJECT_DIR$/ebin/tcp_request_broker.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/test.beam" afterPath="$PROJECT_DIR$/ebin/test.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/vm_memory_monitor.beam" afterPath="$PROJECT_DIR$/ebin/vm_memory_monitor.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/xml_appender.beam" afterPath="$PROJECT_DIR$/ebin/xml_appender.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_task_log.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_task_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log/debug_log.log" afterPath="$PROJECT_DIR$/ebin/log/debug_log.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log/default_log.log" afterPath="$PROJECT_DIR$/ebin/log/default_log.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.erlang" afterPath="$PROJECT_DIR$/.erlang" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/common.hrl" afterPath="$PROJECT_DIR$/include/common.hrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/erl_crash.dump" afterPath="$PROJECT_DIR$/ebin/erl_crash.dump" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_task_log.erl" afterPath="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_init.erl" afterPath="$PROJECT_DIR$/src/mod/mod_init.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_webserver.erl" afterPath="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/record.hrl" afterPath="$PROJECT_DIR$/include/record.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log/trand_log.log" afterPath="$PROJECT_DIR$/ebin/log/trand_log.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl.app" afterPath="$PROJECT_DIR$/ebin/log4erl.app" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/run.sh" afterPath="$PROJECT_DIR$/ebin/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server.app" afterPath="$PROJECT_DIR$/ebin/server.app" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server_app.erl" afterPath="$PROJECT_DIR$/src/server_app.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -229,94 +327,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mod_webserver.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
+      <file leaf-file-name="record_info.hrl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/record_info.hrl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0689654" vertical-offset="7817" max-vertical-offset="9093">
-              <caret line="382" column="23" selection-start-line="382" selection-start-column="23" selection-end-line="382" selection-end-column="23" />
-              <folding>
-                <marker date="1410196293039" expanded="true" signature="7264:7955" placeholder="loop/2 -&gt; ..." />
-                <marker date="1410196293039" expanded="true" signature="12661:13091" placeholder="do_miidi/1 -&gt; ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mochiweb_request.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_request.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2931" max-vertical-offset="18228">
-              <caret line="149" column="27" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4erl_lex.xrl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/src/log4erl/src/log4erl_lex.xrl">
+      <file leaf-file-name="db_agent.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/core/db_agent.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1596">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mochiweb_socket.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_socket.erl">
+      <file leaf-file-name="mysql.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/mysql/src/mysql.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1890">
-              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3940" max-vertical-offset="17176">
+              <caret line="236" column="32" selection-start-line="236" selection-start-column="32" selection-end-line="236" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib_callback_miidi.erl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl">
+      <file leaf-file-name=".erlang" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.erlang">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64285713" vertical-offset="210" max-vertical-offset="798">
-              <caret line="28" column="67" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib_task_log.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/lib_task_log.erl">
+      <file leaf-file-name="mochiweb.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.586207" vertical-offset="1114" max-vertical-offset="1680">
-              <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1596">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib_util_type.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_type.erl">
+      <file leaf-file-name="mochiweb_http.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb_http.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="5124">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mochiutf8.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiutf8.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="6783">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_util_string.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_string.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
+            <state vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="5548">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mochiapp_deps.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/mochiweb/support/templates/mochiwebapp_skel/src/mochiapp_deps.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1710">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4erl_conf.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4erl.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4408">
+              <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server_app.erl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server_app.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61254615" vertical-offset="219" max-vertical-offset="1235">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -357,10 +462,8 @@
         <option value="$PROJECT_DIR$/src/mod/increase/mod_increase_player.erl" />
         <option value="$PROJECT_DIR$/ebin/log4erl.conf" />
         <option value="$PROJECT_DIR$/src/server_sup_db.erl" />
-        <option value="$PROJECT_DIR$/src/server_app.erl" />
         <option value="$PROJECT_DIR$/include/channel.hrl" />
         <option value="$PROJECT_DIR$/src/lib/lib_callback_miidi.erl" />
-        <option value="$PROJECT_DIR$/include/common.hrl" />
         <option value="$PROJECT_DIR$/include/storage_file.hrl" />
         <option value="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" />
         <option value="$PROJECT_DIR$/src/mod/player_server.erl" />
@@ -377,14 +480,21 @@
         <option value="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
         <option value="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
         <option value="$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_request.erl" />
+        <option value="$PROJECT_DIR$/priv/src/mysql-driver/src/mysql_recv.erl" />
+        <option value="$PROJECT_DIR$/include/common.hrl" />
+        <option value="$PROJECT_DIR$/src/server.app.src" />
+        <option value="$PROJECT_DIR$/ebin/server.app" />
+        <option value="$PROJECT_DIR$/src/server_sup.erl" />
+        <option value="$PROJECT_DIR$/.erlang" />
+        <option value="$PROJECT_DIR$/src/server_app.erl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-3" />
+    <option name="y" value="-3" />
+    <option name="width" value="1926" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -432,114 +542,6 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log4erl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log4erl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ebin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -556,7 +558,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="D:/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="vcs.Subversion" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -564,13 +566,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="D:\lizhuan\sngyai_server\server\priv\src" />
       <recent name="D:\lizhuan\sngyai_server\server\priv\src\record_proplist" />
       <recent name="D:\lizhuan\sngyai_server\server\include" />
       <recent name="D:\lizhuan\sngyai_server\server\ebin" />
-      <recent name="D:\trunk\project\src\mod" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib" />
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="D:\lizhuan\sngyai_server\server\src\lib\channel_callback" />
     </key>
   </component>
@@ -591,6 +595,26 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
       <module name="" />
       <option name="erlFlags" value="" />
@@ -600,6 +624,53 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit">
@@ -662,6 +733,26 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -741,6 +832,46 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
       <module name="" />
       <option name="name" value="Erlang" />
@@ -804,6 +935,26 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -847,14 +998,15 @@
       <workItem from="1410025566050" duration="6462000" />
       <workItem from="1410065749477" duration="19574000" />
       <workItem from="1410151844473" duration="16515000" />
+      <workItem from="1410250024587" duration="6917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65481000" />
+    <option name="totallyTimeSpent" value="72398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-3" y="-3" width="1926" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -862,7 +1014,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3347413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39209402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -876,12 +1028,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.221875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22151224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -904,141 +1057,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/db/db_agent_system_config.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54452056" vertical-offset="720" max-vertical-offset="1596">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/increase/mod_increase_player.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22209695" vertical-offset="1525" max-vertical-offset="4725">
-          <caret line="82" column="23" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/lib_server_log.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6004" max-vertical-offset="6594">
-          <caret line="294" column="74" selection-start-line="294" selection-start-column="2" selection-end-line="294" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/mod_server_log.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="449" max-vertical-offset="6384">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ebin/log4erl.conf">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7497" max-vertical-offset="15078">
-          <caret line="364" column="20" selection-start-line="364" selection-start-column="17" selection-end-line="364" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/src/log4erl.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1935" max-vertical-offset="4872">
-          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/priv/log4erl.conf">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6748466" vertical-offset="819" max-vertical-offset="1449">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Emakefile">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1176">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="189">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/erl6.1/lib/kernel-3.0.1/src/application.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3201" max-vertical-offset="8925">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/include/log4erl.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1239">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/log4erl.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1239">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/config/lib_config.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="6867">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server_sup_db.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="506" max-vertical-offset="1302">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/core/db_agent.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1764">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/core/db_mysql.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="90.51724" vertical-offset="3024" max-vertical-offset="8589">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="2142">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1680">
-          <caret line="41" column="159" selection-start-line="41" selection-start-column="159" selection-end-line="41" selection-end-column="159" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/storage_file.hrl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1533">
@@ -1075,65 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ebin/log4erl">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="504" max-vertical-offset="1050">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/ejson/ejson_encode.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.793103" vertical-offset="0" max-vertical-offset="2709">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/ejson/ejson.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server_sup_sys.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="3885">
           <caret line="72" column="13" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/common.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2413793" vertical-offset="1904" max-vertical-offset="4305">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/mod_crone.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1927" max-vertical-offset="4809">
-          <caret line="100" column="118" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_info.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/record_proplist/record_debug.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1113">
-          <caret line="40" column="15" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,17 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4059" max-vertical-offset="4998">
           <caret line="222" column="73" selection-start-line="222" selection-start-column="73" selection-end-line="222" selection-end-column="73" />
-          <folding>
-            <marker date="1410153875779" expanded="true" signature="-1:-1" placeholder="init_ets/0 -&gt; ..." />
-            <marker date="1410153875779" expanded="true" signature="-1:-1" placeholder="init_data_task_log/0 -&gt; ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/channel.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1184,130 +1136,206 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1407">
           <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-          <folding>
-            <marker date="1410181897231" expanded="true" signature="-1:-1" placeholder="data2record/2 -&gt; ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/erl6.1/lib/inets-5.10.2/src/http_lib/http_uri.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36220473" vertical-offset="3731" max-vertical-offset="4872">
-          <caret line="193" column="29" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochifmt.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9051">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_html.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13435" max-vertical-offset="16380">
-          <caret line="648" column="33" selection-start-line="648" selection-start-column="33" selection-end-line="648" selection-end-column="33" />
-          <folding>
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="to_tokens/1 -&gt; ..." />
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="%% ..." />
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="parse_flag/1 -&gt; ..." />
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="tokenize/2 -&gt; ..." />
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="find_gt/3 -&gt; ..." />
-            <marker date="1403890471000" expanded="true" signature="-1:-1" placeholder="tokenize_charref/3 -&gt; ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server_app.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1365">
-          <caret line="16" column="16" selection-start-line="15" selection-start-column="11" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_string.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiutf8.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="6783">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_type.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="5124">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/lib_task_log.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.586207" vertical-offset="1114" max-vertical-offset="1680">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_socket.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1890">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/mochiweb/src/mochiweb_request.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2931" max-vertical-offset="18228">
-          <caret line="149" column="27" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/src/log4erl_conf.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2893701" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/src/log4erl/src/log4erl_lex.xrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="4636">
+          <caret line="20" column="9" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0689654" vertical-offset="7817" max-vertical-offset="9093">
-          <caret line="382" column="23" selection-start-line="382" selection-start-column="23" selection-end-line="382" selection-end-column="23" />
-          <folding>
-            <marker date="1410196293039" expanded="true" signature="7264:7955" placeholder="loop/2 -&gt; ..." />
-            <marker date="1410196293039" expanded="true" signature="12661:13091" placeholder="do_miidi/1 -&gt; ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="8113" max-vertical-offset="8227">
+          <caret line="427" column="0" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl">
+    <entry file="file://$PROJECT_DIR$/include/common.hrl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64285713" vertical-offset="210" max-vertical-offset="798">
-          <caret line="28" column="67" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2126" max-vertical-offset="3781">
+          <caret line="119" column="54" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/lib_task_log.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1520">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/config/lib_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1501" max-vertical-offset="6213">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/config/lib_system_config.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="3477">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.app.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="931">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebin/server.app">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="988">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_sup.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1938">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sys_monitor/sys_alarm_handler.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4522">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/mod_crone.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="4351">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crone.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.555555" vertical-offset="27" max-vertical-offset="6042">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/crone/crone.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5925927" vertical-offset="1790" max-vertical-offset="8797">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/record_info.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/core/db_agent.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1596">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mysql/src/mysql.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3940" max-vertical-offset="17176">
+          <caret line="236" column="32" selection-start-line="236" selection-start-column="32" selection-end-line="236" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1596">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb_http.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="5548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/support/templates/mochiwebapp_skel/src/mochiapp_deps.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1710">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4408">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.erlang">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61254615" vertical-offset="219" max-vertical-offset="1235">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
