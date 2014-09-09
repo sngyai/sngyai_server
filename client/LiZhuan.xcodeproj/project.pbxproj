@@ -81,8 +81,8 @@
 		F19AAA8518A9C7590001C8FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19AAA8418A9C7590001C8FD /* ImageIO.framework */; };
 		F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19AAA8618A9C7770001C8FD /* MapKit.framework */; };
 		F1A0C83617E07C7B00474C9A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A0C83517E07C7B00474C9A /* AdSupport.framework */; };
-		FB43E4C319BF8DEC003173D1 /* ChanceAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB43E4BA19BF8DEC003173D1 /* ChanceAdRes.bundle */; };
-		FB43E4C419BF8DEC003173D1 /* libChanceAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB43E4C219BF8DEC003173D1 /* libChanceAd.a */; };
+		FB43E4D019BF8F01003173D1 /* ChanceAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB43E4C719BF8F01003173D1 /* ChanceAdRes.bundle */; };
+		FB43E4D119BF8F01003173D1 /* libChanceAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB43E4CF19BF8F01003173D1 /* libChanceAd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -226,16 +226,16 @@
 		F1FBB35018BF3B930061F8B6 /* MiidiAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdSpot.h; path = Lib/MiidiAdSpot.h; sourceTree = "<group>"; };
 		F1FBB35118BF3B930061F8B6 /* MiidiAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdView.h; path = Lib/MiidiAdView.h; sourceTree = "<group>"; };
 		F1FBB35218BF3B930061F8B6 /* MiidiAdViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiidiAdViewDelegate.h; path = Lib/MiidiAdViewDelegate.h; sourceTree = "<group>"; };
-		FB43E4B919BF8DEC003173D1 /* ChanceAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanceAd.h; sourceTree = "<group>"; };
-		FB43E4BA19BF8DEC003173D1 /* ChanceAdRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChanceAdRes.bundle; sourceTree = "<group>"; };
-		FB43E4BB19BF8DEC003173D1 /* CSADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSADRequest.h; sourceTree = "<group>"; };
-		FB43E4BC19BF8DEC003173D1 /* CSAppZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppZone.h; sourceTree = "<group>"; };
-		FB43E4BD19BF8DEC003173D1 /* CSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBannerView.h; sourceTree = "<group>"; };
-		FB43E4BE19BF8DEC003173D1 /* CSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInterstitial.h; sourceTree = "<group>"; };
-		FB43E4BF19BF8DEC003173D1 /* CSMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMoreGame.h; sourceTree = "<group>"; };
-		FB43E4C019BF8DEC003173D1 /* CSNativeMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNativeMoreGame.h; sourceTree = "<group>"; };
-		FB43E4C119BF8DEC003173D1 /* CSRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRequestError.h; sourceTree = "<group>"; };
-		FB43E4C219BF8DEC003173D1 /* libChanceAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChanceAd.a; sourceTree = "<group>"; };
+		FB43E4C619BF8F01003173D1 /* ChanceAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanceAd.h; sourceTree = "<group>"; };
+		FB43E4C719BF8F01003173D1 /* ChanceAdRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChanceAdRes.bundle; sourceTree = "<group>"; };
+		FB43E4C819BF8F01003173D1 /* CSADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSADRequest.h; sourceTree = "<group>"; };
+		FB43E4C919BF8F01003173D1 /* CSAppZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppZone.h; sourceTree = "<group>"; };
+		FB43E4CA19BF8F01003173D1 /* CSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBannerView.h; sourceTree = "<group>"; };
+		FB43E4CB19BF8F01003173D1 /* CSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInterstitial.h; sourceTree = "<group>"; };
+		FB43E4CC19BF8F01003173D1 /* CSMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMoreGame.h; sourceTree = "<group>"; };
+		FB43E4CD19BF8F01003173D1 /* CSNativeMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNativeMoreGame.h; sourceTree = "<group>"; };
+		FB43E4CE19BF8F01003173D1 /* CSRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRequestError.h; sourceTree = "<group>"; };
+		FB43E4CF19BF8F01003173D1 /* libChanceAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChanceAd.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +257,7 @@
 				B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */,
 				B7F1E24619B9F3FF0095D451 /* libDMOfferWallSDK.a in Frameworks */,
 				B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */,
+				FB43E4D119BF8F01003173D1 /* libChanceAd.a in Frameworks */,
 				BE882ED01568C15000D0EDC9 /* SystemConfiguration.framework in Frameworks */,
 				B7867CBB19AA481700D7965A /* Security.framework in Frameworks */,
 				B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */,
@@ -265,7 +266,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */,
 				BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */,
-				FB43E4C419BF8DEC003173D1 /* libChanceAd.a in Frameworks */,
 				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
 				F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */,
 				F19AA98018A9BFAF0001C8FD /* MiidiAdLib.a in Frameworks */,
@@ -546,7 +546,7 @@
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				FB43E4B819BF8DEC003173D1 /* libChanceAd */,
+				FB43E4C519BF8F01003173D1 /* libChanceAd */,
 				B7B1680219BCA38500449466 /* JSONKit */,
 				B7B1678219BC4D5A00449466 /* ASIHTTPRequest */,
 				B7B167D519BC4D5A00449466 /* External */,
@@ -597,19 +597,19 @@
 			name = spot;
 			sourceTree = "<group>";
 		};
-		FB43E4B819BF8DEC003173D1 /* libChanceAd */ = {
+		FB43E4C519BF8F01003173D1 /* libChanceAd */ = {
 			isa = PBXGroup;
 			children = (
-				FB43E4B919BF8DEC003173D1 /* ChanceAd.h */,
-				FB43E4BA19BF8DEC003173D1 /* ChanceAdRes.bundle */,
-				FB43E4BB19BF8DEC003173D1 /* CSADRequest.h */,
-				FB43E4BC19BF8DEC003173D1 /* CSAppZone.h */,
-				FB43E4BD19BF8DEC003173D1 /* CSBannerView.h */,
-				FB43E4BE19BF8DEC003173D1 /* CSInterstitial.h */,
-				FB43E4BF19BF8DEC003173D1 /* CSMoreGame.h */,
-				FB43E4C019BF8DEC003173D1 /* CSNativeMoreGame.h */,
-				FB43E4C119BF8DEC003173D1 /* CSRequestError.h */,
-				FB43E4C219BF8DEC003173D1 /* libChanceAd.a */,
+				FB43E4C619BF8F01003173D1 /* ChanceAd.h */,
+				FB43E4C719BF8F01003173D1 /* ChanceAdRes.bundle */,
+				FB43E4C819BF8F01003173D1 /* CSADRequest.h */,
+				FB43E4C919BF8F01003173D1 /* CSAppZone.h */,
+				FB43E4CA19BF8F01003173D1 /* CSBannerView.h */,
+				FB43E4CB19BF8F01003173D1 /* CSInterstitial.h */,
+				FB43E4CC19BF8F01003173D1 /* CSMoreGame.h */,
+				FB43E4CD19BF8F01003173D1 /* CSNativeMoreGame.h */,
+				FB43E4CE19BF8F01003173D1 /* CSRequestError.h */,
+				FB43E4CF19BF8F01003173D1 /* libChanceAd.a */,
 			);
 			name = libChanceAd;
 			path = Lib/libChanceAd;
@@ -670,7 +670,7 @@
 				B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */,
 				B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */,
 				B7B1680719BCA38500449466 /* CHANGELOG.md in Resources */,
-				FB43E4C319BF8DEC003173D1 /* ChanceAdRes.bundle in Resources */,
+				FB43E4D019BF8F01003173D1 /* ChanceAdRes.bundle in Resources */,
 				B71C689E19ACC4ED0054EAF4 /* Icon.png in Resources */,
 				B7AE23A119B1DBF500C54B62 /* InfoTableViewController.xib in Resources */,
 				F14551C5171E43950087DDB5 /* Default-568h@2x.png in Resources */,
