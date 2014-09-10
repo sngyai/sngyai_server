@@ -39,7 +39,6 @@ query(Idfa) ->
       [] ->
         [];
       L ->
-        ?T("HELLO, WORLD ****** TASK_LOG:~p~n", [L]),
         lists:reverse(lists:keysort(#task_log.time, L))
     end,
   lists:concat(["[", concat_result(List, []), "]"]).

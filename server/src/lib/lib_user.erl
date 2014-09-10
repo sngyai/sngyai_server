@@ -58,7 +58,6 @@ login(UserId) ->
 add_score(UserId, Score) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
-      ?T("HELLO, WORLD ***********SC:~p, ST:~p, SCORE:~p~n",[SC, ST, Score]),
       ScoreCurrent = SC + Score,
       ScoreTotal = SC + ST,
       NewUserInfo =

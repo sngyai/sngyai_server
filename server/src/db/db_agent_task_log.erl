@@ -41,7 +41,6 @@ get_all_tasks() ->
 
 data2record(app_name, Value) ->
   AppName = lib_util_type:string_to_term(Value),
-  ?T("HELLO, WORLD *****************APP_NAME~p~p~n",[Value, AppName]),
   {app_name, AppName};
 data2record(user_id, Value) ->
   {user_id, binary_to_list(Value)};

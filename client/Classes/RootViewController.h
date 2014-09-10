@@ -25,9 +25,14 @@
 #import "JSONKit.h"
 
 
-
-#define HOST (@"http://192.168.1.3:8088/")
+// aliyun服务器
 //#define HOST (@"http://123.57.9.112:8088/")
+
+// Window台式机
+//#define HOST (@"http://192.168.1.3:8088/")
+
+// MacMini
+#define HOST (@"http://192.168.1.4:8088/")
 
 @interface RootViewController : UITabBarController
 <MiidiAdWallShowAppOffersDelegate
