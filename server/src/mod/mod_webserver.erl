@@ -9,6 +9,7 @@
 
 -include("common.hrl").
 -include("record.hrl").
+-include("channel.hrl").
 
 -define(SERVER, ?MODULE).
 -define(DEFAULT_PORT, lib_config:get_webserver_port()).
@@ -294,9 +295,20 @@ deal_request(["sys"], QS) ->
   {finish, Result};
 
 %%**********************************积分墙回调 start *********************************
-%% miidi回调,调用方法:http://127.0.0.1:8088/miidi/
+%% miidi回调,调用方法:http://127.0.0.1:8088/callback/
+deal_request(["callback"], QS) ->
+  Result = lib_callback:channel_callback(QS),
+  {finish, Result};
 deal_request(["miidi"], QS) ->
   Result = do_miidi(QS),
+  {finish, Result};
+
+deal_request(["cocounion"], QS) ->
+  Result = do_cocounion(QS),
+  {finish, Result};
+
+deal_request(["youmi"], QS) ->
+  Result = do_youmi(QS),
   {finish, Result};
 
 
@@ -343,9 +355,6 @@ do_user(1002, QS) ->
 
 
 
-%% do_user(1002, _QS) ->
-%%   lib_util_string:key_value_to_json([{"error", "\"Invalid Parameter player_id\""}]).
-
 %% 调用方法:http://127.0.0.1:8088/callback/?msg=100
 %%服务器回调相关
 %% id: 赚取积分的广告id；
@@ -373,8 +382,8 @@ do_miidi(QS) ->
   Idfa = string:to_upper(resolve_parameter("imei", QS)),
   TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
   Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
-  AppName = unicode:characters_to_list(iolist_to_binary(resolve_parameter("appName", QS))),
-  lib_callback_miidi:deal(Idfa, TrandNo, Cash, AppName),
+  AppName = resolve_parameter("appName", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_MIIDI, TrandNo, Cash, AppName),
   200.
 
 %% QS:[{"msg","1000"},{"user_name","\"sngyai\""},{"passwd","\"MoonLight\""}]
@@ -384,6 +393,57 @@ do_miidi(QS) ->
 %% {"appName",[230,177,189,232,189,166,228,185,139,229,174,182]},
 %% {"bundleId","com.autohome"},
 %% {"param0",[]}]
+
+%% 触控： 调用方法http://123.57.9.112:8088/cocounion/?adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B9%B4&coins =900&idfa=6471AB94­E369­46D7­A140­2CA425630FF1&ip=27.41.190.224&mac=02000000000 0&os=iOS&os_version=7.0.6&taskcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E %A93%E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%8E%B7%E 5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E6%BF%80%E6%B4%BB&token=Z00007 1&transactionid=c701673f­5664­4958­ba55­7dbc5133d627&sign=5e804afe2f8775d5e70d1cfb2e 490bd0
+%% os: 必填项,系统类型。定义enum: ['iOS', 'Android']
+%% idfa: iOS系统的广告标识符,有中划线全部大写,示例: 03B610E3-D865-4BCE-AB2E-5A58635A739C
+%% transactionid: 必填项,用于识别是否会用重复的积分返还请求,同一个任务的积分返还id不变
+%% coins: 必填项,积分数
+%% adid: 必填项,广告id
+%% adtitle: 广告标题(一般为积分墙列表中的app名称)
+%% ￼￼￼￼￼排序后的拼接示例:
+%% adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627
+%% ￼￼￼￼￼￼￼￼￼注意:
+%% ￼1.触控的回调请求的所有参数(除sign)都要参数拼接,值为空的参数不做拼
+%% ￼接处理
+%% ￼2.每个参数值要用encodeURI进行编码,encode值是否正确请参考网站:
+%% ￼http://meyerweb.com/eric/tools/dencoder/
+%% ￼￼3.由于触控的服务器使用nodejs来开发,导致和其他语言(比如java)
+%% ￼URLEncode操作值不一样,要解决这个问题,需要开发者判断,如果你的
+%% ￼encode值中出现”+”,请替换为”%20”, 具体参考
+%% ￼http://onedear.iteye.com/blog/1727920
+%% ￼￼4.上面的拼接示例只是示例,已实际请求的querystring参数为准
+%% 5. iOS和Android区别只在于idfa和imei两个参数,android有imei没有idfa, iOS有idfa没有imei,其他参数都一样。
+%% ￼￼￼￼3.将秘钥追加到“拼接完的请求参数字符串”后面进行MD5
+%% 9
+%% ￼￼￼￼￼需要进行MD5的内容示例:
+%% adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627&secret=secretvalue
+%% ￼9
+%% ￼￼￼￼￼￼￼￼红色部分是追加的秘钥参数
+%% ￼“secretvalue”是由媒体来确定具体的值
+%% ￼￼￼% 6
+%% % 6
+%% 4.MD5的值即是sign
+%% ￼￼￼￼￼示例:
+%% String sign=MD5( adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627&secret=secretvalue)
+%% ● iOS示例请求: http://domain?adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B9%B4&coins =900&idfa=6471AB94­E369­46D7­A140­2CA425630FF1&ip=27.41.190.224&mac=02000000000 0&os=iOS&os_version=7.0.6&taskcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E %A93%E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%8E%B7%E 5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E6%BF%80%E6%B4%BB&token=Z00007 1&transactionid=c701673f­5664­4958­ba55­7dbc5133d627&sign=5e804afe2f8775d5e70d1cfb2e 490bd0
+do_cocounion(QS) ->
+  Idfa = string:to_upper(resolve_parameter("idfa", QS)),
+  TrandNo = lib_util_type:string_to_term(resolve_parameter("transactionid",QS)),
+  Cash = lib_util_type:string_to_term(resolve_parameter("coins", QS)),
+  AppName = resolve_parameter("adtitle", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_COCOUNION, TrandNo, Cash, AppName),
+  200.
+
+
+%%http://api.kaifazhe.com/youmi.php?order=YM121201PWxw0DGr0f&app=2f3ca4oge6894826&ad=%E7%BE%8E%E4%B8%BD%E8%AF%B4&adid=476&user=ef2&chn=0&points=140&price=0.93&time=1354851585&device=98fee7g64057&sig=b68184af
+do_youmi(QS) ->
+  Idfa = string:to_upper(resolve_parameter("device", QS)),
+  TrandNo = resolve_parameter("order",QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
+  AppName = resolve_parameter("ad", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_YOUMI, TrandNo, Cash, AppName),
+  200.
 
 
 %% 具体处理消息请求---------------------------------------------------------------------------------------

@@ -7,7 +7,7 @@ logger default_logger{
 		file = default_log,
 		type = size,
 		max = 1000000,
-		suffix = log,
+		suffix = "ebin/log",
 		rotation = 50,
 		format = '%d %h:%m:%s.%i %l%n'
 	}
@@ -21,7 +21,7 @@ logger debug_logger{
 		file = debug_log,
 		type = size,
 		max = 1000000,
-		suffix = log,
+		suffix = "ebin/log",
 		rotation = 50,
 		format = '%d %h:%m:%s.%i %l%n'
 	}
@@ -35,10 +35,23 @@ logger trand_logger{
 		file = trand_log,
 		type = size,
 		max = 1000000,
-		suffix = log,
+		suffix = "ebin/log",
 		rotation = 50,
 		format = '%d %h:%m:%s.%i %l%n'
 	}
 }
 
+%%webserver_logger
+logger webserver_logger{
+	file_appender webserver_app{
+		dir = "./log",
+		level = error,
+		file = webserver_log,
+		type = size,
+		max = 1000000,
+		suffix = "ebin/log",
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
 

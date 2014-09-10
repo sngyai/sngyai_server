@@ -27,14 +27,9 @@ start(normal, []) ->
   ok = server_sup:start_child_supervisor(server_sup_db),
   ok = server_sup_db:start_db_conn(), %初始化db连接
 
-
   %% 启动系统服务监控进程
   ok = server_sup:start_child_supervisor(server_sup_sys),
   ok = server_sup_sys:start_service(),
-
-  %% 启动玩家监控进程
-  ok = server_sup:start_child_supervisor(server_sup_player),
-  ok = server_sup_player:start_service(),
 
   %% ssl 启动
   ok = ssl:start(),
@@ -46,14 +41,6 @@ start(normal, []) ->
 
 %% 应用程序停止回调方法
 stop(_State) ->
-  %io:format("server_app stopped1"),
-  %% 系统服务结束
   server_sup_sys:stop_service(),
-  %% 玩家服务结束
-  server_sup_player:stop_service(),
-  %io:format("server_app stopped2"),
-  %% ssl关闭
-  %ssl:stop(),
-  %io:format("server_app stopped"),
   void.
 

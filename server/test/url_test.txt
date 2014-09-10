@@ -1,5 +1,0 @@
-http://127.0.0.1:8088/miidi?id=1787&trand_no=1035124&imei=8005655A-C66D-4E3D-814E-7021B077DFD0&cash=150&sign=7e932bd24a41ed92d46db4464aeb72c2&appName=%E6%B1%BD%E8%BD%A6%E6%8A%A5%E4%BB%B7&bundleId=com.autohome.quote&param0=
-
-http://127.0.0.1:8088/user/?msg=1002&user_id=8005655A-C66D-4E3D-814E-7021B077DFD0
-
-

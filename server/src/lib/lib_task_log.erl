@@ -54,7 +54,6 @@ concat_result([TaskLog|T], Result) ->
     app_name = AppName,
     score = Score
   } = TaskLog,
-%%   AppName = binary_to_list(AppNameBin),
   CurResult = lists:concat(["{\"user_id\":\"", UserId,
     "\",\"time\":\"", Time,
     "\",\"channel\":\"", Channel,

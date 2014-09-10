@@ -42,18 +42,20 @@ get_all_tasks() ->
 data2record(app_name, Value) ->
   AppName = lib_util_type:string_to_term(Value),
   {app_name, AppName};
+data2record(trand_no, Value) ->
+  TrandNo = lib_util_type:string_to_term(Value),
+  {trand_no, TrandNo};
 data2record(user_id, Value) ->
   {user_id, binary_to_list(Value)};
-%% data2record(app_name, Value) ->
-%%   {app_name, binary_to_list(Value)};
 data2record(Key, Value) ->
   {Key, Value}.
 
 
 
-record2data(User) ->
-  tuple_to_list(User#task_log{
-    app_name = lib_util_type:term_to_string(User#task_log.app_name)
+record2data(Task) ->
+  tuple_to_list(Task#task_log{
+    app_name = lib_util_type:term_to_string(Task#task_log.app_name),
+    trand_no = lib_util_type:term_to_string(Task#task_log.trand_no)
   }
   ).
 

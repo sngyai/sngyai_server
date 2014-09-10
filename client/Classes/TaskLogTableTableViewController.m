@@ -226,7 +226,11 @@
         case 3:
             channelString = @"果盟";
             break;
+        case 5:
+            channelString = @"触控";
+            break;
         default:
+            channelString = @"未知";
             break;
     }
     NSLog(@"HELLO, WORLD *********%@",channelString);
