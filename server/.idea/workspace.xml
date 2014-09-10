@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="6c710d36-de48-4af6-9089-c7d8193ec96e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../doc/利赚渠道.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/channel_callback/lib_callback_miidi.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/crone/crone.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/crone/polish.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/storage_file/lib_storage_file_player.erl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server_sup_player.erl" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/url_test.txt" afterPath="$PROJECT_DIR$/doc/url_test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/Classes/TaskLogTableTableViewController.m" afterPath="$PROJECT_DIR$/../client/Classes/TaskLogTableTableViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/LiZhuan.xcodeproj/project.xcworkspace/xcuserdata/yangyudong.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../client/LiZhuan.xcodeproj/project.xcworkspace/xcuserdata/yangyudong.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/db_agent_task_log.beam" afterPath="$PROJECT_DIR$/ebin/db_agent_task_log.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_callback_miidi.beam" afterPath="$PROJECT_DIR$/ebin/lib_callback_miidi.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_task_log.beam" afterPath="$PROJECT_DIR$/ebin/lib_task_log.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/lib_user.beam" afterPath="$PROJECT_DIR$/ebin/lib_user.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_webserver.beam" afterPath="$PROJECT_DIR$/ebin/mod_webserver.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server_app.beam" afterPath="$PROJECT_DIR$/ebin/server_app.beam" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/channel.hrl" afterPath="$PROJECT_DIR$/include/channel.hrl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/db_agent_task_log.erl" afterPath="$PROJECT_DIR$/src/db/db_agent_task_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erl_crash.dump" afterPath="$PROJECT_DIR$/erl_crash.dump" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/lib_task_log.erl" afterPath="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/log4erl" afterPath="$PROJECT_DIR$/ebin/log4erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_webserver.erl" afterPath="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/server.app" afterPath="$PROJECT_DIR$/ebin/server.app" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server_app.erl" afterPath="$PROJECT_DIR$/src/server_app.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/url_test.txt" afterPath="$PROJECT_DIR$/doc/url_test.txt" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,18 +60,8 @@
       <file leaf-file-name="mod_webserver.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.535714" vertical-offset="8917" max-vertical-offset="10227">
-              <caret line="444" column="40" selection-start-line="444" selection-start-column="40" selection-end-line="444" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_agent_task_log.erl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/db/db_agent_task_log.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40677965" vertical-offset="459" max-vertical-offset="1428">
-              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state vertical-scroll-proportion="-56.25" vertical-offset="5313" max-vertical-offset="10416">
+              <caret line="328" column="12" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -132,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="url_test.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="url_test.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/url_test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3723404" vertical-offset="0" max-vertical-offset="846">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -211,10 +179,10 @@
         <option value="$PROJECT_DIR$/src/lib/channel_callback/lib_callback.erl" />
         <option value="$PROJECT_DIR$/src/lib/lib_task_log.erl" />
         <option value="$PROJECT_DIR$/src/server_app.erl" />
-        <option value="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
-        <option value="$PROJECT_DIR$/doc/url_test.txt" />
         <option value="$PROJECT_DIR$/ebin/log4erl" />
         <option value="$PROJECT_DIR$/src/db/db_agent_task_log.erl" />
+        <option value="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
+        <option value="$PROJECT_DIR$/doc/url_test.txt" />
       </list>
     </option>
   </component>
@@ -317,6 +285,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,12 +616,12 @@
       <workItem from="1410151844473" duration="16515000" />
       <workItem from="1410250024587" duration="7545000" />
       <workItem from="1410363179252" duration="1436000" />
-      <workItem from="1410365092457" duration="5347000" />
+      <workItem from="1410365092457" duration="7713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79809000" />
+    <option name="totallyTimeSpent" value="82175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="982" extended-state="6" />
@@ -663,7 +645,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.108333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1031,14 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.535714" vertical-offset="8917" max-vertical-offset="10227">
-          <caret line="444" column="40" selection-start-line="444" selection-start-column="40" selection-end-line="444" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ebin/log4erl">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1046,14 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.777779" vertical-offset="294" max-vertical-offset="1323">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/url_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1068,8 +1034,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/db_agent_task_log.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40677965" vertical-offset="459" max-vertical-offset="1428">
+        <state vertical-scroll-proportion="0.7864407" vertical-offset="123" max-vertical-offset="1428">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mod/mod_webserver.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-56.25" vertical-offset="5313" max-vertical-offset="10416">
+          <caret line="328" column="12" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/url_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3723404" vertical-offset="0" max-vertical-offset="846">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>

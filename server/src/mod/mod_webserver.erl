@@ -296,9 +296,6 @@ deal_request(["sys"], QS) ->
 
 %%**********************************积分墙回调 start *********************************
 %% miidi回调,调用方法:http://127.0.0.1:8088/callback/
-deal_request(["callback"], QS) ->
-  Result = lib_callback:channel_callback(QS),
-  {finish, Result};
 deal_request(["miidi"], QS) ->
   Result = do_miidi(QS),
   {finish, Result};
@@ -309,6 +306,10 @@ deal_request(["cocounion"], QS) ->
 
 deal_request(["youmi"], QS) ->
   Result = do_youmi(QS),
+  {finish, Result};
+
+deal_request(["guomob"], QS) ->
+  Result = do_guomob(QS),
   {finish, Result};
 
 
@@ -443,6 +444,14 @@ do_youmi(QS) ->
   Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
   AppName = resolve_parameter("ad", QS),
   lib_callback:deal(Idfa, ?CHANNEL_YOUMI, TrandNo, Cash, AppName),
+  200.
+%% http://api.kaifazhe.com/guomob.php?order=20140811155747161&app=8325&ad=变形金刚&adsid=1158&device=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&mac=020000000000&idfa=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&openudid=2aff0eaf9da29cd522e87cfff4139dcae50bae34&price=2.20&points=2200&time=1407726452&other=06808b83ef-30b9-4284-a4cb-c865ad4546e2&look2=0&look3=0&look4=0
+do_guomob(QS) ->
+  Idfa = string:to_upper(resolve_parameter("idfa", QS)),
+  TrandNo = resolve_parameter("order",QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
+  AppName = resolve_parameter("ad", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_GUOMOB, TrandNo, Cash, AppName),
   200.
 
 

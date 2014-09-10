@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://www.guomob.com/jfq_interface_help.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>果盟对开发者的积分反馈接口</title>
+		<style type="text/css">
+			body{ margin: 0px; padding: 0px; font-family: 'Microsoft YaHei'; font-weight: normal; font-size: 14px; }
+
+			p{ font-size: 12px; }
+
+			a{ text-decoration: none; color: #0645AD; }
+
+			ul{ margin: 0px; padding: 0px 0px 0px 18px; }
+
+			ul li{ font-size: 14px; margin: 5px 0px; font-weight: normal; }
+
+			ol{ margin: 0px; padding: 0px 0px 0px 25px; }
+
+			ol li{ font-size: 14px; margin: 5px 0px; font-weight: normal; }
+
+			a:hover{ text-decoration: underline; }
+
+			#body{ margin: 0px auto; width: 850px; height: auto; overflow: hidden; }
+
+			#title{ width: auto; display: block; text-align: left; }
+
+			#directory{ width: 200px; height: 150px; background: #F9F9F9; padding: 10px; border: 1px solid #000000; }
+
+			#directory_title{ color: #0645AD; font-weight: bold; font-size: 16px; margin-bottom: 10px; }
+
+			.table{ width: 850px; table-layout:fixed; background: #F9F9F9; border: 1px solid #AAAAAA; border-collapse: collapse; color: #000000; margin: 20px 0px; }
+
+			.table tbody tr{ text-align: left; }
+
+			.table tbody tr td{ border: 1px solid #AAAAAA; padding: 20px; }
+
+			.p_1{ font-size: 14px; margin: 10px 35px; margin-right: 0px; }
+
+			.p_2{ font-size: 12px; margin: 10px 55px; margin-right: 0px; }
+
+			.ol_1{ margin: 10px 30px; margin-right: 0px; }
+
+			.ol_2{ margin: 20px 70px; margin-right: 0px; }
+
+			.ol_2 li{ font-size: 12px; }
+
+			.ol_3{ margin: 10px 30px; margin-right: 0px; }
+
+			.ol_3 li{ font-size: 14px; margin: 15px 0px; line-height: 18px; }
+
+			.h3_1{ margin: 0px 30px; }
+		</style>
+	</head>
+
+	<body>
+	<div id="body">
+      <h1 id="title">对开发者的积分反馈接口</h1>
+	  <dl id="directory">
+        <dt id="directory_title">目录</dt>
+	    <dt><a href="http://www.guomob.com/jfq_interface_help.html#directory_t1">1 说明</a></dt>
+	    <dt><a href="http://www.guomob.com/jfq_interface_help.html#directory_t2">2 流程</a></dt>
+	    <dt><a href="http://www.guomob.com/jfq_interface_help.html#directory_t3">3 参数</a></dt>
+	    <dt><a href="http://www.guomob.com/jfq_interface_help.html#directory_t4">4 签名算法</a></dt>
+	    <dd><a href="http://www.guomob.com/jfq_interface_help.html#directory_t5">4.1 签名参数的校验</a></dd>
+	    <dt><a href="http://www.guomob.com/jfq_interface_help.html#directory_t6">5 返回值 </a></dt>
+      </dl>
+	  <h2 id="directory_t1">
+	  说明
+	  </h2><h2>
+      <ul>
+        <li>接口统一使用的编码为：UTF-8</li>
+        <li>适合于开发者使用自己的服务器来托管积分的情况。 </li>
+        <li>当我们收到广告主反馈的积分时，我们会实时反馈给开发者服务器。 </li>
+        <li>需要开发者提供一个接口来接收数据（web端提供设置页面），接口接收数据的方式：GET。</li>
+      </ul>
+	  </h2><h2 id="directory_t2">流程</h2>
+	  <ol>
+        <li>开发者在果盟的开发者后台设置自己应用的积分反馈地址，例如：<a href="http://api.kaifazhe.com/guomob.php" target="_blank">http://api.kaifazhe.com/guomob.php</a></li>
+	    <li>当果盟的服务器接收到一个有效的效果记录时，就会按开发者提供的反馈地址，加上相关的参数（具体参数见下面的表格），一起反馈给开发者的服务器（GET的方式）。</li>
+      </ol>
+	  <div class="div_table">
+        <table class="table">
+          <tbody>
+            <tr style="font-weight: bold; font-size: 15px;">
+              <td width="15%">参数全称 </td>
+              <td width="15%">参数名 </td>
+              <td width="25%">长度限制（字节数） </td>
+              <td width="45%">说明 </td>
+            </tr>
+            <tr>
+              <td>Order ID </td>
+              <td>order </td>
+              <td>字符串(16字节) </td>
+              <td>订单ID：该值是唯一的，如果开发者接收到相同的订单号，那说明该订单已经存在 </td>
+            </tr>
+            <tr>
+              <td>App ID </td>
+              <td>app </td>
+              <td>字符串(16字节) </td>
+              <td>开发者应用ID</td>
+            </tr>
+            <tr>
+              <td>Ad Name </td>
+              <td>ad </td>
+              <td>广告名（50字节） </td>
+              <td>广告名，如果是应用类型的广告则是应用名 </td>
+            </tr>
+            <tr>
+              <td>Ad Identify </td>
+              <td>adsid </td>
+              <td>广告编号（整形）</td>
+              <td>广告的编号ID</td>
+            </tr>
+            <!--<tr>
+              <td>User ID </td>
+              <td>user </td>
+              <td>字符串</td>
+              <td>用户ID：开发者可以设置自己的用户ID，或者将该字段作为回调预留字段使用</td>
+            </tr> -->
+            <tr>
+              <td>Device ID</td>
+              <td>device</td>
+              <td>字符串</td>
+              <td>设备ID：iOS是MAC地址，iOS 7 没有MAC地址则传Advertising Identifier (IDFA) “<a href="https://developer.apple.com/library/ios/documentation/AdSupport/Reference/ASIdentifierManager_Ref/ASIdentifierManager.html#//apple_ref/occ/instp/ASIdentifierManager/advertisingIdentifier" target="_blank">https://developer.apple.com/library/<br>
+                ios/documentation/AdSupport/Reference/<br>
+                ASIdentifierManager_Ref/ASIdentifier<br>
+                Manager.html#//apple_ref/occ/instp/<br>
+                ASIdentifierManager/advertisingIdentifier</a>”</td>
+            </tr>
+            <tr>
+              <td>Mac</td>
+              <td>mac</td>
+              <td>字符串</td>
+              <td>MAC地址</td>
+            </tr>
+            <tr>
+              <td>Idfa</td>
+              <td>idfa</td>
+              <td>字符串</td>
+              <td>IDFA</td>
+            </tr>
+            <tr>
+              <td>Openudid</td>
+              <td>openudid</td>
+              <td>字符串</td>
+              <td>openudid</td>
+            </tr>
+            
+            <tr>
+              <td>Price</td>
+              <td>price</td>
+              <td>浮点型</td>
+              <td>开发者获得的收入</td>
+            </tr>
+            <tr>
+              <td>Points</td>
+              <td>points</td>
+              <td>整型</td>
+              <td>用户可以赚取的积分</td>
+            </tr>
+            <tr>
+              <td>Order Create Time</td>
+              <td>time</td>
+              <td>整形</td>
+              <td>果盟创建订单的时间</td>
+            </tr>
+            <tr>
+              <td>Sign</td>
+              <td>sign</td>
+              <td>字符串(36字节)</td>
+              <td>签名</td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td>other</td>
+              <td>字符串(50位)</td>
+              <td>开发者在客户端传上来的其他值，如：客户端xxxID等</td>
+            </tr>
+        <!--    <tr>
+              <td>Look2</td>
+              <td>look2</td>
+              <td>整形</td>
+              <td>多任务广告中，完成的第几个任务值</td>
+            </tr>-->
+          </tbody>
+        </table>
+      </div>
+	  <h2 id="directory_t3">参数</h2>
+	  <h3 class="h3_1">注：</h3>
+	  <ol class="ol_1">
+        <li>本协议的所有参数均采用UTF-8。</li>
+	    <!--<li>$dev_server_secret:开发者服务器端密钥，由果盟单独提供给开发者。请登录后进入“<a href="http://www.guomob.com/applications/server" target="_blank" >http://www.guomob.com/applications/server</a>” 进行服务器地址设置，设置成功后就会分配一个密钥给您的应用。</li>-->
+	    <li>部分字段可能包含有特殊字符，在接收到请求时请自行使用urldecode。</li>
+      </ol>
+	  <h2 id="directory_t4">签名算法</h2>
+	  <p class="p_1">注意：</p>
+	  <ol class="ol_1">
+        <li>计算签名时的请求参数中不要包含sign（签名）参数，因为sign参数的值此时还不知道，有待计算。</li>
+	    <li>签名过程中的各个参数并未经过urlencode处理</li>
+      </ol>
+	  <p class="p_2">即：sign = md5("order={$order}app={$applyid}ad={$ad}adsid={$adsid}user={服务器回调加密码}device={$device}price={$price}points={$points}time={$time}");</p>
+	  <h3 class="h3_1">示例：</h3>
+	  <p class="p_2">原URL：</p>
+	  <p class="p_2">http://api.kaifazhe.com/guomob.php?order=20140811155747161&amp;app=8325&amp;ad=变形金刚&amp;adsid=1158&amp;device=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&amp;mac=020000000000&amp;idfa=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&amp;openudid=2aff0eaf9da29cd522e87cfff4139dcae50bae34&amp;price=2.20&amp;points=2200&amp;time=1407726452&amp;other=06808b83ef-30b9-4284-a4cb-c865ad4546e2&amp;look2=0&amp;look3=0&amp;look4=0</p>
+	  <p class="p_2">经计算后</p>
+	  <p class="p_2">sign=1a25799303cb4ceef417401b226a5371</p>
+	  <p class="p_2">最终URL：</p>
+	  <p class="p_2">http://api.kaifazhe.com/guomob.php?order=20140811155747161&amp;app=8325&amp;ad=变形金刚&amp;adsid=1158&amp;device=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&amp;mac=020000000000&amp;idfa=55263EE2-35D1-41AB-8EB9-1B17BFEE996E&amp;openudid=2aff0eaf9da29cd522e87cfff4139dcae50bae34&amp;price=2.20&amp;points=2200&amp;time=1407726452&amp;other=06808b83ef-30b9-4284-a4cb-c865ad4546e2&amp;look2=0&amp;look3=0&amp;look4=0&amp;sign=1a25799303cb4ceef417401b226a5371</p>
+	  <h2 id="directory_t6">返回值</h2>
+	  <ol class="ol_3">
+        <li>果盟会根据开发者服务器返回的http状态码（http_code）来判断该进行什么样的操作，正常情况收到的http状态码应该是200或者403。</li>
+	    <li>如果是200，表示开发者正常接收到信息并且正常处理了。</li>
+	    <li>如果是403，表示开发者拒绝了该次请求，此时中间层服务器不会再重复请求开发者服务器。</li>
+	    <li>如果超时、或收到的不是200或者403，中间层的服务器就会放在下一次循环请求开发者服务器。</li>
+	    <li>下一次循环请求开发者服务器会有一定的延迟，延迟分别为：5s, 10s, 60s, 300s, 600s, 3600s（距离上一次发送）。即最差环境下，果盟最多将发送7次请求，若7次请求全部失败，则该链接将被丢弃。</li>
+	    <li>因为网络等问题，开发者服务器可能会接收到订单号完全相同的多条记录，这时开发者服务器需要把重复的丢失，并以http状态码（http_code）403输出。也就是说：<b>开发者服务器需要对接收到的信息进行去重复</b>。</li>
+      </ol>
+    </div>
+	
+</body></html>
