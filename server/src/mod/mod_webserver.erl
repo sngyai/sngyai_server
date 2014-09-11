@@ -430,7 +430,7 @@ do_miidi(QS) ->
 %% ● iOS示例请求: http://domain?adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B9%B4&coins =900&idfa=6471AB94­E369­46D7­A140­2CA425630FF1&ip=27.41.190.224&mac=02000000000 0&os=iOS&os_version=7.0.6&taskcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E %A93%E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%8E%B7%E 5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E6%BF%80%E6%B4%BB&token=Z00007 1&transactionid=c701673f­5664­4958­ba55­7dbc5133d627&sign=5e804afe2f8775d5e70d1cfb2e 490bd0
 do_cocounion(QS) ->
   Idfa = string:to_upper(resolve_parameter("idfa", QS)),
-  TrandNo = lib_util_type:string_to_term(resolve_parameter("transactionid",QS)),
+  TrandNo = resolve_parameter("transactionid",QS),
   Cash = lib_util_type:string_to_term(resolve_parameter("coins", QS)),
   AppName = resolve_parameter("adtitle", QS),
   lib_callback:deal(Idfa, ?CHANNEL_COCOUNION, TrandNo, Cash, AppName),
