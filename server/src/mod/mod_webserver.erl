@@ -312,6 +312,10 @@ deal_request(["guomob"], QS) ->
   Result = do_guomob(QS),
   {finish, Result};
 
+deal_request(["domob"], QS) ->
+  Result = do_domob(QS),
+  {finish, Result};
+
 
 %%**********************************积分墙回调 end *********************************
 
@@ -452,6 +456,15 @@ do_guomob(QS) ->
   Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
   AppName = resolve_parameter("ad", QS),
   lib_callback:deal(Idfa, ?CHANNEL_GUOMOB, TrandNo, Cash, AppName),
+  200.
+
+%% http://192.168.1.203:8123?orderid=3&ad=appcpa%E6%B5%8B%E8%AF%95&point=0&price=4.00&pubid=96ZJ2VzQzesQXwQ24%2F&ts=1358498880&adid=10129&user=C03AFC21E8FA7E7229B20BD90F25B4A2&device=FC%3A25%3A3F%3A12%3A23%3A47&channel=0
+do_domob(QS) ->
+  Idfa = string:to_upper(resolve_parameter("device", QS)),
+  TrandNo = resolve_parameter("orderid",QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("point", QS)),
+  AppName = resolve_parameter("ad", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_DOMOB, TrandNo, Cash, AppName),
   200.
 
 

@@ -229,6 +229,9 @@
         case 5:
             channelString = @"触控";
             break;
+        case 6:
+            channelString = @"多盟";
+            break;
         default:
             channelString = @"未知";
             break;
