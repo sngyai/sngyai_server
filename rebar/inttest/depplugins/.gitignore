@@ -1,0 +1,4 @@
+/depplugins_rt.erl
+/rebar.config
+/rebar_dependsonplugin.config
+/testplugin_mod.erl

@@ -1,0 +1,3 @@
+/rebar_eunit_tests.erl
+/rebar_file_utils_tests.erl
+/rebar_xref_eunit.erl

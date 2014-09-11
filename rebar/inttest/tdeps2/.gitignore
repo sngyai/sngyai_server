@@ -1,0 +1,7 @@
+/a.erl
+/a.rebar.config
+/b.hrl
+/b.rebar.config
+/c.hrl
+/root.rebar.config
+/tdeps2_rt.erl

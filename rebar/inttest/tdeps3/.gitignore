@@ -1,0 +1,12 @@
+/a.erl
+/a.rebar.config
+/b.hrl
+/b.rebar.config
+/c.hrl
+/c.rebar.config
+/d.hrl
+/d.rebar.config
+/e.hrl
+/f.hrl
+/root.rebar.config
+/tdeps3_rt.erl
