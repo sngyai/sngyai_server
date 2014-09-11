@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "YouMiWall.h"
+#import "JupengWall.h"
 #import "MiidiAdSpot.h"
 #import "MiidiAdWall.h"
 #import "CSAppZone.h"
 #import "MiidiManager.h"
+#import "ZKcmoneZkcmtwo.h"
 #import "RootViewController.h"
 #import "GuoMobWallViewController.h"
 #import "MiidiAdWallGetPointsDelegate.h"
@@ -21,6 +23,7 @@
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
+#import "TaskLogTableTableViewController.h"
 
 @interface TaskTableViewController : UITableViewController
     <MiidiAdWallShowAppOffersDelegate,

@@ -33,8 +33,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
         //
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
+    _mobisagejoy = [[MobiSageJoyViewController alloc] initWithPublisherID:@"3c3e990aef814244824e648f024fd170"];
     //设置代理
-    _guomobwall_vc.delegate=self;
+    _guomobwall_vc.delegate = self;
+    _mobisagejoy.delegate = self;
     _offerWallManager.delegate = self;
     
     //设置果盟定时查询是否获得积分
@@ -116,8 +118,6 @@
 
 - (void)didFailReceiveGetPoints:(NSError *)error{
 	NSLog(@"didFailReceiveGetPoints failed!");
-	
-	[self alertMessage:@"卧槽没获取到总分（米迪）~~~~~~~~~~~~~~~~~~~~~~~~~~~"];
 }
 
 // 有米
@@ -255,9 +255,7 @@
     
     if (!error) {
         NSString *response = [request responseString];
-        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
         NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
-        NSLog(@"HELLO, WORLD *********** object:%@", object);
         
         NSString *strScroreCur = [object objectForKey:@"score_current"];
         self.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];

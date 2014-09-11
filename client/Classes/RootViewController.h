@@ -15,6 +15,7 @@
 #import "CSAppZone.h"
 #import "MiidiManager.h"
 #import "GuoMobWallViewController.h"
+#import "MobiSageJoyViewController.h"
 #import "MiidiAdWallGetPointsDelegate.h"
 #import "MiidiAdWallAwardPointsDelegate.h"
 #import "MiidiAdWallSpendPointsDelegate.h"
@@ -29,10 +30,10 @@
 #define HOST (@"http://123.57.9.112:8088/")
 
 // Window台式机
-//#define HOST (@"http://192.168.1.7:8088/")
+//#define HOST (@"http://192.168.1.3:8088/")
 
 // MacMini
-//#define HOST (@"http://192.168.1.4:8088/")
+//#define HOST (@"http://192.168.1.7:8088/")
 
 @interface RootViewController : UITabBarController
 <MiidiAdWallShowAppOffersDelegate
@@ -41,9 +42,11 @@
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
 , DMOfferWallManagerDelegate
+, MobiSageJoyDelegate
 , GuoMobWallDelegate>
 {
     GuoMobWallViewController * _guomobwall_vc;
+    MobiSageJoyViewController *_mobisagejoy;
     DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
 }
@@ -51,6 +54,7 @@
 -(void) queryScore;
 
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
+@property(nonatomic,copy)MobiSageJoyViewController *mobisagejoy;
 @property(nonatomic,copy)DMOfferWallManager *offerWallManager;
 @property(nonatomic,copy)NSNumber *score;
 

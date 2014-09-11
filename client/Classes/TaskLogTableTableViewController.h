@@ -16,4 +16,6 @@
     NSMutableArray *tasks;
 }
 
++(NSString*) getChannelStr:(int)channel;
+
 @end

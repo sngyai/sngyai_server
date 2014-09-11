@@ -25,7 +25,6 @@
 //    NSString *StringUrlPing = [HOST stringByAppendingString:@"ping"];
     NSString *StringUrlPing = @"www.apple.com";
     Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
-    NSLog(@"HELLO, WORLD ********** URL：%@\nRESULT%d", StringUrlPing, [r currentReachabilityStatus]);
 
     switch ([r currentReachabilityStatus]) {
         case NotReachable:

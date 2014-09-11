@@ -316,7 +316,16 @@ deal_request(["domob"], QS) ->
   Result = do_domob(QS),
   {finish, Result};
 
+deal_request(["adwo"], QS) ->
+  Result = do_adwo(QS),
+  {finish, Result};
 
+deal_request(["adsage"], QS) ->
+  Result = do_adsage(QS),
+  {finish, Result};
+deal_request(["jupeng"], QS) ->
+  Result = do_jupeng(QS),
+  {finish, Result};
 %%**********************************积分墙回调 end *********************************
 
 %% 安全沙箱
@@ -360,29 +369,6 @@ do_user(1002, QS) ->
 
 
 
-%% 调用方法:http://127.0.0.1:8088/callback/?msg=100
-%%服务器回调相关
-%% id: 赚取积分的广告id；
-%%
-%% trand_no:  交易流水号，唯一id；
-%%
-%% cash:  此次操作赚取的积分数量； cash=广告价格×应用和汇率；
-%%
-%% imei: 安卓平台为手机imei， iOS为手机mac地址, 如果是iOS 7.0以上的系统, 则是个该手机的idfa, 由于手机的idfa在特殊请情况下会发生改名改变,因此建议看开发者使用param0自定义参数来标识内部系统的唯一值；
-%%
-%% bundleId: 赚取积分的广告的唯一标识，例如唯品会为 com.vipshop.ipad ；
-%%
-%% param0: 应用通过SDK上传的参数；
-%%
-%% appName: 安装的应用的名称；
-%%
-%% sign: 签名字符串，签名算法如下：
-%%
-%% StringBuffer sign=  new StringBuffer();
-%%
-%% sign.append(id).append(trand_no).append(cash).append(param0==null?"":param0).append(key);
-%%
-%% key: 积分积分墙的回调key，注意：不是应用密钥；
 do_miidi(QS) ->
   Idfa = string:to_upper(resolve_parameter("imei", QS)),
   TrandNo = lib_util_type:string_to_term(resolve_parameter("trand_no",QS)),
@@ -391,47 +377,6 @@ do_miidi(QS) ->
   lib_callback:deal(Idfa, ?CHANNEL_MIIDI, TrandNo, Cash, AppName),
   200.
 
-%% QS:[{"msg","1000"},{"user_name","\"sngyai\""},{"passwd","\"MoonLight\""}]
-%% QS:[{"id","1960"},{"trand_no","940740"}, {"imei","8377a82f-3482-45e1-b3e2-ef90b3bc2d11"},
-%% {"cash","250"},
-%% {"sign","64e0c8a3fd577129a0d7a815e6343f22"},
-%% {"appName",[230,177,189,232,189,166,228,185,139,229,174,182]},
-%% {"bundleId","com.autohome"},
-%% {"param0",[]}]
-
-%% 触控： 调用方法http://123.57.9.112:8088/cocounion/?adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B9%B4&coins =900&idfa=6471AB94­E369­46D7­A140­2CA425630FF1&ip=27.41.190.224&mac=02000000000 0&os=iOS&os_version=7.0.6&taskcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E %A93%E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%8E%B7%E 5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E6%BF%80%E6%B4%BB&token=Z00007 1&transactionid=c701673f­5664­4958­ba55­7dbc5133d627&sign=5e804afe2f8775d5e70d1cfb2e 490bd0
-%% os: 必填项,系统类型。定义enum: ['iOS', 'Android']
-%% idfa: iOS系统的广告标识符,有中划线全部大写,示例: 03B610E3-D865-4BCE-AB2E-5A58635A739C
-%% transactionid: 必填项,用于识别是否会用重复的积分返还请求,同一个任务的积分返还id不变
-%% coins: 必填项,积分数
-%% adid: 必填项,广告id
-%% adtitle: 广告标题(一般为积分墙列表中的app名称)
-%% ￼￼￼￼￼排序后的拼接示例:
-%% adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627
-%% ￼￼￼￼￼￼￼￼￼注意:
-%% ￼1.触控的回调请求的所有参数(除sign)都要参数拼接,值为空的参数不做拼
-%% ￼接处理
-%% ￼2.每个参数值要用encodeURI进行编码,encode值是否正确请参考网站:
-%% ￼http://meyerweb.com/eric/tools/dencoder/
-%% ￼￼3.由于触控的服务器使用nodejs来开发,导致和其他语言(比如java)
-%% ￼URLEncode操作值不一样,要解决这个问题,需要开发者判断,如果你的
-%% ￼encode值中出现”+”,请替换为”%20”, 具体参考
-%% ￼http://onedear.iteye.com/blog/1727920
-%% ￼￼4.上面的拼接示例只是示例,已实际请求的querystring参数为准
-%% 5. iOS和Android区别只在于idfa和imei两个参数,android有imei没有idfa, iOS有idfa没有imei,其他参数都一样。
-%% ￼￼￼￼3.将秘钥追加到“拼接完的请求参数字符串”后面进行MD5
-%% 9
-%% ￼￼￼￼￼需要进行MD5的内容示例:
-%% adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627&secret=secretvalue
-%% ￼9
-%% ￼￼￼￼￼￼￼￼红色部分是追加的秘钥参数
-%% ￼“secretvalue”是由媒体来确定具体的值
-%% ￼￼￼% 6
-%% % 6
-%% 4.MD5的值即是sign
-%% ￼￼￼￼￼示例:
-%% String sign=MD5( adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B %B4&coins=900&idfa=6471AB94-E369-46D7-A140-2CA425630FF1&i p=27.41.190.224&mac=020000000000&os=iOS&os_version=7.0.6&t askcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E%A93 %E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E %BF%80%E6%B4%BB&token=Z000071&transactionid=c701673f-56 64-4958-ba55-7dbc5133d627&secret=secretvalue)
-%% ● iOS示例请求: http://domain?adid=391&adtitle=%E9%BB%91%E6%9A%97%E5%85%89%E5%B9%B4&coins =900&idfa=6471AB94­E369­46D7­A140­2CA425630FF1&ip=27.41.190.224&mac=02000000000 0&os=iOS&os_version=7.0.6&taskcontent=%E5%AE%89%E8%A3%85%E8%AF%95%E7%8E %A93%E5%88%86%E9%92%9F%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%8E%B7%E 5%BE%97%E5%A5%96%E5%8A%B1&taskname=%E6%BF%80%E6%B4%BB&token=Z00007 1&transactionid=c701673f­5664­4958­ba55­7dbc5133d627&sign=5e804afe2f8775d5e70d1cfb2e 490bd0
 do_cocounion(QS) ->
   Idfa = string:to_upper(resolve_parameter("idfa", QS)),
   TrandNo = resolve_parameter("transactionid",QS),
@@ -466,7 +411,25 @@ do_domob(QS) ->
   AppName = resolve_parameter("ad", QS),
   lib_callback:deal(Idfa, ?CHANNEL_DOMOB, TrandNo, Cash, AppName),
   200.
+%% http://127.0.0.1:8088/adwo/appid=85a4821e2aca4035b3591de8e0e8cd4a&adname=%E9%AD%94%E7%81%B5%E5%8F%AC%E5%94%A4%3A+%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%BD%B9&adid=16596&device=&idfa=99C19059-596F-4BC1-9580-ACB70CACD0BE&point=130&keyword=&ts=1410453656899&sign=1da868150f8a0417d13e846875194573
+do_adwo(QS) ->
+  Idfa = string:to_upper(resolve_parameter("idfa", QS)),
+  TrandNo = resolve_parameter("appid",QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("point", QS)),
+  AppName = resolve_parameter("adname", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_ADWO, TrandNo, Cash, AppName),
+  200.
 
+do_adsage(QS) ->
+  200.
+
+do_jupeng(QS) ->
+  Idfa = string:to_upper(resolve_parameter("udid", QS)),
+  TrandNo = resolve_parameter("follow",QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("score", QS)),
+  AppName = resolve_parameter("adShowName", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_JUPENG, TrandNo, Cash, AppName),
+  200.
 
 %% 具体处理消息请求---------------------------------------------------------------------------------------
 %% 前面是消息号,每一个请求在这里对应一个方法

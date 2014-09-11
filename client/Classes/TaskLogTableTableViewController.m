@@ -174,8 +174,6 @@
     
     if (!error) {
         NSString *response = [request responseString];
-        NSLog(@"HELLO, WORLD *********** RESPONSE:%@", response);
-//        NSDictionary *object = [[NSString alloc] initWithData:[response objectFromJSONString] encoding:NSUTF8StringEncoding];
         NSDictionary *object = [response objectFromJSONString];
         [tasks removeAllObjects];
         for (NSDictionary *dic in object){
@@ -188,7 +186,7 @@
             
             int channel = [[dic objectForKey:@"channel"]intValue];
             NSString *channelString = [[[NSString alloc]init]autorelease];
-            channelString = [self getChannelStr:channel];
+            channelString = [TaskLogTableTableViewController getChannelStr:channel];
             
             NSString *appNameString = [dic objectForKey:@"app_name"];
             
@@ -205,18 +203,19 @@
 
             [tasks addObject:TaskLog];
         }
-        NSLog(@"HELLO, WORLD DICT task_log, %@", tasks);
         [self.tableView reloadData];
     }else{
         NSLog(@"HELLO, WORLD ***ERROR:%@", error);
     }
 }
 
--(NSString*) getChannelStr:(int)channel
++(NSString*) getChannelStr:(int)channel
 {
     NSString *channelString = [[[NSString alloc]init]autorelease];
-    NSLog(@"channel:%d", channel);
     switch (channel) {
+        case 0:
+            channelString = @"安沃";
+            break;
         case 1:
             channelString = @"有米";
             break;
@@ -226,17 +225,22 @@
         case 3:
             channelString = @"果盟";
             break;
-        case 5:
+        case 4:
             channelString = @"触控";
             break;
-        case 6:
+        case 5:
             channelString = @"多盟";
+            break;
+        case 6:
+            channelString = @"艾德";
+            break;
+        case 7:
+            channelString = @"巨朋";
             break;
         default:
             channelString = @"未知";
             break;
     }
-    NSLog(@"HELLO, WORLD *********%@",channelString);
     return channelString;
 }
 
