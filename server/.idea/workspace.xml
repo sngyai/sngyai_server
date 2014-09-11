@@ -2,9 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="6c710d36-de48-4af6-9089-c7d8193ec96e" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebin/mod_webserver.beam" afterPath="$PROJECT_DIR$/ebin/mod_webserver.beam" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mod/mod_webserver.erl" afterPath="$PROJECT_DIR$/src/mod/mod_webserver.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/url_test.txt" afterPath="$PROJECT_DIR$/doc/url_test.txt" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/dynamic_compile/ebin/dynamic_compile.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/console_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/dummy_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/email_msg.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/error_logger_log4erl_h.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/file_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl.app" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl_conf.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl_lex.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl_parser.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log4erl_utils.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log_filter.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log_filter_codegen.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log_formatter.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/log_manager.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/logger_guard.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/smtp_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/smtp_fsm.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/syslog_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deps/log4erl/ebin/xml_appender.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/crone.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent_server_state.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent_system_config.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent_task_log.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_agent_user.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_cache.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_mysql.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/db_mysqlutil.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/gen_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/increase_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_callback_miidi.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_config.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_server_log.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_server_state.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_storage_file.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_storage_file_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_system_config.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_task_log.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_user.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_algo.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_math.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_proc.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_random.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_string.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_time.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/lib_util_type.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/main.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_chat.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_chat_system.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_crone.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_increase_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_init.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_random.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_reloader.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_server_log.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/mod_webserver.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/player_server.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/polish.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/rabbit_disk_monitor.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/record_debug.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/record_info.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/record_info_compiler_supplement.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/record_info_transform.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server.app" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server_app.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server_sup_db.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server_sup_player.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/server_sup_sys.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/sys_alarm_handler.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/sys_alarm_monitor_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/sys_background_gc.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_acceptor.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_acceptor_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_client_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_listener.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_listener_sup.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/tcp_request_broker.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/test.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ebin/vm_memory_monitor.beam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erl_crash.dump" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,6 +119,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< Updated upstream
       <file leaf-file-name="server_app.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server_app.erl">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,6 +135,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="753" max-vertical-offset="1638">
               <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+=======
+      <file leaf-file-name="mysql.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/mysql/src/mysql.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4484" max-vertical-offset="17176">
+              <caret line="236" column="32" selection-start-line="236" selection-start-column="32" selection-end-line="236" selection-end-column="32" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -50,8 +150,13 @@
       <file leaf-file-name="server_sup.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server_sup.erl">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
               <caret line="18" column="34" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="34" />
+=======
+            <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="228">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -80,8 +185,13 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="lib_callback.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/channel_callback/lib_callback.erl">
+=======
+      <file leaf-file-name="log4erl_conf.erl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
               <caret line="24" column="35" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="35" />
@@ -90,6 +200,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="channel.hrl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/channel.hrl">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,6 +231,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> Stashed changes
     </leaf>
   </component>
   <component name="FindManager">
@@ -317,8 +430,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="true" />
     <property name="FullScreen" value="false" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/knight/server/erlang" />
+    <property name="options.lastSelected" value="vcs.Subversion" />
+>>>>>>> Stashed changes
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -614,14 +732,24 @@
       <workItem from="1410025566050" duration="6462000" />
       <workItem from="1410065749477" duration="19574000" />
       <workItem from="1410151844473" duration="16515000" />
+<<<<<<< Updated upstream
       <workItem from="1410250024587" duration="7545000" />
       <workItem from="1410363179252" duration="1436000" />
       <workItem from="1410365092457" duration="7713000" />
+=======
+      <workItem from="1410250024587" duration="8759000" />
+      <workItem from="1410315262976" duration="987000" />
+      <workItem from="1410316433169" duration="1559000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="82175000" />
+=======
+    <option name="totallyTimeSpent" value="76786000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="982" extended-state="6" />
@@ -651,7 +779,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39101863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3929336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -675,11 +807,146 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/lib/config/lib_config.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="4905">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="12" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb_http.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="5548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/support/templates/mochiwebapp_skel/src/mochiapp_deps.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1710">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4408">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="1235">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.app.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="931">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/core/db_agent.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1596">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mysql/src/mysql.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4484" max-vertical-offset="17176">
+          <caret line="236" column="32" selection-start-line="236" selection-start-column="32" selection-end-line="236" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.erlang">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="228">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1596">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb_http.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="5548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/mochiweb/support/templates/mochiwebapp_skel/src/mochiapp_deps.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1710">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4408">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="1235">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.app.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="931">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/storage_file.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1533">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -717,124 +984,205 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/url_test.txt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="471" max-vertical-offset="1890">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="39" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/core/db_agent.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1176">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/mysql/src/mysql.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="3540" max-vertical-offset="13560">
           <caret line="236" column="32" selection-start-line="236" selection-start-column="32" selection-end-line="236" selection-end-column="32" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="4059" max-vertical-offset="4998">
+          <caret line="222" column="73" selection-start-line="222" selection-start-column="73" selection-end-line="222" selection-end-column="73" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.erlang">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="165">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1491">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="56" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1260">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="10" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1407">
+          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/mochiweb/src/mochiweb_http.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4380">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/mochiweb/support/templates/mochiwebapp_skel/src/mochiapp_deps.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1350">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="4636">
+          <caret line="20" column="9" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="9" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
           <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="8113" max-vertical-offset="8227">
+          <caret line="427" column="0" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3480">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="2126" max-vertical-offset="3781">
+          <caret line="119" column="54" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server_app.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="975">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1520">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="34" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server.app.src">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="735">
           <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="1501" max-vertical-offset="6213">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/storage_file.hrl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1533">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="3477">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/db_agent_player.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="-9.586206" vertical-offset="4027" max-vertical-offset="7959">
           <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="206" selection-end-column="109" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mod/player_server.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="7140">
           <caret line="155" column="42" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="42" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1938">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="29" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server_sup_sys.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="3885">
           <caret line="72" column="13" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="13" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4522">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/record.hrl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1176">
           <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="4351">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="33" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mod/mod_init.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="4059" max-vertical-offset="4998">
           <caret line="222" column="73" selection-start-line="222" selection-start-column="73" selection-end-line="222" selection-end-column="73" />
         </state>
@@ -851,22 +1199,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
           <caret line="12" column="75" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+=======
+        <state vertical-scroll-proportion="-9.555555" vertical-offset="27" max-vertical-offset="6042">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/utils/lib_util_type.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="4636">
           <caret line="20" column="9" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="9" />
           <folding />
+=======
+        <state vertical-scroll-proportion="-7.5925927" vertical-offset="1790" max-vertical-offset="8797">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="19" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/common.hrl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="2126" max-vertical-offset="3781">
           <caret line="119" column="54" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -926,23 +1288,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+    <entry file="file://$PROJECT_DIR$/.erlang">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
           <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+    <entry file="file://$PROJECT_DIR$/rebar.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="4408">
-          <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.16758545" vertical-offset="0" max-vertical-offset="907">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.erlang">
+    <entry file="file://$PROJECT_DIR$/src/server.app.src">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="180">
           <caret line="3" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="30" />
           <folding />
@@ -1001,18 +1370,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
           <caret line="18" column="34" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="34" />
+=======
+        <state vertical-scroll-proportion="0.7214765" vertical-offset="1" max-vertical-offset="931">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server_app.erl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="1092">
           <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+=======
+        <state vertical-scroll-proportion="0.3660419" vertical-offset="219" max-vertical-offset="1235">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/ebin/log4erl">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1020,6 +1399,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.777779" vertical-offset="294" max-vertical-offset="1323">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.31422272" vertical-offset="285" max-vertical-offset="4408">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/log4erl/src/log4erl_conf.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="20" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
