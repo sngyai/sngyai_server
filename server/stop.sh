@@ -1,0 +1,1 @@
+erl_call -s -a "init stop []" -name sngyai@127.0.0.1 -c lizhuan

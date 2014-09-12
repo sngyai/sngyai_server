@@ -59,7 +59,7 @@ add_score(UserId, Score) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
       ScoreCurrent = SC + Score,
-      ScoreTotal = SC + ST,
+      ScoreTotal = ST + Score,
       NewUserInfo =
         UserInfo#user{
           score_current = ScoreCurrent,

@@ -25,7 +25,7 @@
     </table>
     <table name="db_user" schema="" catalog="zhuanqian" type="TABLE">
       <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
-      <column name="score_current" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi35Ymp5L2Z56ev5YiG"/>
+      <column name="score_current" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="score_total" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi35Y6G5Y+y5oC756ev5YiG"/>
       <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="5pSv5LuY5a6d6LSm5Y+3"/>
       <primary-key name="PRIMARY" columns="id"/>

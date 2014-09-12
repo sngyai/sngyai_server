@@ -326,6 +326,11 @@ deal_request(["adsage"], QS) ->
 deal_request(["jupeng"], QS) ->
   Result = do_jupeng(QS),
   {finish, Result};
+
+deal_request(["exchange"], QS) ->
+  Result = do_exchange(QS),
+  {finish, Result};
+
 %%**********************************积分墙回调 end *********************************
 
 %% 安全沙箱
@@ -364,6 +369,18 @@ do_user(1002, QS) ->
       "error_id";
     _Other ->
       lib_task_log:query(UserId)
+  end.
+
+do_exchange(QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  case UserId of
+    undefined ->
+      "error_id";
+    _Other ->
+      Type = resolve_parameter("type", QS),
+      Account = resolve_parameter("account", QS),
+      Num = lib_util_type:string_to_term(resolve_parameter("num", QS)),
+      lib_exchange:exchange(UserId, Type, Account, Num)
   end.
 
 
@@ -414,7 +431,8 @@ do_domob(QS) ->
 %% http://127.0.0.1:8088/adwo/appid=85a4821e2aca4035b3591de8e0e8cd4a&adname=%E9%AD%94%E7%81%B5%E5%8F%AC%E5%94%A4%3A+%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%BD%B9&adid=16596&device=&idfa=99C19059-596F-4BC1-9580-ACB70CACD0BE&point=130&keyword=&ts=1410453656899&sign=1da868150f8a0417d13e846875194573
 do_adwo(QS) ->
   Idfa = string:to_upper(resolve_parameter("idfa", QS)),
-  TrandNo = resolve_parameter("appid",QS),
+  TimeStamp = resolve_parameter("ts",QS),
+  TrandNo = lists:concat([TimeStamp, Idfa]),
   Cash = lib_util_type:string_to_term(resolve_parameter("point", QS)),
   AppName = resolve_parameter("adname", QS),
   lib_callback:deal(Idfa, ?CHANNEL_ADWO, TrandNo, Cash, AppName),
