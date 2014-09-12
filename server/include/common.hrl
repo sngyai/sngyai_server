@@ -54,6 +54,7 @@
 -define(ETS_STAT_DB, ets_stat_db).  %% 数据库访问统计(表名，操作，次数)
 -define(ETS_ONLINE, ets_online).    %% 玩家在线ETS
 -define(ETS_TASK_LOG, ets_task_log).
+-define(ETS_EXCHANGE_LOG, ets_exchange_log).
 
 
 %%%_------------------------数据缓存标记--------------------------------------------------------------------------------------------

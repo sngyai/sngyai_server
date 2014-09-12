@@ -5,3 +5,17 @@
   AppName:[229,164,167,228,188,151,231,130,185,232,175,132]
   Cash:148
 
+13-9-2014 2:32:4.121 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:1
+  TrandNo:"YM121201PWxw0DGr0f"
+  AppName:[231,190,142,228,184,189,232,175,180]
+  Cash:140
+
+13-9-2014 2:32:36.248 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:1
+  TrandNo:"YM121201PWxw0DGr0f"
+  AppName:[231,190,142,228,184,189,232,175,180]
+  Cash:140
+

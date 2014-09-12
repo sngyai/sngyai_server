@@ -201,10 +201,12 @@ do_terminate(Reason, State) ->
 init_ets() ->
   ets:new(?ETS_ONLINE, [{keypos, #user.id}, named_table, public, set]),      %%在线玩家列表
   ets:new(?ETS_TASK_LOG, [{keypos, #task_log.id}, named_table, public, set]),
+  ets:new(?ETS_EXCHANGE_LOG, [{keypos, #exchange_log.id}, named_table, public, set]),
   ets:new(?Ets_Services_Time, [{keypos, 1}, named_table, public, set]),
 
   init_data_user(),
   init_data_task_log(),
+  init_data_exchange_log(),
   ok.
 
 init_data_user() ->
@@ -222,6 +224,14 @@ init_data_task_log() ->
     fun(#task_log{channel = Channel, trand_no = TrandNo} = Task_E) ->
       ets:insert(?ETS_TASK_LOG, Task_E#task_log{id = {Channel, TrandNo}})
     end, AllTasks).
+
+init_data_exchange_log() ->
+  AllExchanges = db_agent_exchange_log:get_all(),
+  ?T("all TASKS 1: ~p~n", [AllExchanges]),
+  lists:foreach(
+    fun(#exchange_log{user_id = UserId, time = Time} = Exchange_E) ->
+      ets:insert(?ETS_EXCHANGE_LOG, Exchange_E#exchange_log{id = {UserId, Time}})
+    end, AllExchanges).
 
 %% 初始数据
 %% 返回值:ok

@@ -62,11 +62,12 @@ concat_result([TaskLog|T], Result) ->
     "\",\"score\":\"", Score,
     "\"}"
   ]),
-  NewResult = case Result of
-                [] ->
-                  CurResult;
-                _Other ->
-                  lists:concat([Result, ",", CurResult])
-              end,
+  NewResult =
+    case Result of
+      [] ->
+        CurResult;
+      _Other ->
+        lists:concat([Result, ",", CurResult])
+    end,
   concat_result(T, NewResult).
 

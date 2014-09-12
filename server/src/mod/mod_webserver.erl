@@ -331,6 +331,10 @@ deal_request(["exchange"], QS) ->
   Result = do_exchange(QS),
   {finish, Result};
 
+deal_request(["exchange_log"], _QS) ->
+  Result = do_exchange_log(),
+  {finish, Result};
+
 %%**********************************积分墙回调 end *********************************
 
 %% 安全沙箱
@@ -371,6 +375,7 @@ do_user(1002, QS) ->
       lib_task_log:query(UserId)
   end.
 
+%% http://127.0.0.1:8088/exchange/?user_id=7C9419F2-65D5-4C3E-95D4-D27F84574822&type=1&account=progyang@gmail.com&num=6680
 do_exchange(QS) ->
   UserId = resolve_parameter("user_id", QS),
   case UserId of
@@ -383,7 +388,8 @@ do_exchange(QS) ->
       lib_exchange:exchange(UserId, Type, Account, Num)
   end.
 
-
+do_exchange_log() ->
+  lib_exchange:get_all().
 
 
 do_miidi(QS) ->

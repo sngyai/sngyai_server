@@ -13,7 +13,8 @@
       <column name="type" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" remarks="5YWR5o2i57G75Z6L"/>
       <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="6LSm5oi3"/>
       <column name="num" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5YWR5o2i5pWw6YeP"/>
-      <primary-key name="PRIMARY" columns="user_id"/>
+      <primary-key name="PRIMARY" columns="user_id,time"/>
+      <index name="idx_db_exchange_log_time" unique="false" columns="time"/>
     </table>
     <table name="db_task_log" schema="" catalog="zhuanqian" type="TABLE">
       <column name="user_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>

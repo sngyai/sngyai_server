@@ -48,3 +48,13 @@
   score
 }).
 
+-record(exchange_log,
+{
+  id,
+  user_id,
+  time,
+  type,
+  account,
+  num
+}).
+
