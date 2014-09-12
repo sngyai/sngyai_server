@@ -120,6 +120,7 @@
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
                 [tabBarController.mobisagejoy presentJoyWithViewController:self];
             }
+            break;
         case 7:
             [JupengWall showOffers:self
                       didShowBlock:^{
