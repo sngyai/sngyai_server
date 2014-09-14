@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 #import "TaskLogTableTableViewController.h"
+#import "AppDelegate.h"
 
 @interface InfoTableViewController : UITableViewController
 

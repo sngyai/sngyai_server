@@ -20,7 +20,7 @@
     if ([super initWithStyle:style] != nil)
     {
         UITabBarItem * item = [[UITabBarItem alloc]
-                               initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:1];
+                               initWithTitle:@"个人中心" image:[UIImage imageNamed:@"user_enabled"] tag:0];
         self.tabBarItem = item;
     }
     return self;
@@ -30,6 +30,16 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"个人中心";
+    
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"任务记录" style:UIBarButtonItemStylePlain
+                                                                      target:self action:@selector(showTaskLog)];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+    [leftButtonItem release];
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor purpleColor]];
+    [self.navigationController.navigationBar setBarTintColor:NAVIGATION_BACKGROUND];
+    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+
     [self setupRefresh];
 }
 
@@ -106,6 +116,15 @@
     return cell;
 }
 
+- (void)setFullScreen:(BOOL)fullScreen
+{
+    // 状态条
+    [UIApplication sharedApplication].statusBarHidden = fullScreen;
+    // 导航条
+    [self.navigationController setNavigationBarHidden:fullScreen];
+    // tabBar的隐藏通过在初始化方法中设置hidesBottomBarWhenPushed属性来实现
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,17 +167,19 @@
     
 	switch (indexPath.row) {
         case 1:
-        {
-            UIViewController *controller = [[TaskLogTableTableViewController alloc] init];
-            if (controller) {
-                [self.navigationController pushViewController:controller animated:YES];
-                [controller release];
-            }
-        }
+            [self showTaskLog];
             break;
 		default:
 			break;
 	}
+}
+
+-(void) showTaskLog{
+    UIViewController *controller = [[TaskLogTableTableViewController alloc] init];
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }
 }
 
 

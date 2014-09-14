@@ -124,10 +124,8 @@
     
     NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
     _tabBar.viewControllers = controllerArray;
-    
-    [[_tabBar.tabBar.items objectAtIndex:0] setTitle:@"利赚-手机赚钱"];
-    [(UITabBarItem *)[_tabBar.tabBar.items objectAtIndex:1] setTitle:@"用户中心"];
-    
+    [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+
     self.window.rootViewController = _tabBar;
     
     [self.window makeKeyAndVisible];

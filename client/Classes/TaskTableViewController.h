@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
 #import "YouMiWall.h"
 #import "JupengWall.h"
 #import "MiidiAdSpot.h"
@@ -24,6 +25,7 @@
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
 #import "TaskLogTableTableViewController.h"
+#import "ApplicationCell.h"
 
 @interface TaskTableViewController : UITableViewController
     <MiidiAdWallShowAppOffersDelegate,
@@ -34,6 +36,12 @@
     GuoMobWallDelegate>
 {
     UILabel *versionTipView_;
+    ApplicationCell *_tmpCell;
+    NSArray *_data;
+    UINib *_cellNib;
 }
 
+@property (nonatomic, retain) NSArray *data;
+@property (nonatomic, retain) UINib *cellNib;
+@property (nonatomic, retain) ApplicationCell *tmpCell;
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "TaskTableViewController.h"
+#import "CompositeSubviewBasedApplicationCell.h"
+#import "HybridSubviewBasedApplicationCell.h"
+
 
 @interface TaskTableViewController ()
 
@@ -19,7 +22,7 @@
     if ([super initWithStyle:style] != nil)
     {
         UITabBarItem * item = [[UITabBarItem alloc]
-                               initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
+                               initWithTitle:@"任务中心" image:[UIImage imageNamed:@"globe_enabled"] tag:0];
         item.badgeValue = @"新";
         self.tabBarItem = item;
     }
@@ -28,7 +31,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"欢迎使用";
+    [self setNav];
+	
+	// Configure the table view.
+    self.tableView.rowHeight = 73.0;
+    self.tableView.backgroundColor = DARK_BACKGROUND;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+	// Load the data.
+    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    self.data = [NSArray arrayWithContentsOfFile:dataPath];
+	
+	self.cellNib = [UINib nibWithNibName:@"IndividualSubviewsBasedApplicationCell" bundle:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,30 +61,46 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 8;
+    return [_data count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 40.0;
+//}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
-}
+    static NSString *CellIdentifier = @"ApplicationCell";
+    
+    ApplicationCell *cell = (ApplicationCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+    if (cell == nil)
+    {
 
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Task Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [self.cellNib instantiateWithOwner:self options:nil];
+		cell = _tmpCell;
+		self.tmpCell = nil;
     }
     
-	// Configure the cell...
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    NSString *indexStr = [[NSString alloc] init];
-    indexStr = [TaskLogTableTableViewController getChannelStr:indexPath.row];
-    cell.textLabel.text = [indexStr stringByAppendingString:@"积分墙"];
+	// Display dark and light background in alternate rows -- see tableView:willDisplayCell:forRowAtIndexPath:.
+    cell.useDarkBackground = YES;//(indexPath.row % 2 == 0);
+	
+	// Configure the data for the cell.
+    NSDictionary *dataItem = [_data objectAtIndex:indexPath.row];
+    cell.icon = [UIImage imageNamed:[dataItem objectForKey:@"Icon"]];
+    cell.publisher = [dataItem objectForKey:@"Publisher"];
+    cell.name = [dataItem objectForKey:@"Name"];
+    cell.numRatings = [[dataItem objectForKey:@"NumRatings"] intValue];
+    cell.rating = [[dataItem objectForKey:@"Rating"] floatValue];
+    cell.price = [dataItem objectForKey:@"Price"];
+	
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = ((ApplicationCell *)cell).useDarkBackground ? DARK_BACKGROUND : LIGHT_BACKGROUND;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -132,6 +163,22 @@
 		default:
 			break;
 	}
+}
+
+-(void) setNav{
+    self.navigationItem.title = @"欢迎使用";
+//    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左边按钮" style:UIBarButtonItemStylePlain
+//                                                                      target:self action:@selector(OnLeftButton:)];
+//    self.navigationItem.leftBarButtonItem = leftButtonItem;
+//    [leftButtonItem release];
+//    
+//    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边按钮" style:UIBarButtonItemStylePlain
+//                                                                       target:self action:@selector(OnRightButton:)];
+//    self.navigationItem.rightBarButtonItem = rightButtonItem;
+//    [rightButtonItem release];
+    [self.navigationController.navigationBar setTintColor:[UIColor purpleColor]];
+    [self.navigationController.navigationBar setBarTintColor:NAVIGATION_BACKGROUND];
+    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
 }
 
 static NSString* const errCodeList[] = {
