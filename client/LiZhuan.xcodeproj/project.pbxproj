@@ -18,6 +18,8 @@
 		B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B71C68AB19ACC56F0054EAF4 /* GuomobWallBundle.bundle */; };
 		B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B71C68AD19ACC56F0054EAF4 /* libGuoMobWall.a */; };
 		B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B745A5F519AA5DBE00491373 /* CoreTelephony.framework */; };
+		B7798FC019C9F80B00D3ABE2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */; };
+		B7798FC119C9F80B00D3ABE2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBF19C9F80B00D3ABE2 /* Parse.framework */; };
 		B7867CBB19AA481700D7965A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBA19AA481700D7965A /* Security.framework */; };
 		B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBC19AA484500D7965A /* CFNetwork.framework */; };
 		B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBE19AA485D00D7965A /* libsqlite3.dylib */; };
@@ -149,6 +151,8 @@
 		B71C68AC19ACC56F0054EAF4 /* GuoMobWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuoMobWallViewController.h; path = Lib/GuoMobWallViewController.h; sourceTree = "<group>"; };
 		B71C68AD19ACC56F0054EAF4 /* libGuoMobWall.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGuoMobWall.a; path = Lib/libGuoMobWall.a; sourceTree = "<group>"; };
 		B745A5F519AA5DBE00491373 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B7798FBF19C9F80B00D3ABE2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B7867CBA19AA481700D7965A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B7867CBC19AA484500D7965A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B7867CBE19AA485D00D7965A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -346,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */,
+				B7798FC019C9F80B00D3ABE2 /* Bolts.framework in Frameworks */,
 				B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */,
 				F19AAA8518A9C7590001C8FD /* ImageIO.framework in Frameworks */,
 				B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */,
@@ -376,6 +381,7 @@
 				FBFBDD1E19C1F75800D368CD /* libzkcmone2.3.a in Frameworks */,
 				B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */,
 				B71C68AA19ACC5370054EAF4 /* libYouMi.a in Frameworks */,
+				B7798FC119C9F80B00D3ABE2 /* Parse.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */,
 				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
@@ -469,6 +475,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */,
+				B7798FBF19C9F80B00D3ABE2 /* Parse.framework */,
 				FBFBDD3B19C2102900D368CD /* AudioToolbox.framework */,
 				FBFBDD3919C2102300D368CD /* CoreImage.framework */,
 				FBFBDD3719C2101D00D368CD /* CoreAudio.framework */,
@@ -1008,12 +1016,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1038,8 +1047,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -1051,12 +1060,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1078,8 +1088,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1091,8 +1101,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1106,7 +1116,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1117,8 +1127,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (2FK45Z3564)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1133,7 +1143,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "4822a9a7-4f0c-4c98-bfe8-aef79c0ee1c5";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";

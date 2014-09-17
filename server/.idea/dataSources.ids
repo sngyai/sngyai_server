@@ -32,4 +32,7 @@
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
+  <data-source source="LOCAL" name="MySQL - @localhost" uuid="1d9e0c02-2965-4b62-bd82-326342ecac0a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

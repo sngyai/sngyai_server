@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import "RootViewController.h"
 #import "TaskTableViewController.h"
 #import "RootViewController.h"
