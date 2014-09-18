@@ -15,9 +15,9 @@
 
 %% API
 -export([
-  create_role/1,
   login/1,
   add_score/2,
+  set_tokens/2,
   t/0
 ]).
 
@@ -33,6 +33,19 @@ create_role(Idfa) ->
     ets:insert(?ETS_ONLINE, NewUser),
     db_agent_user:create(NewUser),
     "ok".
+
+create_role_with_tokens(Idfa, Tokens) ->
+  NewUser =
+    #user{
+      id = Idfa,
+      score_current = 0,
+      score_total = 0,
+      account = "",
+      tokens = Tokens
+    },
+  ets:insert(?ETS_ONLINE, NewUser),
+  db_agent_user:create(NewUser),
+  "ok".
 
 %%登录
 login(UserId) ->
@@ -71,6 +84,17 @@ add_score(UserId, Score) ->
       ?T("add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       ?Error(default_logger, "add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       skip
+  end.
+
+%%更新用户tokens
+set_tokens(UserId, Tokens) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{} = UserInfo|_] ->
+      NewUserInfo = UserInfo#user{tokens = Tokens},
+      ets:insert(?ETS_ONLINE, NewUserInfo),
+      db_agent_user:set_tokens(UserId, Tokens);
+    _Other ->
+      create_role_with_tokens(UserId, Tokens)
   end.
 
 

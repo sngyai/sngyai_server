@@ -34,7 +34,8 @@
   id,                                     %% 玩家ID
   score_current = 0,
   score_total = 0,
-  account = ""
+  account = "",
+  tokens
 }).
 
 -record(task_log,

@@ -26,6 +26,7 @@
      UIRemoteNotificationTypeBadge |
      UIRemoteNotificationTypeAlert |
      UIRemoteNotificationTypeSound];
+    
     NSString *StringUrlPing = @"www.apple.com";
     Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
 
@@ -57,15 +58,58 @@
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
 {
-    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
-    // Subscribe this user to the broadcast channel, ""
-    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Successfully subscribed to the broadcast channel.");
-        } else {
-            NSLog(@"Failed to subscribe to the broadcast channel.");
-        }
-    }];
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", newDeviceToken]];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        
+        NSLog(@"HELLO, WORLD ***object:%@", object);
+    }else{
+        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
+    }
+
+    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", newDeviceToken]];
+    
+//    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
+//    // Subscribe this user to the broadcast channel, ""
+//    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"Successfully subscribed to the broadcast channel.");
+//        } else {
+//            NSLog(@"Failed to subscribe to the broadcast channel.");
+//        }
+//    }];
+}
+
+-(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", error]];
+}
+
+-(void) alertMessage:(NSString*)msg{
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning"
+														message:msg
+													   delegate:nil
+											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)hold
@@ -102,20 +146,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
-}
-
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*)notification{
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LocalNotification" message:notification.alertBody delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    [alert show];
-    
-    NSDictionary* dic = [[[NSDictionary alloc]init]autorelease];
-    //这里可以接受到本地通知中心发送的消息
-    dic = notification.userInfo;
-    NSLog(@"user info = %@",[dic objectForKey:@"key"]);
-    
-    // 图标上的数字减1
-    application.applicationIconBadgeNumber -= 1;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

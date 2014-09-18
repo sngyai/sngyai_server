@@ -373,7 +373,13 @@ do_user(1002, QS) ->
       "error_id";
     _Other ->
       lib_task_log:query(UserId)
-  end.
+  end;
+
+%%注册用户设备tokens
+do_user(1003, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  Tokens = resolve_parameter("tokens", QS),
+  lib_user:set_tokens(UserId, Tokens).
 
 %% http://127.0.0.1:8088/exchange/?user_id=7C9419F2-65D5-4C3E-95D4-D27F84574822&type=1&account=progyang@gmail.com&num=6680
 do_exchange(QS) ->

@@ -1,0 +1,48 @@
+%%%-------------------------------------------------------------------
+%%% @author sngyai
+%%% @copyright (C) 2014, <COMPANY>
+%%% @doc
+%%%
+%%% @end
+%%% Created : 18. 九月 2014 上午2:27
+%%%-------------------------------------------------------------------
+-module(t_apns).
+-author("sngyai").
+
+-compile(export_all).
+-define(APNS_NAME,app_apns).
+
+-include("common.hrl").
+-include("apns.hrl").
+-include("localized.hrl").
+
+conn_apns() ->
+  ssl:start(),
+  apns:start(),
+  ?T(['HELLO, WORLD !']),
+  apns:connect(
+    ?APNS_NAME,
+    fun handle_apns_error/2,
+    fun handle_apns_delete_subscription/1
+  ).
+
+send_message()->
+  apns:send_message(?APNS_NAME, "devicetoken31d1df3a324bb72c1ff2bcb3b87d33fd1a2b7578b359fb5494eff", "hello,这是一号话务员").
+
+send_message(Msg) ->
+  apns:send_message(my_connection_name, #apns_msg{
+    alert  = Msg ,
+    badge  = 5,
+    sound  = "beep.wav" ,
+    expiry = 1348000749,
+    device_token = "devicetoken31d1df3a324bb72c1ff2bcb3b87d33fd1a2b7578b359fb5494eff"
+  }).
+
+send_badge(Number)->
+  apns:send_badge(qiaoqiao_apns,"devicetoken31d1df3a324bb72c1ff2bcb3b87d33fd1a2b7578b359fb5494eff", Number).
+
+handle_apns_error(MsgId, Status) ->
+  error_logger:error_msg("error: ~p - ~p~n", [MsgId, Status]).
+
+handle_apns_delete_subscription(Data) ->
+  error_logger:info_msg("delete subscription: ~p~n", [Data]).

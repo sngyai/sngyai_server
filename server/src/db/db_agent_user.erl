@@ -18,7 +18,8 @@
   create/1,
   get_user_by_name/1,
   get_all_users/0,
-  update_score/3
+  update_score/3,
+  set_tokens/2
   ]).
 
 %%创建新用户
@@ -46,6 +47,9 @@ get_all_users() ->
 update_score(UserId, ScoreCurrent, ScoreTotal) ->
   {update, _} = ?DB_GAME:update(db_user, [{score_current, ScoreCurrent}, {score_total, ScoreTotal}], [{id, UserId}]).
 
+%%更新用户设备tokens
+set_tokens(UserId, Tokens) ->
+  {update, _} = ?DB_GAME:update(db_user, [{tokens, Tokens}], [{id, UserId}]).
 
 data2record(id, Value) ->
   {id, binary_to_list(Value)};
