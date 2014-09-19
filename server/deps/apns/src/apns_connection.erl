@@ -85,8 +85,11 @@ open_out(Connection) ->
     RealSslOpts,
     Connection#apns_connection.timeout
   ) of
-    {ok, OutSocket} -> {ok, OutSocket};
+    {ok, OutSocket} ->
+      io:format("CONNECTION OK:~p~n~p~n",[OutSocket, RealSslOpts]),
+      {ok, OutSocket};
     {error, Reason} ->
+      io:format("CONNECTION error:~p~n",[Reason]),
       {error, Reason}
   end.
 
@@ -213,7 +216,7 @@ handle_info(reconnect, State = #state{connection = Connection}) ->
   end;
 
 handle_info({ssl_closed, SslSocket}, State = #state{out_socket = SslSocket}) ->
-  error_logger:info_msg("APNS disconnected~n"),
+  error_logger:info_msg("APNS disconnected ~p~n"),
   {noreply, State#state{out_socket=undefined}};
 
 handle_info(Request, State) ->

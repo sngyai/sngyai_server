@@ -18,6 +18,7 @@
   login/1,
   add_score/2,
   set_tokens/2,
+  get_tokens/1,
   t/0
 ]).
 
@@ -49,7 +50,6 @@ create_role_with_tokens(Idfa, Tokens) ->
 
 %%登录
 login(UserId) ->
-  ?T("user_id:~p, tab2list:~p", [UserId, ets:tab2list(?ETS_ONLINE)]),
   {ScoreCurrent, ScoreTotal} =
     case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC, score_total = ST}|_] ->
@@ -94,6 +94,14 @@ set_tokens(UserId, Tokens) ->
       db_agent_user:set_tokens(UserId, Tokens);
     _Other ->
       create_role_with_tokens(UserId, Tokens)
+  end.
+
+get_tokens(UserId) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{tokens = Tokens}|_] when Tokens =/= undefined->
+      Tokens;
+    _Other ->
+      []
   end.
 
 

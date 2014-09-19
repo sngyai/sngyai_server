@@ -53,6 +53,15 @@ set_tokens(UserId, Tokens) ->
 
 data2record(id, Value) ->
   {id, binary_to_list(Value)};
+data2record(tokens, Value) ->
+  Tokens =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {tokens, Tokens};
 data2record(account, Value) ->
   {account, lib_util_type:string_to_term(Value)};
 data2record(Key, Value) ->
@@ -62,7 +71,6 @@ data2record(Key, Value) ->
 
 record2data(User) ->
   tuple_to_list(User#user{
-%%     id = lib_util_type:term_to_string(User#user.id),
     account = lib_util_type:term_to_string(User#user.account)
   }
 ).

@@ -56,10 +56,18 @@
 }
 
 - (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 {
+    NSString *pushToken = [[[[DeviceToken description]
+                             
+                             stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                           
+                           stringByReplacingOccurrencesOfString:@" " withString:@""] ;
+
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", newDeviceToken]];
+    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", pushToken]];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
     
     NSURL *url = [NSURL URLWithString:StrUrl];
@@ -80,7 +88,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
         NSLog(@"HELLO, WORLD ***ERROR:%@", error);
     }
 
-    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", newDeviceToken]];
+    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", pushToken]];
     
 //    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
 //    // Subscribe this user to the broadcast channel, ""
@@ -93,9 +101,30 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
 //    }];
 }
 
--(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+-(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
 {
-    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", error]];
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", errorReason]];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        
+        NSLog(@"HELLO, WORLD ***object:%@", object);
+    }else{
+        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
+    }
+    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
 }
 
 -(void) alertMessage:(NSString*)msg{

@@ -189,6 +189,8 @@
 -define(TGW_HEADER, <<"tgw_l">>). % 字符个数对应包头长度
 
 
+-define(APNS_NAME,app_apns).
+
 
 
 

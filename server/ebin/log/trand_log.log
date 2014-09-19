@@ -42,3 +42,17 @@
            231,169,186,228,185,139,229,189,185]
   Cash:130
 
+20-9-2014 3:41:40.172 [lib_callback:30] duplicate trand req:
+  Idfa:"199856BA-21F8-44D8-95CC-EF82BBCF7B48"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+20-9-2014 5:3:17.941 [lib_callback:30] duplicate trand req:
+  Idfa:"199856BA-21F8-44D8-95CC-EF82BBCF7B48"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+

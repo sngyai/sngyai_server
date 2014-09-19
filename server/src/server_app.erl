@@ -33,6 +33,12 @@ start(normal, []) ->
 
   %% ssl 启动
   ok = ssl:start(),
+  ok = apns:start(),
+  apns:connect(
+    ?APNS_NAME,
+    fun t_apns:handle_apns_error/2,
+    fun t_apns:handle_apns_delete_subscription/1
+  ),
 
   %%输出
   io:format("server_app started"),
