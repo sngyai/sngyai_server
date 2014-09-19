@@ -12,3 +12,193 @@
 
 19-9-2014 17:27:30.218 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
 
+19-9-2014 18:5:1.220 [mod_webserver:260] mod_webserver handle_request type:["user"], Reason :{badmatch,
+                                                                         {error,
+                                                                          {mysql_result,
+                                                                           [],
+                                                                           [],
+                                                                           0,
+                                                                           0,
+                                                                           "Column 'tokens' cannot be null",
+                                                                           1048,
+                                                                           "23000"}}}, Qs:[{"msg",
+                                                                                            "1001"},
+                                                                                           {"user_id",
+                                                                                            "8005655A-C66D-4E3D-814E-7021B077DFD0"}],Stack_trace:[{db_agent_user,
+                                                                                                                                                   create,
+                                                                                                                                                   1,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/db/db_agent_user.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     29}]},
+                                                                                                                                                  {lib_user,
+                                                                                                                                                   create_role,
+                                                                                                                                                   1,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/lib/lib_user.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     34}]},
+                                                                                                                                                  {lib_user,
+                                                                                                                                                   login,
+                                                                                                                                                   1,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/lib/lib_user.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     58}]},
+                                                                                                                                                  {mod_webserver,
+                                                                                                                                                   deal_request,
+                                                                                                                                                   2,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/mod/mod_webserver.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     285}]},
+                                                                                                                                                  {mod_webserver,
+                                                                                                                                                   handle_request,
+                                                                                                                                                   1,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/mod/mod_webserver.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     250}]},
+                                                                                                                                                  {mod_webserver,
+                                                                                                                                                   loop,
+                                                                                                                                                   2,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/mod/mod_webserver.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     223}]},
+                                                                                                                                                  {mod_webserver,
+                                                                                                                                                   '-init/1-fun-0-',
+                                                                                                                                                   2,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/mod/mod_webserver.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     60}]},
+                                                                                                                                                  {mochiweb_http,
+                                                                                                                                                   headers,
+                                                                                                                                                   5,
+                                                                                                                                                   [{file,
+                                                                                                                                                     "src/mochiweb_http.erl"},
+                                                                                                                                                    {line,
+                                                                                                                                                     96}]}] 
+
+19-9-2014 18:5:1.473 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:5:58.541 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:6:34.983 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:6:57.169 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:7:19.374 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:7:31.669 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:7:41.315 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:7:59.656 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:8:5.801 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:8:25.936 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:8:30.606 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:8:36.531 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:9:8.621 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:9:34.007 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:9:36.295 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:10:10.556 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:10:13.147 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:10:20.682 [mod_webserver:352] mod_webserver deal_request type error type:["adwo",
+                                                                [97,112,112,
+                                                                 105,100,61,
+                                                                 56,53,97,52,
+                                                                 56,50,49,101,
+                                                                 50,97,99,97,
+                                                                 52,48,51,53,
+                                                                 98,51,53,57,
+                                                                 49,100,101,
+                                                                 56,101,48,
+                                                                 101,56,99,
+                                                                 100,52,97,38,
+                                                                 97,100,110,
+                                                                 97,109,101,
+                                                                 61,233,173,
+                                                                 148,231,129,
+                                                                 181,229,143,
+                                                                 172,229,148,
+                                                                 164,58,32,
+                                                                 229,164,169,
+                                                                 231,169,186,
+                                                                 228,185,139,
+                                                                 229,189,185,
+                                                                 38,97,100,
+                                                                 105,100,61,
+                                                                 49,54,53,57,
+                                                                 54,38,100,
+                                                                 101,118,105,
+                                                                 99,101,61,38,
+                                                                 105,100,102,
+                                                                 97,61,57,57,
+                                                                 67,49,57,48,
+                                                                 53,57,45,53,
+                                                                 57,54,70,45,
+                                                                 52,66,67,49,
+                                                                 45,57,53,56,
+                                                                 48,45,65,67,
+                                                                 66,55,48,67,
+                                                                 65,67,68,48,
+                                                                 66,69,38,112,
+                                                                 111,105,110,
+                                                                 116,61,49,51,
+                                                                 48,38,107,
+                                                                 101,121,119,
+                                                                 111,114,100,
+                                                                 61,38,116,
+                                                                 115,61,49,52,
+                                                                 49,48,52,53,
+                                                                 51,54,53,54,
+                                                                 56,57,57,38,
+                                                                 115,105,103,
+                                                                 110,61,49,
+                                                                 100,97,56,54,
+                                                                 56,49,53,48,
+                                                                 102,56,97,48,
+                                                                 52,49,55,100,
+                                                                 49,51,101,56,
+                                                                 52,54,56,55,
+                                                                 53,49,57,52,
+                                                                 53,55,51]], QS:[]
+
+19-9-2014 18:10:20.938 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:14:54.730 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:14:57.114 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:19:35.239 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:19:48.225 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:19:54.666 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:19:57.691 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:20:21.543 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:21:29.597 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:21:34.009 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:23:55.617 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:24:48.947 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+19-9-2014 18:24:52.661 [mod_webserver:352] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+

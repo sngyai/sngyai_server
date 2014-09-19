@@ -245,7 +245,7 @@ handle_request(Req) ->
   %?T("handle_request path: ~p, method:~p",[Req:get(path), Req:get(method)]),
   QS = case Req:get(method) of 'GET' -> Req:parse_qs(); 'POST' -> Req:parse_post() end,
   ?T("handle_request req:~p, QS:~p", [Req, QS]),
-  ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
+%%   ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
   try deal_request(Type, QS) of
     {finish, Result} ->
@@ -354,7 +354,7 @@ deal_request(Type, QS) ->
   {finish, "type_error"}.
 
 %%用户相关
-%% http://127.0.0.1:8088/user/?msg=1001
+%% http://127.0.0.1:8088/user/?msg=1001&user_id=
 %%登录
 do_user(1001, QS) ->
   UserId = resolve_parameter("user_id", QS),
@@ -440,7 +440,7 @@ do_domob(QS) ->
   AppName = resolve_parameter("ad", QS),
   lib_callback:deal(Idfa, ?CHANNEL_DOMOB, TrandNo, Cash, AppName),
   200.
-%% http://127.0.0.1:8088/adwo/appid=85a4821e2aca4035b3591de8e0e8cd4a&adname=%E9%AD%94%E7%81%B5%E5%8F%AC%E5%94%A4%3A+%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%BD%B9&adid=16596&device=&idfa=99C19059-596F-4BC1-9580-ACB70CACD0BE&point=130&keyword=&ts=1410453656899&sign=1da868150f8a0417d13e846875194573
+%% http://127.0.0.1:8088/adwo/?appid=85a4821e2aca4035b3591de8e0e8cd4a&adname=%E9%AD%94%E7%81%B5%E5%8F%AC%E5%94%A4%3A+%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%BD%B9&adid=16596&device=&idfa=99C19059-596F-4BC1-9580-ACB70CACD0BE&point=130&keyword=&ts=1410453656899&sign=1da868150f8a0417d13e846875194573
 do_adwo(QS) ->
   Idfa = string:to_upper(resolve_parameter("idfa", QS)),
   TimeStamp = resolve_parameter("ts",QS),
