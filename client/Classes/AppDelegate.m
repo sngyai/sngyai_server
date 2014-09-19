@@ -88,17 +88,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
         NSLog(@"HELLO, WORLD ***ERROR:%@", error);
     }
 
-    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", pushToken]];
-    
-//    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
-//    // Subscribe this user to the broadcast channel, ""
-//    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"Successfully subscribed to the broadcast channel.");
-//        } else {
-//            NSLog(@"Failed to subscribe to the broadcast channel.");
-//        }
-//    }];
+//    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", pushToken]];
 }
 
 -(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
@@ -198,13 +188,39 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     _tabBar = [[[RootViewController alloc] init]autorelease];
     _tabBar.delegate = self;
     
-    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
-    _tabBar.viewControllers = controllerArray;
-    [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
-
-    self.window.rootViewController = _tabBar;
+    //获取IDFA
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
     
-    [self.window makeKeyAndVisible];
+    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        
+        NSString *strScroreCur = [object objectForKey:@"score_current"];
+        _tabBar.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
+        
+        NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
+        _tabBar.viewControllers = controllerArray;
+        [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+        
+        self.window.rootViewController = _tabBar;
+        
+        [self.window makeKeyAndVisible];
+    }else{
+        [self alertMessage:[NSString stringWithFormat:@"服务器故障, 具体错误: %@", error]];
+    }
 }
 
 @end
