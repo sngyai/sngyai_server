@@ -46,13 +46,13 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    __block UIBackgroundTaskIdentifier background_task;
-    //Create a task object
-    background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
-        [self hold];
-        [application endBackgroundTask: background_task];
-        background_task = UIBackgroundTaskInvalid;
-    }];
+//    __block UIBackgroundTaskIdentifier background_task;
+//    //Create a task object
+//    background_task = [application beginBackgroundTaskWithExpirationHandler: ^ {
+//        [self hold];
+//        [application endBackgroundTask: background_task];
+//        background_task = UIBackgroundTaskInvalid;
+//    }];
 }
 
 - (void)application:(UIApplication *)application
@@ -93,27 +93,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 
 -(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
 {
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", errorReason]];
-    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
-    
-    NSURL *url = [NSURL URLWithString:StrUrl];
-    
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    request.delegate = self;
-    
-    [request startSynchronous];
-    
-    NSError *error = [request error];
-    
-    if (!error) {
-        NSString *response = [request responseString];
-        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
-        
-        NSLog(@"HELLO, WORLD ***object:%@", object);
-    }else{
-        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
-    }
     [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
 }
 
@@ -131,24 +110,24 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
 }
 
-- (void)hold
-{
-    NSLog(@"hold enter");
-    _isBackGround = YES;
-    NSLog(@"hold inner");
-    while (_isBackGround) {
-        NSLog(@"running ~~~~~~~~~~~~~~");
-        [NSThread sleepForTimeInterval:1];
-        /** clean the runloop for other source */
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
-    }
-    NSLog(@"hold exit");
-}
+//- (void)hold
+//{
+//    NSLog(@"hold enter");
+//    _isBackGround = YES;
+//    NSLog(@"hold inner");
+//    while (_isBackGround) {
+//        NSLog(@"running ~~~~~~~~~~~~~~");
+//        [NSThread sleepForTimeInterval:1];
+//        /** clean the runloop for other source */
+//        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, TRUE);
+//    }
+//    NSLog(@"hold exit");
+//}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     NSLog(@"enter foreground");
-    _isBackGround = NO;
+//    _isBackGround = NO;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -219,7 +198,8 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
         
         [self.window makeKeyAndVisible];
     }else{
-        [self alertMessage:[NSString stringWithFormat:@"服务器故障, 具体错误: %@", error]];
+        [self alertMessage:[NSString stringWithFormat:@"服务器不可达: %@", error]];
+        exit(0);
     }
 }
 

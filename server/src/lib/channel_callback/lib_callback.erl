@@ -31,7 +31,6 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
   end.
 
 push_notification(Idfa, Channel, AppName, Score) ->
-%%   ?T("charset: ~p ~p ~p~n", [AppName, "??", lists:concat(["??", unicode:characters_to_list(AppName)])]),
   AppNameStr = mochiutf8:bytes_to_codepoints(list_to_binary(AppName)),
   case lib_user:get_tokens(Idfa) of
     [] ->
@@ -40,7 +39,13 @@ push_notification(Idfa, Channel, AppName, Score) ->
     Token ->
       Msg =
         lists:concat(["恭喜你在", config_channel_name(Channel), "中通过", AppNameStr, "获得", Score, "积分"]),
-      apns:send_message(?APNS_NAME, Token, Msg)
+      apns:send_message(?APNS_NAME,
+        #apns_msg{
+          device_token = Token,
+          alert = Msg,
+          sound = "beep.wav"
+        })
+%%       apns:send_message(?APNS_NAME, Token, Msg)
   end.
 
 config_channel_name(?CHANNEL_ADWO) ->

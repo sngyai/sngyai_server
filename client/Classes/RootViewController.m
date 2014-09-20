@@ -24,15 +24,13 @@
         // 创建积分墙管理器,这⾥里使⽤用的是测试 ID,请按照 User Guide ⽂文档中获取新的 PublisherID。
         _offerWallManager = [[DMOfferWallManager alloc] initWithPublisherID:@"96ZJ1IZAzeB0nwTBAd"];
     }
-    return self; }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
   	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        //
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     _mobisagejoy = [[MobiSageJoyViewController alloc] initWithPublisherID:@"3c3e990aef814244824e648f024fd170"];
     //设置代理
@@ -40,14 +38,7 @@
     _mobisagejoy.delegate = self;
     _offerWallManager.delegate = self;
     
-    //设置果盟定时查询是否获得积分
-    _guomobwall_vc.updatetime=30;
-    
-    [NSThread detachNewThreadSelector:@selector(threadMethod) toTarget:self withObject:nil];
     [[CSAppZone sharedAppZone] loadAppZone:[CSADRequest request]];
-    
-//    //设置有米获取积分监听
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
 
 #pragma mark -
@@ -73,16 +64,6 @@
     _offerWallManager = nil;
     
     [super dealloc];
-}
-
--(void)threadMethod
-
-{
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(timerDone) userInfo:nil repeats:YES];
-    
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    
-    [[NSRunLoop currentRunLoop] run];
 }
 
 -(void) queryScore
