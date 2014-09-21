@@ -327,10 +327,6 @@ deal_request(["jupeng"], QS) ->
   Result = do_jupeng(QS),
   {finish, Result};
 
-deal_request(["exchange"], QS) ->
-  Result = do_exchange(QS),
-  {finish, Result};
-
 deal_request(["exchange_log"], _QS) ->
   Result = do_exchange_log(),
   {finish, Result};
@@ -379,20 +375,31 @@ do_user(1002, QS) ->
 do_user(1003, QS) ->
   UserId = resolve_parameter("user_id", QS),
   Tokens = resolve_parameter("tokens", QS),
-  lib_user:set_tokens(UserId, Tokens).
+  lib_user:set_tokens(UserId, Tokens);
 
-%% http://127.0.0.1:8088/exchange/?user_id=7C9419F2-65D5-4C3E-95D4-D27F84574822&type=1&account=progyang@gmail.com&num=6680
-do_exchange(QS) ->
+%%注册用户支付宝账号
+do_user(1004, QS) ->
   UserId = resolve_parameter("user_id", QS),
-  case UserId of
-    undefined ->
-      "error_id";
-    _Other ->
-      Type = resolve_parameter("type", QS),
-      Account = resolve_parameter("account", QS),
-      Num = lib_util_type:string_to_term(resolve_parameter("num", QS)),
-      lib_exchange:exchange(UserId, Type, Account, Num)
-  end.
+  Alipay = resolve_parameter("alipay", QS),
+  lib_user:bind_account(UserId, Alipay);
+
+%%获取用户绑定的支付宝账号
+do_user(1005, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  lib_user:get_account(UserId);
+
+%%兑换积分
+do_user(1006, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  Exchange = lib_util_type:string_to_term(resolve_parameter("exchange", QS)),
+  Result = lib_user:do_exchange(UserId, trunc(Exchange*100)),
+  ?T("exchange_result:~p~n ~p~n", [UserId, Result]),
+  Result;
+
+%%获取兑换记录
+do_user(1007, QS) ->
+  UserId = resolve_parameter("user_id", QS),
+  lib_exchange:get_user_log(UserId).
 
 do_exchange_log() ->
   lib_exchange:get_all().

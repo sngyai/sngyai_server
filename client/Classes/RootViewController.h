@@ -49,13 +49,16 @@
     MobiSageJoyViewController *_mobisagejoy;
     DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
+    NSString *_alipay;
 }
 
 -(void) queryScore;
+-(void) getAccount;
 
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
 @property(nonatomic,copy)MobiSageJoyViewController *mobisagejoy;
 @property(nonatomic,copy)DMOfferWallManager *offerWallManager;
 @property(nonatomic,copy)NSNumber *score;
+@property(nonatomic,copy)NSString *alipay;
 
 @end

@@ -36,9 +36,13 @@
     self.navigationItem.leftBarButtonItem = leftButtonItem;
     [leftButtonItem release];
     
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"兑换记录" style:UIBarButtonItemStylePlain
+                                                                       target:self action:@selector(showExchangeLog)];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
+    [rightButtonItem release];
     [self.navigationController.navigationBar setTintColor:[UIColor purpleColor]];
     [self.navigationController.navigationBar setBarTintColor:NAVIGATION_BACKGROUND];
-    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+//    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
 
     [self setupRefresh];
 }
@@ -84,12 +88,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    switch (section) {
+        case 0:
+            return 2;
+            break;
+        case 1:
+            return 1;
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,79 +117,99 @@
                 UITableViewCellStyleDefault reuseIdentifier:myId];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    if (indexPath.row == 0) {
-        RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
-        
-        NSString *totalScore = [NSString stringWithFormat:@"用户总积分:\t %@", tabBarController.score];
-        cell.textLabel.text = totalScore;
-    }
-    if (indexPath.row == 1) {
-        cell.textLabel.text = @"任务记录";
-    }
     
-    return cell;
+    switch (indexPath.section) {
+        case 0:
+            if (indexPath.row == 0) {
+                RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+                
+                NSString *totalScore = [NSString stringWithFormat:@"用户总积分:\t %@", tabBarController.score];
+                cell.textLabel.text = totalScore;
+                cell.userInteractionEnabled = NO;
+            }
+            if (indexPath.row == 1) {
+                cell.textLabel.text = @"账户设置";
+            }
+            
+            return cell;
+            break;
+        case 1:
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"积分兑换";
+            }
+            return cell;
+            break;
+        default:
+            return cell;
+            break;
+    }
 }
 
-- (void)setFullScreen:(BOOL)fullScreen
-{
-    // 状态条
-    [UIApplication sharedApplication].statusBarHidden = fullScreen;
-    // 导航条
-    [self.navigationController setNavigationBarHidden:fullScreen];
-    // tabBar的隐藏通过在初始化方法中设置hidesBottomBarWhenPushed属性来实现
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    switch (section) {
+        case 0:
+            return @"账户总览";
+        case 1:
+            return @"积分兑换";
+        default:
+            return @"Unknown";
+    }
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-	switch (indexPath.row) {
-        case 1:
-            [self showTaskLog];
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 1:
+                    [self showAccountSettings];
+                    break;
+                default:
+                    break;
+            }
             break;
-		default:
-			break;
-	}
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    [self showExchangeView];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+	
 }
 
+//账户设置
+-(void) showAccountSettings{
+    UIViewController *controller = [[AccountSettingsViewController alloc] init];
+    if(controller){
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+
+//任务记录
 -(void) showTaskLog{
     UIViewController *controller = [[TaskLogTableTableViewController alloc] init];
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }
+}
+//兑换记录
+-(void) showExchangeLog{
+    UIViewController *controller = [[ExchangeLogTableViewController alloc] init];
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }
+}
+//积分兑换
+-(void) showExchangeView{
+    UIViewController *controller = [[ExchangeViewController alloc] init];
     if (controller) {
         [self.navigationController pushViewController:controller animated:YES];
         [controller release];

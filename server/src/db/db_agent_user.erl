@@ -19,7 +19,8 @@
   get_user_by_name/1,
   get_all_users/0,
   update_score/3,
-  set_tokens/2
+  set_tokens/2,
+  set_account/2
   ]).
 
 %%创建新用户
@@ -51,6 +52,10 @@ update_score(UserId, ScoreCurrent, ScoreTotal) ->
 set_tokens(UserId, Tokens) ->
   {update, _} = ?DB_GAME:update(db_user, [{tokens, Tokens}], [{id, UserId}]).
 
+%%更新用户（支付宝）账号
+set_account(UserId, Account) ->
+  {update, _} = ?DB_GAME:update(db_user, [{account, Account}], [{id, UserId}]).
+
 data2record(id, Value) ->
   {id, binary_to_list(Value)};
 data2record(tokens, Value) ->
@@ -63,7 +68,14 @@ data2record(tokens, Value) ->
     end,
   {tokens, Tokens};
 data2record(account, Value) ->
-  {account, lib_util_type:string_to_term(Value)};
+  Account =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {account, Account};
 data2record(Key, Value) ->
   {Key, Value}.
 
@@ -71,7 +83,6 @@ data2record(Key, Value) ->
 
 record2data(User) ->
   tuple_to_list(User#user{
-    account = lib_util_type:term_to_string(User#user.account)
   }
 ).
 

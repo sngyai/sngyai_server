@@ -23,7 +23,6 @@
     {
         UITabBarItem * item = [[UITabBarItem alloc]
                                initWithTitle:@"任务中心" image:[UIImage imageNamed:@"globe_enabled"] tag:0];
-        item.badgeValue = @"新";
         self.tabBarItem = item;
     }
     return self;
@@ -84,7 +83,7 @@
     }
     
 	// Display dark and light background in alternate rows -- see tableView:willDisplayCell:forRowAtIndexPath:.
-    cell.useDarkBackground = YES;//(indexPath.row % 2 == 0);
+    cell.useDarkBackground = NO;//(indexPath.row % 2 == 0);
 	
 	// Configure the data for the cell.
     NSDictionary *dataItem = [_data objectAtIndex:indexPath.row];
@@ -100,7 +99,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = ((ApplicationCell *)cell).useDarkBackground ? DARK_BACKGROUND : LIGHT_BACKGROUND;
+//    cell.backgroundColor = ((ApplicationCell *)cell).useDarkBackground ? DARK_BACKGROUND : LIGHT_BACKGROUND;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -178,7 +177,7 @@
 //    [rightButtonItem release];
     [self.navigationController.navigationBar setTintColor:[UIColor purpleColor]];
     [self.navigationController.navigationBar setBarTintColor:NAVIGATION_BACKGROUND];
-    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+//    [self.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
 }
 
 static NSString* const errCodeList[] = {

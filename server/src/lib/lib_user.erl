@@ -11,7 +11,7 @@
 
 -include("common.hrl").
 -include("record.hrl").
-
+-include("exchange.hrl").
 
 %% API
 -export([
@@ -19,6 +19,9 @@
   add_score/2,
   set_tokens/2,
   get_tokens/1,
+  bind_account/2,
+  get_account/1,
+  do_exchange/2,
   t/0
 ]).
 
@@ -43,6 +46,19 @@ create_role_with_tokens(Idfa, Tokens) ->
       score_total = 0,
       account = "",
       tokens = Tokens
+    },
+  ets:insert(?ETS_ONLINE, NewUser),
+  db_agent_user:create(NewUser),
+  "ok".
+
+create_role_with_account(Idfa, Account) ->
+  NewUser =
+    #user{
+      id = Idfa,
+      score_current = 0,
+      score_total = 0,
+      account = Account,
+      tokens = ""
     },
   ets:insert(?ETS_ONLINE, NewUser),
   db_agent_user:create(NewUser),
@@ -102,6 +118,51 @@ get_tokens(UserId) ->
       Tokens;
     _Other ->
       []
+  end.
+
+%%绑定支付宝
+bind_account(UserId, Account) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{} = UserInfo|_] ->
+      NewUserInfo = UserInfo#user{account = Account},
+      ets:insert(?ETS_ONLINE, NewUserInfo),
+      db_agent_user:set_account(UserId, Account);
+    _Other ->
+      create_role_with_account(UserId, Account)
+  end.
+
+%%获取绑定的支付宝账号
+get_account(UserId) ->
+  Account =
+    case ets:lookup(?ETS_ONLINE, UserId) of
+      [#user{account = Ac}|_] when Ac =/= undefined ->
+        Ac;
+      _Other ->
+        ""
+    end,
+  lists:concat(["{\"alipay\":\"", Account, "\"}"]).
+
+%%兑换积分
+do_exchange(UserId, Exchange) ->
+  ?T("exchange:~p~n ~p~n", [UserId, Exchange]),
+  case Exchange > 0 of
+    true ->
+      case ets:lookup(?ETS_ONLINE, UserId) of
+        [#user{score_current = SC, account = Account}|_] ->
+          case SC >= Exchange of
+            true ->
+              case Account =/= undefined of
+                true ->
+                  lib_exchange:exchange(UserId, ?EXCHANGE_TYPE_ALIPAY, Account, Exchange);
+                false ->
+                  lists:concat(["{\"error\":\"", "bind_account", "\"}"])
+              end;
+            false ->
+              lists:concat(["{\"error\":\"", "score_not_enough", "\"}"])
+          end
+      end;
+    false ->
+      lists:concat(["{\"error\":\"", "wrong_num", "\"}"])
   end.
 
 

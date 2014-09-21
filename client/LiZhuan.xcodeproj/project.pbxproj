@@ -26,6 +26,13 @@
 		B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBC19AA484500D7965A /* CFNetwork.framework */; };
 		B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBE19AA485D00D7965A /* libsqlite3.dylib */; };
 		B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CC019AA486C00D7965A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B79B767E19CE031D0091783F /* ExchangeLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */; };
+		B79B767F19CE031D0091783F /* ExchangeLogTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */; };
+		B79B768619CE0FA90091783F /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79B768419CE0FA90091783F /* AccountSettingsViewController.m */; };
+		B79B768719CE0FA90091783F /* AccountSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */; };
+		B79B768919CE19EB0091783F /* account_confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = B79B768819CE19EB0091783F /* account_confirm.png */; };
+		B79B768D19CECF0F0091783F /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79B768B19CECF0F0091783F /* ExchangeViewController.m */; };
+		B79B769019CEF1660091783F /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79B768F19CEF1660091783F /* ExchangeViewController.xib */; };
 		B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239519AEF15000C54B62 /* AppDelegate.m */; };
 		B7AE239919AEF25900C54B62 /* TaskTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239819AEF25900C54B62 /* TaskTableViewController.mm */; };
 		B7AE23A019B1DBF500C54B62 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AE239E19B1DBF500C54B62 /* InfoTableViewController.m */; };
@@ -109,7 +116,6 @@
 		FB9B8C9619C60BD600FA021A /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B8C9319C60BD600FA021A /* RKTabItem.m */; };
 		FB9B8C9719C60BD600FA021A /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B8C9519C60BD600FA021A /* RKTabView.m */; };
 		FB9B8C9F19C60FCD00FA021A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9B8C9E19C60FCD00FA021A /* Home.png */; };
-		FB9B8CA119C6119E00FA021A /* Aston.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9B8CA019C6119E00FA021A /* Aston.png */; };
 		FB9B8CA319C6133400FA021A /* Sand.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9B8CA219C6133400FA021A /* Sand.png */; };
 		FBFBDD1C19C1F75800D368CD /* minizip64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFBDD1719C1F75800D368CD /* minizip64.a */; };
 		FBFBDD1D19C1F75800D368CD /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = FBFBDD1819C1F75800D368CD /* wall_template.zip */; };
@@ -167,6 +173,16 @@
 		B7867CBC19AA484500D7965A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B7867CBE19AA485D00D7965A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B7867CC019AA486C00D7965A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B79B767B19CE031D0091783F /* ExchangeLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeLogTableViewController.h; sourceTree = "<group>"; };
+		B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeLogTableViewController.m; sourceTree = "<group>"; };
+		B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeLogTableViewController.xib; sourceTree = "<group>"; };
+		B79B768319CE0FA90091783F /* AccountSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSettingsViewController.h; sourceTree = "<group>"; };
+		B79B768419CE0FA90091783F /* AccountSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsViewController.m; sourceTree = "<group>"; };
+		B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSettingsViewController.xib; sourceTree = "<group>"; };
+		B79B768819CE19EB0091783F /* account_confirm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account_confirm.png; sourceTree = "<group>"; };
+		B79B768A19CECF0F0091783F /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		B79B768B19CECF0F0091783F /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		B79B768F19CEF1660091783F /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		B7AE239419AEF15000C54B62 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7AE239519AEF15000C54B62 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B7AE239719AEF25900C54B62 /* TaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewController.h; sourceTree = "<group>"; };
@@ -312,7 +328,6 @@
 		FB9B8C9419C60BD600FA021A /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
 		FB9B8C9519C60BD600FA021A /* RKTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabView.m; sourceTree = "<group>"; };
 		FB9B8C9E19C60FCD00FA021A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
-		FB9B8CA019C6119E00FA021A /* Aston.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aston.png; sourceTree = "<group>"; };
 		FB9B8CA219C6133400FA021A /* Sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sand.png; sourceTree = "<group>"; };
 		FBFBDD1719C1F75800D368CD /* minizip64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = minizip64.a; sourceTree = "<group>"; };
 		FBFBDD1819C1F75800D368CD /* wall_template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = wall_template.zip; sourceTree = "<group>"; };
@@ -408,6 +423,15 @@
 				B7AE239F19B1DBF500C54B62 /* InfoTableViewController.xib */,
 				B7B1680E19BCE3A900449466 /* TaskLogTableTableViewController.h */,
 				B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */,
+				B79B767B19CE031D0091783F /* ExchangeLogTableViewController.h */,
+				B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */,
+				B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */,
+				B79B768319CE0FA90091783F /* AccountSettingsViewController.h */,
+				B79B768419CE0FA90091783F /* AccountSettingsViewController.m */,
+				B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */,
+				B79B768A19CECF0F0091783F /* ExchangeViewController.h */,
+				B79B768B19CECF0F0091783F /* ExchangeViewController.m */,
+				B79B768F19CEF1660091783F /* ExchangeViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -446,8 +470,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B79B768819CE19EB0091783F /* account_confirm.png */,
 				FB9B8CA219C6133400FA021A /* Sand.png */,
-				FB9B8CA019C6119E00FA021A /* Aston.png */,
 				FB9B8C9E19C60FCD00FA021A /* Home.png */,
 				FB9B8C8919C60B4B00FA021A /* user_enabled@2x.png */,
 				FB9B8C8A19C60B4B00FA021A /* user_disabled@2x.png */,
@@ -915,6 +939,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9B8C6119C5EF5100FA021A /* Data.plist in Resources */,
+				B79B768919CE19EB0091783F /* account_confirm.png in Resources */,
 				B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */,
 				B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */,
 				B7B1680719BCA38500449466 /* CHANGELOG.md in Resources */,
@@ -927,17 +952,19 @@
 				B74346DF19CD980200BA5802 /* ChanceAdRes.bundle in Resources */,
 				FBFBDD1D19C1F75800D368CD /* wall_template.zip in Resources */,
 				FB9B8C6C19C5F00500FA021A /* DarkBackground.png in Resources */,
+				B79B768719CE0FA90091783F /* AccountSettingsViewController.xib in Resources */,
+				B79B769019CEF1660091783F /* ExchangeViewController.xib in Resources */,
 				FB9B8C6A19C5F00500FA021A /* Blocks.png in Resources */,
 				B7B1680019BC4D5A00449466 /* README-GHUnit in Resources */,
 				FB9B8C8819C5F6D400FA021A /* StarsForeground.png in Resources */,
 				FB9B8C9F19C60FCD00FA021A /* Home.png in Resources */,
 				FB9B8C6F19C5F00500FA021A /* MathGraph.png in Resources */,
+				B79B767F19CE031D0091783F /* ExchangeLogTableViewController.xib in Resources */,
 				FB9B8C8D19C60B4B00FA021A /* user_enabled@2x.png in Resources */,
 				FB9B8C6E19C5F00500FA021A /* Football.png in Resources */,
 				B71C689D19ACC4ED0054EAF4 /* Icon-72.png in Resources */,
 				FB9B8C8E19C60B4B00FA021A /* user_disabled@2x.png in Resources */,
 				FB9B8C7119C5F01F00FA021A /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
-				FB9B8CA119C6119E00FA021A /* Aston.png in Resources */,
 				B7FDDB4619B3824B00278867 /* MJRefresh.bundle in Resources */,
 				FB9B8C8719C5F6D400FA021A /* StarsBackground.png in Resources */,
 				B71C689F19ACC4ED0054EAF4 /* Icon@2x.png in Resources */,
@@ -978,7 +1005,9 @@
 				B7AE23A019B1DBF500C54B62 /* InfoTableViewController.m in Sources */,
 				B7B167E819BC4D5A00449466 /* ASICloudFilesObject.m in Sources */,
 				B7AE239619AEF15000C54B62 /* AppDelegate.m in Sources */,
+				B79B768619CE0FA90091783F /* AccountSettingsViewController.m in Sources */,
 				B7B167DE19BC4D5A00449466 /* ASIDownloadCache.m in Sources */,
+				B79B768D19CECF0F0091783F /* ExchangeViewController.m in Sources */,
 				B7B167F019BC4D5A00449466 /* ASIS3ServiceRequest.m in Sources */,
 				FB9B8C8219C5F54000FA021A /* HybridSubviewBasedApplicationCell.m in Sources */,
 				B7B167E119BC4D5A00449466 /* ASIInputStream.m in Sources */,
@@ -993,6 +1022,7 @@
 				B7B167E019BC4D5A00449466 /* ASIHTTPRequest.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				B7FDDB4A19B3824B00278867 /* MJRefreshHeaderView.m in Sources */,
+				B79B767E19CE031D0091783F /* ExchangeLogTableViewController.m in Sources */,
 				B7B167E319BC4D5A00449466 /* ASIWebPageRequest.m in Sources */,
 				B7AE239919AEF25900C54B62 /* TaskTableViewController.mm in Sources */,
 				FB9B8C8019C5F54000FA021A /* ApplicationCell.m in Sources */,
@@ -1015,8 +1045,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1047,8 +1077,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -1060,8 +1090,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1089,8 +1119,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1102,8 +1132,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1117,7 +1147,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1128,8 +1158,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1144,7 +1174,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";

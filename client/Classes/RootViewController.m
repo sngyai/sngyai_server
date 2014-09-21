@@ -95,6 +95,40 @@
     }
 }
 
+-(void) getAccount
+{
+    //获取IDFA
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    
+    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1005&user_id=%@", adId];
+    NSString* StrUrl = [HOST stringByAppendingString:StrUser];
+    
+    NSLog(@"HELLO, WORLD ***** URL:%@", StrUrl);
+    
+    NSURL *url = [NSURL URLWithString:StrUrl];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.delegate = self;
+    
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
+        NSLog(@"HELLO,WORLD RETURN : %@", response);
+        NSLog(@"HELLO,WORLD RETURN : %@", object);
+        
+        NSString *alipay = [object objectForKey:@"alipay"];
+        NSLog(@"HELLO, WORLD ***alipay:%@", alipay);
+        self.alipay = alipay;
+    }else{
+        NSLog(@"HELLO, WORLD ***ERROR:%@", error);
+    }
+}
+
 @end
 
 

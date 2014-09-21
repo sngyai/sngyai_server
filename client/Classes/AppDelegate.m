@@ -97,7 +97,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 }
 
 -(void) alertMessage:(NSString*)msg{
-	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning"
+	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"错误"
 														message:msg
 													   delegate:nil
 											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
@@ -186,13 +186,14 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     if (!error) {
         NSString *response = [request responseString];
         NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
-        
+        NSLog(@"HELLO,WORLD RETURN : %@", response);
+        NSLog(@"HELLO,WORLD RETURN : %@", object);
         NSString *strScroreCur = [object objectForKey:@"score_current"];
         _tabBar.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
         
         NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
         _tabBar.viewControllers = controllerArray;
-        [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
+//        [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
         
         self.window.rootViewController = _tabBar;
         
