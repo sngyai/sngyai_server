@@ -15,4 +15,6 @@
 @property (retain, nonatomic) IBOutlet UITextField *textExchange;
 @property (retain, nonatomic) IBOutlet UIButton *buttonExchange;
 
+-(IBAction)backgroundTap:(id)sender;
+
 @end

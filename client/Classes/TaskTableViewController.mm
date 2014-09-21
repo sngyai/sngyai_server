@@ -34,7 +34,7 @@
 	
 	// Configure the table view.
     self.tableView.rowHeight = 73.0;
-    self.tableView.backgroundColor = DARK_BACKGROUND;
+//    self.tableView.backgroundColor = DARK_BACKGROUND;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 	// Load the data.

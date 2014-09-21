@@ -61,6 +61,21 @@
     return res;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //[nameTextField resignFirstResponder];
+    //    [numberTextField resignFirstResponder];
+    [textField resignFirstResponder];//等于上面两行的代码
+    
+    NSLog(@"textFieldShouldReturn 2");//测试用
+    return YES;
+}
+
+-(IBAction)backgroundTap:(id)sender
+{
+    [self.textExchange resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

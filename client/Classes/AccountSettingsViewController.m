@@ -36,6 +36,7 @@
     self.textAlipay.keyboardType = UIKeyboardTypeURL;
     self.textAlipay.clearButtonMode = UITextFieldViewModeAlways;
     self.textAlipay.text = tabBarController.alipay;
+    self.textAlipay.delegate = self;
 
     NSLog(@"HAHA");
     
@@ -47,6 +48,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //[nameTextField resignFirstResponder];
+    //    [numberTextField resignFirstResponder];
+    [textField resignFirstResponder];//等于上面两行的代码
+    
+    NSLog(@"textFieldShouldReturn");//测试用
+    return YES;
+}
+
+-(IBAction)backgroundTap:(id)sender
+{
+    [self.textAlipay resignFirstResponder];
 }
 
 - (void)dealloc {
@@ -83,7 +99,7 @@
         if (!error) {
             NSString *response = [request responseString];
             NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
-            
+            [self alertMessage:[NSString stringWithFormat:@"设定成功"]];
             NSLog(@"HELLO, WORLD ***object:%@", object);
         }else{
             NSLog(@"HELLO, WORLD ***ERROR:%@", error);
