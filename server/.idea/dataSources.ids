@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - zhuanqian@123.57.9.112" uuid="aaf325f9-a6b4-4dc0-9f5a-bec561bd5307">
+    <database-info product="MySQL" version="5.5.36-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="zhuanqian"/>
+    <table name="db_exchange_log" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="user_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5pe26Ze0"/>
+      <column name="type" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" remarks="5YWR5o2i57G75Z6L"/>
+      <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="6LSm5oi3"/>
+      <column name="num" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5YWR5o2i5pWw6YeP"/>
+      <primary-key name="PRIMARY" columns="user_id,time"/>
+      <index name="idx_db_exchange_log_time" unique="false" columns="time"/>
+    </table>
+    <table name="db_task_log" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="user_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5a6M5oiQ5pe26Ze0"/>
+      <column name="channel" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5rig6YGT"/>
+      <column name="trand_no" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5Lqk5piT5rWB5rC05Y+3"/>
+      <column name="app_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="5bqU55So5ZCN56ew"/>
+      <column name="score" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6I635b6X56ev5YiG"/>
+    </table>
+    <table name="db_user" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="score_current" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="score_total" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi35Y6G5Y+y5oC756ev5YiG"/>
+      <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="5pSv5LuY5a6d6LSm5Y+3"/>
+      <column name="tokens" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="MySQL - @localhost" uuid="1d9e0c02-2965-4b62-bd82-326342ecac0a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

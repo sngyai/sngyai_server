@@ -1,0 +1,58 @@
+12-9-2014 2:6:58.258 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:7
+  TrandNo:"21516762"
+  AppName:[229,164,167,228,188,151,231,130,185,232,175,132]
+  Cash:148
+
+13-9-2014 2:32:4.121 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:1
+  TrandNo:"YM121201PWxw0DGr0f"
+  AppName:[231,190,142,228,184,189,232,175,180]
+  Cash:140
+
+13-9-2014 2:32:36.248 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:1
+  TrandNo:"YM121201PWxw0DGr0f"
+  AppName:[231,190,142,228,184,189,232,175,180]
+  Cash:140
+
+19-9-2014 18:8:36.235 [lib_callback:28] duplicate trand req:
+  Idfa:"8005655A-C66D-4E3D-814E-7021B077DFD0"
+, Channel:1
+  TrandNo:"YM121201PWxw0DGr0f"
+  AppName:[231,190,142,228,184,189,232,175,180]
+  Cash:140
+
+19-9-2014 18:19:54.452 [lib_callback:28] duplicate trand req:
+  Idfa:"99C19059-596F-4BC1-9580-ACB70CACD0BE"
+, Channel:0
+  TrandNo:"141045365689999C19059-596F-4BC1-9580-ACB70CACD0BE"
+  AppName:[233,173,148,231,129,181,229,143,172,229,148,164,58,32,229,164,169,
+           231,169,186,228,185,139,229,189,185]
+  Cash:130
+
+19-9-2014 18:20:21.294 [lib_callback:28] duplicate trand req:
+  Idfa:"99C19059-596F-4BC1-9580-ACB70CACD0BE"
+, Channel:0
+  TrandNo:"141045365689999C19059-596F-4BC1-9580-ACB70CACD0BE"
+  AppName:[233,173,148,231,129,181,229,143,172,229,148,164,58,32,229,164,169,
+           231,169,186,228,185,139,229,189,185]
+  Cash:130
+
+20-9-2014 3:41:40.172 [lib_callback:30] duplicate trand req:
+  Idfa:"199856BA-21F8-44D8-95CC-EF82BBCF7B48"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+20-9-2014 5:3:17.941 [lib_callback:30] duplicate trand req:
+  Idfa:"199856BA-21F8-44D8-95CC-EF82BBCF7B48"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+

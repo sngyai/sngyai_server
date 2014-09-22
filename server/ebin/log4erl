@@ -1,0 +1,57 @@
+
+%%default
+logger default_logger{
+	file_appender default_app{
+		dir = "./ebin/log",
+		level = debug,
+		file = default_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%debug_logger
+logger debug_logger{
+	file_appender debug_app{
+		dir = "./ebin/log",
+		level = error,
+		file = debug_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%trand_logger
+logger trand_logger{
+	file_appender trand_app{
+		dir = "./ebin/log",
+		level = error,
+		file = trand_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+
+%%webserver_logger
+logger webserver_logger{
+	file_appender webserver_app{
+		dir = "./ebin/log",
+		level = error,
+		file = webserver_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+

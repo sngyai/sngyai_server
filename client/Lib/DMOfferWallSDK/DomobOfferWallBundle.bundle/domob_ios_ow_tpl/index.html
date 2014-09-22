@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>多盟积分墙</title>
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1" />
+<link href="css/style.css?v=ios82161" type="text/css" rel="stylesheet"/>
+<link rel="apple-touch-icon" size="175x175" href="http://scc.domob.cn/ugc/123255.png" />
+</head>
+<body>
+<div id="page" class="withPadding">
+	<header id="list_header" class="header">
+		<a href="javascript:void(0)" class="btn_iconed btn_back ac_close"><span class="icon icon_back"></span></a>
+		<h1><span class="app">免费赚取</span><span class="unit">奖励</span></h1>
+		<!-- <h1><span class="app m_name">多盟积分墙</span></h1> -->
+		<a href="javascript:void(0);" class="btn_iconed btn_history ac_show_status"><span class="icon icon_history"></span></a>
+	</header>
+	<div id="game_scroller" class="list_body">
+		<div class="lists">
+			<pulldown>
+				<div>
+					<span class="icon icon_pull pullDownIcon"></span> 
+					<span class="pull_text pull_text_normal">下拉刷新</span> 
+					<span class="pull_text pull_text_flip">释放立即刷新</span>
+					<span class="pull_text pull_text_loading">正在刷新</span>
+					<span id="last_pull_time"></span>
+				</div>
+			</pulldown>
+			<div id="open_wrapper" class="hidden">
+				<!-- <h3 class="action_sort">签到</h3> -->
+				<ul id="openlist" class="games"></ul>
+			</div>
+			<ul id="gamelist" class="games">
+				<li id="first_load"><div id="msgs" class="loading"></div></li>
+			</ul>
+			<div id="more_game" class="shadow_before more_box loading">
+				<div class="more"><span class="icon icon_more"></span> <em>更多奖励</em></div>
+				<div class="loading"><span class="icon icon_loading"></span> <em>正在加载</em></div>
+			</div>
+			<div id="extra_div" class="hidden">
+				<div id="video_wrapper" class="hidden">
+					<h3 class="action_sort">看视频，得<em class="unit">奖励</em></h3>
+					<ul id="videolist" class="games">
+						<li srv="video" class="ac_callsdk" srv="video"><div class="game_banner"><span class="link_detail"><em class="game_icon"></em></span><h4 class="game_name">看视频，即可获<em class="unit">奖励</em></h4></div><div class="download_info"><span class="bg icon_go link_go">立即观看</span></div></li>
+					</ul>
+				</div>
+				<div id="done_wrapper" class="">
+					<h3 class="action_sort">精品推荐 无<em class="unit">奖励</em>奖励</h3>
+					<ul id="donelist" class="games"></ul>
+				</div>
+				<footer class="footer">
+					<span class="bg domob_logo">DOMOB 多盟</span>
+					<span id="btn_repo" class="link" href="javascript:void(0);">意见反馈</span>
+					<span id="btn_help" class="link" href="javascript:void(0);">帮助</span>
+				</footer>
+			</div>
+		</div>
+	</div>
+<!-- 
+	<div id="detail" class="box">
+		<div id="detail_scroller" class="detail_padder">
+			<div class="detail_body"></div>
+		</div>
+	</div>
+ -->
+	<div id="status" class="box">
+		<header class="header">
+			<a href="javascript:void(0);" class="btn_iconed btn_back ac_back2list"><span class="icon icon_back"></span></a>
+			<h1><span>查看奖励状态</span></h1>
+			<a id="btn_help" href="javascript:void(0);" class="btn_iconed btn_history"><span class="icon icon_info"></span></a>
+		</header>
+		<div id="status_scroller" class="list_body">
+			<div class="status_body">
+				<div class="msg">
+					<span class="icon icon_loading"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+<div id="alerter_wrapper">
+	<div class="mask">
+		<div id="alerter">
+			<div class="alerter_title">话费赚取方法</div>
+			<div class="alerter_content">
+				1.首次安装下载应用<br/>
+				2.注册帐户
+				<p>完成上述步骤，半小时内获得积分</p>
+			</div>
+			<a href="javascript:void(0)" class="closer"><span class="icon icon_close"></span></a>
+			<div class="action btn_group_justified">
+				<a href="javascript:void(0)" class="btn btn_default" target="_blank"><span>立即赚取</span><span class="icon icon_gt"></span></a>
+			</div>
+		</div>
+	</div>
+</div>
+	<div id="repo" class="box">
+		<header class="header">
+			<span class="btn_iconed btn_back ac_back2list"><em class="icon icon_back"></em></span>
+			<h1>没有获得奖励？</h1>
+			<!-- <span class="bg logo">多盟</span> -->
+		</header>
+		<div id="report_scroller" class="repo_wrapper">
+			<div class="repo_body">
+				<p class="info">如果您已下载、安装并激活应用，指定时间后仍未获得奖励，请填写以下信息，我们会尽快为您解决问题。</p>
+				<form action="domob://appealinfo/">
+					<input type="hidden" name="pkg" id="repo_app_pkg"/>
+					<input type="hidden" name="name" id="repo_app_name"/>
+					<input type="hidden" name="callback" value="appealResult"/>
+					<p>
+						<label class="select">
+							<select name="id" id="select_repo_app">
+								<option value="" disabled>下载安装的应用名称</option>
+							</select>		
+						</label>
+					</p>
+					<p><label><input id="repo_email" type="email" name="email" placeholder="您的邮箱"/></label></p>
+			
+					<!-- <div class="sdk_info">
+						<p><dfn>当前版本</dfn> <span id="sdk_version">v1.0.1</span></p>
+						<p><dfn>当前设备号</dfn> <span id="device_id">00A4D647-AB08-44DC-B3E5-6067E150B63F</span></p>
+					</div> -->
+			
+					<p class="actions">
+						<button class="btn_submit" type="submit"><span>提交</span></button>
+					</p>
+				</form>
+			</div>
+		</div>
+		<div id="form_mask"></div>
+	</div>
+	<div id="help" class="box">
+		<header class="header">
+			<span class="btn_iconed btn_back ac_back2list"><em class="icon icon_back"></em></span>
+			<h1 class="">帮助中心</h1>
+		</header>
+		<div id="help_scroller" class="help_wrapper">
+			<dl class="help_body">
+				<dd>感谢您使用多盟广告平台，对于不能获取积分奖励的情况我们深表歉意，我们整理了不返积分的常见原因，希望可以帮到您。</dd>
+				<dt>1.没有按照广告要求完成任务</dt>
+				<dd>首先，必须是首次安装，如果您的设备之前安装过广告主应用，您将获取不到奖励； <br/>其次，有的广告要求用户安装之后打开运行即可，而有的广告则要求用户必须注册或者登录，用户需要严格按照广告要求完成任务。</dd>
+				<dt>2.积分发放延迟</dt>
+				<dd>正常情况下，用户完成任务之后10分钟内即可获得积分，而有时因为广告主侧或多盟侧服务延迟导致不能及时返积分，请耐心等待。</dd>
+				<dt>3.网络连接失败 </dt>
+				<dd>请确保打开广告主应用时网络连接正常，否则会影响给广告主发送数据，请检查网络连接并尝试退出后重新打开。</dd>
+				<dd>感谢您对多盟广告平台的大力支持，我们将致力于为您提供更好的服务！</dd>
+			</dl>
+		</div>
+	</div>
+	<a href="#" id="pich"><span></span></a>
+</div>
+	<!-- <a id="more_games" href="javascript:void(0)">查看更多…</a> -->
+
+<script type="text/javascript">
+var RUNTIME = {
+			"platfrom": '<platfrom>',
+			"platfrom_version" : '<platfrom_version>',
+			"IMEI": '<IMEI>',
+			"device_id": '<device_id>',
+			"sdk_version": '<sdk_version>'
+		}
+</script>
+	<script type="text/javascript" src='js/jquery.js'></script>
+	<script type="text/javascript" src='js/iscroll.js'></script>
+	<script type="text/javascript" src='js/index.js?v=ios82161'></script>
+	<span id="version" style="display: block;height: 0px;overflow: hidden;position: absolute;">v=ios82161</span>
+</body>
+</html>
