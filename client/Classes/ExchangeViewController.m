@@ -7,6 +7,8 @@
 //
 
 #import "ExchangeViewController.h"
+#define myDotNumbers @"0123456789.\n"
+#define myNumbers @"0123456789\n"
 
 @interface ExchangeViewController ()
 
@@ -41,24 +43,40 @@
     [self.buttonExchange addTarget:self action:@selector(doExchange) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    return [self validateNumber:string];
-}
-
-- (BOOL)validateNumber:(NSString*)number {
-    BOOL res = YES;
-    NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
-    int i = 0;
-    while (i < number.length) {
-        NSString * string = [number substringWithRange:NSMakeRange(i, 1)];
-        NSRange range = [string rangeOfCharacterFromSet:tmpSet];
-        if (range.length == 0) {
-            res = NO;
-            break;
-        }
-        i++;
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    const static int lengthOfIntegral = 2; //最大表示金额的整数位长度
+    const static int lengthOfDecimal = 2; //最大表示的小数位长度
+    const static int lengthOfAmount = lengthOfDecimal + lengthOfDecimal + 1; //金额的总长度=整数位+小数位+小数点
+    if([string isEqualToString:@"\n"]||[string isEqualToString:@""]) {//按下return
+        return YES;
     }
-    return res;
+    NSCharacterSet *cs;
+    NSUInteger nDotLoc = [textField.text rangeOfString:@"."].location;
+    if (NSNotFound == nDotLoc && 0 != range.location) {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:myNumbers] invertedSet];
+        if ([string isEqualToString:@"."]) {
+            return YES;
+        }
+        if (textField.text.length >= lengthOfIntegral) {
+            return NO;
+        }
+    }
+    else {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:myDotNumbers] invertedSet];
+        if (textField.text.length >= lengthOfAmount) {
+            return NO;
+        }
+    }
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    BOOL basicTest = [string isEqualToString:filtered];
+    if (!basicTest) {
+        return NO;
+    }
+    if (NSNotFound != nDotLoc && range.location > nDotLoc + lengthOfDecimal) {
+        return NO;
+    }
+    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

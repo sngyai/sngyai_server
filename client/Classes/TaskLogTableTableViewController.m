@@ -129,7 +129,7 @@
         [tasks removeAllObjects];
         for (NSDictionary *dic in object){
             NSDateFormatter *fromatter = [[[NSDateFormatter alloc] init] autorelease];
-            [fromatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            [fromatter setDateFormat:@"MM-dd HH:mm"];
 
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[dic objectForKey:@"time"]intValue]];
             
