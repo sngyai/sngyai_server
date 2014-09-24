@@ -148,6 +148,7 @@
                 InfoTableViewController *infoViewController = (InfoTableViewController*)[viewControllers objectAtIndex:viewControllers.count - 2];
                 [infoViewController.tableView reloadData];
                 [self noticeOK:[NSString stringWithFormat:@"兑换成功"]];
+                [self.textExchange setText:@""];
             }
             else{
                 NSString *errorString = [self get_error_string:errorCode];

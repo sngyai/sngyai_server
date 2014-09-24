@@ -44,6 +44,7 @@
 {
   id,
   user_id,
+  name,
   time,
   channel,
   trand_no,
@@ -55,6 +56,7 @@
 {
   id,
   user_id,
+  name,
   time,
   type,
   account,

@@ -1112,3 +1112,7 @@
 
 25-9-2014 0:51:24.665 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
 
+25-9-2014 1:32:0.309 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 1:33:6.590 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+

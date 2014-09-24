@@ -23,6 +23,7 @@ add(Idfa, Channel, TrandNo, AppName, Score) ->
     #task_log{
       id = {Channel, TrandNo},
       user_id = Idfa,
+      name = lib_user:get_user_name(Idfa),
       time = lib_util_time:get_timestamp(),
       trand_no = TrandNo,
       channel = Channel,

@@ -14,13 +14,13 @@
 
 %% API
 -export([
-  exchange/4,
+  exchange/5,
   get_all/0,
   get_user_log/1
   ]).
 
 %%兑换
-exchange(UserId, Type, Account, Num) ->
+exchange(UserId, UserName, Type, Account, Num) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC}|_] ->
       case Num =< SC of
@@ -31,6 +31,7 @@ exchange(UserId, Type, Account, Num) ->
             #exchange_log{
               id = {UserId, Time},
               user_id = UserId,
+              name = UserName,
               time = Time,
               type = Type,
               account = Account,

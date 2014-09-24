@@ -22,6 +22,9 @@
   bind_account/2,
   get_account/1,
   do_exchange/2,
+
+  get_user_name/1,
+
   t/0
 ]).
 
@@ -153,12 +156,12 @@ do_exchange(UserId, Exchange) ->
   case Exchange > 0 of
     true ->
       case ets:lookup(?ETS_ONLINE, UserId) of
-        [#user{score_current = SC, account = Account} | _] ->
+        [#user{name = UserName, score_current = SC, account = Account} | _] ->
           case SC >= Exchange of
             true ->
               case Account =/= undefined of
                 true ->
-                  lib_exchange:exchange(UserId, ?EXCHANGE_TYPE_ALIPAY, Account, Exchange);
+                  lib_exchange:exchange(UserId, UserName, ?EXCHANGE_TYPE_ALIPAY, Account, Exchange);
                 false ->
                   lists:concat(["{\"error\":\"", "bind_account", "\"}"])
               end;
@@ -168,6 +171,15 @@ do_exchange(UserId, Exchange) ->
       end;
     false ->
       lists:concat(["{\"error\":\"", "wrong_num", "\"}"])
+  end.
+
+%%获取用户赚钱号
+get_user_name(Idfa) ->
+  case ets:lookup(?ETS_ONLINE, Idfa) of
+    [#user{name = Name}| _] ->
+      Name;
+    _Other ->
+      0
   end.
 
 
