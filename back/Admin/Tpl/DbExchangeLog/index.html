@@ -1,0 +1,86 @@
+<include file="Public:pagerForm"/>
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+        <div class="searchBar">
+            <ul class="searchContent">
+                <li>
+                    <label>用户名：</label>
+                    <input type="text" name="account" value=""/>
+                </li>
+            </ul>
+            <div class="subBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="submit">查询</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="__URL__/add" target="dialog" mask="true"><span>新增</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/id/{sid_dbexchangelog}/navTabId/__MODULE__" target="ajaxTodo"
+                   title="你确定要删除吗？" warn="请选择用户"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_dbexchangelog}" target="dialog" mask="true"
+                   warn="请选择用户"><span>编辑</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="__URL__/password/id/{sid_dbexchangelog}" target="dialog" mask="true" warn="请选择用户"><span>修改密码</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <table class="table" width="100%" layoutH="138">
+        <thead>
+            <tr align="center">
+                <th width="100">IDFA</th>
+                <th width="50" orderField="name"
+                <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>
+                >赚钱号</th>
+                <th width="50" orderField="time"
+                <if condition="$_REQUEST._order eq 'time'">class="{$_REQUEST._sort}"</if>
+                >时间</th>
+                <th width="20" orderField="type"
+                <if condition="$_REQUEST._order eq 'type'">class="{$_REQUEST._sort}"</if>
+                >兑换类型</th>
+                <th width="50" orderField="account"
+                <if condition="$_REQUEST._order eq 'account'">class="{$_REQUEST._sort}"</if>
+                >账户名称</th>
+                <th width="150" orderField="num"
+                <if condition="$_REQUEST._order eq 'num'">class="{$_REQUEST._sort}"</if>
+                >使用积分</th>
+            </tr>
+        </thead>
+        <tbody>
+        <volist id="vo" name="list">
+            <tr target="sid_dbexchangelog" rel="{$vo['user_id']}">
+                <td>{$vo.user_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.time|date="Y-m-d H:i:s",###}</td>
+                <td>{$vo.type|getChannel}</td>
+                <td>{$vo.account}</td>
+                <td>{$vo.num}</td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+
+    <div class="panelBar">
+        <div class="pages">
+            <span>共{$totalCount}条</span>
+        </div>
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}"
+             pageNumShown="10" currentPage="{$currentPage}"></div>
+    </div>
+
+</div>
+
+
