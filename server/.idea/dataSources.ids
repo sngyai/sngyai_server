@@ -7,6 +7,15 @@
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="zhuanqian"/>
+    <table name="access" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="role_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="node_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="level" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="pid" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="module" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <index name="groupId" unique="false" columns="role_id"/>
+      <index name="nodeId" unique="false" columns="node_id"/>
+    </table>
     <table name="db_exchange_log" schema="" catalog="zhuanqian" type="TABLE">
       <column name="user_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
       <column name="time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5pe26Ze0"/>
@@ -25,12 +34,99 @@
       <column name="score" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6I635b6X56ev5YiG"/>
     </table>
     <table name="db_user" schema="" catalog="zhuanqian" type="TABLE">
-      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
+      <column name="idfa" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi35bm/5ZGK5qCH6K+G"/>
       <column name="score_current" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="score_total" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi35Y6G5Y+y5oC756ev5YiG"/>
       <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="5pSv5LuY5a6d6LSm5Y+3"/>
-      <column name="tokens" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tokens" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="create_time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Yib5bu65pe26Ze0"/>
       <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="group" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sort" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="show" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="groups" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT" precision="7" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="node" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="remark" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sort" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="pid" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="level" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="group_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="level" unique="false" columns="level"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="role" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="pid" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="remark" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ename" sqlType="VARCHAR" precision="5" scale="0" nullable="true" jdbcType="12"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="ename" unique="false" columns="ename"/>
+      <index name="parentId" unique="false" columns="pid"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="role_user" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="role_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <index name="group_id" unique="false" columns="role_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="think_data" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="data" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="think_form" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user" schema="" catalog="zhuanqian" type="TABLE">
+      <column name="id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="account" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nickname" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1"/>
+      <column name="bind_account" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_login_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="last_login_ip" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login_count" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="verify" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="remark" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="type_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="info" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="account" unique="true" columns="account"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="MySQL - @localhost" uuid="1d9e0c02-2965-4b62-bd82-326342ecac0a">

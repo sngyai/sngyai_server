@@ -60,7 +60,7 @@ start_mod_workers() ->
   %玩家
   {ok, _} = supervisor:start_child(
     ?MODULE,
-    {mod_increase_player,
-      {mod_increase_player, start_link, []},
-      permanent, 10000, worker, [mod_increase_player]}),
+    {mod_increase_user,
+      {mod_increase_user, start_link, []},
+      permanent, 10000, worker, [mod_increase_user]}),
   ok.

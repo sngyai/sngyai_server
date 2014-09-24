@@ -55,3 +55,17 @@ logger webserver_logger{
 	}
 }
 
+%%increase_logger
+logger increase_logger{
+	file_appender increase_app{
+		dir = "./ebin/log",
+		level = error,
+		file = increase_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
+

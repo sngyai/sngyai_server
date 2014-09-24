@@ -7,7 +7,7 @@
 %%% 支持45个平台  9999个服  100亿个动态ID
 %%% Created : 2012-6-18
 %%% -------------------------------------------------------------------
--module(mod_increase_player).
+-module(mod_increase_user).
 
 -behaviour(gen_server).
 %% --------------------------------------------------------------------
@@ -81,8 +81,13 @@ init([]) ->
   Result = init_id(),
   ?T("*****Error mod_increase_player init error: ~p ~n", [Result]),
   {ok, Id_Index, Id_Max} = Result,
-  % 服务启动的时候保证还有五千万的空间,否则不让启动
-  if Id_Max - Id_Index < 50000000 -> throw("item key overflow warning!"); true -> skip end,
+  % 服务启动的时候保证还有五十万的空间,否则不让启动
+  if
+    Id_Max - Id_Index < 500000 ->
+      throw("item key overflow warning!");
+    true ->
+      skip
+  end,
   State = #state{
     id_index = Id_Index,
     id_max = Id_Max
@@ -201,7 +206,6 @@ do_info(Info, State) ->
 %%%-------------------------------------------------------------------
 %% 内部函数
 %%%-------------------------------------------------------------------
-
 init_id() ->
   Min = lib_config:get_subsection_min(),
   Max = lib_config:get_subsection_max(),

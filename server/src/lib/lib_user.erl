@@ -27,16 +27,16 @@
 
 %%创建用户
 create_role(Idfa) ->
-    NewUser =
-      #user{
-        id = Idfa,
-        score_current = 0,
-        score_total = 0,
-        account = ""
-      },
-    ets:insert(?ETS_ONLINE, NewUser),
-    db_agent_user:create(NewUser),
-    "ok".
+  Name = mod_increase_user:new_id(),
+  NewUser =
+    #user{
+      id = Idfa,
+      name = Name,
+      create_time = lib_util_time:get_timestamp()
+    },
+  ets:insert(?ETS_ONLINE, NewUser),
+  db_agent_user:create(NewUser),
+  Name.
 
 create_role_with_tokens(Idfa, Tokens) ->
   NewUser =
@@ -66,16 +66,17 @@ create_role_with_account(Idfa, Account) ->
 
 %%登录
 login(UserId) ->
-  {ScoreCurrent, ScoreTotal} =
+  {Name, ScoreCurrent, ScoreTotal} =
     case ets:lookup(?ETS_ONLINE, UserId) of
-    [#user{score_current = SC, score_total = ST}|_] ->
-      {SC, ST};
-    _Other -> %用户不存在，创建一个
-      create_role(UserId),
-      {0, 0}
-  end,
+      [#user{name = UserName, score_current = SC, score_total = ST} | _] ->
+        {UserName, SC, ST};
+      _Other -> %用户不存在，创建一个
+        UserName = create_role(UserId),
+        {UserName, 0, 0}
+    end,
   Result =
     [
+      {"user_name", lib_util_type:term_to_string(Name)},
       {"score_current", lib_util_type:term_to_string(ScoreCurrent)},
       {"score_total", lib_util_type:term_to_string(ScoreTotal)}
     ],
@@ -86,7 +87,7 @@ login(UserId) ->
 %%Score获得积分
 add_score(UserId, Score) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
-    [#user{score_current = SC, score_total = ST} = UserInfo|_] ->
+    [#user{score_current = SC, score_total = ST} = UserInfo | _] ->
       ScoreCurrent = SC + Score,
       ScoreTotal = ST + Score,
       NewUserInfo =
@@ -104,7 +105,7 @@ add_score(UserId, Score) ->
 %%更新用户tokens
 set_tokens(UserId, Tokens) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
-    [#user{} = UserInfo|_] ->
+    [#user{} = UserInfo | _] ->
       NewUserInfo = UserInfo#user{tokens = Tokens},
       ets:insert(?ETS_ONLINE, NewUserInfo),
       db_agent_user:set_tokens(UserId, Tokens);
@@ -112,9 +113,10 @@ set_tokens(UserId, Tokens) ->
       create_role_with_tokens(UserId, Tokens)
   end.
 
+%%获取用户token
 get_tokens(UserId) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
-    [#user{tokens = Tokens}|_] when Tokens =/= undefined->
+    [#user{tokens = Tokens} | _] when Tokens =/= undefined ->
       Tokens;
     _Other ->
       []
@@ -123,7 +125,7 @@ get_tokens(UserId) ->
 %%绑定支付宝
 bind_account(UserId, Account) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
-    [#user{} = UserInfo|_] ->
+    [#user{} = UserInfo | _] ->
       NewUserInfo = UserInfo#user{account = Account},
       ets:insert(?ETS_ONLINE, NewUserInfo),
       db_agent_user:set_account(UserId, Account);
@@ -135,7 +137,7 @@ bind_account(UserId, Account) ->
 get_account(UserId) ->
   Account =
     case ets:lookup(?ETS_ONLINE, UserId) of
-      [#user{account = Ac}|_] when Ac =/= undefined ->
+      [#user{account = Ac} | _] when Ac =/= undefined ->
         Ac;
       _Other ->
         ""
@@ -148,7 +150,7 @@ do_exchange(UserId, Exchange) ->
   case Exchange > 0 of
     true ->
       case ets:lookup(?ETS_ONLINE, UserId) of
-        [#user{score_current = SC, account = Account}|_] ->
+        [#user{score_current = SC, account = Account} | _] ->
           case SC >= Exchange of
             true ->
               case Account =/= undefined of
