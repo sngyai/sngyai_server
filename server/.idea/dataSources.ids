@@ -18,6 +18,7 @@
     </table>
     <table name="db_exchange_log" schema="" catalog="zhuanqian" type="TABLE">
       <column name="user_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="name" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi35ZCN56ew"/>
       <column name="time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5pe26Ze0"/>
       <column name="type" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" remarks="5YWR5o2i57G75Z6L"/>
       <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="6LSm5oi3"/>
@@ -34,13 +35,13 @@
       <column name="score" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6I635b6X56ev5YiG"/>
     </table>
     <table name="db_user" schema="" catalog="zhuanqian" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
-      <column name="idfa" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi35bm/5ZGK5qCH6K+G"/>
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="55So5oi3aWQ="/>
+      <column name="name" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi35ZCN56ew77yI6LWa6ZKx5Y+377yJ"/>
       <column name="score_current" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="score_total" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="55So5oi35Y6G5Y+y5oC756ev5YiG"/>
       <column name="account" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="5pSv5LuY5a6d6LSm5Y+3"/>
       <column name="tokens" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="create_time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Yib5bu65pe26Ze0"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="group" schema="" catalog="zhuanqian" type="TABLE">

@@ -37,6 +37,7 @@ exchange(UserId, UserName, Type, Account, Num) ->
               account = Account,
               num = Num
             },
+          db_agent_exchange:update_db_exchange(Account, Num),
           ets:insert(?ETS_EXCHANGE_LOG, ExchangeLog),
           db_agent_exchange_log:add(ExchangeLog);
         false ->
@@ -45,6 +46,8 @@ exchange(UserId, UserName, Type, Account, Num) ->
     _Other ->
       "user_not_exist"
   end.
+
+
 
 get_all() ->
   List = ets:tab2list(?ETS_EXCHANGE_LOG),
