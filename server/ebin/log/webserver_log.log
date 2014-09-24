@@ -1078,3 +1078,37 @@
                                                                                                         "proc_lib.erl"},
                                                                                                        {line,
                                                                                                         239}]}]
+25-9-2014 0:37:34.049 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:37:44.108 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:39:39.400 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:39:47.052 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:39:53.705 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:39:58.728 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:40:3.149 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:40:8.109 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:40:12.343 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:33.714 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:40.443 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:45.230 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:49.920 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:53.983 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:46:58.331 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:47:2.878 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+
+25-9-2014 0:51:24.665 [mod_webserver:348] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+

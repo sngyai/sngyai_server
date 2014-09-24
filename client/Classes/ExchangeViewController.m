@@ -147,7 +147,7 @@
                 NSArray *viewControllers = self.navigationController.viewControllers;
                 InfoTableViewController *infoViewController = (InfoTableViewController*)[viewControllers objectAtIndex:viewControllers.count - 2];
                 [infoViewController.tableView reloadData];
-                [self alertMessage:[NSString stringWithFormat:@"兑换成功"]];
+                [self noticeOK:[NSString stringWithFormat:@"兑换成功"]];
             }
             else{
                 NSString *errorString = [self get_error_string:errorCode];
@@ -162,6 +162,17 @@
     }
 }
 
+-(NSString *) get_error_string:(NSString*)errorCode
+{
+    if([errorCode isEqualToString:@"score_not_enough"])
+        return @"积分不足";
+    if([errorCode isEqualToString:@"bind_account"])
+        return @"请先绑定账号";
+    if([errorCode isEqualToString:@"wrong_num"])
+        return @"错误的金额";
+    return @"未知錯誤";
+}
+
 -(void) alertMessage:(NSString*)msg{
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"错误"
 														message:msg
@@ -171,14 +182,13 @@
 	[alertView release];
 }
 
--(NSString*) get_error_string:(NSString*)errorCode
-{
-    if([errorCode isEqualToString:@"score_not_enough"])
-        return @"积分不足";
-    if([errorCode isEqualToString:@"bind_account"])
-        return @"请先绑定账号";
-    if([errorCode isEqualToString:@"wrong_num"])
-        return @"错误的金额";
+-(void) noticeOK:(NSString*)msg{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示"
+														message:msg
+													   delegate:nil
+											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
 }
 
 @end

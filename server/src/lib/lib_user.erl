@@ -39,9 +39,11 @@ create_role(Idfa) ->
   Name.
 
 create_role_with_tokens(Idfa, Tokens) ->
+  Name = mod_increase_user:new_id(),
   NewUser =
     #user{
       id = Idfa,
+      name = Name,
       score_current = 0,
       score_total = 0,
       account = "",
@@ -49,9 +51,10 @@ create_role_with_tokens(Idfa, Tokens) ->
     },
   ets:insert(?ETS_ONLINE, NewUser),
   db_agent_user:create(NewUser),
-  "ok".
+  Name.
 
 create_role_with_account(Idfa, Account) ->
+  Name = mod_increase_user:new_id(),
   NewUser =
     #user{
       id = Idfa,
@@ -62,7 +65,7 @@ create_role_with_account(Idfa, Account) ->
     },
   ets:insert(?ETS_ONLINE, NewUser),
   db_agent_user:create(NewUser),
-  "ok".
+  Name.
 
 %%登录
 login(UserId) ->

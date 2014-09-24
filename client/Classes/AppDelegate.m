@@ -189,7 +189,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
         NSLog(@"HELLO,WORLD RETURN : %@", response);
         NSLog(@"HELLO,WORLD RETURN : %@", object);
         NSString *strScroreCur = [object objectForKey:@"score_current"];
+        NSString *strName = [object objectForKey:@"user_name"];
         _tabBar.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
+        _tabBar.userName = strName;
         
         NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
         _tabBar.viewControllers = controllerArray;

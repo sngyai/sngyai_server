@@ -56,3 +56,17 @@
   AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
   Cash:150
 
+25-9-2014 0:37:43.932 [lib_callback:30] duplicate trand req:
+  Idfa:"1C496849-C446-4988-A6D9-C39D8AD0E43E"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+25-9-2014 0:46:33.442 [lib_callback:30] duplicate trand req:
+  Idfa:"1C496849-C446-4988-A6D9-C39D8AD0E43E"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+

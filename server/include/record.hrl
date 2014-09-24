@@ -35,7 +35,7 @@
   name,                                   %% 用户账号（赚钱号）
   score_current = 0,
   score_total = 0,
-  account = "",
+  account,
   tokens,
   create_time
 }).

@@ -29,10 +29,23 @@ get_all() ->
   Result.
 
 data2record(account, Value) ->
-  TrandNo = lib_util_type:string_to_term(Value),
+  TrandNo =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
   {account, TrandNo};
 data2record(user_id, Value) ->
-  {user_id, lib_util_type:string_to_term(Value)};
+  UserId =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {user_id, UserId};
 data2record(Key, Value) ->
   {Key, Value}.
 
@@ -40,7 +53,5 @@ data2record(Key, Value) ->
 
 record2data(Exchange) ->
   tuple_to_list(Exchange#exchange_log{
-    account = lib_util_type:term_to_string(Exchange#exchange_log.account),
-    user_id = lib_util_type:term_to_string(Exchange#exchange_log.user_id)
   }
   ).

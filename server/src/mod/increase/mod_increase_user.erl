@@ -210,7 +210,7 @@ init_id() ->
   Min = lib_config:get_subsection_min(),
   Max = lib_config:get_subsection_max(),
   Table_Name = db_user,
-  case ?DB_GAME:select_one(Table_Name, "Max(id)", [{id, ">=", Min}, {id, "<", Max}]) of
+  case ?DB_GAME:select_one(Table_Name, "Max(name)", [{name, ">=", Min}, {name, "<", Max}]) of
     {scalar, undefined} ->%没有找到，初始化 ID起始值
       FirstID = Min,
       {ok, FirstID, Max};
