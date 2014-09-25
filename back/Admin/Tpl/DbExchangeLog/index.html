@@ -81,7 +81,7 @@
                 <td>{$vo.account}</td>
                 <td>{$vo.num}</td>
                 <td>{$vo['status']|exchange=$vo['id']}</td>
-                <td>{$vo.last_update}</td>
+                <td>{$vo.last_update|date="Y-m-d H:i:s",###}</td>
             </tr>
         </volist>
         </tbody>
