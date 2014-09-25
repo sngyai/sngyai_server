@@ -58,8 +58,10 @@
   user_id,
   name,
   time,
-  type,
+  type = 0,
   account,
-  num
+  num = 0,
+  status = 0,
+  last_update
 }).
 

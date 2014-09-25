@@ -23,21 +23,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexAction.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/IndexAction.class.php">
+      <file leaf-file-name="common.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Common/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.535714" vertical-offset="133" max-vertical-offset="893">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="-5.571429" vertical-offset="3302" max-vertical-offset="7961">
+              <caret line="191" column="15" selection-start-line="191" selection-start-column="15" selection-end-line="191" selection-end-column="15" />
+              <folding>
+                <marker date="1411666222000" expanded="false" signature="3554:3565" placeholder="..." />
+                <marker date="1411666222000" expanded="false" signature="3617:3626" placeholder="..." />
+                <marker date="1411666222000" expanded="false" signature="3724:3735" placeholder="..." />
+                <marker date="1411666222000" expanded="false" signature="3787:3796" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbTaskLog/index.html">
+      <file leaf-file-name="add.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Tpl/Group/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.5" vertical-offset="44" max-vertical-offset="1786">
-              <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+            <state vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="950">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -46,18 +51,28 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbExchangeLog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5185184" vertical-offset="367" max-vertical-offset="1748">
-              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+            <state vertical-scroll-proportion="-13.321428" vertical-offset="1204" max-vertical-offset="2014">
+              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/menu.html">
+      <file leaf-file-name="Model.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Model.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.607142" vertical-offset="0" max-vertical-offset="627">
-              <caret line="23" column="17" selection-start-line="11" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
+            <state vertical-scroll-proportion="-6.928571" vertical-offset="12422" max-vertical-offset="29317">
+              <caret line="672" column="40" selection-start-line="672" selection-start-column="40" selection-end-line="672" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormAction.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/FormAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="323">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -66,59 +81,51 @@
       <file leaf-file-name="CommonAction.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/CommonAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7037036" vertical-offset="785" max-vertical-offset="8626">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state vertical-scroll-proportion="-4.5" vertical-offset="4165" max-vertical-offset="8607">
+              <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbExchangeAction.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbExchangeAction.class.php">
+      <file leaf-file-name="RoleModel.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="494">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.75" vertical-offset="10" max-vertical-offset="3534">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbExchange/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7592592" vertical-offset="367" max-vertical-offset="1482">
-              <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbExchangeLogAction.class.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DbExchangeLogAction.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbExchangeLogAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5373737" vertical-offset="0" max-vertical-offset="495">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state vertical-scroll-proportion="-12.535714" vertical-offset="276" max-vertical-offset="1197">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbTaskLogAction.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbTaskLogAction.class.php">
+      <file leaf-file-name="DbExchangeLogModel.class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/DbExchangeLogModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="494">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.41304347" vertical-offset="0" max-vertical-offset="684">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/index.html">
+      <file leaf-file-name="test.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.321428" vertical-offset="1230" max-vertical-offset="1900">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="32" />
-              <folding />
+            <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="285">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,19 +159,21 @@
         <option value="$PROJECT_DIR$/Admin/Tpl/Index/index.html" />
         <option value="$PROJECT_DIR$/Admin/Lib/Action/UserAction.class.php" />
         <option value="$PROJECT_DIR$/Admin/Lib/Action/DbUserAction.class.php" />
-        <option value="db-console:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/" />
         <option value="dbtable:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/zhuanqian..db_task_log" />
         <option value="$PROJECT_DIR$/Admin/Tpl/DbUser/index.html" />
-        <option value="$PROJECT_DIR$/Admin/Common/common.php" />
-        <option value="dbtable:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/zhuanqian..db_exchange_log" />
         <option value="$PROJECT_DIR$/Admin/Tpl/DbExchange/index.html" />
-        <option value="$PROJECT_DIR$/Admin/Tpl/DbExchangeLog/index.html" />
         <option value="$PROJECT_DIR$/Admin/Tpl/DbTaskLog/index.html" />
-        <option value="$PROJECT_DIR$/Admin/Tpl/Public/menu.html" />
-        <option value="$PROJECT_DIR$/Admin/Lib/Action/CommonAction.class.php" />
         <option value="$PROJECT_DIR$/Admin/Lib/Action/DbExchangeAction.class.php" />
         <option value="$PROJECT_DIR$/Admin/Lib/Action/DbTaskLogAction.class.php" />
+        <option value="dbtable:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/zhuanqian..db_exchange_log" />
+        <option value="db-console:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/Public/menu.html" />
+        <option value="$PROJECT_DIR$/Admin/Lib/Action/CommonAction.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Common/common.php" />
         <option value="$PROJECT_DIR$/Admin/Lib/Action/DbExchangeLogAction.class.php" />
+        <option value="$PROJECT_DIR$/Admin/test.php" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/DbExchangeLog/index.html" />
+        <option value="$PROJECT_DIR$/Admin/Lib/Model/DbExchangeLogModel.class.php" />
       </list>
     </option>
   </component>
@@ -204,7 +213,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,133 +260,9 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbTaskLog" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbExchangeLog" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tpl" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbExchange" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dwz_thinkphp3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lib" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Action" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,16 +348,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit">
-      <module name="" />
-      <option name="command" value="eunit" />
-      <option name="name" value="Erlang Rebar Eunit" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <option name="skipDependencies" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -493,6 +368,16 @@
       <option name="USE_PATTERN" value="false" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit">
+      <module name="" />
+      <option name="command" value="eunit" />
+      <option name="name" value="Erlang Rebar Eunit" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="skipDependencies" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -557,6 +442,10 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -576,25 +465,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
-      <module name="" />
-      <option name="name" value="Erlang" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <option name="functionNames">
-        <set />
-      </option>
-      <option name="kind" value="MODULE" />
-      <option name="moduleNames">
-        <set />
-      </option>
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -618,6 +488,21 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
+      <module name="" />
+      <option name="name" value="Erlang" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="functionNames">
+        <set />
+      </option>
+      <option name="kind" value="MODULE" />
+      <option name="moduleNames">
+        <set />
+      </option>
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -861,16 +746,17 @@
       <workItem from="1411403148641" duration="8000" />
       <workItem from="1411403160369" duration="7715000" />
       <workItem from="1411478398595" duration="8256000" />
-      <workItem from="1411545331132" duration="16397000" />
+      <workItem from="1411545331132" duration="16660000" />
+      <workItem from="1411656201274" duration="10839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33567000" />
+    <option name="totallyTimeSpent" value="44669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="970" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861266" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -878,7 +764,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3629301" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4017758" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14166667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -892,7 +778,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -933,69 +819,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/ORG/Util/RBAC.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.714285" vertical-offset="3458" max-vertical-offset="5814">
-          <caret line="214" column="48" selection-start-line="214" selection-start-column="41" selection-end-line="214" selection-end-column="48" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/CommonModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="38.5" vertical-offset="1553" max-vertical-offset="2375">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.321429" vertical-offset="2093" max-vertical-offset="4408">
-          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/runtime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3792325" vertical-offset="1048" max-vertical-offset="4541">
-          <caret line="72" column="58" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Dispatcher.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8081264" vertical-offset="307" max-vertical-offset="5111">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Extend/Mode/Lite/Dispatcher.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3363431" vertical-offset="1181" max-vertical-offset="2774">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Group/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="1121">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3507014" vertical-offset="2656" max-vertical-offset="17081">
-          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/SystemDBAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2636719" vertical-offset="799" max-vertical-offset="1311">
@@ -1030,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.214286" vertical-offset="95" max-vertical-offset="931">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1052,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.678571" vertical-offset="1400" max-vertical-offset="7923">
           <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,42 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/FormAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/NodeAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2052">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/GroupModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="399">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/NodeModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="657">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.296875" vertical-offset="0" max-vertical-offset="512">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1114,38 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0555556" vertical-offset="0" max-vertical-offset="874">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3534">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Runtime/Cache/3aa4777dfb55bcb29082e3da856038b3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326572" vertical-offset="957" max-vertical-offset="1558">
-          <caret line="59" column="173" selection-start-line="59" selection-start-column="173" selection-end-line="59" selection-end-column="173" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Node/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27576196" vertical-offset="532" max-vertical-offset="1539">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Tpl/Group/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51055664" vertical-offset="0" max-vertical-offset="912">
@@ -1158,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.414791" vertical-offset="1110" max-vertical-offset="6080">
           <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,14 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="741">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3103448" vertical-offset="0" max-vertical-offset="152">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1210,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbUserAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="285">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/UserAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2592592" vertical-offset="1268" max-vertical-offset="2071">
@@ -1234,16 +974,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Common/common.php">
+    <entry file="dbDummy://dbtable:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/zhuanqian..db_task_log">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/IndexAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="95.0" vertical-offset="3363" max-vertical-offset="7334">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <marker date="1411564959000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1411564959000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1411564959000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1411564959000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="893">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbTaskLog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="665" max-vertical-offset="1786">
+          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6206896" vertical-offset="0" max-vertical-offset="190">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1258,77 +1019,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/7daeb3cb/549889f1-adab-490a-b230-d048e614a824/zhuanqian..db_task_log">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/FormModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3571428" vertical-offset="0" max-vertical-offset="475">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/GroupModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="399">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/NodeModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="657">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/index.html">
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/UserModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.321428" vertical-offset="1230" max-vertical-offset="1900">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="32" />
+        <state vertical-scroll-proportion="-13.571428" vertical-offset="0" max-vertical-offset="874">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/IndexAction.class.php">
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbUserAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714" vertical-offset="133" max-vertical-offset="893">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbExchange/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7592592" vertical-offset="367" max-vertical-offset="1482">
-          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbExchangeLog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5185184" vertical-offset="367" max-vertical-offset="1748">
-          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbTaskLog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.5" vertical-offset="44" max-vertical-offset="1786">
-          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.607142" vertical-offset="0" max-vertical-offset="627">
-          <caret line="23" column="17" selection-start-line="11" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/CommonAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7037036" vertical-offset="785" max-vertical-offset="8626">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbExchangeAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="494">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="285">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1341,10 +1067,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Runtime/Cache/403a55601eddb96bb997f279776a92f7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.357143" vertical-offset="891" max-vertical-offset="1938">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.464286" vertical-offset="1091" max-vertical-offset="1900">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/CommonModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9444444" vertical-offset="680" max-vertical-offset="2375">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17278287" vertical-offset="1198" max-vertical-offset="4408">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34711966" vertical-offset="18518" max-vertical-offset="20938">
+          <caret line="987" column="9" selection-start-line="987" selection-start-column="9" selection-end-line="987" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/FormAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="323">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Group/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="950">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.928571" vertical-offset="12422" max-vertical-offset="29317">
+          <caret line="672" column="40" selection-start-line="672" selection-start-column="40" selection-end-line="672" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26429674" vertical-offset="0" max-vertical-offset="647">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35962147" vertical-offset="0" max-vertical-offset="634">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Node/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38176197" vertical-offset="874" max-vertical-offset="1539">
+          <caret line="59" column="103" selection-start-line="59" selection-start-column="100" selection-end-line="59" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Extend/Mode/Lite/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52348995" vertical-offset="5067" max-vertical-offset="20520">
+          <caret line="287" column="36" selection-start-line="287" selection-start-column="31" selection-end-line="287" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/CommonAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5" vertical-offset="4165" max-vertical-offset="8607">
+          <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Node/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08260869" vertical-offset="0" max-vertical-offset="1539">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.75" vertical-offset="10" max-vertical-offset="3534">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Common/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.571429" vertical-offset="3302" max-vertical-offset="7961">
+          <caret line="191" column="15" selection-start-line="191" selection-start-column="15" selection-end-line="191" selection-end-column="15" />
+          <folding>
+            <marker date="1411666222000" expanded="false" signature="3554:3565" placeholder="..." />
+            <marker date="1411666222000" expanded="false" signature="3617:3626" placeholder="..." />
+            <marker date="1411666222000" expanded="false" signature="3724:3735" placeholder="..." />
+            <marker date="1411666222000" expanded="false" signature="3787:3796" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DbExchangeLogAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5373737" vertical-offset="0" max-vertical-offset="495">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state vertical-scroll-proportion="-12.535714" vertical-offset="276" max-vertical-offset="1197">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="285">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DbExchangeLog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.321428" vertical-offset="1204" max-vertical-offset="2014">
+          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/DbExchangeLogModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41304347" vertical-offset="0" max-vertical-offset="684">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
           <folding />
         </state>
       </provider>

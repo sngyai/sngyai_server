@@ -226,8 +226,8 @@ init_data_task_log() ->
 init_data_exchange_log() ->
   AllExchanges = db_agent_exchange_log:get_all(),
   lists:foreach(
-    fun(#exchange_log{user_id = UserId, time = Time} = Exchange_E) ->
-      ets:insert(?ETS_EXCHANGE_LOG, Exchange_E#exchange_log{id = {UserId, Time}})
+    fun(#exchange_log{} = Exchange_E) ->
+      ets:insert(?ETS_EXCHANGE_LOG, Exchange_E)
     end, AllExchanges).
 
 %% 初始数据
