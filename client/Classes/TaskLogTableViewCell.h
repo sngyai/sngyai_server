@@ -15,8 +15,8 @@
     UILabel* _appNameField;
     UILabel* _scoreField;
 }
-@property(nonatomic,copy) UILabel* dateField;
-@property(nonatomic,copy) UILabel* channelField;
-@property(nonatomic,copy) UILabel* appNameField;
-@property(nonatomic,copy) UILabel* scoreField;
+@property(strong) UILabel* dateField;
+@property(strong) UILabel* channelField;
+@property(strong) UILabel* appNameField;
+@property(strong) UILabel* scoreField;
 @end

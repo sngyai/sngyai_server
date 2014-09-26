@@ -9,13 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 #import "MJRefresh.h"
-
-typedef struct TaskLog{
-    NSString *date;
-    NSString *channel;
-    NSString *appName;
-    NSString *score;
-}TaskLog;
+#import "TaskLog.h"
 
 @interface TaskLogTableTableViewController : UITableViewController
 <UITableViewDataSource>
@@ -24,5 +18,6 @@ typedef struct TaskLog{
 }
 
 +(NSString*) getChannelStr:(int)channel;
+@property (retain, nonatomic) IBOutlet UITableView *table;
 
 @end

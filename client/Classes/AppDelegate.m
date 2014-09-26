@@ -93,7 +93,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 
 -(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
 {
-    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
+//    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
 }
 
 -(void) alertMessage:(NSString*)msg{

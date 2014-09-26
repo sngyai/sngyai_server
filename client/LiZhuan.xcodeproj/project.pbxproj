@@ -20,7 +20,9 @@
 		B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B745A5F519AA5DBE00491373 /* CoreTelephony.framework */; };
 		B7798FC019C9F80B00D3ABE2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */; };
 		B7798FC119C9F80B00D3ABE2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBF19C9F80B00D3ABE2 /* Parse.framework */; };
-		B77F506B19D5DFF700E0B06E /* TaskLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */; };
+		B77F506B19D5DFF700E0B06E /* TaskLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B77F506F19D5F07B00E0B06E /* TaskLogTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B77F506E19D5F07B00E0B06E /* TaskLogTableViewController.xib */; };
+		B77F507219D609F100E0B06E /* TaskLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F507119D609F100E0B06E /* TaskLog.m */; };
 		B7867CBB19AA481700D7965A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBA19AA481700D7965A /* Security.framework */; };
 		B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBC19AA484500D7965A /* CFNetwork.framework */; };
 		B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBE19AA485D00D7965A /* libsqlite3.dylib */; };
@@ -161,6 +163,9 @@
 		B7798FBF19C9F80B00D3ABE2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B77F506919D5DFF700E0B06E /* TaskLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLogTableViewCell.h; sourceTree = "<group>"; };
 		B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLogTableViewCell.m; sourceTree = "<group>"; };
+		B77F506E19D5F07B00E0B06E /* TaskLogTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskLogTableViewController.xib; sourceTree = "<group>"; };
+		B77F507019D609F100E0B06E /* TaskLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLog.h; sourceTree = "<group>"; };
+		B77F507119D609F100E0B06E /* TaskLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLog.m; sourceTree = "<group>"; };
 		B7867CBA19AA481700D7965A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B7867CBC19AA484500D7965A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B7867CBE19AA485D00D7965A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -424,6 +429,7 @@
 				B7AE239F19B1DBF500C54B62 /* InfoTableViewController.xib */,
 				B7B1680E19BCE3A900449466 /* TaskLogTableTableViewController.h */,
 				B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */,
+				B77F506E19D5F07B00E0B06E /* TaskLogTableViewController.xib */,
 				B79B767B19CE031D0091783F /* ExchangeLogTableViewController.h */,
 				B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */,
 				B79B768319CE0FA90091783F /* AccountSettingsViewController.h */,
@@ -434,6 +440,8 @@
 				B79B768F19CEF1660091783F /* ExchangeViewController.xib */,
 				B77F506919D5DFF700E0B06E /* TaskLogTableViewCell.h */,
 				B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */,
+				B77F507019D609F100E0B06E /* TaskLog.h */,
+				B77F507119D609F100E0B06E /* TaskLog.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -958,6 +966,7 @@
 				B79B769019CEF1660091783F /* ExchangeViewController.xib in Resources */,
 				FB9B8C6A19C5F00500FA021A /* Blocks.png in Resources */,
 				B7B1680019BC4D5A00449466 /* README-GHUnit in Resources */,
+				B77F506F19D5F07B00E0B06E /* TaskLogTableViewController.xib in Resources */,
 				B7CA3C9B19D49E3A0062FD02 /* ChanceAdRes.bundle in Resources */,
 				FB9B8C8819C5F6D400FA021A /* StarsForeground.png in Resources */,
 				FB9B8C9F19C60FCD00FA021A /* Home.png in Resources */,
@@ -1035,6 +1044,7 @@
 				B7B167EB19BC4D5A00449466 /* ASIS3Bucket.m in Sources */,
 				B7B167EA19BC4D5A00449466 /* ASICloudFilesRequest.m in Sources */,
 				B7B167DF19BC4D5A00449466 /* ASIFormDataRequest.m in Sources */,
+				B77F507219D609F100E0B06E /* TaskLog.m in Sources */,
 				B7B167DD19BC4D5A00449466 /* ASIDataDecompressor.m in Sources */,
 				FBFBDD3019C2098100D368CD /* mztools.c in Sources */,
 			);

@@ -32,6 +32,8 @@
     
     tasks = [[NSMutableArray alloc]init];
     [tasks removeAllObjects];
+    self.table.dataSource = self;
+    self.table.delegate = self;
     [self setupRefresh];
 }
 
@@ -65,6 +67,10 @@
     });
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -85,25 +91,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * myId = @"TaskIdentifier";
-    TaskLogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
-    
+    static NSString* cellId = @"cellId";
+
+    TaskLogTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+
     if(cell == nil)
     {
         cell = [[TaskLogTableViewCell alloc] initWithStyle:
-                UITableViewCellStyleDefault reuseIdentifier:myId];
+                UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.userInteractionEnabled = NO;
+
     NSInteger rowNo = [indexPath row];
     
-    cell.textLabel.textColor = [UIColor blueColor];
+    cell.userInteractionEnabled = NO;
+    TaskLog *this_task = [tasks objectAtIndex:rowNo];
 
-    UIFont *myFont = [UIFont fontWithName: @"Arial" size:12];
-    cell.textLabel.font  = myFont;
-    
-    struct TaskLog this_task;
-    NSValue *value = [tasks objectAtIndex:rowNo];
-    [value getValue:&this_task];
     cell.dateField.text = this_task.date;
     cell.channelField.text = this_task.channel;
     cell.appNameField.text= this_task.appName;
@@ -149,16 +151,16 @@
             
             NSString *appNameString = [dic objectForKey:@"app_name"];
             
-            NSString *cashString = [dic objectForKey:@"score"];
+            NSString *cashString = [[dic objectForKey:@"score"]stringByAppendingString:@"积分"];
             
-            struct TaskLog *new_task = malloc(sizeof(struct TaskLog));
-            new_task->date = dateString;
-            new_task->channel = channelString;
-            new_task->appName = appNameString;
-            new_task->score = cashString;
+            TaskLog* new_task = [[TaskLog alloc] init];
             
-            NSValue *value = [NSValue valueWithBytes:new_task objCType:@encode(struct TaskLog)];
-            [tasks addObject:value];
+            new_task.date = dateString;
+            new_task.channel = channelString;
+            new_task.appName = appNameString;
+            new_task.score = cashString;
+            
+            [tasks addObject:new_task];
         }
         [self.tableView reloadData];
     }else{
@@ -201,4 +203,8 @@
     return channelString;
 }
 
+- (void)dealloc {
+    [_table release];
+    [super dealloc];
+}
 @end

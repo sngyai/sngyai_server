@@ -12,31 +12,27 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.dateField = [[UILabel alloc]
-                          initWithFrame:CGRectMake(5 , 5 , 180 , 20)];
-        self.dateField.textAlignment = NSTextAlignmentRight;
-        self.dateField.font = [UIFont boldSystemFontOfSize:18];
+                          initWithFrame:CGRectMake(5 , 5 , 200 , 20)];
+        self.dateField.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:self.dateField];
         
-		
-        self.scoreField = [[UILabel alloc]
-                           initWithFrame:CGRectMake(180 , 5 , 180 , 20)];
-		self.scoreField.textAlignment = NSTextAlignmentLeft;
-        self.scoreField.font = [UIFont boldSystemFontOfSize:18];
-        [self.contentView addSubview:self.scoreField];
-        
-        self.channelField = [[UILabel alloc]
-                               initWithFrame:CGRectMake(5 , 30 , 70 , 20)];
+		self.channelField = [[UILabel alloc]
+                             initWithFrame:CGRectMake(5 , 30 , 70 , 20)];
         self.channelField.textAlignment = NSTextAlignmentLeft;
-        self.channelField.font = [UIFont boldSystemFontOfSize:18];
         [self.contentView addSubview:self.channelField];
         
+        self.scoreField = [[UILabel alloc]
+                           initWithFrame:CGRectMake(220 , 5 , 90 , 20)];
+		self.scoreField.textAlignment = NSTextAlignmentRight;
+        self.scoreField.textColor = [UIColor blueColor];
+        [self.contentView addSubview:self.scoreField];
         
         self.appNameField = [[UILabel alloc]
-                           initWithFrame:CGRectMake(90 , 30 , 180 , 20)];
-        self.appNameField.textAlignment = NSTextAlignmentLeft;
-        self.appNameField.font = [UIFont boldSystemFontOfSize:18];
+                           initWithFrame:CGRectMake(90 , 30 , 220 , 20)];
+        self.appNameField.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:self.appNameField];
     }
     return self;
