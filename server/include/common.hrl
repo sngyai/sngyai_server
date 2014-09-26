@@ -191,6 +191,10 @@
 
 -define(APNS_NAME,app_apns).
 
+-define(TIME_HZ, 1000).   %1秒钟里面有1000毫秒
+
+-define(RELOAD_TICK, 10).    %定时加载更新过状态的兑换记录（10秒钟）
+
 
 
 

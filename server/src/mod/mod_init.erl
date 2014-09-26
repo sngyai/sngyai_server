@@ -29,6 +29,7 @@
 
 %% gen_server启动
 start_link() ->
+  io:format("start_link init"),
   gen_server:start_link({local, ?MODULE}, ?MODULE, [], ?Public_Service_Options).
 
 
@@ -46,6 +47,7 @@ start_link() ->
 %% --------------------------------------------------------------------
 %% 在初始化的地方进行数据的初始化处理,gen_server由supervisor重启的时候可以执行到
 init(_Args) ->
+  io:format("init init"),
   put(tag, ?MODULE),
   process_flag(trap_exit, true),
   %%初始ets表

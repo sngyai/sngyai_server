@@ -15,7 +15,9 @@
 %% API
 -export([
   add/1,
-  get_all/0
+  get_all/0,
+
+  get_update/0
 ]).
 
 add(ExchangeLog) ->
@@ -26,6 +28,11 @@ add(ExchangeLog) ->
 
 get_all() ->
   {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", []),
+  Result.
+
+get_update() ->
+  TimeBegin = lib_util_time:get_timestamp() - (?RELOAD_TICK + 5),
+  {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", [{last_update, ">" ,TimeBegin}]),
   Result.
 
 data2record(account, Value) ->
