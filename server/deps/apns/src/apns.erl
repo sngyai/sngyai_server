@@ -206,6 +206,7 @@ get_env(K, Def) ->
     _ -> Def
   end.
 
+-spec default_connection() -> Connection::term().
 default_connection() ->
   DefaultConn = #apns_connection{},
   DefaultConn#apns_connection{apple_host      = get_env(apple_host,       DefaultConn#apns_connection.apple_host),
