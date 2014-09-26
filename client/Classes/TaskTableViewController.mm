@@ -159,8 +159,8 @@
                           NSLog(@"巨朋积分墙已退出");
                       }];
             break;
-        case 8:
-            [AppConnect showList:self];
+//        case 8:
+//            [AppConnect showList:self];
             break;
 		default:
 			break;

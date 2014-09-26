@@ -7,6 +7,7 @@
 //
 
 #import "TaskLogTableTableViewController.h"
+#import "TaskLogTableViewCell.h"
 
 @interface TaskLogTableTableViewController ()
 
@@ -85,11 +86,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * myId = @"TaskIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
+    TaskLogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
     
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:
+        cell = [[TaskLogTableViewCell alloc] initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:myId];
     }
     cell.userInteractionEnabled = NO;
@@ -99,7 +100,14 @@
 
     UIFont *myFont = [UIFont fontWithName: @"Arial" size:12];
     cell.textLabel.font  = myFont;
-    cell.textLabel.text = [tasks objectAtIndex:rowNo];
+    
+    struct TaskLog this_task;
+    NSValue *value = [tasks objectAtIndex:rowNo];
+    [value getValue:&this_task];
+    cell.dateField.text = this_task.date;
+    cell.channelField.text = this_task.channel;
+    cell.appNameField.text= this_task.appName;
+    cell.scoreField.text = this_task.score;
 
     return cell;
 }
@@ -143,16 +151,14 @@
             
             NSString *cashString = [dic objectForKey:@"score"];
             
-            NSString* TaskLog =
-                [[[[[[dateString
-                     stringByAppendingString:@"   "]
-                     stringByAppendingString:channelString]
-                  stringByAppendingString:@"   "]
-                   stringByAppendingString:appNameString]
-                    stringByAppendingString:@"   "]
-                 stringByAppendingString:cashString];
-
-            [tasks addObject:TaskLog];
+            struct TaskLog *new_task = malloc(sizeof(struct TaskLog));
+            new_task->date = dateString;
+            new_task->channel = channelString;
+            new_task->appName = appNameString;
+            new_task->score = cashString;
+            
+            NSValue *value = [NSValue valueWithBytes:new_task objCType:@encode(struct TaskLog)];
+            [tasks addObject:value];
         }
         [self.tableView reloadData];
     }else{

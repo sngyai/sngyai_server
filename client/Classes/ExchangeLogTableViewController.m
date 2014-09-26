@@ -132,7 +132,7 @@
         [exchanges removeAllObjects];
         for (NSDictionary *dic in object){
             NSDateFormatter *fromatter = [[[NSDateFormatter alloc] init] autorelease];
-//            [fromatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+
             [fromatter setDateFormat:@"MM-dd HH:mm"];
             
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[dic objectForKey:@"time"]intValue]];
@@ -146,18 +146,20 @@
             NSString *accountString = [dic objectForKey:@"account"];
             
             NSString *cashString = [dic objectForKey:@"num"];
+            NSString *status = [self get_status:[[dic objectForKey:@"status"] intValue]];
             
-            NSString* TaskLog =
-            [[[[[[[dateString
+            NSString* ExchangeLog =
+            [[[[[[[[dateString
                   stringByAppendingString:@" "]
                  stringByAppendingString:typeStr]
               stringByAppendingString:@" "]
              stringByAppendingString:accountString]
                 stringByAppendingString:@" \t"]
                stringByAppendingString:cashString]
-                stringByAppendingString:@"\t积分"];
+                stringByAppendingString:@"\t积分 \t"]
+              stringByAppendingString:status];
             
-            [exchanges addObject:TaskLog];
+            [exchanges addObject:ExchangeLog];
         }
         [self.tableView reloadData];
     }else{
@@ -177,6 +179,18 @@
             break;
     }
     return typeStr;
+}
+
+-(NSString*) get_status:(int)status
+{
+    switch (status) {
+        case 1:
+            return @"已发放";
+            break;
+        default:
+            return @"审核中";
+            break;
+    }
 }
 
 /*

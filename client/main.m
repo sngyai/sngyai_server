@@ -13,7 +13,7 @@
 #import "JupengConfig.h"
 #import "YouMiPointsManager.h"
 #import "ChanceAd.h"
-#import "WPLib/AppConnect.h"
+//#import "WPLib/AppConnect.h"
 
 int main(int argc, char *argv[]) {
 	//触控
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     [JupengConfig launchWithAppID:@"11001" withAppSecret:@"0duc7irgtme0ccef"];
     
     //万普
-    [AppConnect getConnect:@"23673a3aa69129898a59ba3a3c6de9a6"];
+//    [AppConnect getConnect:@"23673a3aa69129898a59ba3a3c6de9a6"];
     
     int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 	

@@ -20,12 +20,12 @@
 		B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B745A5F519AA5DBE00491373 /* CoreTelephony.framework */; };
 		B7798FC019C9F80B00D3ABE2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */; };
 		B7798FC119C9F80B00D3ABE2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBF19C9F80B00D3ABE2 /* Parse.framework */; };
+		B77F506B19D5DFF700E0B06E /* TaskLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */; };
 		B7867CBB19AA481700D7965A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBA19AA481700D7965A /* Security.framework */; };
 		B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBC19AA484500D7965A /* CFNetwork.framework */; };
 		B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CBE19AA485D00D7965A /* libsqlite3.dylib */; };
 		B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7867CC019AA486C00D7965A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B79B767E19CE031D0091783F /* ExchangeLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */; };
-		B79B767F19CE031D0091783F /* ExchangeLogTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */; };
 		B79B768619CE0FA90091783F /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79B768419CE0FA90091783F /* AccountSettingsViewController.m */; };
 		B79B768719CE0FA90091783F /* AccountSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */; };
 		B79B768919CE19EB0091783F /* account_confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = B79B768819CE19EB0091783F /* account_confirm.png */; };
@@ -159,13 +159,14 @@
 		B745A5F519AA5DBE00491373 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B7798FBF19C9F80B00D3ABE2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B77F506919D5DFF700E0B06E /* TaskLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLogTableViewCell.h; sourceTree = "<group>"; };
+		B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLogTableViewCell.m; sourceTree = "<group>"; };
 		B7867CBA19AA481700D7965A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B7867CBC19AA484500D7965A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B7867CBE19AA485D00D7965A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B7867CC019AA486C00D7965A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B79B767B19CE031D0091783F /* ExchangeLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeLogTableViewController.h; sourceTree = "<group>"; };
 		B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeLogTableViewController.m; sourceTree = "<group>"; };
-		B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeLogTableViewController.xib; sourceTree = "<group>"; };
 		B79B768319CE0FA90091783F /* AccountSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSettingsViewController.h; sourceTree = "<group>"; };
 		B79B768419CE0FA90091783F /* AccountSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsViewController.m; sourceTree = "<group>"; };
 		B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSettingsViewController.xib; sourceTree = "<group>"; };
@@ -425,13 +426,14 @@
 				B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */,
 				B79B767B19CE031D0091783F /* ExchangeLogTableViewController.h */,
 				B79B767C19CE031D0091783F /* ExchangeLogTableViewController.m */,
-				B79B767D19CE031D0091783F /* ExchangeLogTableViewController.xib */,
 				B79B768319CE0FA90091783F /* AccountSettingsViewController.h */,
 				B79B768419CE0FA90091783F /* AccountSettingsViewController.m */,
 				B79B768519CE0FA90091783F /* AccountSettingsViewController.xib */,
 				B79B768A19CECF0F0091783F /* ExchangeViewController.h */,
 				B79B768B19CECF0F0091783F /* ExchangeViewController.m */,
 				B79B768F19CEF1660091783F /* ExchangeViewController.xib */,
+				B77F506919D5DFF700E0B06E /* TaskLogTableViewCell.h */,
+				B77F506A19D5DFF700E0B06E /* TaskLogTableViewCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -960,7 +962,6 @@
 				FB9B8C8819C5F6D400FA021A /* StarsForeground.png in Resources */,
 				FB9B8C9F19C60FCD00FA021A /* Home.png in Resources */,
 				FB9B8C6F19C5F00500FA021A /* MathGraph.png in Resources */,
-				B79B767F19CE031D0091783F /* ExchangeLogTableViewController.xib in Resources */,
 				FB9B8C8D19C60B4B00FA021A /* user_enabled@2x.png in Resources */,
 				FB9B8C6E19C5F00500FA021A /* Football.png in Resources */,
 				B71C689D19ACC4ED0054EAF4 /* Icon-72.png in Resources */,
@@ -1025,6 +1026,7 @@
 				B7FDDB4A19B3824B00278867 /* MJRefreshHeaderView.m in Sources */,
 				B79B767E19CE031D0091783F /* ExchangeLogTableViewController.m in Sources */,
 				B7B167E319BC4D5A00449466 /* ASIWebPageRequest.m in Sources */,
+				B77F506B19D5DFF700E0B06E /* TaskLogTableViewCell.m in Sources */,
 				B7AE239919AEF25900C54B62 /* TaskTableViewController.mm in Sources */,
 				FB9B8C8019C5F54000FA021A /* ApplicationCell.m in Sources */,
 				BE882EE61568C34600D0EDC9 /* RootViewController.m in Sources */,

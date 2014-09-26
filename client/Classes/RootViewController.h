@@ -22,7 +22,7 @@
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
-#import "WPLib/AppConnect.h"
+//#import "WPLib/AppConnect.h"
 
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"

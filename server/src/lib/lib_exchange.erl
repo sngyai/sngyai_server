@@ -71,13 +71,15 @@ concat_result([Exchange|T], Result) ->
     time = Time,
     type = Type,
     account = Account,
-    num = Num
+    num = Num,
+    status = Status
   } = Exchange,
   CurResult = lists:concat(["{\"user_id\":\"", UserId,
     "\",\"time\":\"", Time,
     "\",\"type\":\"", Type,
     "\",\"account\":\"", Account,
     "\",\"num\":\"", Num,
+    "\",\"status\":\"", Status,
     "\"}"
   ]),
   NewResult =
