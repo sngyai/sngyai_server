@@ -22,6 +22,8 @@
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
+#import "WPLib/AppConnect.h"
+
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 
@@ -43,7 +45,8 @@
 , MiidiAdWallRequestToggleDelegate
 , DMOfferWallManagerDelegate
 , MobiSageJoyDelegate
-, GuoMobWallDelegate>
+, GuoMobWallDelegate
+>
 {
     GuoMobWallViewController * _guomobwall_vc;
     MobiSageJoyViewController *_mobisagejoy;

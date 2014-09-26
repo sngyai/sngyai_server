@@ -17,8 +17,6 @@
 		B71C68AA19ACC5370054EAF4 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B71C68A919ACC5370054EAF4 /* libYouMi.a */; };
 		B71C68AE19ACC56F0054EAF4 /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B71C68AB19ACC56F0054EAF4 /* GuomobWallBundle.bundle */; };
 		B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B71C68AD19ACC56F0054EAF4 /* libGuoMobWall.a */; };
-		B74346DF19CD980200BA5802 /* ChanceAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B74346D619CD980200BA5802 /* ChanceAdRes.bundle */; };
-		B74346E019CD980200BA5802 /* libChanceAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B74346DE19CD980200BA5802 /* libChanceAd.a */; };
 		B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B745A5F519AA5DBE00491373 /* CoreTelephony.framework */; };
 		B7798FC019C9F80B00D3ABE2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */; };
 		B7798FC119C9F80B00D3ABE2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7798FBF19C9F80B00D3ABE2 /* Parse.framework */; };
@@ -70,6 +68,8 @@
 		B7B1680819BCA38500449466 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1680519BCA38500449466 /* JSONKit.m */; };
 		B7B1680919BCA38500449466 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7B1680619BCA38500449466 /* README.md */; };
 		B7B1681019BCE3A900449466 /* TaskLogTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */; };
+		B7CA3C9B19D49E3A0062FD02 /* ChanceAdRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7CA3C9219D49E3A0062FD02 /* ChanceAdRes.bundle */; };
+		B7CA3C9C19D49E3A0062FD02 /* libChanceAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CA3C9A19D49E3A0062FD02 /* libChanceAd.a */; };
 		B7F1E24519B9F3FF0095D451 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */; };
 		B7F1E24619B9F3FF0095D451 /* libDMOfferWallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */; };
 		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
@@ -156,16 +156,6 @@
 		B71C68AB19ACC56F0054EAF4 /* GuomobWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GuomobWallBundle.bundle; path = Lib/GuomobWallBundle.bundle; sourceTree = "<group>"; };
 		B71C68AC19ACC56F0054EAF4 /* GuoMobWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuoMobWallViewController.h; path = Lib/GuoMobWallViewController.h; sourceTree = "<group>"; };
 		B71C68AD19ACC56F0054EAF4 /* libGuoMobWall.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGuoMobWall.a; path = Lib/libGuoMobWall.a; sourceTree = "<group>"; };
-		B74346D519CD980200BA5802 /* ChanceAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanceAd.h; sourceTree = "<group>"; };
-		B74346D619CD980200BA5802 /* ChanceAdRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChanceAdRes.bundle; sourceTree = "<group>"; };
-		B74346D719CD980200BA5802 /* CSADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSADRequest.h; sourceTree = "<group>"; };
-		B74346D819CD980200BA5802 /* CSAppZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppZone.h; sourceTree = "<group>"; };
-		B74346D919CD980200BA5802 /* CSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBannerView.h; sourceTree = "<group>"; };
-		B74346DA19CD980200BA5802 /* CSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInterstitial.h; sourceTree = "<group>"; };
-		B74346DB19CD980200BA5802 /* CSMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMoreGame.h; sourceTree = "<group>"; };
-		B74346DC19CD980200BA5802 /* CSNativeMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNativeMoreGame.h; sourceTree = "<group>"; };
-		B74346DD19CD980200BA5802 /* CSRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRequestError.h; sourceTree = "<group>"; };
-		B74346DE19CD980200BA5802 /* libChanceAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChanceAd.a; sourceTree = "<group>"; };
 		B745A5F519AA5DBE00491373 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		B7798FBE19C9F80B00D3ABE2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B7798FBF19C9F80B00D3ABE2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -253,6 +243,16 @@
 		B7B1680619BCA38500449466 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		B7B1680E19BCE3A900449466 /* TaskLogTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLogTableTableViewController.h; sourceTree = "<group>"; };
 		B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLogTableTableViewController.m; sourceTree = "<group>"; };
+		B7CA3C9119D49E3A0062FD02 /* ChanceAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanceAd.h; sourceTree = "<group>"; };
+		B7CA3C9219D49E3A0062FD02 /* ChanceAdRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChanceAdRes.bundle; sourceTree = "<group>"; };
+		B7CA3C9319D49E3A0062FD02 /* CSADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSADRequest.h; sourceTree = "<group>"; };
+		B7CA3C9419D49E3A0062FD02 /* CSAppZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppZone.h; sourceTree = "<group>"; };
+		B7CA3C9519D49E3A0062FD02 /* CSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBannerView.h; sourceTree = "<group>"; };
+		B7CA3C9619D49E3A0062FD02 /* CSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInterstitial.h; sourceTree = "<group>"; };
+		B7CA3C9719D49E3A0062FD02 /* CSMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMoreGame.h; sourceTree = "<group>"; };
+		B7CA3C9819D49E3A0062FD02 /* CSNativeMoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNativeMoreGame.h; sourceTree = "<group>"; };
+		B7CA3C9919D49E3A0062FD02 /* CSRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRequestError.h; sourceTree = "<group>"; };
+		B7CA3C9A19D49E3A0062FD02 /* libChanceAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChanceAd.a; sourceTree = "<group>"; };
 		B7F1E24119B9F3FF0095D451 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
 		B7F1E24319B9F3FF0095D451 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOfferWallManager.h; sourceTree = "<group>"; };
 		B7F1E24419B9F3FF0095D451 /* libDMOfferWallSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDMOfferWallSDK.a; sourceTree = "<group>"; };
@@ -392,6 +392,7 @@
 				BE882ED01568C15000D0EDC9 /* SystemConfiguration.framework in Frameworks */,
 				FBFBDD1C19C1F75800D368CD /* minizip64.a in Frameworks */,
 				B7867CBB19AA481700D7965A /* Security.framework in Frameworks */,
+				B7CA3C9C19D49E3A0062FD02 /* libChanceAd.a in Frameworks */,
 				FBFBDD1E19C1F75800D368CD /* libzkcmone2.3.a in Frameworks */,
 				B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */,
 				B71C68AA19ACC5370054EAF4 /* libYouMi.a in Frameworks */,
@@ -400,7 +401,6 @@
 				B71C68AF19ACC56F0054EAF4 /* libGuoMobWall.a in Frameworks */,
 				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
 				F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */,
-				B74346E019CD980200BA5802 /* libChanceAd.a in Frameworks */,
 				F19AA98018A9BFAF0001C8FD /* MiidiAdLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,23 +548,6 @@
 			path = Lib/include;
 			sourceTree = "<group>";
 		};
-		B74346D419CD980200BA5802 /* libChanceAd */ = {
-			isa = PBXGroup;
-			children = (
-				B74346D519CD980200BA5802 /* ChanceAd.h */,
-				B74346D619CD980200BA5802 /* ChanceAdRes.bundle */,
-				B74346D719CD980200BA5802 /* CSADRequest.h */,
-				B74346D819CD980200BA5802 /* CSAppZone.h */,
-				B74346D919CD980200BA5802 /* CSBannerView.h */,
-				B74346DA19CD980200BA5802 /* CSInterstitial.h */,
-				B74346DB19CD980200BA5802 /* CSMoreGame.h */,
-				B74346DC19CD980200BA5802 /* CSNativeMoreGame.h */,
-				B74346DD19CD980200BA5802 /* CSRequestError.h */,
-				B74346DE19CD980200BA5802 /* libChanceAd.a */,
-			);
-			path = libChanceAd;
-			sourceTree = "<group>";
-		};
 		B7B1678219BC4D5A00449466 /* ASIHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +667,24 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		B7CA3C9019D49E3A0062FD02 /* libChanceAd */ = {
+			isa = PBXGroup;
+			children = (
+				B7CA3C9119D49E3A0062FD02 /* ChanceAd.h */,
+				B7CA3C9219D49E3A0062FD02 /* ChanceAdRes.bundle */,
+				B7CA3C9319D49E3A0062FD02 /* CSADRequest.h */,
+				B7CA3C9419D49E3A0062FD02 /* CSAppZone.h */,
+				B7CA3C9519D49E3A0062FD02 /* CSBannerView.h */,
+				B7CA3C9619D49E3A0062FD02 /* CSInterstitial.h */,
+				B7CA3C9719D49E3A0062FD02 /* CSMoreGame.h */,
+				B7CA3C9819D49E3A0062FD02 /* CSNativeMoreGame.h */,
+				B7CA3C9919D49E3A0062FD02 /* CSRequestError.h */,
+				B7CA3C9A19D49E3A0062FD02 /* libChanceAd.a */,
+			);
+			name = libChanceAd;
+			path = Lib/libChanceAd;
+			sourceTree = "<group>";
+		};
 		B7F1E24019B9F3FF0095D451 /* DMOfferWallSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,7 +731,7 @@
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				B74346D419CD980200BA5802 /* libChanceAd */,
+				B7CA3C9019D49E3A0062FD02 /* libChanceAd */,
 				FB9B8C9119C60BD600FA021A /* RKTabView */,
 				FBFBDD3D19C2150900D368CD /* lib */,
 				FBFBDD1F19C2098100D368CD /* MobiSageSDK */,
@@ -949,13 +950,13 @@
 				F14551C5171E43950087DDB5 /* Default-568h@2x.png in Resources */,
 				B7B1680919BCA38500449466 /* README.md in Resources */,
 				FB9B8C8F19C60B4B00FA021A /* globe_enabled@2x.png in Resources */,
-				B74346DF19CD980200BA5802 /* ChanceAdRes.bundle in Resources */,
 				FBFBDD1D19C1F75800D368CD /* wall_template.zip in Resources */,
 				FB9B8C6C19C5F00500FA021A /* DarkBackground.png in Resources */,
 				B79B768719CE0FA90091783F /* AccountSettingsViewController.xib in Resources */,
 				B79B769019CEF1660091783F /* ExchangeViewController.xib in Resources */,
 				FB9B8C6A19C5F00500FA021A /* Blocks.png in Resources */,
 				B7B1680019BC4D5A00449466 /* README-GHUnit in Resources */,
+				B7CA3C9B19D49E3A0062FD02 /* ChanceAdRes.bundle in Resources */,
 				FB9B8C8819C5F6D400FA021A /* StarsForeground.png in Resources */,
 				FB9B8C9F19C60FCD00FA021A /* Home.png in Resources */,
 				FB9B8C6F19C5F00500FA021A /* MathGraph.png in Resources */,
@@ -1050,8 +1051,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Lib",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1065,14 +1066,13 @@
 					"$(PROJECT_DIR)/Lib/**",
 					"$(PROJECT_DIR)/Lib/DMOfferWallSDK",
 					"$(PROJECT_DIR)/Lib",
-					"$(PROJECT_DIR)/Lib/libPunchBoxAd",
 					"$(PROJECT_DIR)/Lib/libChanceAd",
 					"$(PROJECT_DIR)/Lib/zkcmoneSDK/res",
 					"$(PROJECT_DIR)/Lib/zkcmoneSDK/zkcmone",
 					"$(PROJECT_DIR)/Lib/MobiSageSDK",
 					"$(PROJECT_DIR)/Lib/lib",
-					"$(PROJECT_DIR)/libChanceAd",
 				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
@@ -1095,8 +1095,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Lib",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1108,14 +1108,13 @@
 					"$(PROJECT_DIR)/Lib/**",
 					"$(PROJECT_DIR)/Lib/DMOfferWallSDK",
 					"$(PROJECT_DIR)/Lib",
-					"$(PROJECT_DIR)/Lib/libPunchBoxAd",
 					"$(PROJECT_DIR)/Lib/libChanceAd",
 					"$(PROJECT_DIR)/Lib/zkcmoneSDK/res",
 					"$(PROJECT_DIR)/Lib/zkcmoneSDK/zkcmone",
 					"$(PROJECT_DIR)/Lib/MobiSageSDK",
 					"$(PROJECT_DIR)/Lib/lib",
-					"$(PROJECT_DIR)/libChanceAd",
 				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
