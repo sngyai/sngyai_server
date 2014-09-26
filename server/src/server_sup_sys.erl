@@ -51,6 +51,8 @@ start_service() ->
   ok = start_webserver(),
   %% 定时触发服务
   ok = start_crone(),
+  %% 兑换记录任务
+  ok = start_exchange_log(),
   %% 服务日志记录
   ok = start_log(),
   %% reloader服务
@@ -125,6 +127,15 @@ start_crone() ->
       {mod_crone, start_link, []},
       permanent, 10000, worker, [mod_crone]}),
   ok.
+
+%%启动兑换记录服务
+start_exchange_log() ->
+    {ok, _} = supervisor:start_child(
+        server_sup_sys,
+        {mod_exchange_log,
+            {mod_exchange_log, start_link, []},
+            permanent, 10000, worker, [mod_exchange_log]}),
+    ok.
 
 %% 服务日志记录
 start_log() ->

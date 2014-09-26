@@ -11,6 +11,8 @@
 
 -behaviour(gen_server).
 
+-include("common.hrl").
+
 %% API
 -export([start_link/0]).
 
@@ -26,6 +28,8 @@
 
 -record(state, {}).
 
+-define(RELOAD_TICK, 10*1000).    %定时加载更新过状态的兑换记录（10秒钟）
+
 %%%===================================================================
 %%% API
 %%%===================================================================
@@ -39,7 +43,7 @@
 -spec(start_link() ->
   {ok, Pid :: pid()} | ignore | {error, Reason :: term()}).
 start_link() ->
-  gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
+    gen_server:start_link({local, ?SERVER}, ?MODULE, [], ?Public_Service_Options).
 
 %%%===================================================================
 %%% gen_server callbacks
@@ -60,6 +64,9 @@ start_link() ->
   {ok, State :: #state{}} | {ok, State :: #state{}, timeout() | hibernate} |
   {stop, Reason :: term()} | ignore).
 init([]) ->
+    process_flag(trap_exit, true),
+    put(tag, ?MODULE),
+    erlang:send_after(?RELOAD_TICK, self(), {self_state_deal}),
   {ok, #state{}}.
 
 %%--------------------------------------------------------------------
@@ -108,8 +115,16 @@ handle_cast(_Request, State) ->
   {noreply, NewState :: #state{}} |
   {noreply, NewState :: #state{}, timeout() | hibernate} |
   {stop, Reason :: term(), NewState :: #state{}}).
-handle_info(_Info, State) ->
-  {noreply, State}.
+handle_info(Info, State) ->
+    try
+        do_info(Info, State)
+    catch
+        _:Reason ->
+            Stacktrace = erlang:get_stacktrace(),
+            ?Error(chat_system_logger, "mod_chat_system handle_info is Info:~p, Reason:~p, Trace:~p, State:~p", [Info, Reason, Stacktrace, State]),
+            ?T("*****Error mod_chat_system handle_info info: ~p,~n reason:~p,~n stacktrace:~p", [Info, Reason, Stacktrace]),
+            {noreply, State}
+    end.
 
 %%--------------------------------------------------------------------
 %% @private
@@ -144,3 +159,10 @@ code_change(_OldVsn, State, _Extra) ->
 %%%===================================================================
 %%% Internal functions
 %%%===================================================================
+do_info({self_state_deal}, State) ->
+    reload(),
+    erlang:send_after(?RELOAD_TICK, self(), {self_state_deal}),
+    {noreply, State};
+do_info(Info, State) ->
+    ?Error(exchange_log_logger, "exchange_log info is not match:~p", [Info]),
+    {noreply, State}.

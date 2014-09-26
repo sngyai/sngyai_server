@@ -69,3 +69,16 @@ logger increase_logger{
 	}
 }
 
+%%exchange_log_logger
+logger exchange_log_logger{
+	file_appender exchange_log_app{
+		dir = "./ebin/log",
+		level = error,
+		file = exchange_log_log,
+		type = size,
+		max = 1000000,
+		suffix = log,
+		rotation = 50,
+		format = '%d %h:%m:%s.%i %l%n'
+	}
+}
