@@ -62,6 +62,6 @@
   account,
   num = 0,
   status = 0,
-  last_update
+  last_update = 0
 }).
 

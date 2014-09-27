@@ -7,6 +7,7 @@
 //
 
 #import "ExchangeLogTableViewController.h"
+#import "ExchangeLogTableViewCell.h"
 
 @interface ExchangeLogTableViewController ()
 
@@ -26,8 +27,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
+    [super viewDidLoad];    
     self.title = @"兑换记录";
     
     exchanges = [[NSMutableArray alloc]init];
@@ -48,7 +48,7 @@
     // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
     self.tableView.headerPullToRefreshText = @"下拉可以刷新了";
     self.tableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    self.tableView.headerRefreshingText = @"刷新积分";
+    self.tableView.headerRefreshingText = @"刷新兑换记录";
 }
 
 #pragma mark 开始进入刷新状态
@@ -65,6 +65,10 @@
     });
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -85,25 +89,27 @@
     return [exchanges count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * myId = @"ExchangeIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
+    static NSString* cellId = @"cellId";
+    
+    ExchangeLogTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:
-                UITableViewCellStyleDefault reuseIdentifier:myId];
+        cell = [[ExchangeLogTableViewCell alloc] initWithStyle:
+                UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.userInteractionEnabled = NO;
+    
     NSInteger rowNo = [indexPath row];
     
-    cell.textLabel.textColor = [UIColor blueColor];
+    cell.userInteractionEnabled = NO;
+    ExchangeLog *this_exchange = [exchanges objectAtIndex:rowNo];
     
-    UIFont *myFont = [UIFont fontWithName: @"Arial" size:12];
-    cell.textLabel.font  = myFont;
-    cell.textLabel.text = [exchanges objectAtIndex:rowNo];
+    cell.dateField.text = this_exchange.date;
+    cell.cashField.text = this_exchange.cash;
+    cell.accountField.text= this_exchange.account;
+    cell.statusField.text = this_exchange.status;
     
     return cell;
 }
@@ -145,21 +151,23 @@
             
             NSString *accountString = [dic objectForKey:@"account"];
             
-            NSString *cashString = [dic objectForKey:@"num"];
+            float cashInt = [[dic objectForKey:@"num"]floatValue];
+            float cashFloat = cashInt/100;
+            NSString *cashString = [NSString stringWithFormat:@"%.2f元",cashFloat];
+            
+            NSLog(@"hello, world!%f %f %@: ", cashInt, cashFloat, cashString);
+
+//            NSString *cashString = [dic objectForKey:@"num"];
             NSString *status = [self get_status:[[dic objectForKey:@"status"] intValue]];
             
-            NSString* ExchangeLog =
-            [[[[[[[[dateString
-                  stringByAppendingString:@" "]
-                 stringByAppendingString:typeStr]
-              stringByAppendingString:@" "]
-             stringByAppendingString:accountString]
-                stringByAppendingString:@" \t"]
-               stringByAppendingString:cashString]
-                stringByAppendingString:@"\t积分 \t"]
-              stringByAppendingString:status];
+            ExchangeLog* new_exchange = [[ExchangeLog alloc] init];
             
-            [exchanges addObject:ExchangeLog];
+            new_exchange.date = dateString;
+            new_exchange.cash = [typeStr stringByAppendingString:cashString];
+            new_exchange.account = accountString;
+            new_exchange.status = status;
+            
+            [exchanges addObject:new_exchange];
         }
         [self.tableView reloadData];
     }else{
@@ -248,4 +256,7 @@
 }
 */
 
+- (void)dealloc {
+    [super dealloc];
+}
 @end

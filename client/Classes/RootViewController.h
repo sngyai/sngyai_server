@@ -35,7 +35,7 @@
 //#define HOST (@"http://192.168.1.3:8088/")
 
 // MacMini
-#define HOST (@"http://192.168.1.107:8088/")
+#define HOST (@"http://192.168.1.10:8088/")
 
 @interface RootViewController : UITabBarController
 <MiidiAdWallShowAppOffersDelegate

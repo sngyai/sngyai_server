@@ -27,9 +27,10 @@ exchange(UserId, UserName, Type, Account, Num) ->
         true ->
           lib_user:add_score(UserId, -Num),
           Time = lib_util_time:get_timestamp(),
+          Id = mod_increase_exchange_log:new_id(),
           ExchangeLog =
             #exchange_log{
-              id = {UserId, Time},
+              id = Id,
               user_id = UserId,
               name = UserName,
               time = Time,
@@ -37,7 +38,6 @@ exchange(UserId, UserName, Type, Account, Num) ->
               account = Account,
               num = Num
             },
-          db_agent_exchange:update_db_exchange(Account, Num),
           ets:insert(?ETS_EXCHANGE_LOG, ExchangeLog),
           db_agent_exchange_log:add(ExchangeLog);
         false ->
@@ -61,6 +61,7 @@ get_user_log(UserId) ->
       L ->
         lists:reverse(lists:keysort(#exchange_log.time, L))
     end,
+  ?T("hello, world ***** get_user_log: ~p", [List]),
   lists:concat(["[", concat_result(List, []), "]"]).
 
 concat_result([], Result) ->

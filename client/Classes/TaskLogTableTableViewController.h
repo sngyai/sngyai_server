@@ -18,6 +18,5 @@
 }
 
 +(NSString*) getChannelStr:(int)channel;
-@property (retain, nonatomic) IBOutlet UITableView *table;
 
 @end

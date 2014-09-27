@@ -32,8 +32,8 @@
     
     tasks = [[NSMutableArray alloc]init];
     [tasks removeAllObjects];
-    self.table.dataSource = self;
-    self.table.delegate = self;
+//    self.table.dataSource = self;
+//    self.table.delegate = self;
     [self setupRefresh];
 }
 
@@ -50,7 +50,7 @@
     // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
     self.tableView.headerPullToRefreshText = @"下拉可以刷新了";
     self.tableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    self.tableView.headerRefreshingText = @"刷新积分";
+    self.tableView.headerRefreshingText = @"刷新任务记录";
 }
 
 #pragma mark 开始进入刷新状态
@@ -204,7 +204,7 @@
 }
 
 - (void)dealloc {
-    [_table release];
+//    [_table release];
     [super dealloc];
 }
 @end

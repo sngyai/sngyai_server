@@ -21,8 +21,8 @@
 ]).
 
 add(ExchangeLog) ->
-  ValueList = lists:nthtail(2, record2data(ExchangeLog)),
-  [_Id | FieldList] = record_info(fields, exchange_log),
+  ValueList = lists:nthtail(1, record2data(ExchangeLog)),
+  FieldList = record_info(fields, exchange_log),
   {insert, _, _} = ?DB_GAME:insert(db_exchange_log, FieldList, ValueList),
   ok.
 
