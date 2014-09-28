@@ -233,6 +233,7 @@ code_change(_OldVsn, State, _Extra) ->  {ok, State}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Private functions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-spec build_payload(term()) -> iolist().
 build_payload(#apns_msg{alert = Alert,
                         badge = Badge,
                         sound = Sound,

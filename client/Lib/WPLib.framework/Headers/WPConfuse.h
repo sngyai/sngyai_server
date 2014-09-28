@@ -1,0 +1,66 @@
+
+#ifndef WPDemo_WPConfuse_h
+#define WPDemo_WPConfuse_h
+
+#define isJailBroken bvdZkEpgUPmycaGI
+#define isJailBrokenStr LIQNMFopYbxMTnww
+#define autoGetPoints DCfLwMDDLSwAwbwL
+#define onWPConnectSuccess IBBUqzuzNJvOSeXl
+#define onWPConnectFailed mtkwDSSFosJbTuWs
+#define onWPUpdatePoints DeoALIlPAErqouie
+#define onWPGetPointsSuccess EmyzzTDJPIXIaAsV
+#define onWPGetPointsFailed DGOALHswHFtGcqxr
+#define onWPAwardPointsSuccess HYYxSBsScKkxqifl
+#define onWPAwardPointsFailed ftTkkridXfOtHxgN
+#define onWPSpendPointsSuccess yCchjbANwQzyvdWu
+#define onWPSpendPointsFailed IECrsxuGEFKfTXwQ
+#define onWPListClose rESiOoadSozlLbrP
+#define onWPBannerShow jTwRiMprUYWhvhvO
+#define onWPBannerShowFailed XZqMaKJApsyJbJuZ
+#define onWPBannerClick sIYCoAamcVOtsdSx
+#define onWPBannerClose GfSKDtZQsRobsoOg
+#define onWPPopAdInitSuccess BYIGfGHTyHvAtNwG
+#define onWPPopAdInitFailed WHNTjeFXimtAPiXj
+#define onWPPopAdInitNull qztSwPddSTUpEWHg
+#define onWPPopAdShowSuccess qofXxpSzyXTgroEk
+#define onWPPopAdShowFailed vMxscmzmaXqFYhlO
+#define onWPPopAdClose dWpYGZqZjnOffisR
+#define onWPPopAdClick EIrudBeHnLHxASWc
+#define getPoints hBRiUaMypkJGbRyb
+#define spendPoints InppoUsBzfaKnwXy
+#define awardPoints RwTVAKwHWxSDEpuB
+#define showEarnedPoints bPnFVGjAKvXYtKRk
+#define requestPoints eoLeGNGmgcYUPXdk
+#define subtractPoints lAzilTuBCSwZzefH
+#define addPoints aYebOtgQwNfMJYLY
+#define displayAd lZBGgFSyeUBNEjMO
+#define removeAdH5 ttHWpTakbGyInuXD
+#define closeBannerAd nlKFuaBLdjsdwolv
+#define displayAdForSize CoWKrkZCflftHMlW
+#define closeLists XPeQfJDtpcDwmRBi
+#define showLists RtsXuEJytTzyrhWz
+#define getListContentView iEiiBmLpnKUIqBpm
+#define showListsWithURL YeyIzcXxxqwWWfjm
+#define showFeedBack KuLrlPieOzeJBswo
+#define removeListsWebView oDZtGroznInunBIG
+#define sharedWPListsViewHandler ERgroYIFTRDIKpqX
+#define showListWithController KKACUHKnHvOMmTpo
+#define showListsWithUserURL NtCdgbDbmZIcPwgM
+#define showFeedBackWithController zYrCYFdhXQfZygta
+#define showListsWithController EuDotNWcPHTCRoAo
+#define getPopAdViewWithController AJsfsoPphOqklxKM
+#define loadADWithVersion BZVpxNcsKQYtYzJH
+#define sharedWPPopAdView ZOvwwIYndbeTSASy
+#define initPop NtCdgbLbmZIcOwgM
+#define showPop DEvqTmIJJTKvZRBY
+#define closePop gpOboqAgLMuYYiuI
+#define initADWithVersion lXhqFwLsQKvGXgOZ
+#define onWPPopInitSuccess lXhqFwLeQKvGXgOZ
+#define onWPPopInitFailed ttHWpWakbGyQnuXD
+#define onWPPopInitNull InppoXsBzfaAnwXy
+#define onWPPopShowSuccess BYIGfGHTtVvAtNwG
+#define onWPPopShowFailed HYYxSBsQcZkxqifl
+#define onWPPopClose iQiiBmLpnPUIqBpm
+#define onWPPopClick IMBUqzuzNJvOPeXl
+
+#endif

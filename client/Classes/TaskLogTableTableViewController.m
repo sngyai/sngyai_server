@@ -7,6 +7,7 @@
 //
 
 #import "TaskLogTableTableViewController.h"
+#import "TaskLogTableViewCell.h"
 
 @interface TaskLogTableTableViewController ()
 
@@ -31,6 +32,8 @@
     
     tasks = [[NSMutableArray alloc]init];
     [tasks removeAllObjects];
+//    self.table.dataSource = self;
+//    self.table.delegate = self;
     [self setupRefresh];
 }
 
@@ -47,7 +50,7 @@
     // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
     self.tableView.headerPullToRefreshText = @"下拉可以刷新了";
     self.tableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    self.tableView.headerRefreshingText = @"刷新积分";
+    self.tableView.headerRefreshingText = @"刷新任务记录";
 }
 
 #pragma mark 开始进入刷新状态
@@ -64,6 +67,10 @@
     });
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,22 +91,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * myId = @"TaskIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
-    
+    static NSString* cellId = @"cellId";
+
+    TaskLogTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:
-                UITableViewCellStyleDefault reuseIdentifier:myId];
+        cell = [[TaskLogTableViewCell alloc] initWithStyle:
+                UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.userInteractionEnabled = NO;
+
     NSInteger rowNo = [indexPath row];
     
-    cell.textLabel.textColor = [UIColor blueColor];
+    cell.userInteractionEnabled = NO;
+    TaskLog *this_task = [tasks objectAtIndex:rowNo];
 
-    UIFont *myFont = [UIFont fontWithName: @"Arial" size:12];
-    cell.textLabel.font  = myFont;
-    cell.textLabel.text = [tasks objectAtIndex:rowNo];
+    cell.dateField.text = this_task.date;
+    cell.channelField.text = this_task.channel;
+    cell.appNameField.text= this_task.appName;
+    cell.scoreField.text = this_task.score;
 
     return cell;
 }
@@ -129,7 +139,7 @@
         [tasks removeAllObjects];
         for (NSDictionary *dic in object){
             NSDateFormatter *fromatter = [[[NSDateFormatter alloc] init] autorelease];
-            [fromatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            [fromatter setDateFormat:@"MM-dd HH:mm"];
 
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[dic objectForKey:@"time"]intValue]];
             
@@ -141,18 +151,16 @@
             
             NSString *appNameString = [dic objectForKey:@"app_name"];
             
-            NSString *cashString = [dic objectForKey:@"score"];
+            NSString *cashString = [[dic objectForKey:@"score"]stringByAppendingString:@"积分"];
             
-            NSString* TaskLog =
-                [[[[[[dateString
-                     stringByAppendingString:@"   "]
-                     stringByAppendingString:channelString]
-                  stringByAppendingString:@"   "]
-                   stringByAppendingString:appNameString]
-                    stringByAppendingString:@"   "]
-                 stringByAppendingString:cashString];
-
-            [tasks addObject:TaskLog];
+            TaskLog* new_task = [[TaskLog alloc] init];
+            
+            new_task.date = dateString;
+            new_task.channel = channelString;
+            new_task.appName = appNameString;
+            new_task.score = cashString;
+            
+            [tasks addObject:new_task];
         }
         [self.tableView reloadData];
     }else{
@@ -195,4 +203,8 @@
     return channelString;
 }
 
+- (void)dealloc {
+//    [_table release];
+    [super dealloc];
+}
 @end

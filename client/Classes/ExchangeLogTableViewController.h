@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 #import "MJRefresh.h"
+#import "ExchangeLog.h"
 
 @interface ExchangeLogTableViewController : UITableViewController
+<UITableViewDataSource>
 {
     NSMutableArray *exchanges;
 }
 +(NSString*) getTypeStr:(int)type;
+
 @end

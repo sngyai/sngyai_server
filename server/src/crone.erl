@@ -148,8 +148,7 @@ current_time() ->
 %% a task is to be run.
 
 until_next_time(Task) ->
-  CurrentTime = current_time(),
-  {When, MFA} = Task,
+  {When, _MFA} = Task,
   case When of
     {daily, Period} ->
       until_next_daytime(Period);
@@ -218,7 +217,7 @@ until_next_daytime_or_days_from_now(Period, Days) ->
   case last_time(Period) of
     T when T < CurrentTime ->
       until_days_from_now(Period, Days-1);
-    T ->
+    _T ->
       until_next_daytime(Period)
   end.
 
@@ -259,7 +258,7 @@ resolve_period({every, Duration, {between, TimeA, TimeB}}) ->
 resolve_period(Time) ->
   [resolve_time(Time)].
 
-resolve_period0(Period, Time, EndTime, Acc) when Time >= EndTime -> Acc;
+resolve_period0(_Period, Time, EndTime, Acc) when Time >= EndTime -> Acc;
 resolve_period0(Period, Time, EndTime, Acc) ->
   resolve_period0(Period, Time + Period, EndTime, [Time | Acc]).
 
@@ -296,7 +295,7 @@ resolve_dow(sun) -> 7.
 %% @doc Spawns a process to accomplish the given task.
 
 run_task(Task) ->
-  {When, MFA} = Task,
+  {_When, MFA} = Task,
   {M,F,A} = MFA,
   spawn(M,F,A).
 

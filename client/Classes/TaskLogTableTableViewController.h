@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 #import "MJRefresh.h"
+#import "TaskLog.h"
 
 @interface TaskLogTableTableViewController : UITableViewController
 <UITableViewDataSource>

@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-
+	
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
     _mobisagejoy = [[MobiSageJoyViewController alloc] initWithPublisherID:@"3c3e990aef814244824e648f024fd170"];
     //设置代理

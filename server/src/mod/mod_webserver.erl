@@ -457,7 +457,7 @@ do_adwo(QS) ->
   lib_callback:deal(Idfa, ?CHANNEL_ADWO, TrandNo, Cash, AppName),
   200.
 
-do_adsage(QS) ->
+do_adsage(_QS) ->
   200.
 
 do_jupeng(QS) ->

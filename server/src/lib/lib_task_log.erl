@@ -16,13 +16,14 @@
 -export([
   add/5,
   query/1
-  ]).
+]).
 
 add(Idfa, Channel, TrandNo, AppName, Score) ->
   TaskLog =
     #task_log{
       id = {Channel, TrandNo},
       user_id = Idfa,
+      name = lib_user:get_user_name(Idfa),
       time = lib_util_time:get_timestamp(),
       trand_no = TrandNo,
       channel = Channel,
@@ -35,7 +36,7 @@ add(Idfa, Channel, TrandNo, AppName, Score) ->
 %%查询用户完成任务记录
 query(Idfa) ->
   List =
-    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa,_='_'}) of
+    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa, _ = '_'}) of
       [] ->
         [];
       L ->
@@ -45,7 +46,7 @@ query(Idfa) ->
 
 concat_result([], Result) ->
   Result;
-concat_result([TaskLog|T], Result) ->
+concat_result([TaskLog | T], Result) ->
   #task_log{
     user_id = UserId,
     time = Time,

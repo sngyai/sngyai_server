@@ -29,6 +29,7 @@
 
 %% gen_server启动
 start_link() ->
+  io:format("start_link init"),
   gen_server:start_link({local, ?MODULE}, ?MODULE, [], ?Public_Service_Options).
 
 
@@ -46,6 +47,7 @@ start_link() ->
 %% --------------------------------------------------------------------
 %% 在初始化的地方进行数据的初始化处理,gen_server由supervisor重启的时候可以执行到
 init(_Args) ->
+  io:format("init init"),
   put(tag, ?MODULE),
   process_flag(trap_exit, true),
   %%初始ets表
@@ -211,7 +213,6 @@ init_ets() ->
 
 init_data_user() ->
   AllUsers = db_agent_user:get_all_users(),
-  ?T("all users 1: ~p~n", [AllUsers]),
   lists:foreach(
     fun(#user{} = User_E) ->
       ets:insert(?ETS_ONLINE, User_E)
@@ -219,7 +220,6 @@ init_data_user() ->
 
 init_data_task_log() ->
   AllTasks = db_agent_task_log:get_all_tasks(),
-  ?T("all TASKS 1: ~p~n", [AllTasks]),
   lists:foreach(
     fun(#task_log{channel = Channel, trand_no = TrandNo} = Task_E) ->
       ets:insert(?ETS_TASK_LOG, Task_E#task_log{id = {Channel, TrandNo}})
@@ -227,10 +227,9 @@ init_data_task_log() ->
 
 init_data_exchange_log() ->
   AllExchanges = db_agent_exchange_log:get_all(),
-  ?T("all TASKS 1: ~p~n", [AllExchanges]),
   lists:foreach(
-    fun(#exchange_log{user_id = UserId, time = Time} = Exchange_E) ->
-      ets:insert(?ETS_EXCHANGE_LOG, Exchange_E#exchange_log{id = {UserId, Time}})
+    fun(#exchange_log{} = Exchange_E) ->
+      ets:insert(?ETS_EXCHANGE_LOG, Exchange_E)
     end, AllExchanges).
 
 %% 初始数据

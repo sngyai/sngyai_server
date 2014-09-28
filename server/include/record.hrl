@@ -31,17 +31,20 @@
 %% 玩家状态信息记录
 %% player ==> player_status
 -record(user, {
-  id,                                     %% 玩家ID
+  id,                                     %% 用户id
+  name,                                   %% 用户账号（赚钱号）
   score_current = 0,
   score_total = 0,
-  account = "",
-  tokens
+  account,
+  tokens,
+  create_time
 }).
 
 -record(task_log,
 {
   id,
   user_id,
+  name,
   time,
   channel,
   trand_no,
@@ -53,9 +56,12 @@
 {
   id,
   user_id,
+  name,
   time,
-  type,
+  type = 0,
   account,
-  num
+  num = 0,
+  status = 0,
+  last_update = 0
 }).
 

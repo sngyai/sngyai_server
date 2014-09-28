@@ -95,7 +95,7 @@
 {
     switch (section) {
         case 0:
-            return 2;
+            return 3;
             break;
         case 1:
             return 1;
@@ -123,11 +123,18 @@
             if (indexPath.row == 0) {
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
                 
+                NSString *userName = [NSString stringWithFormat:@"賺錢號:\t %@", tabBarController.userName];
+                cell.textLabel.text = userName;
+                cell.userInteractionEnabled = NO;
+            }
+            if (indexPath.row == 1) {
+                RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+                
                 NSString *totalScore = [NSString stringWithFormat:@"用户总积分:\t %@", tabBarController.score];
                 cell.textLabel.text = totalScore;
                 cell.userInteractionEnabled = NO;
             }
-            if (indexPath.row == 1) {
+            if (indexPath.row == 2) {
                 cell.textLabel.text = @"账户设置";
             }
             
@@ -161,7 +168,7 @@
     switch (indexPath.section) {
         case 0:
             switch (indexPath.row) {
-                case 1:
+                case 2:
                     [self showAccountSettings];
                     break;
                 default:

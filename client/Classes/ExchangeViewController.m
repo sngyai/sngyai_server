@@ -7,6 +7,8 @@
 //
 
 #import "ExchangeViewController.h"
+#define myDotNumbers @"0123456789.\n"
+#define myNumbers @"0123456789\n"
 
 @interface ExchangeViewController ()
 
@@ -41,24 +43,40 @@
     [self.buttonExchange addTarget:self action:@selector(doExchange) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    return [self validateNumber:string];
-}
-
-- (BOOL)validateNumber:(NSString*)number {
-    BOOL res = YES;
-    NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
-    int i = 0;
-    while (i < number.length) {
-        NSString * string = [number substringWithRange:NSMakeRange(i, 1)];
-        NSRange range = [string rangeOfCharacterFromSet:tmpSet];
-        if (range.length == 0) {
-            res = NO;
-            break;
-        }
-        i++;
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    const static int lengthOfIntegral = 2; //最大表示金额的整数位长度
+    const static int lengthOfDecimal = 2; //最大表示的小数位长度
+    const static int lengthOfAmount = lengthOfDecimal + lengthOfDecimal + 1; //金额的总长度=整数位+小数位+小数点
+    if([string isEqualToString:@"\n"]||[string isEqualToString:@""]) {//按下return
+        return YES;
     }
-    return res;
+    NSCharacterSet *cs;
+    NSUInteger nDotLoc = [textField.text rangeOfString:@"."].location;
+    if (NSNotFound == nDotLoc && 0 != range.location) {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:myNumbers] invertedSet];
+        if ([string isEqualToString:@"."]) {
+            return YES;
+        }
+        if (textField.text.length >= lengthOfIntegral) {
+            return NO;
+        }
+    }
+    else {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:myDotNumbers] invertedSet];
+        if (textField.text.length >= lengthOfAmount) {
+            return NO;
+        }
+    }
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    BOOL basicTest = [string isEqualToString:filtered];
+    if (!basicTest) {
+        return NO;
+    }
+    if (NSNotFound != nDotLoc && range.location > nDotLoc + lengthOfDecimal) {
+        return NO;
+    }
+    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -129,7 +147,8 @@
                 NSArray *viewControllers = self.navigationController.viewControllers;
                 InfoTableViewController *infoViewController = (InfoTableViewController*)[viewControllers objectAtIndex:viewControllers.count - 2];
                 [infoViewController.tableView reloadData];
-                [self alertMessage:[NSString stringWithFormat:@"兑换成功"]];
+                [self noticeOK:[NSString stringWithFormat:@"兑换成功"]];
+                [self.textExchange setText:@""];
             }
             else{
                 NSString *errorString = [self get_error_string:errorCode];
@@ -144,6 +163,17 @@
     }
 }
 
+-(NSString *) get_error_string:(NSString*)errorCode
+{
+    if([errorCode isEqualToString:@"score_not_enough"])
+        return @"积分不足";
+    if([errorCode isEqualToString:@"bind_account"])
+        return @"请先绑定账号";
+    if([errorCode isEqualToString:@"wrong_num"])
+        return @"错误的金额";
+    return @"未知錯誤";
+}
+
 -(void) alertMessage:(NSString*)msg{
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"错误"
 														message:msg
@@ -153,14 +183,13 @@
 	[alertView release];
 }
 
--(NSString*) get_error_string:(NSString*)errorCode
-{
-    if([errorCode isEqualToString:@"score_not_enough"])
-        return @"积分不足";
-    if([errorCode isEqualToString:@"bind_account"])
-        return @"请先绑定账号";
-    if([errorCode isEqualToString:@"wrong_num"])
-        return @"错误的金额";
+-(void) noticeOK:(NSString*)msg{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示"
+														message:msg
+													   delegate:nil
+											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
 }
 
 @end

@@ -40,6 +40,7 @@ start_sup() ->
       {?MODULE, start_link, []},
       permanent, infinity, supervisor, [?MODULE]}),
   ok = start_mod_workers(),
+  ok = start_mod_exchange(),
   ok.
 
 %%关闭监控树
@@ -57,10 +58,21 @@ stop_sup() ->
 %% 返回：不是返回值
 %%------------------------------------------------------------------------------
 start_mod_workers() ->
-  %玩家
+  %用户
   {ok, _} = supervisor:start_child(
     ?MODULE,
-    {mod_increase_player,
-      {mod_increase_player, start_link, []},
-      permanent, 10000, worker, [mod_increase_player]}),
+    {mod_increase_user,
+      {mod_increase_user, start_link, []},
+      permanent, 10000, worker, [mod_increase_user]}),
   ok.
+
+start_mod_exchange() ->
+  %兑换
+  {ok, _} = supervisor:start_child(
+    ?MODULE,
+    {mod_increase_exchange_log,
+      {mod_increase_exchange_log, start_link, []},
+      permanent, 10000, worker, [mod_increase_exchange_log]}),
+  ok.
+
+

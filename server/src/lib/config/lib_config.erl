@@ -178,11 +178,11 @@ get_server_id() ->
     _ -> throw(server_id)
   end.
 %% 获取分段值 开发用 支持1-99区间 正式服此值必须配置为 0
-get_subsection_val() ->
-  case application:get_env(?APP, subsection) of
-    {ok, Subsection} -> Subsection;
-    _ -> 0
-  end.
+%% get_subsection_val() ->
+%%   case application:get_env(?APP, subsection) of
+%%     {ok, Subsection} -> Subsection;
+%%     _ -> 0
+%%   end.
 
 %%%	系统ID管理服务，服务启动时首先从数据库中初始化当前表中最大ID值，运行中在此基础上递增,作为数据记录的唯一ID
 %%% 动态ID = 平台ID(1-45)*100000000000000 + 服ID(1-9999)*10000000000 + 增长ID(1-9999999999)
@@ -190,19 +190,21 @@ get_subsection_val() ->
 %%% 支持45个平台  9999个服  100亿个动态ID
 %% 获取分段ID下限
 get_subsection_min() ->
-  Min = get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + get_subsection_val() * 100000000,
-  Min.
+  65535.
+%%   Min = get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + get_subsection_val() * 100000000,
+%%   Min.
 
 %% 获取分段ID上限
 get_subsection_max() ->
-  Max = case get_subsection_val() of
-          0 ->
-            get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + 9999999999;%正式服动态ID增长区间为100亿
-          SubsectionVal ->
-            % SubsectionVal: 分段值 开发用 支持1-99区间 正式服此值必须配置为 0  给每个开发调试小段给一个亿动态ID范围
-            get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + SubsectionVal * 100000000 + 99999999
-        end,
-  Max.
+  9999999.
+%%   Max = case get_subsection_val() of
+%%           0 ->
+%%             get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + 9999999999;%正式服动态ID增长区间为100亿
+%%           SubsectionVal ->
+%%             % SubsectionVal: 分段值 开发用 支持1-99区间 正式服此值必须配置为 0  给每个开发调试小段给一个亿动态ID范围
+%%             get_acc_id() * 100000000000000 + get_server_id() * 10000000000 + SubsectionVal * 100000000 + 99999999
+%%         end,
+%%   Max.
 
 %% 获取服务器类型
 get_server_type() ->

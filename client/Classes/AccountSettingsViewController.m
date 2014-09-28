@@ -99,7 +99,7 @@
         if (!error) {
             NSString *response = [request responseString];
             NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
-            [self alertMessage:[NSString stringWithFormat:@"设定成功"]];
+            [self noticeOK:[NSString stringWithFormat:@"设定成功"]];
             NSLog(@"HELLO, WORLD ***object:%@", object);
         }else{
             NSLog(@"HELLO, WORLD ***ERROR:%@", error);
@@ -110,6 +110,15 @@
 
 -(void) alertMessage:(NSString*)msg{
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"错误"
+														message:msg
+													   delegate:nil
+											  cancelButtonTitle:@"确定" otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
+-(void) noticeOK:(NSString*)msg{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示"
 														message:msg
 													   delegate:nil
 											  cancelButtonTitle:@"确定" otherButtonTitles:nil];

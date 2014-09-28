@@ -14,23 +14,25 @@
 
 %% API
 -export([
-  exchange/4,
+  exchange/5,
   get_all/0,
   get_user_log/1
   ]).
 
 %%兑换
-exchange(UserId, Type, Account, Num) ->
+exchange(UserId, UserName, Type, Account, Num) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
     [#user{score_current = SC}|_] ->
       case Num =< SC of
         true ->
           lib_user:add_score(UserId, -Num),
           Time = lib_util_time:get_timestamp(),
+          Id = mod_increase_exchange_log:new_id(),
           ExchangeLog =
             #exchange_log{
-              id = {UserId, Time},
+              id = Id,
               user_id = UserId,
+              name = UserName,
               time = Time,
               type = Type,
               account = Account,
@@ -45,6 +47,8 @@ exchange(UserId, Type, Account, Num) ->
       "user_not_exist"
   end.
 
+
+
 get_all() ->
   List = ets:tab2list(?ETS_EXCHANGE_LOG),
   lists:concat(["[", concat_result(List, []), "]"]).
@@ -57,6 +61,7 @@ get_user_log(UserId) ->
       L ->
         lists:reverse(lists:keysort(#exchange_log.time, L))
     end,
+  ?T("hello, world ***** get_user_log: ~p", [List]),
   lists:concat(["[", concat_result(List, []), "]"]).
 
 concat_result([], Result) ->
@@ -67,13 +72,15 @@ concat_result([Exchange|T], Result) ->
     time = Time,
     type = Type,
     account = Account,
-    num = Num
+    num = Num,
+    status = Status
   } = Exchange,
   CurResult = lists:concat(["{\"user_id\":\"", UserId,
     "\",\"time\":\"", Time,
     "\",\"type\":\"", Type,
     "\",\"account\":\"", Account,
     "\",\"num\":\"", Num,
+    "\",\"status\":\"", Status,
     "\"}"
   ]),
   NewResult =
