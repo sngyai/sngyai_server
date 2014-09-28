@@ -20,11 +20,30 @@
 deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
   case ets:match_object(?ETS_TASK_LOG, #task_log{channel = ChannelId, trand_no = TrandNo, _='_'}) of
     [] ->
-      %%添加任务记录
-      lib_task_log:add(Idfa, ChannelId, TrandNo, AppName, Cash),
-      %%增加积分
-      lib_user:add_score(Idfa, Cash),
-      push_notification(Idfa, ChannelId, AppName, Cash);
+      case check_ip(Idfa, AppName) of
+        {error, ErrorMsg} ->
+          case lib_user:get_tokens(Idfa) of
+            [] ->
+              ?T("no tokens: ~p~n", [Idfa]),
+              ?Error(default_logger, "no tokens: ~p~n", [Idfa]);
+            Token ->
+              apns:send_message(?APNS_NAME,
+                #apns_msg{
+                  device_token = Token,
+                  alert = ErrorMsg,
+                  sound = "beep.wav"
+                })
+            end;
+        {ok, IPAddress} ->
+          %%添加任务记录
+          lib_task_log:add(Idfa, ChannelId, TrandNo, AppName, Cash, IPAddress),
+          %%增加积分
+          lib_user:add_score(Idfa, Cash),
+          push_notification(Idfa, ChannelId, AppName, Cash);
+        _Other ->
+          ?T("no ip_bind trand req:~n  Idfa:~p~n  Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
+          ?Error(trand_logger, "no ip_bind trand trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash])
+      end;
     _Other -> %%重复的流水
       ?T("duplicate trand req:~n  Idfa:~p~n  Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
       ?Error(trand_logger, "duplicate trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash])
@@ -45,7 +64,6 @@ push_notification(Idfa, Channel, AppName, Score) ->
           alert = Msg,
           sound = "beep.wav"
         })
-%%       apns:send_message(?APNS_NAME, Token, Msg)
   end.
 
 config_channel_name(?CHANNEL_ADWO) ->
@@ -65,6 +83,20 @@ config_channel_name(?CHANNEL_ADSAGE) ->
 config_channel_name(?CHANNEL_JUPENG) ->
   "巨朋".
 
+%%验证IP
+check_ip(UserId, AppName) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{ip = IPAddress}| _] ->
+      case ets:match_object(?ETS_TASK_LOG, #task_log{ip = IPAddress, app_name = AppName, _='_'}) of
+        [] ->
+          {ok, IPAddress};
+        _Other ->
+          ErrorMsg = lists:concat(["IP冲突，重复的任务: ", mochiutf8:bytes_to_codepoints(list_to_binary(AppName))]),
+          {error, ErrorMsg}
+      end;
+    _Other ->
+      skip
+  end.
 
 
 

@@ -1082,8 +1082,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1113,8 +1113,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -1126,8 +1126,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1154,8 +1154,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1167,8 +1167,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1182,7 +1182,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1193,8 +1193,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1209,7 +1209,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";

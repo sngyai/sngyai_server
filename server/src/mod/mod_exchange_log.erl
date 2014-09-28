@@ -116,14 +116,13 @@ handle_cast(_Request, State) ->
   {noreply, NewState :: #state{}, timeout() | hibernate} |
   {stop, Reason :: term(), NewState :: #state{}}).
 handle_info(Info, State) ->
-  ?T("handle_info: ~p", [Info]),
   try
     do_info(Info, State)
   catch
     _:Reason ->
       Stacktrace = erlang:get_stacktrace(),
-      ?Error(chat_system_logger, "mod_chat_system handle_info is Info:~p, Reason:~p, Trace:~p, State:~p", [Info, Reason, Stacktrace, State]),
-      ?T("*****Error mod_chat_system handle_info info: ~p,~n reason:~p,~n stacktrace:~p", [Info, Reason, Stacktrace]),
+      ?Error(chat_system_logger, "module:mod_exchange_log handle_info is Info:~p, Reason:~p, Trace:~p, State:~p", [Info, Reason, Stacktrace, State]),
+      ?T("*****Error module:mod_exchange_log handle_info info: ~p,~n reason:~p,~n stacktrace:~p", [Info, Reason, Stacktrace]),
       {noreply, State}
   end.
 
@@ -171,5 +170,4 @@ do_info(Info, State) ->
 %%加载
 reload() ->
   UpdatedLogs = db_agent_exchange_log:get_update(),
-  ?T("update_logs: ~p", [UpdatedLogs]),
   [ets:insert(?ETS_EXCHANGE_LOG, Log)||Log<-UpdatedLogs].

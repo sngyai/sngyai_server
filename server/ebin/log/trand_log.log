@@ -70,3 +70,52 @@
   AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
   Cash:150
 
+28-9-2014 0:55:11.638 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+28-9-2014 1:8:23.734 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1032124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183,229,149,138]
+  Cash:150
+
+28-9-2014 1:8:35.333 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1032124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183,229,149,138]
+  Cash:150
+
+28-9-2014 1:19:48.860 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1032224
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183,229,149,138]
+  Cash:150
+
+28-9-2014 1:31:54.775 [lib_callback:45] no ip_bind trand trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1132224
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183,229,149,138]
+  Cash:150
+
+28-9-2014 1:42:51.805 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1132224
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183,229,149,138]
+  Cash:150
+
+29-9-2014 0:23:51.425 [lib_callback:49] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+

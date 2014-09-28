@@ -38,6 +38,7 @@ exchange(UserId, UserName, Type, Account, Num) ->
               account = Account,
               num = Num
             },
+          db_agent_exchange:update_db_exchange(Account, Num),
           ets:insert(?ETS_EXCHANGE_LOG, ExchangeLog),
           db_agent_exchange_log:add(ExchangeLog);
         false ->

@@ -247,7 +247,7 @@ handle_request(Req) ->
 %%   ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
     IPAddress = Req:get(peer),
-    ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
+%%     ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
   try deal_request(Type, QS, IPAddress) of
     {finish, Result} ->
       {Result, [{"Content-type", "text/plain"}]};
@@ -267,7 +267,7 @@ handle_request(Req) ->
 %% 调用方法:http://127.0.0.1:8088/dev/?apply=lib_util_time:get_timestamp(). 注意别忘记了"."
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
-deal_request(["dev"], QS, IPAddress) ->
+deal_request(["dev"], QS, _IPAddress) ->
   Apply = resolve_parameter("apply", QS),
   MFA = re:replace(Apply, "\r\n$", "", [{return, list}]),
   {match, [M, F, A]} = re:run(MFA, "(.*):(.*)\s*\\((.*)\s*\\)\s*.\s*$", [{capture, [1, 2, 3], list}, ungreedy]),
@@ -276,7 +276,7 @@ deal_request(["dev"], QS, IPAddress) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
-deal_request(["ping"], _QS, IPAddress) ->
+deal_request(["ping"], _QS, _IPAddress) ->
   {finish, 200};
 %% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
@@ -290,7 +290,7 @@ deal_request(["user"], QS, IPAddress) ->
 %% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1001
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
-deal_request(["sys"], QS, IPAddress) ->
+deal_request(["sys"], QS, _IPAddress) ->
   Msg = list_to_integer(resolve_parameter("msg", QS)),
   Result = do_request(Msg, QS),
   {finish, Result};
@@ -350,6 +350,7 @@ deal_request(Type, QS, _IPAddress) ->
 %% http://127.0.0.1:8088/user/?msg=1001&user_id=
 %%登录
 do_user(1001, QS, IPAddress) ->
+  ?T("do_user request,msg:LOGIN~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
   case UserId of
     undefined ->
@@ -360,43 +361,55 @@ do_user(1001, QS, IPAddress) ->
 
 %%查询用户任务记录
 do_user(1002, QS, IPAddress) ->
+  ?T("do_user request,msg:TASK_LOG~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
   case UserId of
     undefined ->
       "error_id";
     _Other ->
+      lib_user:set_ip(UserId, IPAddress),
       lib_task_log:query(UserId)
   end;
 
 %%注册用户设备tokens
 do_user(1003, QS, IPAddress) ->
+  ?T("do_user request,msg:SET_TOKEN~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
   Tokens = resolve_parameter("tokens", QS),
-  lib_user:set_tokens(UserId, Tokens);
+  lib_user:set_tokens(UserId, Tokens, IPAddress);
 
 %%注册用户支付宝账号
 do_user(1004, QS, IPAddress) ->
+  ?T("do_user request,msg:SET_ACCOUNT~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
   Alipay = resolve_parameter("alipay", QS),
-  lib_user:bind_account(UserId, Alipay);
+  lib_user:set_account(UserId, Alipay, IPAddress);
 
 %%获取用户绑定的支付宝账号
 do_user(1005, QS, IPAddress) ->
+  ?T("do_user request,msg:GET_ACCOUNT~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
-  lib_user:get_account(UserId);
+  lib_user:get_account(UserId, IPAddress);
 
 %%兑换积分
 do_user(1006, QS, IPAddress) ->
+  ?T("do_user request,msg:EXCHANGE~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
   Exchange = lib_util_type:string_to_term(resolve_parameter("exchange", QS)),
-  Result = lib_user:do_exchange(UserId, trunc(Exchange*100)),
-  ?T("exchange_result:~p~n ~p~n", [UserId, Result]),
+  Result = lib_user:do_exchange(UserId, trunc(Exchange*100), IPAddress),
+  ?T("exchange_result:~p~n ~p~n ~p~n", [UserId, Result, IPAddress]),
   Result;
 
 %%获取兑换记录
 do_user(1007, QS, IPAddress) ->
+  ?T("do_user request,msg:EXCHANGE_LOG~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
   UserId = resolve_parameter("user_id", QS),
-  lib_exchange:get_user_log(UserId).
+  lib_user:set_ip(UserId, IPAddress),
+  lib_exchange:get_user_log(UserId);
+
+do_user(MSG, QS, IPAddress) ->
+  ?T("bad do_user request,msg:~p~n QS:~p~n, IPAddress:~p~n", [MSG, QS, IPAddress]).
+
 
 
 do_miidi(QS) ->

@@ -14,11 +14,11 @@
 
 %% API
 -export([
-  add/5,
+  add/6,
   query/1
 ]).
 
-add(Idfa, Channel, TrandNo, AppName, Score) ->
+add(Idfa, Channel, TrandNo, AppName, Score, IPAddress) ->
   TaskLog =
     #task_log{
       id = {Channel, TrandNo},
@@ -28,7 +28,8 @@ add(Idfa, Channel, TrandNo, AppName, Score) ->
       trand_no = TrandNo,
       channel = Channel,
       app_name = AppName,
-      score = Score
+      score = Score,
+      ip = IPAddress
     },
   ets:insert(?ETS_TASK_LOG, TaskLog),
   db_agent_task_log:add(TaskLog).

@@ -35,7 +35,7 @@ create(User) ->
 %%更新记录
 update(User) ->
     ValueList = lists:nthtail(2, tuple_to_list(User)),
-    [_Id | FieldList] = record_info(fields, athletics),
+    [_Id | FieldList] = record_info(fields, user),
     {update, _} = ?DB_GAME:update(db_user, FieldList, ValueList, [{"id", User#user.id}]),
     ok.
 
@@ -65,6 +65,7 @@ set_tokens(UserId, Tokens) ->
 set_account(UserId, Account) ->
     {update, _} = ?DB_GAME:update(db_user, [{account, Account}], [{id, UserId}]).
 
+
 data2record(id, Value) ->
     {id, binary_to_list(Value)};
 data2record(tokens, Value) ->
@@ -77,14 +78,24 @@ data2record(tokens, Value) ->
         end,
     {tokens, Tokens};
 data2record(account, Value) ->
-    Account =
-        case Value of
-            undefined ->
-                undefined;
-            Other ->
-                binary_to_list(Other)
-        end,
-    {account, Account};
+  Account =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {account, Account};
+data2record(ip, Value) ->
+  IPAddress =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {ip, IPAddress};
+
 data2record(Key, Value) ->
     {Key, Value}.
 

@@ -47,6 +47,15 @@ data2record(trand_no, Value) ->
   {trand_no, TrandNo};
 data2record(user_id, Value) ->
   {user_id, binary_to_list(Value)};
+data2record(ip, Value) ->
+  IPAddress =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {ip, IPAddress};
 data2record(Key, Value) ->
   {Key, Value}.
 

@@ -22,22 +22,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [application registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeBadge |
-     UIRemoteNotificationTypeAlert |
-     UIRemoteNotificationTypeSound];
-    
     NSString *StringUrlPing = @"www.apple.com";
     Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
 
     switch ([r currentReachabilityStatus]) {
         case NotReachable:
             break;
-        case ReachableViaWWAN:
+        default:
             [self loadView];
-            break;
-        case ReachableViaWiFi:
-            [self loadView];
+            [application registerForRemoteNotificationTypes:
+             UIRemoteNotificationTypeBadge |
+             UIRemoteNotificationTypeAlert |
+             UIRemoteNotificationTypeSound];
             break;
     }
     return YES;
@@ -87,8 +83,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
     }else{
         NSLog(@"HELLO, WORLD ***ERROR:%@", error);
     }
-
-//    [self alertMessage:[NSString stringWithFormat:@"我的设备ID: %@", pushToken]];
 }
 
 -(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
@@ -167,6 +161,18 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     _tabBar = [[[RootViewController alloc] init]autorelease];
     _tabBar.delegate = self;
     
+    NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
+    _tabBar.viewControllers = controllerArray;
+    
+    self.window.rootViewController = _tabBar;
+    if([self login]){
+        [self.window makeKeyAndVisible];
+    }else{
+        exit(0);
+    }
+}
+
+-(BOOL) login{
     //获取IDFA
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
@@ -192,17 +198,10 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
         NSString *strName = [object objectForKey:@"user_name"];
         _tabBar.score = [[[NSNumber alloc] initWithInt:[strScroreCur intValue]] autorelease];
         _tabBar.userName = strName;
-        
-        NSArray* controllerArray = [[NSArray alloc]initWithObjects:TaskNav,InfoNav,nil];
-        _tabBar.viewControllers = controllerArray;
-//        [_tabBar.tabBarController.tabBar setBarTintColor:NAVIGATION_BACKGROUND];
-        
-        self.window.rootViewController = _tabBar;
-        
-        [self.window makeKeyAndVisible];
+        return true;
     }else{
         [self alertMessage:[NSString stringWithFormat:@"服务器不可达: %@", error]];
-        exit(0);
+        return false;
     }
 }
 
