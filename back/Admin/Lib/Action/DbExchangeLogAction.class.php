@@ -18,7 +18,7 @@ class DbExchangeLogAction extends CommonAction{
         $model = D($name);
 
         if (!empty ($model)) {
-            $this->_list($model, $map, $sortBy = 'time', $asc = false, $countPk = 'user_id');
+            $this->_list($model, $map, $sortBy = 'time', $asc = false, $countPk = 'id');
         }
         $this->display();
         return;

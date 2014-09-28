@@ -1,0 +1,84 @@
+<include file="Public:pagerForm"/>
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+        <div class="searchBar">
+            <ul class="searchContent">
+                <li>
+                    <label>账号：</label>
+                    <input type="text" name="id" value=""/>
+                </li>
+                <li>
+                    <label>状态：</label>
+                    <input type="text" name="status" value=""/>
+                </li>
+            </ul>
+            <div class="subBar">
+                <ul>
+                    <li>
+                        <div class="buttonActive">
+                            <div class="buttonContent">
+                                <button type="submit">查询</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="__URL__/add" target="dialog" mask="true"><span>新增</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/id/{sid_dbtask}/navTabId/__MODULE__" target="ajaxTodo"
+                   title="你确定要删除吗？" warn="请选择用户"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_dbtask}" target="dialog" mask="true"
+                   warn="请选择用户"><span>编辑</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="__URL__/password/id/{sid_dbtask}" target="dialog" mask="true" warn="请选择用户"><span>修改密码</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <table class="table" width="100%" layoutH="138">
+        <thead>
+            <tr align="center">
+                <th width="50" orderField="id"
+                <if condition="$_REQUEST._order eq 'id'">class="{$_REQUEST._sort}"</if>
+                >支付宝账号</th>
+                <th width="50" orderField="sum"
+                <if condition="$_REQUEST._order eq 'sum'">class="{$_REQUEST._sort}"</if>
+                >余额</th>
+                <th width="20" orderField="last_update"
+                <if condition="$_REQUEST._order eq 'last_update'">class="{$_REQUEST._sort}"</if>
+                >最后更新</th>
+                <th width="20" orderField="status"
+                <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>
+                >审核</th>
+            </tr>
+        </thead>
+        <tbody>
+        <volist id="vo" name="list">
+            <tr target="sid_dbtask" rel="{$vo['user_id']}">
+                <td>{$vo.id}</td>
+                <td>{$vo.sum|score_to_rmb}元</td>
+                <td>{$vo.last_update|date="Y-m-d H:i:s",###}</td>
+                <td>{$vo['status']|cash=$vo['id']}</td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+
+    <div class="panelBar">
+        <div class="pages">
+            <span>共{$totalCount}条</span>
+        </div>
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}"
+             pageNumShown="10" currentPage="{$currentPage}"></div>
+    </div>
+
+</div>
+
+

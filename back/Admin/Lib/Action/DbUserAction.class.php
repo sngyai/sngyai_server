@@ -7,9 +7,20 @@
  */
 
 class DbUserAction extends CommonAction{
-//    public function index(){
-//        $Data = M('DbUser');
-//        $this->data = $Data->select();
-//        $this->display();
+//    protected function _search($name = '')
+//    {
+//        //生成查询条件
+//        if (empty ($name)) {
+//            $name = $this->getActionName();
+//        }
+//        $name = $this->getActionName();
+//        $model = D($name);
+//        $map = array();
+//        foreach ($model->getDbFields() as $key => $val) {
+//            if (isset ($_REQUEST [$val]) && $_REQUEST [$val] != '') {
+//                $map [$val] = $_REQUEST [$val];
+//            }
+//        }
+//        return $map;
 //    }
 } 

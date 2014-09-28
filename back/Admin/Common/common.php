@@ -204,6 +204,23 @@ function exchange($status, $id, $callback = "")
     return $info;
 }
 
+function cash($status, $id, $callback = "")
+{
+    switch ($status) {
+        case 0 :
+            $info = '<a href="__URL__/exchange/id/' . $id . '/navTabId/__MODULE__" target="ajaxTodo" callback="' . $callback . '">审核</a>';
+            break;
+        case 1 :
+            $info = "已结算";
+    }
+    return $info;
+}
+
+function score_to_rmb($sum)
+{
+    return $sum / 100;
+}
+
 function getChannel($channel)
 {
     switch ($channel){
@@ -224,6 +241,17 @@ function getChannel($channel)
         case 7 :
             return "巨朋";
     }
+}
+
+function getCity($ip)
+{
+    $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
+    $ipinfo=json_decode(file_get_contents($url));
+    if($ipinfo->code=='1'){
+        return false;
+    }
+    $city = $ipinfo->data->region.$ipinfo->data->city;
+    return $city;
 }
 
 /**

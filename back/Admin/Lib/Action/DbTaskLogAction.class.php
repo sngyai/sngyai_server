@@ -23,4 +23,22 @@ class DbTaskLogAction extends CommonAction{
         $this->display();
         return;
     }
+
+    protected function _search($name = '')
+    {
+        //生成查询条件
+        if (empty ($name)) {
+            $name = $this->getActionName();
+        }
+        $name = $this->getActionName();
+        $model = D($name);
+        $map = array();
+        foreach ($model->getDbFields() as $key => $val) {
+            if (isset ($_REQUEST [$val]) && $_REQUEST [$val] != '') {
+                $map [$val] = $_REQUEST [$val];
+            }
+        }
+        return $map;
+
+    }
 }

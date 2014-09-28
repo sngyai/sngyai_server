@@ -22,6 +22,7 @@ class DbExchangeLogModel extends CommonModel{
 
     public function cancel_exchange($options, $field = 'status')
     {
+        $now = time();
         $data = array($field=>0,'last_update'=>$now);
         if (FALSE === $this->where($options)->setField($data)) {
             $this->error = L('_OPERATION_WRONG_');

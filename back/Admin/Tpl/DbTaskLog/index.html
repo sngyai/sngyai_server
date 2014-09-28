@@ -5,8 +5,20 @@
         <div class="searchBar">
             <ul class="searchContent">
                 <li>
-                    <label>用户名：</label>
-                    <input type="text" name="account" value=""/>
+                    <label>用户id：</label>
+                    <input type="text" name="id" value=""/>
+                </li>
+                <li>
+                    <label>赚钱号：</label>
+                    <input type="text" name="name" value=""/>
+                </li>
+                <li>
+                    <label>应用名称：</label>
+                    <input type="text" name="app_name" value=""/>
+                </li>
+                <li>
+                    <label>ip地址：</label>
+                    <input type="text" name="ip" value=""/>
                 </li>
             </ul>
             <div class="subBar">
@@ -57,6 +69,12 @@
                 <th width="50" orderField="score"
                 <if condition="$_REQUEST._order eq 'score'">class="{$_REQUEST._sort}"</if>
                 >获得积分</th>
+                <th width="50" orderField="ip"
+                <if condition="$_REQUEST._order eq 'ip'">class="{$_REQUEST._sort}"</if>
+                >ip</th>
+                <th width="50" orderField="ip"
+                <if condition="$_REQUEST._order eq 'ip'">class="{$_REQUEST._sort}"</if>
+                >ip所在地</th>
                 <th width="150">流水号</th>
             </tr>
         </thead>
@@ -69,6 +87,8 @@
                 <td>{$vo.channel|getChannel}</td>
                 <td>{$vo.app_name}</td>
                 <td>{$vo.score}</td>
+                <td>{$vo.ip}</td>
+                <td>{$vo.ip|getCity}</td>
                 <td>{$vo.trand_no}</td>
             </tr>
         </volist>

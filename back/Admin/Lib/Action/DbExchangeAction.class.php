@@ -2,25 +2,26 @@
 /**
  * Created by IntelliJ IDEA.
  * User: sngyai
- * Date: 14-9-25
- * Time: 上午2:46
+ * Date: 14-9-27
+ * Time: 下午9:17
  */
 
 class DbExchangeAction extends CommonAction{
-    public function index()
+    function exchange()
     {
-        //列表过滤器，生成查询Map对象
-        $map = $this->_search();
-        if (method_exists($this, '_filter')) {
-            $this->_filter($map);
-        }
+        //审核指定记录
         $name = $this->getActionName();
-        $model = D($name);
 
-        if (!empty ($model)) {
-            $this->_list($model, $map, $sortBy = 'sum', $asc = false, $countPk = 'id');
+        $model = D($name);
+        $pk = $model->getPk();
+        $id = $_GET [$pk];
+
+        $condition = array($pk => array('in', $id));
+        if (false !== $model->exchange($condition)) {
+            $this->assign("jumpUrl", $this->getReturnUrl());
+            $this->success('审核成功！');
+        } else {
+            $this->error('审核失败！');
         }
-        $this->display();
-        return;
     }
 } 
