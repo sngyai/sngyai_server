@@ -244,10 +244,11 @@ loop(Req, Root) ->
 handle_request(Req) ->
   %?T("handle_request path: ~p, method:~p",[Req:get(path), Req:get(method)]),
   QS = case Req:get(method) of 'GET' -> Req:parse_qs(); 'POST' -> Req:parse_post() end,
-  ?T("handle_request req:~p, QS:~p", [Req, QS]),
 %%   ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
-  try deal_request(Type, QS) of
+    IPAddress = Req:get(peer),
+    ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
+  try deal_request(Type, QS, IPAddress) of
     {finish, Result} ->
       {Result, [{"Content-type", "text/plain"}]};
     Other ->
@@ -266,7 +267,7 @@ handle_request(Req) ->
 %% 调用方法:http://127.0.0.1:8088/dev/?apply=lib_util_time:get_timestamp(). 注意别忘记了"."
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
-deal_request(["dev"], QS) ->
+deal_request(["dev"], QS, IPAddress) ->
   Apply = resolve_parameter("apply", QS),
   MFA = re:replace(Apply, "\r\n$", "", [{return, list}]),
   {match, [M, F, A]} = re:run(MFA, "(.*):(.*)\s*\\((.*)\s*\\)\s*.\s*$", [{capture, [1, 2, 3], list}, ungreedy]),
@@ -275,60 +276,56 @@ deal_request(["dev"], QS) ->
   Result = apply(list_to_atom(M), list_to_atom(F), Args),
   {finish, io_lib:format("~p", [Result])};
 
-deal_request(["ping"], _QS) ->
+deal_request(["ping"], _QS, IPAddress) ->
   {finish, 200};
 %% 调用方法:http://127.0.0.1:8088/user/?msg=1001&id=....
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
-deal_request(["user"], QS) ->
+deal_request(["user"], QS, IPAddress) ->
   Msg = list_to_integer(resolve_parameter("msg", QS)),
-  Result = do_user(Msg, QS),
+  Result = do_user(Msg, QS, IPAddress),
   {finish, Result};
 
 %% 处理请求
 %% 系统请求,调用方法:http://127.0.0.1:8088/sys/?msg=1001
 %% QS:当前参数列表
 %% 返回值:{finish, Result:string()}
-deal_request(["sys"], QS) ->
+deal_request(["sys"], QS, IPAddress) ->
   Msg = list_to_integer(resolve_parameter("msg", QS)),
   Result = do_request(Msg, QS),
   {finish, Result};
 
 %%**********************************积分墙回调 start *********************************
 %% miidi回调,调用方法:http://127.0.0.1:8088/callback/
-deal_request(["miidi"], QS) ->
+deal_request(["miidi"], QS, _IPAddress) ->
   Result = do_miidi(QS),
   {finish, Result};
 
-deal_request(["cocounion"], QS) ->
+deal_request(["cocounion"], QS, _IPAddress) ->
   Result = do_cocounion(QS),
   {finish, Result};
 
-deal_request(["youmi"], QS) ->
+deal_request(["youmi"], QS, _IPAddress) ->
   Result = do_youmi(QS),
   {finish, Result};
 
-deal_request(["guomob"], QS) ->
+deal_request(["guomob"], QS, _IPAddress) ->
   Result = do_guomob(QS),
   {finish, Result};
 
-deal_request(["domob"], QS) ->
+deal_request(["domob"], QS, _IPAddress) ->
   Result = do_domob(QS),
   {finish, Result};
 
-deal_request(["adwo"], QS) ->
+deal_request(["adwo"], QS, _IPAddress) ->
   Result = do_adwo(QS),
   {finish, Result};
 
-deal_request(["adsage"], QS) ->
+deal_request(["adsage"], QS, _IPAddress) ->
   Result = do_adsage(QS),
   {finish, Result};
-deal_request(["jupeng"], QS) ->
+deal_request(["jupeng"], QS, _IPAddress) ->
   Result = do_jupeng(QS),
-  {finish, Result};
-
-deal_request(["exchange_log"], _QS) ->
-  Result = do_exchange_log(),
   {finish, Result};
 
 %%**********************************积分墙回调 end *********************************
@@ -336,7 +333,7 @@ deal_request(["exchange_log"], _QS) ->
 %% 安全沙箱
 %% 系统请求,调用方法:http://127.0.0.1:8088/crossdomain.xml
 %% 返回值:{finish, Result:string()}
-deal_request(["crossdomain.xml"], _QS) ->
+deal_request(["crossdomain.xml"], _QS, _IPAddress) ->
   Result = "<cross-domain-policy><allow-access-from domain='*' to-ports='*' /></cross-domain-policy>",
   {finish, Result};
 
@@ -344,7 +341,7 @@ deal_request(["crossdomain.xml"], _QS) ->
 %% Type:类型
 %% QS:当前参数列表
 %% 返回值:{finish, type_error}
-deal_request(Type, QS) ->
+deal_request(Type, QS, _IPAddress) ->
   ?Error(webserver_logger, "mod_webserver deal_request type error type:~p, QS:~p~n", [Type, QS]),
   ?T("mod_webserver deal_request type error type:~p, QS:~p~n", [Type, QS]),
   {finish, "type_error"}.
@@ -352,17 +349,17 @@ deal_request(Type, QS) ->
 %%用户相关
 %% http://127.0.0.1:8088/user/?msg=1001&user_id=
 %%登录
-do_user(1001, QS) ->
+do_user(1001, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   case UserId of
     undefined ->
       "error_id";
     _Other ->
-      lib_user:login(UserId)
+      lib_user:login(UserId, IPAddress)
   end;
 
 %%查询用户任务记录
-do_user(1002, QS) ->
+do_user(1002, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   case UserId of
     undefined ->
@@ -372,24 +369,24 @@ do_user(1002, QS) ->
   end;
 
 %%注册用户设备tokens
-do_user(1003, QS) ->
+do_user(1003, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   Tokens = resolve_parameter("tokens", QS),
   lib_user:set_tokens(UserId, Tokens);
 
 %%注册用户支付宝账号
-do_user(1004, QS) ->
+do_user(1004, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   Alipay = resolve_parameter("alipay", QS),
   lib_user:bind_account(UserId, Alipay);
 
 %%获取用户绑定的支付宝账号
-do_user(1005, QS) ->
+do_user(1005, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   lib_user:get_account(UserId);
 
 %%兑换积分
-do_user(1006, QS) ->
+do_user(1006, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   Exchange = lib_util_type:string_to_term(resolve_parameter("exchange", QS)),
   Result = lib_user:do_exchange(UserId, trunc(Exchange*100)),
@@ -397,12 +394,9 @@ do_user(1006, QS) ->
   Result;
 
 %%获取兑换记录
-do_user(1007, QS) ->
+do_user(1007, QS, IPAddress) ->
   UserId = resolve_parameter("user_id", QS),
   lib_exchange:get_user_log(UserId).
-
-do_exchange_log() ->
-  lib_exchange:get_all().
 
 
 do_miidi(QS) ->

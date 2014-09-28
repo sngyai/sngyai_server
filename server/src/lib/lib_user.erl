@@ -71,10 +71,16 @@ create_role_with_account(Idfa, Account) ->
   Name.
 
 %%登录
-login(UserId) ->
+login(UserId, IPAddress) ->
   {Name, ScoreCurrent, ScoreTotal} =
     case ets:lookup(?ETS_ONLINE, UserId) of
-      [#user{name = UserName, score_current = SC, score_total = ST} | _] ->
+      [#user{name = UserName, score_current = SC, score_total = ST}=Info|_] ->
+          NewInfo =
+            Info#user{
+                ip = IPAddress
+            },
+          ets:insert(?ETS_ONLINE, NewInfo),
+          db_agent_user:update(NewInfo),
         {UserName, SC, ST};
       _Other -> %用户不存在，创建一个
         UserName = create_role(UserId),

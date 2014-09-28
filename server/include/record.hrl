@@ -37,7 +37,8 @@
   score_total = 0,
   account,
   tokens,
-  create_time
+  create_time,
+  ip
 }).
 
 -record(task_log,
