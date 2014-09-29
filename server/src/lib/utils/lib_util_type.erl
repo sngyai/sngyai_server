@@ -224,6 +224,8 @@ get_record_filed_list(Record_Name) ->
       record_info(fields, task_log);
     exchange_log ->
       record_info(fields, exchange_log);
+    exchange ->
+      record_info(fields, exchange);
     Other_Record ->
       ?T("get_record_filed_list record no define in lib_util_type.erl do it record_name is:~p", [Other_Record]),
       ?Error(default_logger, "no record ~p", [Other_Record]),
