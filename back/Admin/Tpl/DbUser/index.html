@@ -50,8 +50,8 @@
         </ul>
     </div>
 
-    <table class="table" width="100%" layoutH="138">
-        <thead>
+    <table style="word-wrap:break-word;" class="table" width="100%" layoutH="138">
+        <thead align="center">
             <tr>
                 <th width="100">IDFA</th>
                 <th width="100" orderField="account"
@@ -69,11 +69,10 @@
                 <th width="50" orderField="score_current"
                 <if condition="$_REQUEST._order eq 'score_current'">class="{$_REQUEST._sort}"</if>
                 >ip所在地</th>
-                <th width="150">tokens</th>
                 <th width="150">创建时间</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
         <volist id="vo" name="list">
             <tr target="sid_dbuser" rel="{$vo['id']}">
                 <td>{$vo.id}</td>
@@ -82,8 +81,7 @@
                 <td>{$vo.score_current}</td>
                 <td>{$vo.ip}</td>
                 <td>{$vo.ip|getCity}</td>
-                <td>{$vo.tokens}</td>
-                <td>{$vo.create_time|date="Y-m-d",###}</td>
+                <td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
             </tr>
         </volist>
         </tbody>

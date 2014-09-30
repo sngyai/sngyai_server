@@ -5,20 +5,12 @@
         <div class="searchBar">
             <ul class="searchContent">
                 <li>
-                    <label>用户id：</label>
-                    <input type="text" name="id" value=""/>
-                </li>
-                <li>
                     <label>赚钱号：</label>
                     <input type="text" name="name" value=""/>
                 </li>
                 <li>
                     <label>账号：</label>
                     <input type="text" name="account" value=""/>
-                </li>
-                <li>
-                    <label>状态：</label>
-                    <input type="text" name="status" value=""/>
                 </li>
             </ul>
             <div class="subBar">
@@ -50,49 +42,45 @@
         </ul>
     </div>
 
-    <table class="table" width="100%" layoutH="138">
-        <thead>
+    <table border="1" align="right" style="word-wrap:break-word;" class="table" width="95%" layoutH="138">
+        <thead align="center">
             <tr align="center">
-                <th width="50" orderField="id"
+                <th orderField="id"
                 <if condition="$_REQUEST._order eq 'id'">class="{$_REQUEST._sort}"</if>
                 >流水号</th>
-                <th width="50" orderField="user_id"
+                <th orderField="user_id"
                 <if condition="$_REQUEST._order eq 'user_id'">class="{$_REQUEST._sort}"</if>
                 >IDFA</th>
-                <th width="50" orderField="name"
+                <th orderField="name"
                 <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>
                 >赚钱号</th>
-                <th width="50" orderField="time"
+                <th orderField="time"
                 <if condition="$_REQUEST._order eq 'time'">class="{$_REQUEST._sort}"</if>
                 >时间</th>
-                <th width="20" orderField="type"
+                <th orderField="type"
                 <if condition="$_REQUEST._order eq 'type'">class="{$_REQUEST._sort}"</if>
                 >兑换类型</th>
-                <th width="50" orderField="account"
+                <th orderField="account"
                 <if condition="$_REQUEST._order eq 'account'">class="{$_REQUEST._sort}"</if>
                 >账户名称</th>
-                <th width="150" orderField="num"
+                <th orderField="num"
                 <if condition="$_REQUEST._order eq 'num'">class="{$_REQUEST._sort}"</if>
                 >使用积分</th>
-                <th width="150" orderField="status"
-                <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>
-                >状态</th>
-                <th width="150" orderField="status"
+                <th orderField="status"
                 <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>
                 >最后更新时间</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
         <volist id="vo" name="list">
             <tr target="sid_dbexchangelog" rel="{$vo['id']}">
                 <td>{$vo.id}</td>
                 <td>{$vo.user_id}</td>
                 <td>{$vo.name}</td>
                 <td>{$vo.time|date="Y-m-d H:i:s",###}</td>
-                <td>{$vo.type|getChannel}</td>
+                <td>{$vo.type|getExchange}</td>
                 <td>{$vo.account}</td>
                 <td>{$vo.num}</td>
-                <td>{$vo['status']|exchange=$vo['id']}</td>
                 <td>{$vo.last_update|date="Y-m-d H:i:s",###}</td>
             </tr>
         </volist>

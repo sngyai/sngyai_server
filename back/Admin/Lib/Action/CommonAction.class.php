@@ -100,7 +100,6 @@ class CommonAction extends Action
             }
         }
         return $map;
-
     }
 
     /**
@@ -122,7 +121,6 @@ class CommonAction extends Action
      */
     protected function _list($model, $map, $sortBy = '', $asc = false, $countPk = 'id')
     {
-//        echo $countPk;
         //排序字段 默认为主键名
         if (!empty ($_REQUEST ['_order'])) {
             $order = $_REQUEST ['_order'];

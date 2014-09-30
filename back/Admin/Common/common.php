@@ -10,6 +10,8 @@
 // +----------------------------------------------------------------------
 // $Id$
 
+import('ORG.Net.IpLocation');// 导入IpLocation类
+
 //公共函数
 function toDate($time, $format = 'Y-m-d H:i:s')
 {
@@ -243,15 +245,44 @@ function getChannel($channel)
     }
 }
 
+function getChannelId($channel)
+{
+    switch ($channel){
+        case "安沃" :
+            return 0;
+        case "有米" :
+            return 1;
+        case "米迪" :
+            return 2;
+        case "果盟" :
+            return 3;
+        case "触控" :
+            return 4;
+        case "多盟" :
+            return 5;
+        case "艾德" :
+            return 6;
+        case "巨朋" :
+            return 7;
+    }
+}
+
+function getExchange($type){
+    switch($type){
+        case 0:
+            return "支付宝";
+        case 1:
+            return "未知";
+    }
+
+}
+
 function getCity($ip)
 {
-    $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
-    $ipinfo=json_decode(file_get_contents($url));
-    if($ipinfo->code=='1'){
-        return false;
-    }
-    $city = $ipinfo->data->region.$ipinfo->data->city;
-    return $city;
+    $Ip = new IpLocation(); // 实例化类 参数表示IP地址库文件
+    $area = $Ip->getlocation($ip); // 获取某个IP地址所在的位置
+
+    return $area['country'].$area['area'];
 }
 
 /**

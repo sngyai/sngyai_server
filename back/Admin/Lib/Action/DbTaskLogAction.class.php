@@ -39,6 +39,5 @@ class DbTaskLogAction extends CommonAction{
             }
         }
         return $map;
-
     }
 }

@@ -13,6 +13,19 @@
                     <input type="text" name="name" value=""/>
                 </li>
                 <li>
+                    <label>渠道：</label>
+                    <select name="channel" value="">
+                        <option value="0">安沃</option>
+                        <option value="1">有米</option>
+                        <option value="2">米迪</option>
+                        <option value="3">果盟</option>
+                        <option value="4">触控</option>
+                        <option value="5">多盟</option>
+                        <option value="6">艾德</option>
+                        <option value="7">巨朋</option>
+                    </select>
+                </li>
+                <li>
                     <label>应用名称：</label>
                     <input type="text" name="app_name" value=""/>
                 </li>
@@ -50,8 +63,8 @@
         </ul>
     </div>
 
-    <table class="table" width="100%" layoutH="138">
-        <thead>
+    <table style="word-wrap:break-word;" class="table" width="100%" layoutH="138">
+        <thead align="center">
             <tr align="center">
                 <th width="100">IDFA</th>
                 <th width="50" orderField="name"
@@ -75,10 +88,9 @@
                 <th width="50" orderField="ip"
                 <if condition="$_REQUEST._order eq 'ip'">class="{$_REQUEST._sort}"</if>
                 >ip所在地</th>
-                <th width="150">流水号</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody  align="center">
         <volist id="vo" name="list">
             <tr target="sid_dbtasklog" rel="{$vo['user_id']}">
                 <td>{$vo.user_id}</td>
@@ -89,7 +101,6 @@
                 <td>{$vo.score}</td>
                 <td>{$vo.ip}</td>
                 <td>{$vo.ip|getCity}</td>
-                <td>{$vo.trand_no}</td>
             </tr>
         </volist>
         </tbody>
