@@ -117,25 +117,31 @@
                 UITableViewCellStyleDefault reuseIdentifier:myId];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    UIFont *myFont = [UIFont fontWithName: @"Arial" size:15];
     switch (indexPath.section) {
         case 0:
             if (indexPath.row == 0) {
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
                 
-                NSString *userName = [NSString stringWithFormat:@"賺錢號:\t %@", tabBarController.userName];
+                NSString *userName = [NSString stringWithFormat:@"赚钱编号:\t\t\t %@", tabBarController.userName];
                 cell.textLabel.text = userName;
+                cell.textLabel.font  = myFont;
+                cell.imageView.image = [UIImage imageNamed:@"name.png"];
                 cell.userInteractionEnabled = NO;
             }
             if (indexPath.row == 1) {
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
                 
-                NSString *totalScore = [NSString stringWithFormat:@"用户总积分:\t %@", tabBarController.score];
+                NSString *totalScore = [NSString stringWithFormat:@"可用积分:\t\t\t %@", tabBarController.score];
+                cell.textLabel.font  = myFont;
+                cell.imageView.image = [UIImage imageNamed:@"coin.png"];
                 cell.textLabel.text = totalScore;
                 cell.userInteractionEnabled = NO;
             }
             if (indexPath.row == 2) {
                 cell.textLabel.text = @"账户设置";
+                cell.textLabel.font  = myFont;
+                cell.imageView.image = [UIImage imageNamed:@"account.png"];
             }
             
             return cell;
@@ -143,6 +149,8 @@
         case 1:
             if (indexPath.row == 0) {
                 cell.textLabel.text = @"积分兑换";
+                cell.textLabel.font  = myFont;
+                cell.imageView.image = [UIImage imageNamed:@"exchange.png"];
             }
             return cell;
             break;
