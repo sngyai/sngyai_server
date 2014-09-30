@@ -29,6 +29,7 @@
         case NotReachable:
             break;
         default:
+//            [IntegralWallConfig loadWithAppID:@"77" WithSubID:@"" WithType:@"Data" WithUserID:@"142" WithAppKey:@"7a94f4a57fb0b426b3ac2f7d27426396"];
             [self loadView];
             [application registerForRemoteNotificationTypes:
              UIRemoteNotificationTypeBadge |
@@ -101,7 +102,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+//    [PFPush handlePush:userInfo];
 }
 
 //- (void)hold

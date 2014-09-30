@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+//#import <Parse/Parse.h>
 #import "RootViewController.h"
 #import "TaskTableViewController.h"
 #import "RootViewController.h"
@@ -15,6 +15,8 @@
 #import "InfoTableViewController.h"
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
+//#import "IntegralWallADView.h"
+//#import "IntegralWallConfig.h"
 
 #define DARK_BACKGROUND  [UIColor colorWithRed:151.0/255.0 green:152.0/255.0 blue:155.0/255.0 alpha:1.0]
 #define LIGHT_BACKGROUND [UIColor colorWithRed:172.0/255.0 green:173.0/255.0 blue:175.0/255.0 alpha:1.0]

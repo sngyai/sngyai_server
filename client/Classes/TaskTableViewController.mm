@@ -159,8 +159,12 @@
                           NSLog(@"巨朋积分墙已退出");
                       }];
             break;
-//        case 8:
-//            [AppConnect showList:self];
+        case 8:
+//            [IntegralWallADView showWallADView:YES didShowBlock:^(NSString *returnInfo){
+//                NSLog(@"info>>>>%@",returnInfo);
+//            } didDismissBlock:^(NSString * info){
+//                NSLog(@"info>>>>%@",info);
+//            }];
             break;
 		default:
 			break;
