@@ -67,3 +67,9 @@
   last_update = 0
 }).
 
+-record(exchange, {
+    id,
+    sum,
+    status,
+    last_update
+}).
