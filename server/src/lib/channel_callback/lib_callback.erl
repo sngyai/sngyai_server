@@ -22,6 +22,7 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
     [] ->
       case check_ip(Idfa, AppName) of
         {error, ErrorMsg} ->
+          ?Error(trand_logger, "ip conficts trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
           case lib_user:get_tokens(Idfa) of
             [] ->
               ?Error(default_logger, "no tokens: ~p~n", [Idfa]);
@@ -93,6 +94,8 @@ check_ip(UserId, AppName) ->
         [] ->
           {ok, IPAddress};
         _Other ->
+          ?Error(trand_logger, "ip conficts trand req:~n  Idfa:~p~n, AppName:~p~n, AppName2:~p~n,  IPAddress:~p~n, OtherIp:~p~n",
+            [UserId,AppName,mochiutf8:bytes_to_codepoints(list_to_binary(AppName)),IPAddress, _Other]),
           ErrorMsg = lists:concat(["IP冲突，重复的任务: ", mochiutf8:bytes_to_codepoints(list_to_binary(AppName))]),
           {error, ErrorMsg}
       end;

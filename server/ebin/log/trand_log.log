@@ -119,3 +119,38 @@
   AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
   Cash:150
 
+2-10-2014 12:10:19.519 [lib_callback:47] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:4
+  TrandNo:"c711673f56644958ba557dbc5133d627"
+  AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
+  Cash:900
+
+2-10-2014 12:13:21.406 [lib_callback:47] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:4
+  TrandNo:"c711673f56644958ba557dbc5133d627"
+  AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
+  Cash:900
+
+2-10-2014 12:13:25.268 [lib_callback:47] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:4
+  TrandNo:"c711673f56644958ba557dbc5133d627"
+  AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
+  Cash:900
+
+2-10-2014 12:13:28.137 [lib_callback:47] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:4
+  TrandNo:"c711673f56644958ba557dbc5133d627"
+  AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
+  Cash:900
+
+2-10-2014 12:23:18.902 [lib_callback:47] duplicate trand req:
+  Idfa:"DDAF4643-0E61-4118-8C35-D80D8A1F9DEE"
+, Channel:4
+  TrandNo:"c711673f56644958ba557dbc5133d627"
+  AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
+  Cash:900
+

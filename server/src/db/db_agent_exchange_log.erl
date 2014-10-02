@@ -44,7 +44,8 @@ get_update() ->
 
 %%更新用户积分
 set_status(Id) ->
-  {update, _} = ?DB_GAME:update(db_exchange_log, [{status, 1}], [{id, Id}]).
+  Time = lib_util_time:get_timestamp(),
+  {update, _} = ?DB_GAME:update(db_exchange_log, [{status, 1}, {last_update, Time}], [{id, Id}]).
 
 data2record(account, Value) ->
   TrandNo =
