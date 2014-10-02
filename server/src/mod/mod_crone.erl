@@ -67,7 +67,7 @@ init([]) ->
   process_flag(trap_exit, true),
   put(tag, ?MODULE),
 
-  Exchange = {{daily, [{11, 53, pm}]}, {lib_exchange, daily_exchange, []}},
+  Exchange = {{daily, [{11, 59, pm}]}, {lib_exchange, daily_exchange, []}},
   Tasks = [Exchange],
   [spawn_link(crone, loop_task, [T]) || T <- Tasks],
   {ok, Tasks}.
