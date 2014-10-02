@@ -31,7 +31,6 @@ get_user_task(UserId) ->
   case ?DB_GAME:select_record_with(task_log, fun data2record/2, db_task_log, "*", [{user_id, UserId}]) of
     {record, TaskList} -> {ok, TaskList};
     Error ->
-      ?T("get_user_by_name: ~p~n", [Error]),
       Error
   end.
 

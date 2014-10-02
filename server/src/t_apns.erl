@@ -19,7 +19,6 @@
 conn_apns() ->
   ssl:start(),
   apns:start(),
-  ?T(['HELLO, WORLD !']),
   apns:connect(
     ?APNS_NAME,
     fun handle_apns_error/2,

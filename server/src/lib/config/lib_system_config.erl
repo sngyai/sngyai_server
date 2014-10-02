@@ -77,7 +77,6 @@ manage(QS) ->
     Op_Real when Op_Real =:= 1;Op_Real =:= 2 ->
       manage(Op_Real, QS);
     Other ->
-      ?T("manage final:~s", [Other]),
       Other
   end.
 
@@ -99,7 +98,6 @@ manage(1, QS) ->
     {Id, Value} ->
       manage(1, Id, Value);
     Other ->
-      ?T("manage final:~s", [Other]),
       Other
   end;
 

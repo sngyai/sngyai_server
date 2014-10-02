@@ -24,7 +24,6 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
         {error, ErrorMsg} ->
           case lib_user:get_tokens(Idfa) of
             [] ->
-              ?T("no tokens: ~p~n", [Idfa]),
               ?Error(default_logger, "no tokens: ~p~n", [Idfa]);
             Token ->
               apns:send_message(?APNS_NAME,
@@ -41,11 +40,9 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
           lib_user:add_score(Idfa, Cash),
           push_notification(Idfa, ChannelId, AppName, Cash);
         _Other ->
-          ?T("no ip_bind trand req:~n  Idfa:~p~n  Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
           ?Error(trand_logger, "no ip_bind trand trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash])
       end;
     _Other -> %%重复的流水
-      ?T("duplicate trand req:~n  Idfa:~p~n  Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
       ?Error(trand_logger, "duplicate trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash])
   end.
 
@@ -53,7 +50,6 @@ push_notification(Idfa, Channel, AppName, Score) ->
   AppNameStr = mochiutf8:bytes_to_codepoints(list_to_binary(AppName)),
   case lib_user:get_tokens(Idfa) of
     [] ->
-      ?T("no tokens: ~p~n", [Idfa]),
       ?Error(default_logger, "no tokens: ~p~n", [Idfa]);
     Token ->
       Msg =

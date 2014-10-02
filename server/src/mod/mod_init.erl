@@ -226,10 +226,7 @@ init_data_task_log() ->
     end, AllTasks).
 
 init_data_exchange_log() ->
-%%   BeginTime = lib_util_time:get_current_day_start_timestamp(),
-%%   AllExchanges = db_agent_exchange_log:get_valid(BeginTime),
   AllExchanges = db_agent_exchange_log:get_all(),
-  ?T("HELLO, WORLD ****** INIT_DB_TASK_LOG:~p~n", [AllExchanges]),
   lists:foreach(
     fun(#exchange_log{} = Exchange_E) ->
       ets:insert(?ETS_EXCHANGE_LOG, Exchange_E)

@@ -44,7 +44,6 @@ get_user_by_name(User) ->
     case ?DB_GAME:select_record_with(user, fun data2record/2, db_user, "*", [{account, UserName}]) of
         {record, UserList} -> {ok, UserList};
         Error ->
-            ?T("get_user_by_name: ~p~n", [Error]),
             Error
     end.
 

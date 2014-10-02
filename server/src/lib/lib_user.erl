@@ -128,7 +128,6 @@ set_ip(UserId, IPAddress) ->
 
 %%兑换积分
 do_exchange(UserId, Exchange, IPAddress) ->
-  ?T("exchange:~p~n ~p~n", [UserId, Exchange]),
   case Exchange > 0 of
     true ->
       case ets:lookup(?ETS_ONLINE, UserId) of
@@ -182,7 +181,6 @@ add_score(UserId, Score) ->
         },
       update_user(NewUserInfo);
     _Other ->
-      ?T("add_score_error:~p~n ~p~n", [_Other, ets:tab2list(?ETS_ONLINE)]),
       ?Error(default_logger, "add_score_error: ~p~n ~p~n ~p~n", [UserId, _Other, ets:tab2list(?ETS_ONLINE)])
   end.
 

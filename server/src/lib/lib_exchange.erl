@@ -62,7 +62,6 @@ get_user_log(UserId) ->
       L ->
         lists:reverse(lists:keysort(#exchange_log.time, L))
     end,
-  ?T("hello, world ***** get_user_log: ~p", [List]),
   lists:concat(["[", concat_result(List, []), "]"]).
 
 concat_result([], Result) ->
@@ -96,7 +95,6 @@ concat_result([Exchange|T], Result) ->
 %%每日兑换
 daily_exchange() ->
   AllExchanges = ets:tab2list(?ETS_EXCHANGE_LOG),
-  ?T("HELLO, WORLD*******DAILY_EXCHANGE:~p~n", [AllExchanges]),
   Fun =
     fun(#exchange_log{id = Id, account = Account, num = Num}, AccountSumList) ->
       OldSum =
@@ -112,7 +110,6 @@ daily_exchange() ->
       [{Account, NewSum}|proplists:delete(Account, AccountSumList)]
     end,
   ExchangeList = lists:foldl(Fun, [], AllExchanges),
-  ?T("HELLO, WORLD*******DAILY_EXCHANGE 2 :~p~n", [ExchangeList]),
   [db_agent_exchange:update_db_exchange(Account, Sum)||{Account, Sum} <- ExchangeList].
 
 
