@@ -78,10 +78,16 @@ config_channel_name(?CHANNEL_COCOUNION) ->
   "触控";
 config_channel_name(?CHANNEL_DOMOB) ->
   "多盟";
-config_channel_name(?CHANNEL_ADSAGE) ->
+config_channel_name(?CHANNEL_QUMI) ->
   "艾德思奇";
 config_channel_name(?CHANNEL_JUPENG) ->
-  "巨朋".
+  "巨朋";
+config_channel_name(?CHANNEL_WAPS) ->
+  "万普";
+config_channel_name(_) ->
+  "".
+
+
 
 %%验证IP
 check_ip(UserId, AppName) ->

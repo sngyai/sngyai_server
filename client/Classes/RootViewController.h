@@ -15,13 +15,14 @@
 #import "CSAppZone.h"
 #import "MiidiManager.h"
 #import "GuoMobWallViewController.h"
-#import "MobiSageJoyViewController.h"
+//#import "MobiSageJoyViewController.h"
 #import "MiidiAdWallGetPointsDelegate.h"
 #import "MiidiAdWallAwardPointsDelegate.h"
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
 #import "DMOfferWallManager.h"
+#import "QMRecommendApp.h"
 //#import "WPLib/AppConnect.h"
 
 #import "ASIHTTPRequest.h"
@@ -44,12 +45,14 @@
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
 , DMOfferWallManagerDelegate
-, MobiSageJoyDelegate
+//, MobiSageJoyDelegate
+, QMRecommendAppDelegate
 , GuoMobWallDelegate
 >
 {
     GuoMobWallViewController * _guomobwall_vc;
-    MobiSageJoyViewController *_mobisagejoy;
+//    MobiSageJoyViewController *_mobisagejoy;
+    QMRecommendApp *_qumiViewController;
     DMOfferWallManager*_offerWallManager;
     NSNumber *_score;
     NSString *_userName;
@@ -60,8 +63,9 @@
 -(void) getAccount;
 
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
-@property(nonatomic,copy)MobiSageJoyViewController *mobisagejoy;
+//@property(nonatomic,copy)MobiSageJoyViewController *mobisagejoy;
 @property(nonatomic,copy)DMOfferWallManager *offerWallManager;
+@property(nonatomic,copy)QMRecommendApp *qumiViewController;
 @property(nonatomic,copy)NSNumber *score;
 @property(nonatomic,copy)NSString *alipay;
 @property(nonatomic,copy)NSString *userName;

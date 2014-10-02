@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
-#import "Reachability.h"
+#import "QumiConfigTool.h"
 
 
 
@@ -22,22 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *StringUrlPing = @"www.apple.com";
-    Reachability *r = [Reachability reachabilityWithHostName:StringUrlPing];
-
-    switch ([r currentReachabilityStatus]) {
-        case NotReachable:
-            break;
-        default:
 //            [IntegralWallConfig loadWithAppID:@"77" WithSubID:@"" WithType:@"Data" WithUserID:@"142" WithAppKey:@"7a94f4a57fb0b426b3ac2f7d27426396"];
-            [self loadView];
-            [application registerForRemoteNotificationTypes:
-             UIRemoteNotificationTypeBadge |
-             UIRemoteNotificationTypeAlert |
-             UIRemoteNotificationTypeSound];
-            break;
-    }
-    return YES;
+    [QumiConfigTool startWithAPPID:@"09b02d8d7aec58bb" secretKey:@"6747a7ed4e47730d" appChannel:0];
+    [self loadView];
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+   return YES;
 }
 
 

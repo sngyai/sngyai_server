@@ -88,9 +88,9 @@
 	</dict>
 	<dict>
 		<key>Publisher</key>
-		<string>http://www.mobisage.cn/</string>
+		<string>http://www.qumi.com/</string>
 		<key>Name</key>
-		<string>艾德思奇</string>
+		<string>趣米</string>
 		<key>NumRatings</key>
 		<integer>23</integer>
 		<key>Rating</key>
@@ -116,9 +116,9 @@
 	</dict>
 	<dict>
 		<key>Publisher</key>
-		<string>http://www.jpmob.com/</string>
+		<string>http://www.waps.cn/</string>
 		<key>Name</key>
-		<string>巨鲨</string>
+		<string>万普</string>
 		<key>NumRatings</key>
 		<integer>180</integer>
 		<key>Rating</key>
@@ -126,7 +126,7 @@
 		<key>Price</key>
 		<string>打开</string>
 		<key>Icon</key>
-		<string>Sand.png</string>
+		<string>万普.png</string>
 	</dict>
 </array>
 </plist>

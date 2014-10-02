@@ -16,7 +16,8 @@
 -export([
   exchange/5,
   get_all/0,
-  get_user_log/1
+  get_user_log/1,
+  daily_exchange/0
   ]).
 
 %%兑换
@@ -38,7 +39,6 @@ exchange(UserId, UserName, Type, Account, Num) ->
               account = Account,
               num = Num
             },
-          db_agent_exchange:update_db_exchange(Account, Num),
           ets:insert(?ETS_EXCHANGE_LOG, ExchangeLog),
           db_agent_exchange_log:add(ExchangeLog);
         false ->
@@ -92,5 +92,27 @@ concat_result([Exchange|T], Result) ->
         lists:concat([Result, ",", CurResult])
     end,
   concat_result(T, NewResult).
+
+%%每日兑换
+daily_exchange() ->
+  AllExchanges = ets:tab2list(?ETS_EXCHANGE_LOG),
+  ?T("HELLO, WORLD*******DAILY_EXCHANGE:~p~n", [AllExchanges]),
+  Fun =
+    fun(#exchange_log{id = Id, account = Account, num = Num}, AccountSumList) ->
+      OldSum =
+        case proplists:get_value(Account, AccountSumList) of
+          undefined ->
+            0;
+          Val ->
+            Val
+        end,
+      NewSum = Num + OldSum,
+      ets:delete(?ETS_EXCHANGE_LOG, Id),
+      db_agent_exchange_log:set_status(Id), %更新状态
+      [{Account, NewSum}|proplists:delete(Account, AccountSumList)]
+    end,
+  ExchangeList = lists:foldl(Fun, [], AllExchanges),
+  ?T("HELLO, WORLD*******DAILY_EXCHANGE 2 :~p~n", [ExchangeList]),
+  [db_agent_exchange:update_db_exchange(Account, Sum)||{Account, Sum} <- ExchangeList].
 
 

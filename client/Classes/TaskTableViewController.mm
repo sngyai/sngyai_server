@@ -9,6 +9,8 @@
 #import "TaskTableViewController.h"
 #import "CompositeSubviewBasedApplicationCell.h"
 #import "HybridSubviewBasedApplicationCell.h"
+#import "WPLib/AppConnect.h"
+
 
 
 @interface TaskTableViewController ()
@@ -148,7 +150,7 @@
         case 6:
             {
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
-                [tabBarController.mobisagejoy presentJoyWithViewController:self];
+                [tabBarController.qumiViewController presentQmRecommendApp];
             }
             break;
         case 7:
@@ -160,6 +162,7 @@
                       }];
             break;
         case 8:
+            [AppConnect showList:self]; 
 //            [IntegralWallADView showWallADView:YES didShowBlock:^(NSString *returnInfo){
 //                NSLog(@"info>>>>%@",returnInfo);
 //            } didDismissBlock:^(NSString * info){

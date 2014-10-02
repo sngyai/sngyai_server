@@ -17,6 +17,9 @@
   add/1,
   get_all/0,
 
+  get_valid/1,
+  set_status/1,
+
   get_update/0
 ]).
 
@@ -27,13 +30,21 @@ add(ExchangeLog) ->
   ok.
 
 get_all() ->
-  {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", []),
+  {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", [{status, 0}]),
+  Result.
+
+get_valid(BeginTime) ->
+  {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", [{time, ">", BeginTime}]),
   Result.
 
 get_update() ->
   TimeBegin = lib_util_time:get_timestamp() - (?RELOAD_TICK + 5),
   {record_list, Result} = ?DB_GAME:select_record_list_with(exchange_log, fun data2record/2, db_exchange_log, "*", [{last_update, ">" ,TimeBegin}]),
   Result.
+
+%%更新用户积分
+set_status(Id) ->
+  {update, _} = ?DB_GAME:update(db_exchange_log, [{status, 1}], [{id, Id}]).
 
 data2record(account, Value) ->
   TrandNo =

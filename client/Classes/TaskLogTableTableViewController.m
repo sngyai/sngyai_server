@@ -196,6 +196,9 @@
         case 7:
             channelString = @"巨朋";
             break;
+        case 8:
+            channelString = @"万普";
+            break;
         default:
             channelString = @"未知";
             break;

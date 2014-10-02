@@ -247,7 +247,7 @@ handle_request(Req) ->
 %%   ?Error(default_logger, "handle_request req:~p~n, ~nQS:~p~n", [Req, QS]),
   Type = string:tokens(Req:get(path), "/"),
     IPAddress = Req:get(peer),
-%%     ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
+    ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
   try deal_request(Type, QS, IPAddress) of
     {finish, Result} ->
       {Result, [{"Content-type", "text/plain"}]};
@@ -326,6 +326,14 @@ deal_request(["adsage"], QS, _IPAddress) ->
   {finish, Result};
 deal_request(["jupeng"], QS, _IPAddress) ->
   Result = do_jupeng(QS),
+  {finish, Result};
+
+deal_request(["waps"], QS, _IPAddress) ->
+  Result = do_waps(QS),
+  {finish, Result};
+
+deal_request(["qumi"], QS, _IPAddress) ->
+  Result = do_qumi(QS),
   {finish, Result};
 
 %%**********************************积分墙回调 end *********************************
@@ -474,6 +482,23 @@ do_jupeng(QS) ->
   AppName = resolve_parameter("adShowName", QS),
   lib_callback:deal(Idfa, ?CHANNEL_JUPENG, TrandNo, Cash, AppName),
   200.
+
+do_waps(QS) ->
+  Idfa = string:to_upper(resolve_parameter("udid", QS)),
+  TrandNo = resolve_parameter("order_id", QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
+  AppName = resolve_parameter("ad_name", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_WAPS, TrandNo, Cash, AppName),
+  200.
+
+do_qumi(QS) ->
+  Idfa = string:to_upper(resolve_parameter("device", QS)),
+  TrandNo = resolve_parameter("order", QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
+  AppName = resolve_parameter("ad", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_QUMI, TrandNo, Cash, AppName),
+  200.
+
 
 %% 具体处理消息请求---------------------------------------------------------------------------------------
 %% 前面是消息号,每一个请求在这里对应一个方法

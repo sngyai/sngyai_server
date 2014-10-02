@@ -14,5 +14,6 @@
 -define(CHANNEL_GUOMOB, 3).     %果盟
 -define(CHANNEL_COCOUNION, 4).  %触控
 -define(CHANNEL_DOMOB, 5).      %多盟
--define(CHANNEL_ADSAGE, 6).     %艾德
+-define(CHANNEL_QUMI, 6).       %趣米
 -define(CHANNEL_JUPENG, 7).     %巨朋
+-define(CHANNEL_WAPS, 8).       %万普

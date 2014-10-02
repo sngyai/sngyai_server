@@ -85,8 +85,6 @@
         NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1004&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&alipay=%@", alipay]];
         NSString* StrUrl = [HOST stringByAppendingString:StrUser];
         
-        NSLog(@"HELLO, WORLD ***** URL:%@", StrUrl);
-        
         NSURL *url = [NSURL URLWithString:StrUrl];
         
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
@@ -97,10 +95,7 @@
         NSError *error = [request error];
         
         if (!error) {
-            NSString *response = [request responseString];
-            NSDictionary *object = [response objectFromJSONString];//获取返回数据，有时有些网址返回数据是NSArray类型，可先获取后打印出来查看数据结构，再选择处理方法，得到所需数据
             [self noticeOK:[NSString stringWithFormat:@"设定成功"]];
-            NSLog(@"HELLO, WORLD ***object:%@", object);
         }else{
             NSLog(@"HELLO, WORLD ***ERROR:%@", error);
         }

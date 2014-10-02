@@ -30,13 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	
+//    _mobisagejoy = [[MobiSageJoyViewController alloc] initWithPublisherID:@"3c3e990aef814244824e648f024fd170"];
+//    _mobisagejoy.delegate = self;
+
 	_guomobwall_vc=[[GuoMobWallViewController alloc] initWithId:@"1igkea2wocd3978"];
-    _mobisagejoy = [[MobiSageJoyViewController alloc] initWithPublisherID:@"3c3e990aef814244824e648f024fd170"];
     //设置代理
     _guomobwall_vc.delegate = self;
-    _mobisagejoy.delegate = self;
     _offerWallManager.delegate = self;
+    
+    _qumiViewController = [[QMRecommendApp alloc] initwithPointUserID:nil];
+    _qumiViewController.delegate = self;
+    _qumiViewController.rootViewController = self;
+    //是否隐藏信号区，YES是隐藏，NO显示
+    _qumiViewController.isHiddenStatusBar = NO;
     
     [[CSAppZone sharedAppZone] loadAppZone:[CSADRequest request]];
 }

@@ -43,7 +43,7 @@ data2record(app_name, Value) ->
   AppName = binary_to_list(Value),
   {app_name, AppName};
 data2record(trand_no, Value) ->
-  TrandNo = lib_util_type:string_to_term(Value),
+  TrandNo = binary_to_list(Value),
   {trand_no, TrandNo};
 data2record(user_id, Value) ->
   {user_id, binary_to_list(Value)};
