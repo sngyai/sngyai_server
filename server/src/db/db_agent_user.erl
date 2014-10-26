@@ -67,6 +67,15 @@ set_account(UserId, Account) ->
 
 data2record(id, Value) ->
     {id, binary_to_list(Value)};
+data2record(idfa, Value) ->
+  Idfa =
+    case Value of
+      undefined ->
+        undefined;
+      Other ->
+        binary_to_list(Other)
+    end,
+  {idfa, Idfa};
 data2record(tokens, Value) ->
     Tokens =
         case Value of

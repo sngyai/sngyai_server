@@ -30,7 +30,6 @@
 >
 {
     RootViewController *_tabBar;
-//    BOOL _isBackGround;
 }
 
 @property (retain, nonatomic) UIWindow *window;

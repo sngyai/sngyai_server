@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
 #import "QumiConfigTool.h"
-
+#import<CoreTelephony/CTTelephonyNetworkInfo.h>
+#import<CoreTelephony/CTCarrier.h>
+#import "UIDevice+IdentifierAddition.h"
 
 
 @implementation AppDelegate
@@ -24,6 +26,11 @@
 {
 //            [IntegralWallConfig loadWithAppID:@"77" WithSubID:@"" WithType:@"Data" WithUserID:@"142" WithAppKey:@"7a94f4a57fb0b426b3ac2f7d27426396"];
     [QumiConfigTool startWithAPPID:@"09b02d8d7aec58bb" secretKey:@"6747a7ed4e47730d" appChannel:0];
+    
+    NSLog(@"HELLO, WORLD *******1 %@",[[UIDevice currentDevice] uniqueDeviceIdentifier]);
+    
+    NSLog(@"HELLO, WORLD *******2 %@",[[UIDevice currentDevice] uniqueGlobalDeviceIdentifier]);
+
     [self loadView];
     [application registerForRemoteNotificationTypes:
      UIRemoteNotificationTypeBadge |
@@ -55,8 +62,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
                            
                            stringByReplacingOccurrencesOfString:@" " withString:@""] ;
 
+    NSString *id = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", pushToken]];
+    NSString* StrUser = [[[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", pushToken]] stringByAppendingString:[NSString stringWithFormat:@"&id=%@", id]];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
     
     NSURL *url = [NSURL URLWithString:StrUrl];
@@ -113,7 +121,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    NSLog(@"enter foreground");
 //    _isBackGround = NO;
 }
 
@@ -166,11 +173,12 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 
 -(BOOL) login{
+    NSString *id = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     //获取IDFA
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
     
-    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId];
+    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1001&user_id=%@", adId] stringByAppendingString:[NSString stringWithFormat:@"&id=%@", id]];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
     
     NSURL *url = [NSURL URLWithString:StrUrl];

@@ -15,35 +15,35 @@
 
 %% API
 -export([
-  login/2,
+  login/3,
   add_score/2,
+  dec_score/2,
   set_tokens/3,
   get_tokens/1,
+  get_id/1,
   set_account/3,
   get_account/2,
   do_exchange/3,
 
   set_ip/2,
 
-  get_user_name/1,
-
-  t/0
+  get_user_name/1
 ]).
 
 %%登录
-login(UserId, IPAddress) ->
+login(Id, IDFA, IPAddress) ->
   {Name, ScoreCurrent, ScoreTotal} =
-    case ets:lookup(?ETS_ONLINE, UserId) of
+    case ets:lookup(?ETS_ONLINE, Id) of
       [#user{name = UserName, score_current = SC, score_total = ST}=Info|_] ->
         NewInfo =
           Info#user{
-            ip = IPAddress
+            ip = IPAddress,
+            idfa = IDFA
           },
-        ets:insert(?ETS_ONLINE, NewInfo),
-        db_agent_user:update(NewInfo),
+        update_user(NewInfo),
         {UserName, SC, ST};
       _Other -> %用户不存在，创建一个
-        UserName = create_role(UserId, IPAddress),
+        UserName = create_role(Id, IDFA, IPAddress),
         {UserName, 0, 0}
     end,
   Result =
@@ -63,17 +63,25 @@ set_tokens(UserId, Tokens, IPAddress) ->
           tokens = Tokens,
           ip = IPAddress
         },
-      ets:insert(?ETS_ONLINE, NewUserInfo),
-      db_agent_user:update(NewUserInfo);
+      update_user(NewUserInfo);
     _Other ->
       skip
   end.
 
-%%获取用户token
-get_tokens(UserId) ->
-  case ets:lookup(?ETS_ONLINE, UserId) of
+%%根据用户IDFA查找用户token
+get_tokens(Idfa) ->
+  case ets:match_object(?ETS_ONLINE, #user{idfa = Idfa, _='_'}) of
     [#user{tokens = Tokens} | _] when Tokens =/= undefined ->
       Tokens;
+    _Other ->
+      []
+  end.
+
+%%根据用户IDFA查找用户ID
+get_id(Idfa) ->
+  case ets:match_object(?ETS_ONLINE, #user{idfa = Idfa, _='_'}) of
+    [#user{id = Id} | _] when Id =/= undefined ->
+      Id;
     _Other ->
       []
   end.
@@ -160,8 +168,8 @@ do_exchange(UserId, Exchange, IPAddress) ->
   end.
 
 %%获取用户赚钱号
-get_user_name(Idfa) ->
-  case ets:lookup(?ETS_ONLINE, Idfa) of
+get_user_name(Id) ->
+  case ets:lookup(?ETS_ONLINE, Id) of
     [#user{name = Name}| _] ->
       Name;
     _Other ->
@@ -169,7 +177,7 @@ get_user_name(Idfa) ->
   end.
 
 %%完成任务，更新积分
-%%UserId用户唯一标识T
+%%UserId用户唯一标识
 %%Score获得积分
 add_score(UserId, Score) ->
   case ets:lookup(?ETS_ONLINE, UserId) of
@@ -186,18 +194,35 @@ add_score(UserId, Score) ->
       ?Error(default_logger, "add_score_error: ~p~n ~p~n ~p~n", [UserId, _Other, ets:tab2list(?ETS_ONLINE)])
   end.
 
+%%兑换扣除积分
+%%UserId 用户唯一标识符
+%%Score 扣除积分
+dec_score(UserId, Score) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{score_current = SC} = UserInfo | _] ->
+      ScoreCurrent = SC - Score,
+      NewUserInfo =
+        UserInfo#user{
+          score_current = ScoreCurrent
+        },
+      update_user(NewUserInfo);
+    _Other ->
+      ?Error(default_logger, "add_score_error: ~p~n ~p~n ~p~n", [UserId, _Other, ets:tab2list(?ETS_ONLINE)])
+  end.
+
 %%创建用户
-create_role(Idfa, IPAddress) ->
-  {Role, Name} = role(Idfa, IPAddress),
+create_role(Id, IDFA, IPAddress) ->
+  {Role, Name} = role(Id, IDFA, IPAddress),
   ets:insert(?ETS_ONLINE, Role),
   db_agent_user:create(Role),
   Name.
 
 %%创建角色
-role(Idfa, IPAddress) ->
+role(Id, IDFA, IPAddress) ->
   Name = mod_increase_user:new_id(),
   {#user{
-    id = Idfa,
+    id = Id,
+    idfa = IDFA,
     name = Name,
     ip = IPAddress,
     create_time = lib_util_time:get_timestamp()
@@ -207,8 +232,6 @@ update_user(UserInfo) ->
   ets:insert(?ETS_ONLINE, UserInfo),
   db_agent_user:update(UserInfo).
 
-t() ->
-  create_role("1A2C", "123.123.123.123").
 
 
 

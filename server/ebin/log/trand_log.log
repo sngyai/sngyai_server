@@ -154,3 +154,31 @@
   AppName:[233,187,145,230,154,151,229,133,137,229,185,180]
   Cash:900
 
+26-10-2014 18:49:56.648 [lib_callback:49] no ip_bind trand trand req:
+  Idfa:"EBFDB497-A279-44B3-A95E-683D9F052EFA"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+26-10-2014 18:51:25.939 [lib_callback:49] no ip_bind trand trand req:
+  Idfa:"EBFDB497-A279-44B3-A95E-683D9F052EFA"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+26-10-2014 18:59:29.203 [lib_callback:49] no ip_bind trand trand req:
+  Idfa:"EBFDB497-A279-44B3-A95E-683D9F052EFA"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+
+26-10-2014 19:3:27.098 [lib_callback:52] no ip_bind trand trand req:
+  Idfa:"EBFDB497-A279-44B3-A95E-683D9F052EFA"
+, Channel:2
+  TrandNo:1035124
+  AppName:[230,177,189,232,189,166,230,138,165,228,187,183]
+  Cash:150
+

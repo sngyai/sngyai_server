@@ -360,50 +360,54 @@ deal_request(Type, QS, _IPAddress) ->
 %%登录
 do_user(1001, QS, IPAddress) ->
   ?T("do_user request,msg:LOGIN~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
-  case UserId of
-    undefined ->
+  Id = resolve_parameter("id", QS),
+  IDFA = resolve_parameter("user_id", QS),
+  case Id =:= undefined orelse
+    IDFA =:= undefined of
+    true ->
       "error_id";
-    _Other ->
-      lib_user:login(UserId, IPAddress)
+    false ->
+      lib_user:login(Id, IDFA, IPAddress)
   end;
 
 %%查询用户任务记录
 do_user(1002, QS, IPAddress) ->
   ?T("do_user request,msg:TASK_LOG~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
-  case UserId of
-    undefined ->
+  Id = resolve_parameter("id", QS),
+  IDFA = resolve_parameter("user_id", QS),
+  case Id =:= undefined orelse
+    IDFA =:= undefined of
+    true ->
       "error_id";
-    _Other ->
-      lib_user:set_ip(UserId, IPAddress),
-      lib_task_log:query(UserId)
+    false ->
+      lib_user:set_ip(Id, IPAddress),
+      lib_task_log:query(Id)
   end;
 
 %%注册用户设备tokens
 do_user(1003, QS, IPAddress) ->
   ?T("do_user request,msg:SET_TOKEN~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
+  UserId = resolve_parameter("id", QS),
   Tokens = resolve_parameter("tokens", QS),
   lib_user:set_tokens(UserId, Tokens, IPAddress);
 
 %%注册用户支付宝账号
 do_user(1004, QS, IPAddress) ->
   ?T("do_user request,msg:SET_ACCOUNT~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
+  UserId = resolve_parameter("id", QS),
   Alipay = resolve_parameter("alipay", QS),
   lib_user:set_account(UserId, Alipay, IPAddress);
 
 %%获取用户绑定的支付宝账号
 do_user(1005, QS, IPAddress) ->
   ?T("do_user request,msg:GET_ACCOUNT~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
+  UserId = resolve_parameter("id", QS),
   lib_user:get_account(UserId, IPAddress);
 
 %%兑换积分
 do_user(1006, QS, IPAddress) ->
   ?T("do_user request,msg:EXCHANGE~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
+  UserId = resolve_parameter("id", QS),
   Exchange = lib_util_type:string_to_term(resolve_parameter("exchange", QS)),
   Result = lib_user:do_exchange(UserId, trunc(Exchange*100), IPAddress),
   ?T("exchange_result:~p~n ~p~n ~p~n", [UserId, Result, IPAddress]),
@@ -412,7 +416,7 @@ do_user(1006, QS, IPAddress) ->
 %%获取兑换记录
 do_user(1007, QS, IPAddress) ->
   ?T("do_user request,msg:EXCHANGE_LOG~n QS:~p~n, IPAddress:~p~n", [QS, IPAddress]),
-  UserId = resolve_parameter("user_id", QS),
+  UserId = resolve_parameter("id", QS),
   lib_user:set_ip(UserId, IPAddress),
   lib_exchange:get_user_log(UserId);
 

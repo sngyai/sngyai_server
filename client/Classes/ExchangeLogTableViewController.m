@@ -8,6 +8,7 @@
 
 #import "ExchangeLogTableViewController.h"
 #import "ExchangeLogTableViewCell.h"
+#import "UIDevice+IdentifierAddition.h"
 
 @interface ExchangeLogTableViewController ()
 
@@ -115,11 +116,12 @@
 }
 
 - (void)queryExchange{
+    NSString *id = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     //获取IDFA
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"HELLO, WORLD *********IDFA: %@", adId);
     
-    NSString* StrUser = [NSString stringWithFormat:@"user/?msg=1007&user_id=%@", adId];
+    NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1007&user_id=%@", adId] stringByAppendingString:[NSString stringWithFormat:@"&id=%@", id]];
     NSString* StrUrl = [HOST stringByAppendingString:StrUser];
     
     NSURL *url = [NSURL URLWithString:StrUrl];

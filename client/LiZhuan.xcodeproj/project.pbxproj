@@ -143,6 +143,9 @@
 		B7BCE3E819DC2FFD00123BFC /* 万普.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3E719DC2FFD00123BFC /* 万普.png */; };
 		B7BCE3EA19DC394000123BFC /* libQumiAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */; };
 		B7BCE3F119DC395900123BFC /* QumiImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3EF19DC395900123BFC /* QumiImages.bundle */; };
+		B7C8966619FCF0E6000F9706 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C8966319FCF0E6000F9706 /* NSString+MD5Addition.m */; };
+		B7C8966719FCF0E6000F9706 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C8966519FCF0E6000F9706 /* UIDevice+IdentifierAddition.m */; };
+		B7C8966A19FD0164000F9706 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C8966919FD0164000F9706 /* Common.m */; };
 		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
 		B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24919B9F4D40095D451 /* AVFoundation.framework */; };
 		B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24B19B9F5240095D451 /* CoreLocation.framework */; };
@@ -417,6 +420,12 @@
 		B7BCE3EE19DC395900123BFC /* QumiConfigTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiConfigTool.h; sourceTree = "<group>"; };
 		B7BCE3EF19DC395900123BFC /* QumiImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QumiImages.bundle; sourceTree = "<group>"; };
 		B7BCE3F019DC395900123BFC /* QumiIterStitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiIterStitial.h; sourceTree = "<group>"; };
+		B7C8966219FCF0E6000F9706 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		B7C8966319FCF0E6000F9706 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		B7C8966419FCF0E6000F9706 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		B7C8966519FCF0E6000F9706 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		B7C8966819FD0164000F9706 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		B7C8966919FD0164000F9706 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		B7F1E24719B9F4C70095D451 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B7F1E24919B9F4D40095D451 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B7F1E24B19B9F5240095D451 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -510,6 +519,8 @@
 				B79B768A19CECF0F0091783F /* ExchangeViewController.h */,
 				B79B768B19CECF0F0091783F /* ExchangeViewController.m */,
 				B79B768F19CEF1660091783F /* ExchangeViewController.xib */,
+				B7C8966819FD0164000F9706 /* Common.h */,
+				B7C8966919FD0164000F9706 /* Common.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -969,9 +980,21 @@
 			path = Lib/QumiADLib;
 			sourceTree = "<group>";
 		};
+		B7C8966119FCF0E6000F9706 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				B7C8966219FCF0E6000F9706 /* NSString+MD5Addition.h */,
+				B7C8966319FCF0E6000F9706 /* NSString+MD5Addition.m */,
+				B7C8966419FCF0E6000F9706 /* UIDevice+IdentifierAddition.h */,
+				B7C8966519FCF0E6000F9706 /* UIDevice+IdentifierAddition.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B7C8966119FCF0E6000F9706 /* UIDevice */,
 				B7BCE3EB19DC395900123BFC /* QumiADLib */,
 				B7A055E619DB382F00FCF2EC /* AdvancedTableViewCellsAppDelegate.h */,
 				B7A055E719DB382F00FCF2EC /* AFNetworking */,
@@ -1141,6 +1164,7 @@
 				B7A056B319DB382F00FCF2EC /* AFNetworkReachabilityManager.m in Sources */,
 				B7A056B019DB382F00FCF2EC /* AFHTTPRequestOperation.m in Sources */,
 				B7A056DE19DB382F00FCF2EC /* MJRefreshFooterView.m in Sources */,
+				B7C8966619FCF0E6000F9706 /* NSString+MD5Addition.m in Sources */,
 				B7A056F019DB382F00FCF2EC /* UIProgressView+AFNetworking.m in Sources */,
 				B7A056B619DB382F00FCF2EC /* AFURLRequestSerialization.m in Sources */,
 				B7A056E219DB382F00FCF2EC /* UIView+MJExtension.m in Sources */,
@@ -1181,10 +1205,12 @@
 				B7A056B419DB382F00FCF2EC /* AFSecurityPolicy.m in Sources */,
 				B7A056E919DB382F00FCF2EC /* RKTabView.m in Sources */,
 				B7A056EE19DB382F00FCF2EC /* UIButton+AFNetworking.m in Sources */,
+				B7C8966719FCF0E6000F9706 /* UIDevice+IdentifierAddition.m in Sources */,
 				B7A056C719DB382F00FCF2EC /* ASICloudFilesObjectRequest.m in Sources */,
 				B7A056E019DB382F00FCF2EC /* UIScrollView+MJExtension.m in Sources */,
 				BE882EE61568C34600D0EDC9 /* RootViewController.m in Sources */,
 				B7A056B119DB382F00FCF2EC /* AFHTTPRequestOperationManager.m in Sources */,
+				B7C8966A19FD0164000F9706 /* Common.m in Sources */,
 				B7A056DF19DB382F00FCF2EC /* MJRefreshHeaderView.m in Sources */,
 				B7A056C819DB382F00FCF2EC /* ASICloudFilesRequest.m in Sources */,
 				B7A056EF19DB382F00FCF2EC /* UIImageView+AFNetworking.m in Sources */,
@@ -1221,7 +1247,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LiZhuan_Prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LiZhuan-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -1257,7 +1283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LiZhuan_Prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/LiZhuan-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib/**",
@@ -1298,7 +1324,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDK_DIR}/usr/include/libxml2",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
@@ -1324,7 +1350,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDK_DIR}/usr/include/libxml2",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";

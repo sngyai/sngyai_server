@@ -18,12 +18,12 @@
   query/1
 ]).
 
-add(Idfa, Channel, TrandNo, AppName, Score, IPAddress) ->
+add(Id, Channel, TrandNo, AppName, Score, IPAddress) ->
   TaskLog =
     #task_log{
       id = {Channel, TrandNo},
-      user_id = Idfa,
-      name = lib_user:get_user_name(Idfa),
+      user_id = Id,
+      name = lib_user:get_user_name(Id),
       time = lib_util_time:get_timestamp(),
       trand_no = TrandNo,
       channel = Channel,
@@ -35,9 +35,9 @@ add(Idfa, Channel, TrandNo, AppName, Score, IPAddress) ->
   db_agent_task_log:add(TaskLog).
 
 %%查询用户完成任务记录
-query(Idfa) ->
+query(Id) ->
   List =
-    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Idfa, _ = '_'}) of
+    case ets:match_object(?ETS_TASK_LOG, #task_log{user_id = Id, _ = '_'}) of
       [] ->
         [];
       L ->

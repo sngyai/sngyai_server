@@ -26,7 +26,7 @@ exchange(UserId, UserName, Type, Account, Num) ->
     [#user{score_current = SC}|_] ->
       case Num =< SC of
         true ->
-          lib_user:add_score(UserId, -Num),
+          lib_user:dec_score(UserId, Num),
           Time = lib_util_time:get_timestamp(),
           Id = mod_increase_exchange_log:new_id(),
           ExchangeLog =
@@ -96,7 +96,8 @@ concat_result([Exchange|T], Result) ->
 daily_exchange() ->
   AllExchanges = ets:tab2list(?ETS_EXCHANGE_LOG),
   Fun =
-    fun(#exchange_log{id = Id, account = Account, num = Num}, AccountSumList) ->
+    fun(#exchange_log{id = Id, account = Account, num = Num, status = Status}, AccountSumList)
+      when Status =:= 0->
       OldSum =
         case proplists:get_value(Account, AccountSumList) of
           undefined ->

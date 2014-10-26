@@ -7,6 +7,7 @@
 //
 
 #import "AccountSettingsViewController.h"
+#import "UIDevice+IdentifierAddition.h"
 
 @interface AccountSettingsViewController ()
 
@@ -80,9 +81,11 @@
         [self alertMessage:[NSString stringWithFormat:@"支付宝账号不能为空"]];
     }else{
         //获取IDFA
+        NSString *id = [[UIDevice currentDevice] uniqueDeviceIdentifier];
         NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 
-        NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1004&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&alipay=%@", alipay]];
+        NSString* StrUser = [[[NSString stringWithFormat:@"user/?msg=1004&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&alipay=%@", alipay]] stringByAppendingString:[NSString stringWithFormat:@"&id=%@", id]];
+        
         NSString* StrUrl = [HOST stringByAppendingString:StrUser];
         
         NSURL *url = [NSURL URLWithString:StrUrl];

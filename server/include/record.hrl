@@ -32,6 +32,7 @@
 %% player ==> player_status
 -record(user, {
   id,                                     %% 用户id
+  idfa,                                   %% 用户广告标识符
   name,                                   %% 用户账号（赚钱号）
   score_current = 0,
   score_total = 0,

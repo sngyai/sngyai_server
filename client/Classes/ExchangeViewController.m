@@ -7,6 +7,8 @@
 //
 
 #import "ExchangeViewController.h"
+#import "UIDevice+IdentifierAddition.h"
+
 #define myDotNumbers @"0123456789.\n"
 #define myNumbers @"0123456789\n"
 
@@ -118,10 +120,11 @@
     float numExchange = [[f numberFromString:strExchange]floatValue];
     NSLog(@"numExchange: %f", numExchange);
     if (numExchange > 0){
+        NSString *id = [[UIDevice currentDevice] uniqueDeviceIdentifier];
         //获取IDFA
         NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
         
-        NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1006&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&exchange=%f", numExchange]];
+        NSString* StrUser = [[[NSString stringWithFormat:@"user/?msg=1006&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&exchange=%f", numExchange]] stringByAppendingString:[NSString stringWithFormat:@"&id=%@", id]];
         NSString* StrUrl = [HOST stringByAppendingString:StrUser];
         
         NSLog(@"HELLO, WORLD ***** URL:%@", StrUrl);

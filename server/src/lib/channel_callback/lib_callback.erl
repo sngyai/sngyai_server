@@ -14,12 +14,15 @@
 -include("record.hrl").
 -include("apns.hrl").
 
+
+-compile(export_all).
+
 %% API
 -export([deal/5]).
 
 deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
   case ets:match_object(?ETS_TASK_LOG, #task_log{channel = ChannelId, trand_no = TrandNo, _='_'}) of
-    [] ->
+    [] -> %%查重
       case check_ip(Idfa, AppName) of
         {error, ErrorMsg} ->
           ?Error(trand_logger, "ip conficts trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash]),
@@ -35,11 +38,16 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
                 })
             end;
         {ok, IPAddress} ->
-          %%添加任务记录
-          lib_task_log:add(Idfa, ChannelId, TrandNo, AppName, Cash, IPAddress),
-          %%增加积分
-          lib_user:add_score(Idfa, Cash),
-          push_notification(Idfa, ChannelId, AppName, Cash);
+          case lib_user:get_id(Idfa) of
+            [] ->
+              ?Error(default_logger, "no id: ~p~n", [Idfa]);
+            Id ->
+              %%添加任务记录
+              lib_task_log:add(Id, ChannelId, TrandNo, AppName, Cash, IPAddress),
+              %%增加积分
+              lib_user:add_score(Id, Cash),
+              push_notification(Idfa, ChannelId, AppName, Cash)
+          end;
         _Other ->
           ?Error(trand_logger, "no ip_bind trand trand req:~n  Idfa:~p~n, Channel:~p~n  TrandNo:~p~n  AppName:~p~n  Cash:~p~n", [Idfa, ChannelId, TrandNo, AppName, Cash])
       end;
@@ -87,15 +95,15 @@ config_channel_name(_) ->
 
 
 %%验证IP
-check_ip(UserId, AppName) ->
-  case ets:lookup(?ETS_ONLINE, UserId) of
+check_ip(Idfa, AppName) ->
+  case ets:match_object(?ETS_ONLINE, #user{idfa = Idfa, _='_'}) of
     [#user{ip = IPAddress}| _] ->
       case ets:match_object(?ETS_TASK_LOG, #task_log{ip = IPAddress, app_name = AppName, _='_'}) of
         [] ->
           {ok, IPAddress};
         _Other ->
           ?Error(trand_logger, "ip conficts trand req:~n  Idfa:~p~n, AppName:~p~n, AppName2:~p~n,  IPAddress:~p~n, OtherIp:~p~n",
-            [UserId,AppName,mochiutf8:bytes_to_codepoints(list_to_binary(AppName)),IPAddress, _Other]),
+            [Idfa, AppName, mochiutf8:bytes_to_codepoints(list_to_binary(AppName)),IPAddress, _Other]),
           ErrorMsg = lists:concat(["IP冲突，重复的任务: ", mochiutf8:bytes_to_codepoints(list_to_binary(AppName))]),
           {error, ErrorMsg}
       end;
