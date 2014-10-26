@@ -141,7 +141,9 @@ do_exchange(UserId, Exchange, IPAddress) ->
           end,
           case SC >= Exchange of
             true ->
-              case Account =/= undefined of
+              case Account =/= undefined andalso
+                Account =/= [] andalso
+                Account =/= "" of
                 true ->
                   lib_exchange:exchange(UserId, UserName, ?EXCHANGE_TYPE_ALIPAY, Account, Exchange);
                 false ->
