@@ -1,18 +1,8 @@
-29-9-2014 0:23:42.982 [mod_webserver:345] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+28-10-2014 23:26:18.203 [mod_webserver:353] mod_webserver deal_request type error type:["world.php"], QS:[]
 
-29-9-2014 0:23:51.595 [mod_webserver:345] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+28-10-2014 23:26:18.496 [mod_webserver:353] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
 
-29-9-2014 0:24:33.081 [mod_webserver:345] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+28-10-2014 23:36:15.243 [mod_webserver:353] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
 
-2-10-2014 12:10:17.736 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
-
-2-10-2014 12:10:20.194 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
-
-2-10-2014 12:13:21.993 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
-
-2-10-2014 12:13:25.881 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
-
-2-10-2014 12:13:28.632 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
-
-2-10-2014 12:23:19.425 [mod_webserver:354] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
+28-10-2014 23:36:42.815 [mod_webserver:353] mod_webserver deal_request type error type:["favicon.ico"], QS:[]
 

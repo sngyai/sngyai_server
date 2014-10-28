@@ -17,6 +17,9 @@
 -export([
   login/2,
   add_score/2,
+  del_score/2,
+  update_user/1,
+
   set_tokens/3,
   get_tokens/1,
   set_account/3,
@@ -39,8 +42,7 @@ login(UserId, IPAddress) ->
           Info#user{
             ip = IPAddress
           },
-        ets:insert(?ETS_ONLINE, NewInfo),
-        db_agent_user:update(NewInfo),
+        update_user(NewInfo),
         {UserName, SC, ST};
       _Other -> %用户不存在，创建一个
         UserName = create_role(UserId, IPAddress),
@@ -63,8 +65,7 @@ set_tokens(UserId, Tokens, IPAddress) ->
           tokens = Tokens,
           ip = IPAddress
         },
-      ets:insert(?ETS_ONLINE, NewUserInfo),
-      db_agent_user:update(NewUserInfo);
+      update_user(NewUserInfo);
     _Other ->
       skip
   end.
@@ -168,7 +169,7 @@ get_user_name(Idfa) ->
       -1
   end.
 
-%%完成任务，更新积分
+%%完成任务，增加积分
 %%UserId用户唯一标识T
 %%Score获得积分
 add_score(UserId, Score) ->
@@ -180,6 +181,20 @@ add_score(UserId, Score) ->
         UserInfo#user{
           score_current = ScoreCurrent,
           score_total = ScoreTotal
+        },
+      update_user(NewUserInfo);
+    _Other ->
+      ?Error(default_logger, "add_score_error: ~p~n ~p~n ~p~n", [UserId, _Other, ets:tab2list(?ETS_ONLINE)])
+  end.
+
+%%兑换，扣除积分
+del_score(UserId, Score) ->
+  case ets:lookup(?ETS_ONLINE, UserId) of
+    [#user{score_current = SC} = UserInfo | _] ->
+      ScoreCurrent = SC - Score,
+      NewUserInfo =
+        UserInfo#user{
+          score_current = ScoreCurrent
         },
       update_user(NewUserInfo);
     _Other ->
@@ -203,6 +218,7 @@ role(Idfa, IPAddress) ->
     create_time = lib_util_time:get_timestamp()
   }, Name}.
 
+%%更新用户表
 update_user(UserInfo) ->
   ets:insert(?ETS_ONLINE, UserInfo),
   db_agent_user:update(UserInfo).

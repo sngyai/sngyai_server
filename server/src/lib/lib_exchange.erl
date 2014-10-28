@@ -12,6 +12,8 @@
 -include("record.hrl").
 -include("common.hrl").
 
+-include_lib("stdlib/include/ms_transform.hrl").
+
 %% API
 -export([
   exchange/5,
@@ -26,7 +28,7 @@ exchange(UserId, UserName, Type, Account, Num) ->
     [#user{score_current = SC}|_] ->
       case Num =< SC of
         true ->
-          lib_user:add_score(UserId, -Num),
+          lib_user:del_score(UserId, Num),
           Time = lib_util_time:get_timestamp(),
           Id = mod_increase_exchange_log:new_id(),
           ExchangeLog =
@@ -110,6 +112,27 @@ daily_exchange() ->
       [{Account, NewSum}|proplists:delete(Account, AccountSumList)]
     end,
   ExchangeList = lists:foldl(Fun, [], AllExchanges),
-  [db_agent_exchange:update_db_exchange(Account, Sum)||{Account, Sum} <- ExchangeList].
+  MS = ets:fun2ms(fun(T) when T#user.score_current > 0,
+    T#user.account=/= undefined, T#user.account =/= [], T#user.account =/= "" ->
+    T end),
+  L = ets:select(?ETS_ONLINE, MS),
+  ?T("HELLO, WORLD ******** USER - LIST : ~p~n ~p~n", [ExchangeList, L]),
+  FunUser =
+    fun(#user{account = Account_E, score_current = Score_E} = User_E, AccountSumList2) ->
+      OldSum =
+        case proplists:get_value(Account_E, AccountSumList2) of
+          undefined ->
+            0;
+          Val ->
+            Val
+        end,
+      NewSum = Score_E + OldSum,
+      NewUser_E = User_E#user{score_current = 0},
+      lib_user:update_user(NewUser_E),
+      [{Account_E, NewSum}|proplists:delete(Account_E, AccountSumList2)]
+    end,
+  FinalExchangeList = lists:foldl(FunUser, ExchangeList, L),
+  ?T("HELLO, WORLD ******** USER - LIST -- final : ~p~n", [FinalExchangeList]),
+  [db_agent_exchange:update_db_exchange(Account, Sum)||{Account, Sum} <- FinalExchangeList].
 
 

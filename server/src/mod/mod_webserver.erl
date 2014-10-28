@@ -248,7 +248,6 @@ handle_request(Req) ->
   Type = string:tokens(Req:get(path), "/"),
     IPAddress = Req:get(peer),
     ?T("handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
-  ?Error(default_logger, "handle_request req:~p, QS:~p, IPAddress:~p~n", [Req, QS, IPAddress]),
   try deal_request(Type, QS, IPAddress) of
     {finish, Result} ->
       {Result, [{"Content-type", "text/plain"}]};
