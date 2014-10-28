@@ -94,7 +94,6 @@
 		B7A056CD19DB382F00FCF2EC /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A0562E19DB382F00FCF2EC /* ASIS3Request.m */; };
 		B7A056CE19DB382F00FCF2EC /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A0563019DB382F00FCF2EC /* ASIS3ServiceRequest.m */; };
 		B7A056CF19DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A0563219DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.m */; };
-		B7A056D019DB382F00FCF2EC /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7A0563419DB382F00FCF2EC /* DomobOfferWallBundle.bundle */; };
 		B7A056D119DB382F00FCF2EC /* README-GHUnit in Resources */ = {isa = PBXBuildFile; fileRef = B7A0563919DB382F00FCF2EC /* README-GHUnit */; };
 		B7A056D319DB382F00FCF2EC /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7A0563D19DB382F00FCF2EC /* GuomobWallBundle.bundle */; };
 		B7A056D419DB382F00FCF2EC /* HybridSubviewBasedApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A0564019DB382F00FCF2EC /* HybridSubviewBasedApplicationCell.m */; };
@@ -143,6 +142,7 @@
 		B7BCE3E819DC2FFD00123BFC /* 万普.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3E719DC2FFD00123BFC /* 万普.png */; };
 		B7BCE3EA19DC394000123BFC /* libQumiAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */; };
 		B7BCE3F119DC395900123BFC /* QumiImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3EF19DC395900123BFC /* QumiImages.bundle */; };
+		B7DE1D6E19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */; };
 		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
 		B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24919B9F4D40095D451 /* AVFoundation.framework */; };
 		B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24B19B9F5240095D451 /* CoreLocation.framework */; };
@@ -299,8 +299,6 @@
 		B7A0563019DB382F00FCF2EC /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
 		B7A0563119DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompositeSubviewBasedApplicationCell.h; path = Lib/CompositeSubviewBasedApplicationCell.h; sourceTree = "<group>"; };
 		B7A0563219DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompositeSubviewBasedApplicationCell.m; path = Lib/CompositeSubviewBasedApplicationCell.m; sourceTree = "<group>"; };
-		B7A0563419DB382F00FCF2EC /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
-		B7A0563619DB382F00FCF2EC /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOfferWallManager.h; sourceTree = "<group>"; };
 		B7A0563919DB382F00FCF2EC /* README-GHUnit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-GHUnit"; sourceTree = "<group>"; };
 		B7A0563D19DB382F00FCF2EC /* GuomobWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GuomobWallBundle.bundle; path = Lib/GuomobWallBundle.bundle; sourceTree = "<group>"; };
 		B7A0563E19DB382F00FCF2EC /* GuoMobWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuoMobWallViewController.h; path = Lib/GuoMobWallViewController.h; sourceTree = "<group>"; };
@@ -417,6 +415,8 @@
 		B7BCE3EE19DC395900123BFC /* QumiConfigTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiConfigTool.h; sourceTree = "<group>"; };
 		B7BCE3EF19DC395900123BFC /* QumiImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QumiImages.bundle; sourceTree = "<group>"; };
 		B7BCE3F019DC395900123BFC /* QumiIterStitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiIterStitial.h; sourceTree = "<group>"; };
+		B7DE1D6C19FFF6DF00A0DB27 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMOfferWallManager.h; path = Lib/DMOfferWallSDK/DMOfferWallManager.h; sourceTree = SOURCE_ROOT; };
+		B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
 		B7F1E24719B9F4C70095D451 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B7F1E24919B9F4D40095D451 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B7F1E24B19B9F5240095D451 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -766,7 +766,7 @@
 		B7A0563319DB382F00FCF2EC /* DMOfferWallSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B7A0563419DB382F00FCF2EC /* DomobOfferWallBundle.bundle */,
+				B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */,
 				B7A0563519DB382F00FCF2EC /* Header */,
 			);
 			name = DMOfferWallSDK;
@@ -776,7 +776,7 @@
 		B7A0563519DB382F00FCF2EC /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				B7A0563619DB382F00FCF2EC /* DMOfferWallManager.h */,
+				B7DE1D6C19FFF6DF00A0DB27 /* DMOfferWallManager.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -1090,7 +1090,6 @@
 				B79B769019CEF1660091783F /* ExchangeViewController.xib in Resources */,
 				B7A056EA19DB382F00FCF2EC /* AdSDKBundle.bundle in Resources */,
 				B7A056D619DB382F00FCF2EC /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
-				B7A056D019DB382F00FCF2EC /* DomobOfferWallBundle.bundle in Resources */,
 				B7A055C919DB381B00FCF2EC /* account.png in Resources */,
 				B7A056FC19DB388900FCF2EC /* LiZhuan.plist in Resources */,
 				B7A055D819DB381B00FCF2EC /* Home.png in Resources */,
@@ -1102,6 +1101,7 @@
 				B7A055D619DB381B00FCF2EC /* globe_disabled@2x.png in Resources */,
 				B7A056D119DB382F00FCF2EC /* README-GHUnit in Resources */,
 				B7A055D219DB381B00FCF2EC /* Dinner.png in Resources */,
+				B7DE1D6E19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle in Resources */,
 				B7A055CF19DB381B00FCF2EC /* DarkBackground.png in Resources */,
 				B7A055D419DB381B00FCF2EC /* exchange.png in Resources */,
 				B7A055E519DB381B00FCF2EC /* user_enabled@2x.png in Resources */,
@@ -1208,8 +1208,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1231,8 +1231,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -1245,8 +1245,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1274,8 +1274,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1287,8 +1287,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1302,7 +1302,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7s;
@@ -1313,8 +1313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1329,7 +1329,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7s;
