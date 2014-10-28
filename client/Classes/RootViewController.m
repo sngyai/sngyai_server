@@ -45,6 +45,9 @@
     _qumiViewController.isHiddenStatusBar = NO;
     
     [[CSAppZone sharedAppZone] loadAppZone:[CSADRequest request]];
+    
+    _adWall=[[MBJoyView alloc] initWithAdUnitId:@"de4e1a27c9a80b8e42513e506f8c4033" adType:AdTypeList rootViewController:self userInfo:nil];
+    _adWall.delegate = self;
 }
 
 #pragma mark -

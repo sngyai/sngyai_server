@@ -328,8 +328,8 @@ deal_request(["jupeng"], QS, _IPAddress) ->
   Result = do_jupeng(QS),
   {finish, Result};
 
-deal_request(["waps"], QS, _IPAddress) ->
-  Result = do_waps(QS),
+deal_request(["limei"], QS, _IPAddress) ->
+  Result = do_limei(QS),
   {finish, Result};
 
 deal_request(["qumi"], QS, _IPAddress) ->
@@ -483,13 +483,13 @@ do_jupeng(QS) ->
   lib_callback:deal(Idfa, ?CHANNEL_JUPENG, TrandNo, Cash, AppName),
   200.
 
-do_waps(QS) ->
-  Idfa = string:to_upper(resolve_parameter("udid", QS)),
-  TrandNo = resolve_parameter("order_id", QS),
-  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
-  AppName = resolve_parameter("ad_name", QS),
-  lib_callback:deal(Idfa, ?CHANNEL_WAPS, TrandNo, Cash, AppName),
-  200.
+do_limei(QS) ->
+  Idfa = string:to_upper(resolve_parameter("idfa", QS)),
+  TrandNo = resolve_parameter("orderId", QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("point", QS)),
+  AppName = resolve_parameter("title", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_LIMEI, TrandNo, Cash, AppName),
+  lib_util_string:key_value_to_json([{"code", 200}]).
 
 do_qumi(QS) ->
   Idfa = string:to_upper(resolve_parameter("device", QS)),

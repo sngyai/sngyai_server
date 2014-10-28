@@ -34,9 +34,8 @@
     [super viewDidLoad];
     [self setNav];
 	
-	// Configure the table view.
     self.tableView.rowHeight = 73.0;
-//    self.tableView.backgroundColor = DARK_BACKGROUND;
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 	// Load the data.
@@ -149,7 +148,7 @@
             break;
         case 6:
             {
-                RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+                RootViewController *tabBarController = (RootViewController*)(self.tabBarController);
                 [tabBarController.qumiViewController presentQmRecommendApp];
             }
             break;
@@ -162,7 +161,15 @@
                       }];
             break;
         case 8:
-            [AppConnect showList:self]; 
+            {
+                RootViewController *tabBarController = (RootViewController*)(self.tabBarController);
+                [tabBarController.adWall request];
+                [tabBarController.view addSubview:tabBarController.adWall];
+//                [_adWall request];
+//                
+//                [self.view addSubview:_adWall];
+            }
+//            [AppConnect showList:self];
 //            [IntegralWallADView showWallADView:YES didShowBlock:^(NSString *returnInfo){
 //                NSLog(@"info>>>>%@",returnInfo);
 //            } didDismissBlock:^(NSString * info){

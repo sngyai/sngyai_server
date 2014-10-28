@@ -26,6 +26,7 @@
 #import "DMOfferWallManager.h"
 #import "TaskLogTableTableViewController.h"
 #import "ApplicationCell.h"
+#import <MBJoy/MBJoyView.h>
 
 @interface TaskTableViewController : UITableViewController
     <MiidiAdWallShowAppOffersDelegate,
@@ -33,7 +34,8 @@
     MiidiAdWallSpendPointsDelegate,
     MiidiAdWallGetPointsDelegate,
     MiidiAdWallRequestToggleDelegate,
-    GuoMobWallDelegate>
+    GuoMobWallDelegate,
+    MBJoyViewDelegate>
 {
     UILabel *versionTipView_;
     ApplicationCell *_tmpCell;

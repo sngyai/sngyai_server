@@ -1,6 +1,0 @@
-code:add_patha(".").
-code:add_pathz("./ebin").
-code:add_pathz("./priv/ebin").
-code:add_pathz("./priv/ebin/steady").
-code:add_pathz("./deps/*/ebin").
-io:format("=================erlang file ok=========================~n").   

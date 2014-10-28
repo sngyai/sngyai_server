@@ -76,11 +76,11 @@ config_channel_name(?CHANNEL_COCOUNION) ->
 config_channel_name(?CHANNEL_DOMOB) ->
   "多盟";
 config_channel_name(?CHANNEL_QUMI) ->
-  "艾德思奇";
+  "趣米";
 config_channel_name(?CHANNEL_JUPENG) ->
   "巨朋";
-config_channel_name(?CHANNEL_WAPS) ->
-  "万普";
+config_channel_name(?CHANNEL_LIMEI) ->
+  "力美";
 config_channel_name(_) ->
   "".
 

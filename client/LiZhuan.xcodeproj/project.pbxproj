@@ -143,6 +143,9 @@
 		B7BCE3EA19DC394000123BFC /* libQumiAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */; };
 		B7BCE3F119DC395900123BFC /* QumiImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3EF19DC395900123BFC /* QumiImages.bundle */; };
 		B7DE1D6E19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */; };
+		B7DE1D701A0004D200A0DB27 /* MBJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D6F1A0004D200A0DB27 /* MBJoy.framework */; };
+		B7DE1D721A00050300A0DB27 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D711A00050300A0DB27 /* EventKit.framework */; };
+		B7DE1D741A00050A00A0DB27 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D731A00050A00A0DB27 /* EventKitUI.framework */; };
 		B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24719B9F4C70095D451 /* CoreMedia.framework */; };
 		B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24919B9F4D40095D451 /* AVFoundation.framework */; };
 		B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F1E24B19B9F5240095D451 /* CoreLocation.framework */; };
@@ -417,6 +420,9 @@
 		B7BCE3F019DC395900123BFC /* QumiIterStitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiIterStitial.h; sourceTree = "<group>"; };
 		B7DE1D6C19FFF6DF00A0DB27 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMOfferWallManager.h; path = Lib/DMOfferWallSDK/DMOfferWallManager.h; sourceTree = SOURCE_ROOT; };
 		B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
+		B7DE1D6F1A0004D200A0DB27 /* MBJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBJoy.framework; path = Framework/MBJoy.framework; sourceTree = "<group>"; };
+		B7DE1D711A00050300A0DB27 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		B7DE1D731A00050A00A0DB27 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		B7F1E24719B9F4C70095D451 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B7F1E24919B9F4D40095D451 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B7F1E24B19B9F5240095D451 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -442,10 +448,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B1668219BC317A00449466 /* libz.1.2.5.dylib in Frameworks */,
+				B7A050A119DB26D700FCF2EC /* SystemConfiguration.framework in Frameworks */,
+				F1A0C83617E07C7B00474C9A /* AdSupport.framework in Frameworks */,
+				B7867CBB19AA481700D7965A /* Security.framework in Frameworks */,
+				BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */,
+				B7BCE3E219DC24CA00123BFC /* MobileCoreServices.framework in Frameworks */,
+				BE882ED41568C16800D0EDC9 /* MessageUI.framework in Frameworks */,
+				FBFBDD3419C2100400D368CD /* MediaPlayer.framework in Frameworks */,
+				F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */,
+				B7DE1D741A00050A00A0DB27 /* EventKitUI.framework in Frameworks */,
+				B7DE1D721A00050300A0DB27 /* EventKit.framework in Frameworks */,
+				B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */,
+				B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */,
+				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
+				FBFBDD3C19C2102900D368CD /* AudioToolbox.framework in Frameworks */,
+				B7DE1D701A0004D200A0DB27 /* MBJoy.framework in Frameworks */,
 				B7BCE3EA19DC394000123BFC /* libQumiAdSDK.a in Frameworks */,
 				B7BCE3E619DC2B3800123BFC /* WPLib.framework in Frameworks */,
-				B7B1668219BC317A00449466 /* libz.1.2.5.dylib in Frameworks */,
-				B7BCE3E219DC24CA00123BFC /* MobileCoreServices.framework in Frameworks */,
 				B7A050B419DB2FE800FCF2EC /* Bolts.framework in Frameworks */,
 				B7A050B619DB2FE800FCF2EC /* JupengSdkLib.a in Frameworks */,
 				B7A055A819DB380C00FCF2EC /* Bolts.framework in Frameworks */,
@@ -458,31 +478,20 @@
 				B7A056F319DB382F00FCF2EC /* minizip64.a in Frameworks */,
 				B7A050BE19DB2FE800FCF2EC /* MiidiAdLib.a in Frameworks */,
 				B7A050A319DB2BE800FCF2EC /* libCTWakeCommandParserDynamic.dylib in Frameworks */,
-				B7A050A119DB26D700FCF2EC /* SystemConfiguration.framework in Frameworks */,
 				F19AAA8518A9C7590001C8FD /* ImageIO.framework in Frameworks */,
-				BE882ED21568C15900D0EDC9 /* QuartzCore.framework in Frameworks */,
 				B7F1E24819B9F4C70095D451 /* CoreMedia.framework in Frameworks */,
 				B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */,
-				FBFBDD3C19C2102900D368CD /* AudioToolbox.framework in Frameworks */,
 				FBFBDD3A19C2102300D368CD /* CoreImage.framework in Frameworks */,
 				FBFBDD3819C2101D00D368CD /* CoreAudio.framework in Frameworks */,
 				FBFBDD3619C2100E00D368CD /* CoreMotion.framework in Frameworks */,
-				FBFBDD3419C2100400D368CD /* MediaPlayer.framework in Frameworks */,
-				BE882ED41568C16800D0EDC9 /* MessageUI.framework in Frameworks */,
 				B7B1678119BC46ED00449466 /* libxml2.2.dylib in Frameworks */,
 				B7B1677F19BC46DA00449466 /* libxml2.dylib in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				B7F1E24C19B9F5240095D451 /* CoreLocation.framework in Frameworks */,
-				F1A0C83617E07C7B00474C9A /* AdSupport.framework in Frameworks */,
 				B7867CBF19AA485D00D7965A /* libsqlite3.dylib in Frameworks */,
-				B745A5F619AA5DBE00491373 /* CoreTelephony.framework in Frameworks */,
 				B7867CC119AA486C00D7965A /* StoreKit.framework in Frameworks */,
-				B7867CBB19AA481700D7965A /* Security.framework in Frameworks */,
 				B7AFF00619AE42140009C0C6 /* libz.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				B7867CBD19AA484500D7965A /* CFNetwork.framework in Frameworks */,
-				F19AAA8718A9C7770001C8FD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +593,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7DE1D731A00050A00A0DB27 /* EventKitUI.framework */,
+				B7DE1D711A00050300A0DB27 /* EventKit.framework */,
+				B7DE1D6F1A0004D200A0DB27 /* MBJoy.framework */,
 				B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */,
 				B7BCE3E119DC24CA00123BFC /* MobileCoreServices.framework */,
 				B7A055A419DB380C00FCF2EC /* Bolts.framework */,
@@ -1208,8 +1220,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1231,8 +1243,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -1245,8 +1257,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1274,8 +1286,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1287,8 +1299,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1302,7 +1314,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7s;
@@ -1313,8 +1325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1329,7 +1341,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7s;

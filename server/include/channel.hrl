@@ -16,4 +16,4 @@
 -define(CHANNEL_DOMOB, 5).      %多盟
 -define(CHANNEL_QUMI, 6).       %趣米
 -define(CHANNEL_JUPENG, 7).     %巨朋
--define(CHANNEL_WAPS, 8).       %万普
+-define(CHANNEL_LIMEI, 8).      %力美
