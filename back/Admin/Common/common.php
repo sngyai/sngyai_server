@@ -206,14 +206,28 @@ function exchange($status, $id, $callback = "")
     return $info;
 }
 
-function cash($status, $id, $callback = "")
+function cash($status, $id)
 {
     switch ($status) {
         case 0 :
-            $info = '<a href="__URL__/exchange/id/' . $id . '/navTabId/__MODULE__" target="ajaxTodo" callback="' . $callback . '">审核</a>';
+            $info = '<a href="__URL__/exchange/id/' . $id . '/navTabId/__MODULE__" target="ajaxTodo" callback="' . $callback . '">发款</a>';
             break;
         case 1 :
-            $info = "已结算";
+            $info = "已发款";
+            break;
+    }
+    return $info;
+}
+
+function exchangeLogStatus($status)
+{
+    switch($status){
+        case 0 :
+            $info = "待核算";
+            break;
+        case 1 :
+            $info = "已核算";
+            break;
     }
     return $info;
 }
@@ -227,22 +241,43 @@ function getChannel($channel)
 {
     switch ($channel){
         case 0 :
-            return "安沃";
+            $info = "安沃";
+            break;
         case 1 :
-            return "有米";
+            $info = "有米";
+            break;
         case 2 :
-            return "米迪";
+            $info = "米迪";
+            break;
         case 3 :
-            return "果盟";
+            $info = "果盟";
+            break;
         case 4 :
-            return "触控";
+            $info = "触控";
+            break;
         case 5 :
-            return "多盟";
+            $info = "多盟";
+            break;
         case 6 :
-            return "艾德";
+            $info = "趣米";
+            break;
         case 7 :
-            return "巨朋";
+            $info = "巨朋";
+            break;
+        case 8 :
+            $info = "力美";
+            break;
+        case 9 :
+            $info = "酷告";
+            break;
+        case 10 :
+            $info = "磨盘";
+            break;
+        default :
+            $info = $channel;
+            break;
     }
+    return $info;
 }
 
 function getChannelId($channel)
@@ -260,10 +295,16 @@ function getChannelId($channel)
             return 4;
         case "多盟" :
             return 5;
-        case "艾德" :
+        case "趣米" :
             return 6;
         case "巨朋" :
             return 7;
+        case "力美" :
+            return 8;
+        case "酷告" :
+            return 9;
+        case "磨盘" :
+            return 10;
     }
 }
 
