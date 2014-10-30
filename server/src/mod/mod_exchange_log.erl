@@ -160,14 +160,14 @@ code_change(_OldVsn, State, _Extra) ->
 %%% Internal functions
 %%%===================================================================
 do_info({self_state_deal}, State) ->
-  reload(),
+%%   reload(),
   erlang:send_after(?RELOAD_TICK * ?TIME_HZ, self(), {self_state_deal}),
   {noreply, State};
 do_info(Info, State) ->
   ?Error(exchange_log_logger, "exchange_log info is not match:~p", [Info]),
   {noreply, State}.
 
-%%加载
-reload() ->
-  UpdatedLogs = db_agent_exchange_log:get_update(),
-  [ets:insert(?ETS_EXCHANGE_LOG, Log)||Log<-UpdatedLogs].
+%% %%加载
+%% reload() ->
+%%   UpdatedLogs = db_agent_exchange_log:get_update(),
+%%   [ets:insert(?ETS_EXCHANGE_LOG, Log)||Log<-UpdatedLogs].
