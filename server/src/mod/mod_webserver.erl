@@ -483,9 +483,12 @@ do_jupeng(QS) ->
   lib_callback:deal(Idfa, ?CHANNEL_JUPENG, TrandNo, Cash, AppName),
   200.
 
+%%http://127.0.0.1:8088/limei?aduid=de4e1a27c9a80b8e42513e506f8c4033&aid=&cid=eac1ee3c6e0a445cec877d49e34bf6f10&idfa=8FB77E7F-6898-45B7-9039-237212DD77C6&point=175&source=Limei&timestamp=1414520870&title=%E5%8D%8E%E4%BD%8F%E9%85%92%E5%BA%97%28%E6%B1%89%E5%BA%AD%29&uid=020000000000&sign=cYXX3XIB3%2F12mhepOkyOVYPK67o%3D
 do_limei(QS) ->
   Idfa = string:to_upper(resolve_parameter("idfa", QS)),
-  TrandNo = resolve_parameter("orderId", QS),
+  Cid = resolve_parameter("cid", QS),
+  TimeStamp = resolve_parameter("timestamp",QS),
+  TrandNo = lists:concat([TimeStamp, Idfa, Cid]),
   Cash = lib_util_type:string_to_term(resolve_parameter("point", QS)),
   AppName = resolve_parameter("title", QS),
   lib_callback:deal(Idfa, ?CHANNEL_LIMEI, TrandNo, Cash, AppName),
