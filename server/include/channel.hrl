@@ -17,3 +17,5 @@
 -define(CHANNEL_QUMI, 6).       %趣米
 -define(CHANNEL_JUPENG, 7).     %巨朋
 -define(CHANNEL_LIMEI, 8).      %力美
+-define(CHANNEL_COOLAD, 9).     %酷告
+-define(CHANNEL_MOPAN, 10).     %磨盘

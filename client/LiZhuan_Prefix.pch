@@ -1,8 +1,14 @@
 //
 // Prefix header for all source files of the 'MiidiSdkSample_Wall' target in the 'MiidiSdkSample_Wall' project
 //
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+    #import "MopanObfuscation.h" //添加这行代码
 #endif

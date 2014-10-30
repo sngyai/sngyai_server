@@ -176,6 +176,12 @@
 //                NSLog(@"info>>>>%@",info);
 //            }];
             break;
+        case 9:
+            {
+                RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+                [tabBarController.kgad showCoolAdWallWithController:tabBarController];
+            }
+            break;
 		default:
 			break;
 	}

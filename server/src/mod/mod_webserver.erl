@@ -336,6 +336,14 @@ deal_request(["qumi"], QS, _IPAddress) ->
   Result = do_qumi(QS),
   {finish, Result};
 
+deal_request(["mopan"], QS, _IPAddress) ->
+  Result = do_mopan(QS),
+  {finish, Result};
+
+deal_request(["coolad"], QS, _IPAddress) ->
+  Result = do_coolad(QS),
+  {finish, Result};
+
 %%**********************************积分墙回调 end *********************************
 
 %% 安全沙箱
@@ -500,6 +508,23 @@ do_qumi(QS) ->
   Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
   AppName = resolve_parameter("ad", QS),
   lib_callback:deal(Idfa, ?CHANNEL_QUMI, TrandNo, Cash, AppName),
+  200.
+
+do_mopan(QS) ->
+  Idfa = string:to_upper(resolve_parameter("imei", QS)),
+  TrandNo = resolve_parameter("trand_no", QS),
+  Cash = lib_util_type:string_to_term(resolve_parameter("cash", QS)),
+  AppName = resolve_parameter("appShowName", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_MOPAN, TrandNo, Cash, AppName),
+  200.
+
+do_coolad(QS) ->
+  Idfa = string:to_upper(resolve_parameter("device", QS)),
+  TimeStamp = resolve_parameter("ti",QS),
+  TrandNo = lists:concat([TimeStamp, Idfa]),
+  Cash = lib_util_type:string_to_term(resolve_parameter("points", QS)),
+  AppName = resolve_parameter("dan", QS),
+  lib_callback:deal(Idfa, ?CHANNEL_COOLAD, TrandNo, Cash, AppName),
   200.
 
 

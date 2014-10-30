@@ -199,6 +199,12 @@
         case 8:
             channelString = @"力美";
             break;
+        case 9:
+            channelString = @"酷告";
+            break;
+        case 10:
+            channelString = @"磨盘";
+            break;
         default:
             channelString = @"未知";
             break;

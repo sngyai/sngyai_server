@@ -81,6 +81,10 @@ config_channel_name(?CHANNEL_JUPENG) ->
   "巨朋";
 config_channel_name(?CHANNEL_LIMEI) ->
   "力美";
+config_channel_name(?CHANNEL_COOLAD) ->
+  "酷告";
+config_channel_name(?CHANNEL_MOPAN) ->
+  "磨盘";
 config_channel_name(_) ->
   "".
 

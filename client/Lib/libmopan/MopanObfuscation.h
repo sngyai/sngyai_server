@@ -1,0 +1,32 @@
+#ifndef Mopan_codeObfuscation_h
+//
+#define MopanAdWall slyPMlXIxnPWaECc
+#define initWithMopanWall AaRisiFrqMSKosNW
+#define withMopanWallAppPassword ZYpgmjMqihgRYUDm
+#define showMoneyOffers behpIconmBVmWXab
+#define getMoney REvDtLeJQqeXwGTi
+#define spendMoney EHtgzdTZFZXyYOVP
+#define addMoney bLEVyjqOVToRClox
+#define queryWallEnable XVHtoFtHXgMmmQpg
+#define setCustomUserID bpqIqTuISwawbIpc
+#define MopanAdWallDelegate ZIrvimVAyXwcfoxS
+#define adwallDidShowAppsStartLoad VoLqBOsnpHuhmxHs
+#define adwallDidShowAppsClosed vUPaNLtyLHMWfzqQ
+#define adwallDidFailShowAppsWithError ltlSxyfZgSQlZZVd
+#define adwallSuccessGetMoney iQvreCxaJoeWttUv
+#define forMoneyName WLeFtDmagiouCdFd
+#define adwallFailGetMoney YFxESjTXiBOgBXeR
+#define adwallSuccessSpendMoney kBCUreESKMnggqhG
+#define adwallFailSpendMoney kZdSquUxUlruMWtU
+#define adwallSuccessAddMoney XWixMhWoKeqvzArR
+#define adwallFailAddMoney dkbovbwcxQBWThqs
+#define adwallSuccessAskEnable wPQxaSesNUBgTTQb
+#define adwallFailAskEnable RLYIrHdYXOjvKses
+#define MopanInterstitialDelegate TiPWrbuYuuSBKPTY
+#define didLoadAdSuccess XDAEtDIvNFmcobzZ
+#define didLoadAdFailed XccWcqIDDfjNYVOy
+#define MopanInterstitialAdViewController jLhwBpiRzDLrOvwG
+#define initWithMopanInterstitial kaVqIyKJUpZXWNHC
+#define withMopanInterstitial LSufMbJTqhNFGcSc
+#define loadAd dTWJczLPeTjWGVrE
+#endif

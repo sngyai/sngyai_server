@@ -48,6 +48,9 @@
     
     _adWall=[[MBJoyView alloc] initWithAdUnitId:@"de4e1a27c9a80b8e42513e506f8c4033" adType:AdTypeList rootViewController:self userInfo:nil];
     _adWall.delegate = self;
+    
+    _kgad = [[CoolAdWall alloc] initWithAppID:@"RTB201415280310260wfbj3r67n7igtu" secretKey:@"ilac8ra3tbu8g5j" andDelegate:self];
+    [_kgad setCoolAdWallColor:CoolAdWallThemeColor_Blue];
 }
 
 #pragma mark -
