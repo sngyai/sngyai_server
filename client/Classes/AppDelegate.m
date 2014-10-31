@@ -54,6 +54,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
                             stringByReplacingOccurrencesOfString:@">" withString:@""]
                            
                            stringByReplacingOccurrencesOfString:@" " withString:@""] ;
+    
+    [self alertMessage:[NSString stringWithFormat:@"tokens: %@", pushToken]];
 
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSString* StrUser = [[NSString stringWithFormat:@"user/?msg=1003&user_id=%@", adId]stringByAppendingString:[NSString stringWithFormat:@"&tokens=%@", pushToken]];
@@ -80,6 +82,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 
 -(void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)errorReason
 {
+        [self alertMessage:[NSString stringWithFormat:@"tokens error: %@", errorReason]];
 //    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
 }
 

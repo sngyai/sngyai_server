@@ -26,7 +26,7 @@ conn_apns() ->
   ).
 
 send_message()->
-  apns:send_message(?APNS_NAME, "31e45ec45977603adf584cf3d82447babe328849b5cbf9b0c30e96fdbfdf4db6", "hello,这是一号话务员").
+  apns:send_message(?APNS_NAME, "f0fa91cd95c6d068d29c4e80098558cd9e91951fb7f9d5e71f41d57121c2afb8", "hello,这是一号话务员").
 
 send_message(Msg) ->
   apns:send_message(my_connection_name, #apns_msg{
