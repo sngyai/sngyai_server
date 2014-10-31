@@ -21,7 +21,7 @@
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
-#import "DMOfferWallManager.h"
+#import "AssetZoneManager.h"
 #import "QMRecommendApp.h"
 #import <MBJoy/MBJoyView.h>
 #import "CoolAdWall.h"
@@ -47,7 +47,7 @@
 , MiidiAdWallSpendPointsDelegate
 , MiidiAdWallGetPointsDelegate
 , MiidiAdWallRequestToggleDelegate
-, DMOfferWallManagerDelegate
+, AssetZoneManagerDelegate
 //, MobiSageJoyDelegate
 , QMRecommendAppDelegate
 , GuoMobWallDelegate
@@ -58,7 +58,7 @@
     GuoMobWallViewController * _guomobwall_vc;
 //    MobiSageJoyViewController *_mobisagejoy;
     QMRecommendApp *_qumiViewController;
-    DMOfferWallManager*_offerWallManager;
+    AssetZoneManager*_offerWallManager;
     MBJoyView *_adWall;
     CoolAdWall * _kgad;
     
@@ -72,7 +72,7 @@
 
 @property(nonatomic,copy)GuoMobWallViewController *guomobwall_vc;
 //@property(nonatomic,copy)MobiSageJoyViewController *mobisagejoy;
-@property(nonatomic,copy)DMOfferWallManager *offerWallManager;
+@property(nonatomic,copy)AssetZoneManager *offerWallManager;
 @property(nonatomic,copy)QMRecommendApp *qumiViewController;
 @property(nonatomic,copy)MBJoyView *adWall;
 @property(nonatomic,copy)CoolAdWall *kgad;

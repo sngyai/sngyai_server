@@ -22,7 +22,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]; if (self) {
         // 创建积分墙管理器,这⾥里使⽤用的是测试 ID,请按照 User Guide ⽂文档中获取新的 PublisherID。
-        _offerWallManager = [[DMOfferWallManager alloc] initWithPublisherID:@"96ZJ1IZAzeB0nwTBAd"];
+        _offerWallManager = [[AssetZoneManager alloc] initWithPublisherID:@"96ZJ1IZAzeB0nwTBAd"];
     }
     return self;
 }

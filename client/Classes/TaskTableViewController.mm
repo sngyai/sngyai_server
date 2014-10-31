@@ -143,7 +143,8 @@
         case 5:
             {
                 RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
-                [tabBarController.offerWallManager presentOfferWallWithViewController:self type:eDMOfferWallTypeList];
+                [tabBarController.offerWallManager presentAssetZoneWithType:eAssetZoneTypeList];
+//                [tabBarController.offerWallManager presentOfferWallWithViewController:self type:eDMOfferWallTypeList];
             }
             break;
         case 6:

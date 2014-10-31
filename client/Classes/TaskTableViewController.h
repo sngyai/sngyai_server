@@ -23,7 +23,7 @@
 #import "MiidiAdWallSpendPointsDelegate.h"
 #import "MiidiAdWallShowAppOffersDelegate.h"
 #import "MiidiAdWallRequestToggleDelegate.h"
-#import "DMOfferWallManager.h"
+#import "AssetZoneManager.h"
 #import "TaskLogTableTableViewController.h"
 #import "ApplicationCell.h"
 #import <MBJoy/MBJoyView.h>

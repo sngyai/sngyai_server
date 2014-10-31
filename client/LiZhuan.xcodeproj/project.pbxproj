@@ -173,6 +173,8 @@
 		B7B1677F19BC46DA00449466 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B1677E19BC46DA00449466 /* libxml2.dylib */; };
 		B7B1678119BC46ED00449466 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B1678019BC46ED00449466 /* libxml2.2.dylib */; };
 		B7B1681019BCE3A900449466 /* TaskLogTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */; };
+		B7BB97DE1A03D47100884BD8 /* AssetZoneBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BB97DB1A03D47100884BD8 /* AssetZoneBundle.bundle */; };
+		B7BB97E01A03D48000884BD8 /* libAssetZoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BB97DF1A03D48000884BD8 /* libAssetZoneSDK.a */; };
 		B7BCE3E219DC24CA00123BFC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E119DC24CA00123BFC /* MobileCoreServices.framework */; };
 		B7BCE3E619DC2B3800123BFC /* WPLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050B319DB2FE800FCF2EC /* WPLib.framework */; };
 		B7BCE3E819DC2FFD00123BFC /* 力美.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3E719DC2FFD00123BFC /* 力美.png */; };
@@ -499,6 +501,9 @@
 		B7B1678019BC46ED00449466 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		B7B1680E19BCE3A900449466 /* TaskLogTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLogTableTableViewController.h; sourceTree = "<group>"; };
 		B7B1680F19BCE3A900449466 /* TaskLogTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLogTableTableViewController.m; sourceTree = "<group>"; };
+		B7BB97DB1A03D47100884BD8 /* AssetZoneBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AssetZoneBundle.bundle; sourceTree = "<group>"; };
+		B7BB97DD1A03D47100884BD8 /* AssetZoneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetZoneManager.h; sourceTree = "<group>"; };
+		B7BB97DF1A03D48000884BD8 /* libAssetZoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAssetZoneSDK.a; path = Framework/libAssetZoneSDK.a; sourceTree = "<group>"; };
 		B7BCE3E119DC24CA00123BFC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B7BCE3E719DC2FFD00123BFC /* 力美.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "力美.png"; path = "Resources/力美.png"; sourceTree = "<group>"; };
 		B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQumiAdSDK.a; path = Framework/libQumiAdSDK.a; sourceTree = "<group>"; };
@@ -535,6 +540,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BB97E01A03D48000884BD8 /* libAssetZoneSDK.a in Frameworks */,
 				B788844F1A028A820088C93F /* libstdc++.dylib in Frameworks */,
 				B7F1E24A19B9F4D40095D451 /* AVFoundation.framework in Frameworks */,
 				FBFBDD3C19C2102900D368CD /* AudioToolbox.framework in Frameworks */,
@@ -683,6 +689,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7BB97DF1A03D48000884BD8 /* libAssetZoneSDK.a */,
 				B788844E1A028A820088C93F /* libstdc++.dylib */,
 				B788844C1A028A500088C93F /* CoreText.framework */,
 				B78884481A02898F0088C93F /* libCoolAdOnlineConfig.a */,
@@ -1173,6 +1180,24 @@
 			path = zkcmone;
 			sourceTree = "<group>";
 		};
+		B7BB97DA1A03D47100884BD8 /* AssetZoneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB97DB1A03D47100884BD8 /* AssetZoneBundle.bundle */,
+				B7BB97DC1A03D47100884BD8 /* Header */,
+			);
+			name = AssetZoneSDK;
+			path = Lib/AssetZoneSDK;
+			sourceTree = "<group>";
+		};
+		B7BB97DC1A03D47100884BD8 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB97DD1A03D47100884BD8 /* AssetZoneManager.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		B7BCE3EB19DC395900123BFC /* QumiADLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1189,6 +1214,7 @@
 		BE882ED51568C17300D0EDC9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B7BB97DA1A03D47100884BD8 /* AssetZoneSDK */,
 				B78883F01A0289740088C93F /* SDK */,
 				B78883E51A0254000088C93F /* libmopan */,
 				B7BCE3EB19DC395900123BFC /* QumiADLib */,
@@ -1342,6 +1368,7 @@
 				B7A055CB19DB381B00FCF2EC /* Baseball.png in Resources */,
 				B7A056DA19DB382F00FCF2EC /* ChanceAdRes.bundle in Resources */,
 				B7A055E419DB381B00FCF2EC /* user_disabled@2x.png in Resources */,
+				B7BB97DE1A03D47100884BD8 /* AssetZoneBundle.bundle in Resources */,
 				B78884511A028FE40088C93F /* 酷告.png in Resources */,
 				B7A055CD19DB381B00FCF2EC /* Checkers.png in Resources */,
 				B788843C1A0289740088C93F /* CoolAdWall_coin.png in Resources */,
