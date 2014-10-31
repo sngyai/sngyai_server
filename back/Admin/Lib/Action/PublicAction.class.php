@@ -140,17 +140,18 @@ class PublicAction extends Action
             $this->error('帐号错误！');
         } elseif (empty($_POST['password'])) {
             $this->error('密码必须！');
-        } elseif (empty($_POST['verify'])) {
-            $this->error('验证码必须！');
         }
+//        elseif (empty($_POST['verify'])) {
+//            $this->error('验证码必须！');
+//        }
         //生成认证条件
         $map = array();
         // 支持使用绑定帐号登录
         $map['account'] = $_POST['account'];
         $map["status"] = array('gt', 0);
-        if ($_SESSION['verify'] != md5($_POST['verify'])) {
-            $this->error('验证码错误！');
-        }
+//        if ($_SESSION['verify'] != md5($_POST['verify'])) {
+//            $this->error('验证码错误！');
+//        }
         import('@.ORG.Util.RBAC');
         $authInfo = RBAC::authenticate($map);
         //使用用户名、密码和状态的方式进行认证

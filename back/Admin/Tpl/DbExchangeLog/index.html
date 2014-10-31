@@ -10,7 +10,7 @@
                 </li>
                 <li>
                     <label>账号：</label>
-                    <input type="text" name="account" value=""/>
+                    <input type="text" name="account" value="{$_POST['account']}"/>
                 </li>
             </ul>
             <div class="subBar">
@@ -68,6 +68,9 @@
                 >使用积分</th>
                 <th orderField="status"
                 <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>
+                >状态</th>
+                <th orderField="status"
+                <if condition="$_REQUEST._order eq 'status'">class="{$_REQUEST._sort}"</if>
                 >最后更新时间</th>
             </tr>
         </thead>
@@ -81,6 +84,7 @@
                 <td>{$vo.type|getExchange}</td>
                 <td>{$vo.account}</td>
                 <td>{$vo.num}</td>
+                <td>{$vo.status|exchangeLogStatus}</td>
                 <td>{$vo.last_update|date="Y-m-d H:i:s",###}</td>
             </tr>
         </volist>

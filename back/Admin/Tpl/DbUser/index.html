@@ -62,7 +62,10 @@
                 >赚钱号</th>
                 <th width="50" orderField="score_current"
                 <if condition="$_REQUEST._order eq 'score_current'">class="{$_REQUEST._sort}"</if>
-                >用户积分</th>
+                >可用积分</th>
+                <th width="50" orderField="score_current"
+                <if condition="$_REQUEST._order eq 'score_current'">class="{$_REQUEST._sort}"</if>
+                >历史总计积分</th>
                 <th width="50" orderField="score_current"
                 <if condition="$_REQUEST._order eq 'score_current'">class="{$_REQUEST._sort}"</if>
                 >最近登录ip</th>
@@ -79,6 +82,7 @@
                 <td>{$vo.account}</td>
                 <td>{$vo.name}</td>
                 <td>{$vo.score_current}</td>
+                <td>{$vo.score_total}</td>
                 <td>{$vo.ip}</td>
                 <td>{$vo.ip|getCity}</td>
                 <td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
