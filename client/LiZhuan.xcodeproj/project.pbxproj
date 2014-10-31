@@ -67,7 +67,6 @@
 		B7A050B419DB2FE800FCF2EC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050A619DB2FE800FCF2EC /* Bolts.framework */; };
 		B7A050B619DB2FE800FCF2EC /* JupengSdkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050A819DB2FE800FCF2EC /* JupengSdkLib.a */; };
 		B7A050B719DB2FE800FCF2EC /* libChanceAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050A919DB2FE800FCF2EC /* libChanceAd.a */; };
-		B7A050B819DB2FE800FCF2EC /* libDMOfferWallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AA19DB2FE800FCF2EC /* libDMOfferWallSDK.a */; };
 		B7A050B919DB2FE800FCF2EC /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AB19DB2FE800FCF2EC /* libGuoMobWall.a */; };
 		B7A050BB19DB2FE800FCF2EC /* libSDKApplication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AD19DB2FE800FCF2EC /* libSDKApplication.a */; };
 		B7A050BC19DB2FE800FCF2EC /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AE19DB2FE800FCF2EC /* libYouMi.a */; };
@@ -179,7 +178,6 @@
 		B7BCE3E819DC2FFD00123BFC /* 力美.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3E719DC2FFD00123BFC /* 力美.png */; };
 		B7BCE3EA19DC394000123BFC /* libQumiAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */; };
 		B7BCE3F119DC395900123BFC /* QumiImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3EF19DC395900123BFC /* QumiImages.bundle */; };
-		B7DE1D6E19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */; };
 		B7DE1D701A0004D200A0DB27 /* MBJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D6F1A0004D200A0DB27 /* MBJoy.framework */; };
 		B7DE1D721A00050300A0DB27 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D711A00050300A0DB27 /* EventKit.framework */; };
 		B7DE1D741A00050A00A0DB27 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DE1D731A00050A00A0DB27 /* EventKitUI.framework */; };
@@ -509,8 +507,6 @@
 		B7BCE3EE19DC395900123BFC /* QumiConfigTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiConfigTool.h; sourceTree = "<group>"; };
 		B7BCE3EF19DC395900123BFC /* QumiImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QumiImages.bundle; sourceTree = "<group>"; };
 		B7BCE3F019DC395900123BFC /* QumiIterStitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QumiIterStitial.h; sourceTree = "<group>"; };
-		B7DE1D6C19FFF6DF00A0DB27 /* DMOfferWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMOfferWallManager.h; path = Lib/DMOfferWallSDK/DMOfferWallManager.h; sourceTree = SOURCE_ROOT; };
-		B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobOfferWallBundle.bundle; sourceTree = "<group>"; };
 		B7DE1D6F1A0004D200A0DB27 /* MBJoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBJoy.framework; path = Framework/MBJoy.framework; sourceTree = "<group>"; };
 		B7DE1D711A00050300A0DB27 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		B7DE1D731A00050A00A0DB27 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
@@ -566,7 +562,6 @@
 				B7A050B619DB2FE800FCF2EC /* JupengSdkLib.a in Frameworks */,
 				B7A055A819DB380C00FCF2EC /* Bolts.framework in Frameworks */,
 				B7A050B719DB2FE800FCF2EC /* libChanceAd.a in Frameworks */,
-				B7A050B819DB2FE800FCF2EC /* libDMOfferWallSDK.a in Frameworks */,
 				B7A050B919DB2FE800FCF2EC /* libGuoMobWall.a in Frameworks */,
 				B7A050BB19DB2FE800FCF2EC /* libSDKApplication.a in Frameworks */,
 				B7A050BC19DB2FE800FCF2EC /* libYouMi.a in Frameworks */,
@@ -1003,24 +998,6 @@
 			path = S3;
 			sourceTree = "<group>";
 		};
-		B7A0563319DB382F00FCF2EC /* DMOfferWallSDK */ = {
-			isa = PBXGroup;
-			children = (
-				B7DE1D6D19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle */,
-				B7A0563519DB382F00FCF2EC /* Header */,
-			);
-			name = DMOfferWallSDK;
-			path = Lib/DMOfferWallSDK;
-			sourceTree = "<group>";
-		};
-		B7A0563519DB382F00FCF2EC /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				B7DE1D6C19FFF6DF00A0DB27 /* DMOfferWallManager.h */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
 		B7A0563719DB382F00FCF2EC /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,7 +1198,6 @@
 				B7A055FC19DB382F00FCF2EC /* ASIHTTPRequest */,
 				B7A0563119DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.h */,
 				B7A0563219DB382F00FCF2EC /* CompositeSubviewBasedApplicationCell.m */,
-				B7A0563319DB382F00FCF2EC /* DMOfferWallSDK */,
 				B7A0563719DB382F00FCF2EC /* External */,
 				B7A0563D19DB382F00FCF2EC /* GuomobWallBundle.bundle */,
 				B7A0563E19DB382F00FCF2EC /* GuoMobWallViewController.h */,
@@ -1357,7 +1333,6 @@
 				B7A055D219DB381B00FCF2EC /* Dinner.png in Resources */,
 				B78884441A0289740088C93F /* yes_icon_green.png in Resources */,
 				B788843B1A0289740088C93F /* no_icon.png in Resources */,
-				B7DE1D6E19FFF6EC00A0DB27 /* DomobOfferWallBundle.bundle in Resources */,
 				B7A055CF19DB381B00FCF2EC /* DarkBackground.png in Resources */,
 				B7A055D419DB381B00FCF2EC /* exchange.png in Resources */,
 				B788843D1A0289740088C93F /* CoolAdWall_gold.png in Resources */,
@@ -1484,8 +1459,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1507,8 +1482,8 @@
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s armv64 i386";
@@ -1521,8 +1496,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1551,8 +1526,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -1564,8 +1539,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1579,7 +1554,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7s armv7 i386";
@@ -1590,8 +1565,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Brave Lions Advertising Co.LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: WEI FENG HOU (8M56P2AMGE)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1606,7 +1581,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "59174416-8a6c-47b1-87bd-319e7dc77a8c";
+				PROVISIONING_PROFILE = "58eef3e5-cd00-4523-9c76-15c6d5013eb4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7s armv7 i386";
