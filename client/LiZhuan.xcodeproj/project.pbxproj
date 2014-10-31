@@ -176,6 +176,7 @@
 		B7BB97DE1A03D47100884BD8 /* AssetZoneBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7BB97DB1A03D47100884BD8 /* AssetZoneBundle.bundle */; };
 		B7BB97E01A03D48000884BD8 /* libAssetZoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BB97DF1A03D48000884BD8 /* libAssetZoneSDK.a */; };
 		B7BB97E81A03D79700884BD8 /* MopanAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BB97E71A03D79700884BD8 /* MopanAdLib.a */; };
+		B7BB97EA1A03E0B900884BD8 /* 磨盘.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BB97E91A03E0B900884BD8 /* 磨盘.png */; };
 		B7BCE3E219DC24CA00123BFC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BCE3E119DC24CA00123BFC /* MobileCoreServices.framework */; };
 		B7BCE3E619DC2B3800123BFC /* WPLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050B319DB2FE800FCF2EC /* WPLib.framework */; };
 		B7BCE3E819DC2FFD00123BFC /* 力美.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE3E719DC2FFD00123BFC /* 力美.png */; };
@@ -507,6 +508,7 @@
 		B7BB97DF1A03D48000884BD8 /* libAssetZoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAssetZoneSDK.a; path = Framework/libAssetZoneSDK.a; sourceTree = "<group>"; };
 		B7BB97E51A03D6EF00884BD8 /* MopanAdWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MopanAdWall.h; sourceTree = "<group>"; };
 		B7BB97E71A03D79700884BD8 /* MopanAdLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MopanAdLib.a; path = Framework/MopanAdLib.a; sourceTree = "<group>"; };
+		B7BB97E91A03E0B900884BD8 /* 磨盘.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "磨盘.png"; path = "Resources/磨盘.png"; sourceTree = "<group>"; };
 		B7BCE3E119DC24CA00123BFC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B7BCE3E719DC2FFD00123BFC /* 力美.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "力美.png"; path = "Resources/力美.png"; sourceTree = "<group>"; };
 		B7BCE3E919DC394000123BFC /* libQumiAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQumiAdSDK.a; path = Framework/libQumiAdSDK.a; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7BB97E91A03E0B900884BD8 /* 磨盘.png */,
 				B7A056F519DB388900FCF2EC /* Data.plist */,
 				B7A056F619DB388900FCF2EC /* Entitlements.plist */,
 				B7A056F719DB388900FCF2EC /* LiZhuan-Info.plist */,
@@ -1347,6 +1350,7 @@
 				B7A055CC19DB381B00FCF2EC /* Blocks.png in Resources */,
 				B7A055D519DB381B00FCF2EC /* Football.png in Resources */,
 				B7A055DB19DB381B00FCF2EC /* Icon@2x.png in Resources */,
+				B7BB97EA1A03E0B900884BD8 /* 磨盘.png in Resources */,
 				B78884381A0289740088C93F /* CoolAdWall_icon_wait.png in Resources */,
 				B7A055CE19DB381B00FCF2EC /* coin.png in Resources */,
 				B7A056FA19DB388900FCF2EC /* Entitlements.plist in Resources */,
