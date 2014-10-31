@@ -78,8 +78,9 @@
 @end
 
 
+
 /***
- *  MopanAdWall
+ *
  *
  ***/
 
@@ -89,10 +90,10 @@
 @property (nonatomic, assign) UIViewController *rootViewController;
 
 // 设置开发者账号，账号获取来自网站www.imopan.com
--(id) initWithMopanWall:(NSString*) appID withMopanWallAppPassword:(NSString*)appPassword;
+-(id) initWithMopan:(NSString*) appID withAppSecret:(NSString*)appSecret;
 
 // 显示积分墙
-- (void)      showMoneyOffers;
+- (void)      showAppOffers;
 
 // 获取积分,通过委托,异步通知积分值,或者失败
 //
@@ -108,8 +109,8 @@
 - (void)	  queryWallEnable;
 
 // 用于服务器积分对接,设置自定义参数,参数可以传递给对接服务器
-// 参数 userID				: 需要传递给对接服务器的自定义参数
-- (void)	  setCustomUserID:(NSString*)userID;
+// 参数 paramText				: 需要传递给对接服务器的自定义参数
+- (void)	  setCustomUserID:(NSString*)paramText;
 
 
 @end

@@ -25,6 +25,7 @@
 #import "QMRecommendApp.h"
 #import <MBJoy/MBJoyView.h>
 #import "CoolAdWall.h"
+#import "MopanAdWall.h"
 
 //#import "WPLib/AppConnect.h"
 
@@ -52,7 +53,8 @@
 , QMRecommendAppDelegate
 , GuoMobWallDelegate
 , MBJoyViewDelegate
-//, CoolAdWallDelegate
+, MopanAdWallDelegate
+, CoolAdWallDelegate
 >
 {
     GuoMobWallViewController * _guomobwall_vc;
@@ -61,6 +63,7 @@
     AssetZoneManager*_offerWallManager;
     MBJoyView *_adWall;
     CoolAdWall * _kgad;
+    MopanAdWall *_mopanAdWallControl;
     
     NSNumber *_score;
     NSString *_userName;
@@ -76,6 +79,7 @@
 @property(nonatomic,copy)QMRecommendApp *qumiViewController;
 @property(nonatomic,copy)MBJoyView *adWall;
 @property(nonatomic,copy)CoolAdWall *kgad;
+@property(nonatomic,copy)MopanAdWall *mopanAdWallControl;
 
 @property(nonatomic,copy)NSNumber *score;
 @property(nonatomic,copy)NSString *alipay;

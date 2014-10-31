@@ -183,6 +183,11 @@
                 [tabBarController.kgad showCoolAdWallWithController:tabBarController];
             }
             break;
+        case 10:
+        {
+            RootViewController  *tabBarController = (RootViewController*)(self.tabBarController);
+            [tabBarController.mopanAdWallControl showAppOffers];
+        }
 		default:
 			break;
 	}

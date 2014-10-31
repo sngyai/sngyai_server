@@ -10,5 +10,4 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
-    #import "MopanObfuscation.h" //添加这行代码
 #endif

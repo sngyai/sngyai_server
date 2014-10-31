@@ -51,6 +51,10 @@
     
     _kgad = [[CoolAdWall alloc] initWithAppID:@"RTB201415280310260wfbj3r67n7igtu" secretKey:@"ilac8ra3tbu8g5j" andDelegate:self];
     [_kgad setCoolAdWallColor:CoolAdWallThemeColor_Blue];
+    
+    _mopanAdWallControl = [[MopanAdWall alloc] initWithMopan:@"14418" withAppSecret:@"xd32us8u5kivxnhc"];
+    _mopanAdWallControl.delegate = self;
+    _mopanAdWallControl.rootViewController = self;
 }
 
 #pragma mark -
@@ -68,13 +72,71 @@
     // For example: self.myOutlet = nil;
 }
 
+// MopanAdWallDelegate delegate start
+
+// 积分墙开始加载数据。
+// Adall starts to work.
+- (void)adwallDidShowAppsStartLoad
+{
+    NSLog(@"[mopan] 开始加载积分墙");
+	
+	
+}
+
+// 关闭积分墙页面。
+// Offer wall closed.
+- (void)adwallDidShowAppsClosed
+{
+    NSLog(@"[mopan 关闭积分墙");
+}
+
+// 积分墙加载失败。可能的原因由error部分提供，例如网络连接失败、被禁用等。
+- (void)adwallDidFailShowAppsWithError:(NSError *)error
+{
+    NSLog(@"[mopan] 加载积分墙失败");
+	
+}
+
+// 成功请求积分墙开关
+//
+// 详解:当接收服务器返回积分墙开关成功后调用该函数
+// 补充：adWallSwitch: 返回积分墙是否开启
+- (void)adwallSuccessAskEnable:(BOOL)adWallEnable
+{
+    if(adWallEnable == YES){
+        NSLog(@"[mopan] 从服务器查询，可以正常使用积分墙");
+        
+        
+    }
+    else{
+        NSLog(@"[mopan] 从服务器查询，不能使用积分墙 .需要正常使用，需要到后台设置");
+        
+        
+    }
+    
+}
+
+// 请求积分墙开关失败后调用
+//
+// 详解:当接收服务器返回的数据失败后调用该函数
+// 补充：
+- (void)adwallFailAskEnable:(NSError *)error
+{
+    NSLog(@"[mopan] 获取积分墙开关失败!");
+    
+	
+}
+
+
 
 - (void)dealloc {
     //多盟
 	_offerWallManager.delegate = nil;
     [_offerWallManager release];
     _offerWallManager = nil;
-    
+    // 磨盘释放内存
+    _mopanAdWallControl.delegate = nil;
+    [_mopanAdWallControl release];
     [super dealloc];
 }
 

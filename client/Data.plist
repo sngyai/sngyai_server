@@ -142,5 +142,19 @@
 		<key>Icon</key>
 		<string>酷告.png</string>
 	</dict>
+	<dict>
+		<key>Publisher</key>
+		<string>新渠道，得分给力！欢迎尝鲜</string>
+		<key>Name</key>
+		<string>磨盘</string>
+		<key>NumRatings</key>
+		<integer>68</integer>
+		<key>Rating</key>
+		<real>4</real>
+		<key>Price</key>
+		<string>打开</string>
+		<key>Icon</key>
+		<string>酷告.png</string>
+	</dict>
 </array>
 </plist>
