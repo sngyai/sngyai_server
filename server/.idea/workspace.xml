@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t_apns.erl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="t_apns.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/t_apns.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43413517" vertical-offset="153" max-vertical-offset="1026">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1026">
               <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
               <folding />
             </state>
@@ -113,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.app.src" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.app.src" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server.app.src">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="950">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.21076746" vertical-offset="63" max-vertical-offset="950">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -147,9 +147,9 @@
         <option value="$PROJECT_DIR$/src/lib/channel_callback/lib_callback.erl" />
         <option value="$PROJECT_DIR$/src/lib/lib_exchange.erl" />
         <option value="$PROJECT_DIR$/src/mod/mod_exchange_log.erl" />
-        <option value="$PROJECT_DIR$/src/server.app.src" />
         <option value="$PROJECT_DIR$/doc/url_test.txt" />
         <option value="$PROJECT_DIR$/src/t_apns.erl" />
+        <option value="$PROJECT_DIR$/src/server.app.src" />
       </list>
     </option>
   </component>
@@ -684,12 +684,12 @@
       <workItem from="1414506210532" duration="4863000" />
       <workItem from="1414666769759" duration="2305000" />
       <workItem from="1414692314679" duration="4178000" />
-      <workItem from="1414764667319" duration="1700000" />
+      <workItem from="1414764667319" duration="1897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27867000" />
+    <option name="totallyTimeSpent" value="28064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="970" extended-state="6" />
@@ -1045,14 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.app.src">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="950">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/channel.hrl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
@@ -1122,8 +1114,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t_apns.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43413517" vertical-offset="153" max-vertical-offset="1026">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1026">
           <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.app.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21076746" vertical-offset="63" max-vertical-offset="950">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>
