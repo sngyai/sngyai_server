@@ -23,5 +23,6 @@ class DbExchangeAction extends CommonAction{
         } else {
             $this->error('审核失败！');
         }
+       // header("Location:http://127.0.0.1/back/Admin/#Exchange");
     }
 } 

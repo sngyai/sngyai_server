@@ -206,7 +206,7 @@ function exchange($status, $id, $callback = "")
     return $info;
 }
 
-function cash($status, $id)
+function cash($status, $id, $callback = "")
 {
     switch ($status) {
         case 0 :

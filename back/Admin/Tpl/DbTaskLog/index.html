@@ -6,28 +6,29 @@
             <ul class="searchContent">
                 <li>
                     <label>用户id：</label>
-                    <input type="text" name="id" value=""/>
+                    <input type="text" name="user_id" value="{$_POST['user_id']}"/>
                 </li>
                 <li>
                     <label>赚钱号：</label>
-                    <input type="text" name="name" value=""/>
+                    <input type="text" name="name" value="{$_POST['name']}"/>
                 </li>
                 <li>
                     <label>渠道：</label>
-                    <select name="channel">
-                        <option value="">全部</option>
-                        <option value="0">安沃</option>
-                        <option value="1">有米</option>
-                        <option value="2">米迪</option>
-                        <option value="3">果盟</option>
-                        <option value="4">触控</option>
-                        <option value="5">多盟</option>
-                        <option value="6">艾德</option>
-                        <option value="7">巨朋</option>
-                        <option value="8">力美</option>
-                        <option value="9">酷告</option>
-                        <option value="10">磨盘</option>
-                    </select>
+                    <input type="text" name="channel" value="{$_POST['channel']}"/>
+                    <!--<select id="select" size="2" class="combox" name="channel" value="{$_POST['channel']}">-->
+                        <!--<option value="">全部</option>-->
+                        <!--<option value=0>安沃</option>-->
+                        <!--<option value="1">有米</option>-->
+                        <!--<option value="2">米迪</option>-->
+                        <!--<option value="3">果盟</option>-->
+                        <!--<option value="4">触控</option>-->
+                        <!--<option value="5">多盟</option>-->
+                        <!--<option value="6">艾德</option>-->
+                        <!--<option value="7">巨朋</option>-->
+                        <!--<option value="8">力美</option>-->
+                        <!--<option value="9">酷告</option>-->
+                        <!--<option value="10">磨盘</option>-->
+                    <!--</select>-->
                 </li>
                 <li>
                     <label>应用名称：</label>
@@ -71,12 +72,15 @@
         <thead align="center">
             <tr align="center">
                 <th width="100">IDFA</th>
-                <th width="50" orderField="name"
-                <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>
-                >赚钱号</th>
+                <th width="30" orderField="channel"
+                <if condition="$_REQUEST._order eq 'channel'">class="{$_REQUEST._sort}"</if>
+                >渠道编号</th>
                 <th width="50" orderField="time"
                 <if condition="$_REQUEST._order eq 'time'">class="{$_REQUEST._sort}"</if>
                 >时间</th>
+                <th width="50" orderField="name"
+                <if condition="$_REQUEST._order eq 'name'">class="{$_REQUEST._sort}"</if>
+                >赚钱号</th>
                 <th width="20" orderField="channel"
                 <if condition="$_REQUEST._order eq 'channel'">class="{$_REQUEST._sort}"</if>
                 >渠道</th>
@@ -98,8 +102,9 @@
         <volist id="vo" name="list">
             <tr target="sid_dbtasklog" rel="{$vo['user_id']}">
                 <td>{$vo.user_id}</td>
-                <td>{$vo.name}</td>
+                <td>{$vo.channel}</td>
                 <td>{$vo.time|date="Y-m-d H:i:s",###}</td>
+                <td>{$vo.name}</td>
                 <td>{$vo.channel|getChannel}</td>
                 <td>{$vo.app_name}</td>
                 <td>{$vo.score}</td>
