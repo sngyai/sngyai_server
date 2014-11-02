@@ -26,19 +26,18 @@ conn_apns() ->
   ).
 
 send_message()->
-  apns:send_message(?APNS_NAME, "f0fa91cd95c6d068d29c4e80098558cd9e91951fb7f9d5e71f41d57121c2afb8", "hello,这是一号话务员").
+  apns:send_message(?APNS_NAME, "12b8ce5a593bb25985e2d66de6588cee19734c324bfc60dc028267af80f04f27", "hello,这是一号话务员").
 
 send_message(Msg) ->
-  apns:send_message(my_connection_name, #apns_msg{
+  apns:send_message(?APNS_NAME, #apns_msg{
     alert  = Msg ,
-    badge  = 5,
-    sound  = "beep.wav" ,
-    expiry = 1348000749,
-    device_token = "devicetoken31d1df3a324bb72c1ff2bcb3b87d33fd1a2b7578b359fb5494eff"
+%%     sound  = "beep.wav" ,
+    sound  = "default",
+    device_token = "12b8ce5a593bb25985e2d66de6588cee19734c324bfc60dc028267af80f04f27"
   }).
 
 send_badge(Number)->
-  apns:send_badge(qiaoqiao_apns,"devicetoken31d1df3a324bb72c1ff2bcb3b87d33fd1a2b7578b359fb5494eff", Number).
+  apns:send_badge(?APNS_NAME,"12b8ce5a593bb25985e2d66de6588cee19734c324bfc60dc028267af80f04f27", Number).
 
 handle_apns_error(MsgId, Status) ->
   ?Error(default_logger, "error: ~p - ~p~n", [MsgId, Status]),

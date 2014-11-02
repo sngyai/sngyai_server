@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     [YouMiPointsManager enable];
 
     //巨朋
-    [JupengConfig launchWithAppID:@"11001" withAppSecret:@"0duc7irgtme0ccef"];
+    [JupengConfig launchWithAppID:@"11463" withAppSecret:@"91hfc0uypive7ed2"];
     
     //万普
     [AppConnect getConnect:@"23673a3aa69129898a59ba3a3c6de9a6"];

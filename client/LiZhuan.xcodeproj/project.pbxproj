@@ -72,7 +72,6 @@
 		B7A050BC19DB2FE800FCF2EC /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AE19DB2FE800FCF2EC /* libYouMi.a */; };
 		B7A050BD19DB2FE800FCF2EC /* libzkcmone2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050AF19DB2FE800FCF2EC /* libzkcmone2.3.a */; };
 		B7A050BE19DB2FE800FCF2EC /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A050B019DB2FE800FCF2EC /* MiidiAdLib.a */; };
-		B7A055A819DB380C00FCF2EC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A055A419DB380C00FCF2EC /* Bolts.framework */; };
 		B7A055C919DB381B00FCF2EC /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A055AC19DB381B00FCF2EC /* account.png */; };
 		B7A055CA19DB381B00FCF2EC /* account_confirm.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A055AD19DB381B00FCF2EC /* account_confirm.png */; };
 		B7A055CB19DB381B00FCF2EC /* Baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A055AE19DB381B00FCF2EC /* Baseball.png */; };
@@ -572,7 +571,6 @@
 				B7BCE3E619DC2B3800123BFC /* WPLib.framework in Frameworks */,
 				B7A050B419DB2FE800FCF2EC /* Bolts.framework in Frameworks */,
 				B7A050B619DB2FE800FCF2EC /* JupengSdkLib.a in Frameworks */,
-				B7A055A819DB380C00FCF2EC /* Bolts.framework in Frameworks */,
 				B7A050B719DB2FE800FCF2EC /* libChanceAd.a in Frameworks */,
 				B7A050B919DB2FE800FCF2EC /* libGuoMobWall.a in Frameworks */,
 				B7A050BB19DB2FE800FCF2EC /* libSDKApplication.a in Frameworks */,
@@ -1311,7 +1309,16 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LiZhuan" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1503,7 +1510,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Baotou Magic Water Advertisement Media Co.,Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Baotou Magic Water Advertisement Media Co.,Ltd.";
@@ -1542,7 +1548,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Baotou Magic Water Advertisement Media Co.,Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Baotou Magic Water Advertisement Media Co.,Ltd.";
@@ -1599,7 +1604,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "5cedff2e-880a-4949-a5df-1f9e299f21fe";

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
 #import "QumiConfigTool.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 
 
@@ -25,13 +26,24 @@
 //            [IntegralWallConfig loadWithAppID:@"77" WithSubID:@"" WithType:@"Data" WithUserID:@"142" WithAppKey:@"7a94f4a57fb0b426b3ac2f7d27426396"];
     [QumiConfigTool startWithAPPID:@"09b02d8d7aec58bb" secretKey:@"6747a7ed4e47730d" appChannel:0];
     [self loadView];
-    [application registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeBadge |
-     UIRemoteNotificationTypeAlert |
-     UIRemoteNotificationTypeSound];
-   return YES;
+    [AppDelegate registerPush:application];
+    return YES;
+        
 }
 
++ (void)registerPush:(UIApplication *)application {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    } else {
+        [application registerForRemoteNotificationTypes: UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge];
+    }
+#else
+    [application registerForRemoteNotificationTypes: UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge];
+#endif
+}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -83,6 +95,15 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
     //    [self alertMessage:[NSString stringWithFormat:@"注册失败，无法获取设备ID, 具体错误: %@", errorReason]];
 }
 
+-(void) notificationMessage:(NSString*)msg{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"通知"
+                                                        message:msg
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alertView show];
+    [alertView release];
+}
+
 -(void) alertMessage:(NSString*)msg{
 	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"错误"
 														message:msg
@@ -92,9 +113,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) DeviceToken
 	[alertView release];
 }
 
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo {
-//    [PFPush handlePush:userInfo];
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"enter didReceiveRemoteNotification 1 %@", userInfo);
+    NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    [self notificationMessage:alert];
+    AudioServicesPlaySystemSound(1007);
 }
 
 //- (void)hold
@@ -197,5 +222,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
         return false;
     }
 }
+
 
 @end

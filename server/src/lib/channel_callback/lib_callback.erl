@@ -31,7 +31,7 @@ deal(Idfa, ChannelId, TrandNo, Cash, AppName) ->
                 #apns_msg{
                   device_token = Token,
                   alert = ErrorMsg,
-                  sound = "beep.wav"
+                  sound = "default"
                 })
             end;
         {ok, IPAddress} ->
@@ -59,7 +59,7 @@ push_notification(Idfa, Channel, AppName, Score) ->
         #apns_msg{
           device_token = Token,
           alert = Msg,
-          sound = "beep.wav"
+          sound = "default"
         })
   end.
 
