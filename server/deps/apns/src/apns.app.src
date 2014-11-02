@@ -11,7 +11,7 @@
   {mod, {apns_app, []}},
   {env, [{apple_host,       "gateway.push.apple.com"},
          {apple_port,       2195},
-         {cert_file,        "priv/apns-dev.pem"},
+         {cert_file,        "priv/cert.pem"},
          {key_file,         undefined},
          {timeout,          30000},
          {feedback_host,    "feedback.push.apple.com"},

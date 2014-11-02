@@ -3,7 +3,7 @@
 # Usage:
 #		test_certs {cert_file} {private_key_file}
 # Example:
-#		test_certs aps_developer_indetity.cer aps_developer_identity.p12
+#		./test_certs aps_developer_indetity.cer aps_developer_identity.p12
 
 mkdir -p priv/temp
 openssl pkcs12 -in "$2" -out priv/temp/key-enc.pem

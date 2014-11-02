@@ -1525,7 +1525,7 @@
 					"$(PROJECT_DIR)/Lib/libmopan",
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = LiZhuan;
@@ -1533,6 +1533,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5cedff2e-880a-4949-a5df-1f9e299f21fe";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s armv64 i386";
 			};
 			name = Debug;
@@ -1570,7 +1571,7 @@
 					"$(PROJECT_DIR)/Lib/libmopan",
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = LiZhuan;
 				PROVISIONING_PROFILE = "5cedff2e-880a-4949-a5df-1f9e299f21fe";
@@ -1598,7 +1599,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "5cedff2e-880a-4949-a5df-1f9e299f21fe";
@@ -1624,7 +1625,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
