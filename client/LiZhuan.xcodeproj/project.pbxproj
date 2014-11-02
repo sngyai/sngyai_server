@@ -1565,7 +1565,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib/**",
-					"$(PROJECT_DIR)/Lib/DMOfferWallSDK",
 					"$(PROJECT_DIR)/Lib",
 					"$(PROJECT_DIR)/Lib/libChanceAd",
 					"$(PROJECT_DIR)/Lib/zkcmoneSDK/res",
@@ -1604,13 +1603,13 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "5cedff2e-880a-4949-a5df-1f9e299f21fe";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7 i386";
+				VALID_ARCHS = "armv7s armv7 armv64 i386";
 			};
 			name = Debug;
 		};
@@ -1637,7 +1636,7 @@
 				PROVISIONING_PROFILE = "5cedff2e-880a-4949-a5df-1f9e299f21fe";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7 i386";
+				VALID_ARCHS = "armv7s armv7 armv64 i386";
 			};
 			name = Release;
 		};
